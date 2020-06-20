@@ -1,0 +1,51 @@
+<div class="chk-block shadow-sm">
+        <div class="chk-block-title pb-0">
+            <div class="d-flex justify-content-between">
+                <div class="col-xl-12 row d-flex align-items-start flex-row pr-0 mr-0">
+                    <div class="col-9 col-sm-9 col-md-9 col-lg-9 col-xl-10">
+                        <h5 class="text-capitalize mb-0">Distribuição de Vendas por Categoria de Produtos</h5>
+                        <h6 class="mb-1">
+                            {{ api.dateDeSalesCategory | date:'dd/MM/yyyy' }} - {{ api.dateAteSalesCategory | date:'dd/MM/yyyy' }}
+                        </h6>    
+                    </div>
+                    <!-- <div class="col-xl-1" style="float: right;text-align: right;"><i
+                            class="far fa-calendar-alt"></i></div> -->
+                    <div class="col-2 col-sm-2 col-md-3 col-lg-3 col-xl-2" style="float: right;text-align: right;">
+                        <a id="chart-sales-category"><i class="far fa-calendar-alt"></i></a>
+                        <div class="container mt-0">
+                            <div class="filter-div filter-data-sales-cat mt-0 shadow">
+                                <div class="row">
+                                    <div class="col-sm-5 ml-3 mb-0 pr-0">
+                                        <mat-form-field class="mat-width">
+                                            <input [(ngModel)]="api.dateDeSalesCategory" matInput [matDatepicker]="picker" placeholder="{{'place-de' | translate}}" id="dateDe" (dateChange)="dateRangeChange()">
+                                            <mat-datepicker-toggle matSuffix [for]="picker">
+                                                <mat-icon matDatepickerToggleIcon>keyboard_arrow_down</mat-icon>
+                                            </mat-datepicker-toggle>
+                                            <mat-datepicker #picker></mat-datepicker>
+                                        </mat-form-field>
+                                    </div>
+                                    <div class="col-sm-5 mb-0 ml-3 pr-0">
+                                        <mat-form-field class="mat-width">
+                                            <input [(ngModel)]="api.dateAteSalesCategory" matInput [min]="api.dateDeSalesCategory" [matDatepicker]="picker2" placeholder="{{'place-ate' | translate}}" id="dateAte" (dateChange)="dateRangeChange()">
+                                            <mat-datepicker-toggle matSuffix [for]="picker2">
+                                                <mat-icon matDatepickerToggleIcon>keyboard_arrow_down</mat-icon>
+                                            </mat-datepicker-toggle>
+                                            <mat-datepicker #picker2></mat-datepicker>
+                                        </mat-form-field>
+                                    </div>
+                                </div>
+                                <div class="float-right">
+                                    <button class="btn btn-primary rounded-pill">
+                                      {{ "dash-cancel-filtrar" | translate }}
+                                    </button>
+                                  </div>
+                            </div>
+                        </div>
+                    </div>   
+                </div>
+            </div>
+        </div>
+        <div class="chk-block-content">
+            <canvas height="150vh" id="chart4"></canvas>
+        </div>
+    </div>

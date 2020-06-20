@@ -1,0 +1,6 @@
+var filter = new Filter()
+filter.userId = 2;
+filter.goalId = 1; (Meta 1)
+filter.performance = 1; (Maior Performance)
+
+this.http.post<any>(`${environment.apiUrl}/Dashboards/Commercial/VolumeSalesStates`, filter);

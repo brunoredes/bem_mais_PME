@@ -1,0 +1,164 @@
+<!-- Filtro -->
+<section>
+    <form class="row" [formGroup]="formFilter" (ngSubmit)="findGoals()">
+        <div class="col-md-12 text-right pl-0">
+            <ul class="pl-0">
+                <li class="filter-button">
+                    <a id="filter-dashGoals"><small>{{'dash-cancel-filtrar' | translate}} &nbsp;</small><i
+                            class="fa fa-sliders" aria-hidden="true"></i></a>
+                </li>
+                <div class="container mt-0">
+                    <div class="filter-div filter-dashGoals mt-0 shadow-sm">
+                        <div class="row pt-2 mb-2">
+                            <div class="col-md-12">
+                                <div class="row pr-0 pl-0">
+                                    <div class="col-xl-12">
+                                        <h5 class="fontWeight">{{'AggregatorSalesReportDate' | translate}}</h5>
+                                    </div>
+                                </div>
+                                <div class="row mt-3">
+                                    <div class="col-md-6 pr-0 pl-0">
+                                        <mat-form-field class="col-xl-12">
+                                            <input formControlName="startDate" matInput [matDatepicker]="pickerSalesDe"
+                                                placeholder="{{'place-de' | translate}}">
+                                            <mat-datepicker-toggle matSuffix [for]="pickerSalesDe">
+                                            </mat-datepicker-toggle>
+                                            <mat-datepicker #pickerSalesDe></mat-datepicker>
+                                        </mat-form-field>
+                                    </div>
+                                    <div class="col-md-6 pr-0 pl-0">
+                                        <mat-form-field class="col-xl-12 datePickerAte">
+                                            <input formControlName="endDate" matInput [matDatepicker]="pickerSalesAte"
+                                                placeholder="{{'place-ate' | translate}}">
+                                            <mat-datepicker-toggle matSuffix [for]="pickerSalesAte">
+                                            </mat-datepicker-toggle>
+                                            <mat-datepicker #pickerSalesAte></mat-datepicker>
+                                        </mat-form-field>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-12 pr-0 pl-0">
+                                <div class="col-xl-12">
+                                    <h5 class="fontWeight" for="status">{{'dash-cancel-statusvenda' | translate}}</h5>
+                                </div>
+                                <mat-form-field class="col-xl-12">
+                                    <mat-select matSelect id="status" name="status" formControlName="status">
+                                        <mat-option value="{{s.id}}" *ngFor="let s of filterStatus">
+                                            {{ s.name }}
+                                        </mat-option>
+                                    </mat-select>
+                                </mat-form-field>
+                            </div>
+                        </div>
+
+                        <div class="row">
+                            <div class="col-md-12 pr-0 pl-0">
+                                <div class="col-xl-12">
+                                    <h5 class="fontWeight" for="category">{{'dash-cancel-categprodutos' | translate}}
+                                    </h5>
+                                </div>
+                                <mat-form-field class="col-xl-12">
+                                    <mat-select matSelect id="category" name="category" formControlName="category">
+                                        <mat-option value="{{c.id}}" *ngFor="let c of filterCategory">
+                                            {{ c.name }}
+                                        </mat-option>
+                                    </mat-select>
+                                </mat-form-field>
+                            </div>
+                        </div>
+
+                        <div class="d-grid justify-content-rigth">
+                            <button class="btn btn-primary rounded-pill">
+                                {{ "dash-cancel-filtrar" | translate }}
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </ul>
+        </div>
+    </form>
+</section>
+<!-- Fim filtro -->
+
+<div class="row">
+    <div class="col-sm-12 col-md-12 col-lg-3 col-xl-3">
+        <app-achievement-goals></app-achievement-goals>
+    </div>
+    <div class="col-sm-12 col-md-12 col-lg-3 col-xl-3">
+        <app-goals-beats></app-goals-beats>
+    </div>
+    <div class="col-sm-12 col-md-12 col-lg-6">
+        <app-best-month></app-best-month>
+    </div>
+</div>
+
+<section>
+    <div class="row mb-3">
+        <div class="col-12 col-sm-12 col-md-6 col-lg-6 col-xl-6">
+            <app-chart-small [barLineChartData]="insuranceGoalsData" [barLineChartLabels]="insuranceGoalsLabels"
+                [barLineChartColors]="insuranceGoalsColor" [barLineChartOptions]="insuranceGoalsOptions"
+                [barLineChartType]="insuranceGoalsType" [exportId]="insuranceGoalsExportId"
+                [iconExportId]="insuranceGoalsExportIconId" [filterDataId]="insuranceGoalsFilterDataId"
+                (changeDate)="insuranceGoalsChangeDate($event)" [chartTitle]="insuranceGoalsTitle">
+            </app-chart-small>
+        </div>
+        <div class="col-12 col-sm-12 col-md-6 col-lg-6 col-xl-6">
+            <app-chart-small [barLineChartData]="productGoalsData" [barLineChartLabels]="productGoalsLabels"
+                [barLineChartColors]="productGoalsColor" [barLineChartOptions]="productGoalsOptions"
+                [barLineChartType]="productGoalsType" [exportId]="productGoalsExportId"
+                [iconExportId]="productGoalsExportIconId" [filterDataId]="productGoalsFilterDataId"
+                (changeDate)="productGoalsChangeDate($event)" [chartTitle]="productGoalsTitle">
+            </app-chart-small>
+        </div>
+    </div>
+</section>
+
+<div class="card mb-3 shadow-sm">
+    <div class="card-body">
+        <div class="row">
+            <div class="col-12 col-sm-12 col-md-7 col-lg-7 col-xl-7 border-right">
+                <h5>{{'AgregadorHomeCompareSalesTitle' | translate}}</h5>
+                <div class="project-status-wrap">
+                    <div class="chk-block-content widget-body mb-3">
+                        <div class="table-responsive project-status-table border-0">
+                            <table class="table  table-middle mb-0 table-borderless">
+                                <thead>
+
+                                </thead>
+                                <tbody>
+                                    <tr *ngFor="let i of comparativo">
+                                        <td>{{i.position}}º {{i.name}}</td>
+                                        <td style="width:18vw">
+                                            <div class=" m-0">
+                                                <div class="progress-bar bg-success" role="progressbar"
+                                                    style="height: 10px;" aria-valuenow="25"
+                                                    aria-valuemin="0" aria-valuemax="100" id="position{{i.position}}">
+                                                </div>
+                                            </div>
+                                        </td>
+                                        <td>
+                                            {{format(i.amount)}}
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-12 col-sm-12 col-md-5 col-lg-5 col-xl-5">
+                <h5>{{'AggregatorDashSuggGoals' | translate}}</h5>
+                <div class="d-flex col-md-auto p-2">
+                    <span class="mt-2 mr-2">
+                        {{'AggregatorHomeSell' | translate}} <b class="fontValue">{{format(amount)}}</b>
+                        {{'AggregatorHomeNext' | translate}}
+                        <b class="fontValue"> {{day}} </b> {{'AggregatorHomeDays' | translate}}
+                    </span>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

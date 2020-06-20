@@ -1,0 +1,19 @@
+{
+    "data": {
+        "xAxys": [1],
+        "vendors": [
+            {
+                "label": "Meta",
+                "data": [500]
+            },
+            {
+                "label": "Lojista",
+                "data": [300]
+            }
+        ]
+    },
+    "message": "Ok",
+    "hasError": false,
+    "errorDataCollection": null,
+    "statusCode": 200
+}

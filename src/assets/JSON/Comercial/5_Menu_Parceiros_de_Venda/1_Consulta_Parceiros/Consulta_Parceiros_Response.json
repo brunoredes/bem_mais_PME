@@ -1,0 +1,76 @@
+{
+    "data": {
+        "partners": [
+            {
+                "id": 123,
+                "code": 123,
+                "corporateName": "Lorem Ipsum is simply",
+                "cnpj": "000000000000-0",
+                "state": "SP",
+                "city": "São Paulo",
+                "insuranceCategory": "Pet",
+                "email": "parceiro@zurich.com.br",
+                "level": 1
+            },
+            {
+                "id": 321,
+                "code": 321,
+                "corporateName": "Lorem Ipsum is simply",
+                "cnpj": "000000000000-0",
+                "state": "SP",
+                "city": "Santos",
+                "insuranceCategory": "Viagem",
+                "email": "parceiro@zurich.com.br",
+                "level": 2
+            },
+            {
+                "id": 456,
+                "code": 456,
+                "corporateName": "Lorem Ipsum is simply",
+                "cnpj": "000000000000-0",
+                "state": "SP",
+                "city": "São Paulo",
+                "insuranceCategory": "Pet",
+                "email": "parceiro@zurich.com.br",
+                "level": 3
+            },
+            {
+                "id": 654,
+                "code": 654,
+                "corporateName": "Lorem Ipsum is simply",
+                "cnpj": "000000000000-0",
+                "state": "SP",
+                "city": "Santos",
+                "insuranceCategory": "Viagem",
+                "email": "parceiro@zurich.com.br",
+                "level": 1
+            },
+            {
+                "id": 789,
+                "code": 789,
+                "corporateName": "Lorem Ipsum is simply",
+                "cnpj": "000000000000-0",
+                "state": "SP",
+                "city": "São Paulo",
+                "insuranceCategory": "Pet",
+                "email": "parceiro@zurich.com.br",
+                "level": 2
+            },
+            {
+                "id": 987,
+                "code": 987,
+                "corporateName": "Lorem Ipsum is simply",
+                "cnpj": "000000000000-0",
+                "state": "SP",
+                "city": "Santos",
+                "insuranceCategory": "Viagem",
+                "email": "parceiro@zurich.com.br",
+                "level": 3
+            }
+        ]
+    },
+    "message": "Ok",
+    "hasError": false,
+    "errorDataCollection": null,
+    "statusCode": 200
+}

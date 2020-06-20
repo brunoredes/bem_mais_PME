@@ -1,0 +1,110 @@
+{
+    "data": {
+        "filters": [
+            {
+                "id": 1,
+                "type": "option",
+                "description": "Produto",
+                "options": [
+                    {
+                        "code": "123456",
+                        "value": "Novo"
+                    },
+                    {
+                        "code": "1234564",
+                        "value": "Usado"
+                    }
+                ]
+            },
+            {
+                "id": 2,
+                "type": "option",
+                "description": "Marca",
+                "options": [
+                    {
+                        "code": "123456",
+                        "value": "Samsung"
+                    },
+                    {
+                        "code": "1234564",
+                        "value": "LG"
+                    },
+                    {
+                        "code": "1234564",
+                        "value": "Motorola"
+                    },
+                    {
+                        "code": "1234564",
+                        "value": "Positivo"
+                    },
+                    {
+                        "code": "1234564",
+                        "value": "Asus"
+                    },
+                    {
+                        "code": "1234564",
+                        "value": "Apple"
+                    }
+                ]
+            },
+            {
+                "id": 3,
+                "type": "option",
+                "description": "Memória Interna",
+                "options": [
+                    {
+                        "code": "1234564",
+                        "value": "8.0GB"
+                    },
+                    {
+                        "code": "65423",
+                        "value": "16GB"
+                    },
+                    {
+                        "code": "1234564",
+                        "value": "32GB"
+                    },
+                    {
+                        "code": "1234564",
+                        "value": "64GB"
+                    },
+                    {
+                        "code": "1234564",
+                        "value": "128GB"
+                    }
+                ]
+            },
+            {
+                "id": 4,
+                "type": "option",
+                "description": "Celular - Cor",
+                "options": [
+                    {
+                        "code": "96325",
+                        "value": "Preto"
+                    },
+                    {
+                        "code": "1234564",
+                        "value": "Dourado"
+                    },
+                    {
+                        "code": "1234564",
+                        "value": "Branco"
+                    },
+                    {
+                        "code": "1234564",
+                        "value": "Cinza"
+                    },
+                    {
+                        "code": "1234564",
+                        "value": "Azul"
+                    }
+                ]
+            }
+        ]
+    },
+    "message": "Ok",
+    "hasError": false,
+    "errorDataCollection": null,
+    "statusCode": 200
+}

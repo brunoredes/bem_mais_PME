@@ -1,0 +1,107 @@
+<section>
+    <form class="row" [formGroup]="formFilter" (ngSubmit)="findCancelation()">
+        <div class="col-md-12 text-right pl-0">
+            <ul class="pl-0">
+                <li class="filter-button">
+                    <a id="filter-dashCancelation"><small>{{'dash-cancel-filtrar' | translate}} &nbsp;</small>
+                        <i class="fa fa-sliders" aria-hidden="true"></i></a>
+                </li>
+                <div class="container mt-0">
+                    <div class="filter-dashCancelation mt-0 shadow-sm">
+                        <div class="row mb-2">
+                            <div class="col-md-12">
+                                <div class="row pr-0 pl-0">
+                                    <div class="col-xl-12">
+                                        <label>{{'dash-cancel-data' | translate}}</label>
+                                    </div>
+                                </div>
+                                <div class="row mt-3">
+                                    <div class="col-md-6 pr-0 pl-0">
+                                        <mat-form-field class="col-xl-12">
+                                            <input formControlName="startDate" matInput [matDatepicker]="pickerSalesDe"
+                                                placeholder="{{'place-de' | translate}}">
+                                            <mat-datepicker-toggle matSuffix [for]="pickerSalesDe">
+                                            </mat-datepicker-toggle>
+                                            <mat-datepicker #pickerSalesDe></mat-datepicker>
+                                        </mat-form-field>
+                                    </div>
+                                    <div class="col-md-6 pr-0 pl-0">
+                                        <mat-form-field class="col-xl-12 datePickerAte">
+                                            <input formControlName="endDate" matInput [matDatepicker]="pickerSalesAte"
+                                                placeholder="{{'place-ate' | translate}}">
+                                            <mat-datepicker-toggle matSuffix [for]="pickerSalesAte">
+                                            </mat-datepicker-toggle>
+                                            <mat-datepicker #pickerSalesAte></mat-datepicker>
+                                        </mat-form-field>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-12 pr-0 pl-0">
+                                <div class="col-xl-12">
+                                    <label for="status">{{'dash-cancel-statusvenda' | translate}}</label>
+                                </div>
+                                <mat-form-field class="col-xl-12">
+                                    <mat-select matSelect id="status" name="status" formControlName="status">
+                                        <mat-option value="1">Status 1</mat-option>
+                                        <mat-option value="2">Status 2</mat-option>
+                                        <mat-option value="3">Status 3</mat-option>
+                                    </mat-select>
+                                </mat-form-field>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-12 pr-0 pl-0">
+                                <div class="col-xl-12">
+                                    <label for="category">{{'ManagerFilterProductCat' | translate}}</label>
+                                </div>
+                                <mat-form-field class="col-xl-12">
+                                    <mat-select matSelect id="category" name="category" formControlName="category">
+                                        <mat-option value="1">Categoria 1</mat-option>
+                                        <mat-option value="2">Categoria 2</mat-option>
+                                        <mat-option value="3">Categoria 3</mat-option>
+                                    </mat-select>
+                                </mat-form-field>
+                            </div>
+                        </div>
+                        <div class="float-right">
+                            <button class="btn btn-primary rounded-pill">
+                                {{'dash-cancel-filtrar' | translate}}
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </ul>
+        </div>
+    </form>
+</section>
+
+<section>
+    <app-chart-large [barLineChartData]="CancellationVolumeData" [barLineChartLabels]="CancellationVolumeLabels"
+        [barLineChartOptions]="CancellationVolumeOptions" [barLineChartType]="CancellationVolumeType"
+        [barLineChartColors]="CancellationVolumeColor" [iconExportId]="CancellationVolumeExportIconId"
+        [filterDataId]="CancellationVolumeFilterDataId" (changeDate)="CancellationVolumeChangeDate($event)"
+        [chartTitle]="CancellationVolumeTitle">
+    </app-chart-large>
+</section>
+
+<section>
+    <div class="row">
+        <div class="col-12 col-sm-12 col-md-6 col-lg-6 col-xl-6">
+            <app-chart-small [barLineChartData]="DistributionSecurityData"
+                [barLineChartLabels]="DistributionSecurityLabels" [barLineChartOptions]="DistributionSecurityOptions"
+                [barLineChartType]="DistributionSecurityType" [barLineChartColors]="DistributionSecurityColors"
+                [filterDataId]="DistributionSecurityFilterDataId" [chartTitle]="DistributionSecurityTitle">
+            </app-chart-small>
+        </div>
+        <div class="col-12 col-sm-12 col-md-6 col-lg-6 col-xl-6">
+            <app-chart-small [barLineChartData]="DistributionProductsData"
+                [barLineChartLabels]="DistributionProductsLabels" [barLineChartOptions]="DistributionProductsOptions"
+                [barLineChartType]="DistributionProductsType" [barLineChartColors]="DistributionProductsColors"
+                [filterDataId]="DistributionProductsFilterDataId" [chartTitle]="DistributionProductsTitle">
+            </app-chart-small>
+        </div>
+    </div>
+</section>

@@ -1,0 +1,136 @@
+$green: #62bc00;
+$red: #ff3636;
+$Darkblue: #02296a;
+$LightBlue: #005aab;
+
+.filter-button {
+  padding: 5px 20px;
+  display: inline-block;
+  text-decoration: none;
+  border-radius: 50px;
+  border: 1px solid #787878;
+  color: #707070;
+}
+
+// Modal Inicio
+.modal-header {
+  border-bottom: 0 !important;
+}
+
+.modal-footer {
+  border-top: 1px solid transparent;
+}
+
+.btn-center {
+  margin: 2px;
+  display: flex;
+  justify-content: space-around;
+}
+.badgeModal {
+  border-radius: 50px !important;
+  margin: auto;
+}
+
+.bd-t-red {
+  background-color: #ff3636;
+  border-radius: 0.3rem 0.3rem 0 0;
+  height: 7px;
+  position: absolute;
+  width: 100%;
+  z-index: 1;
+}
+// Modal Fim
+
+.filter-listGoals {
+  background: white;
+  width: 30vw;
+  position: absolute;
+  border-radius: 3px;
+  padding: 20px;
+  z-index: 99;
+  border-radius: 20px;
+  top: 103px;
+  text-align: left;
+  right: 0;
+  display: none;
+  margin-right: 10px;
+  label {
+    margin-bottom: 2px;
+  }
+}
+
+.filter-listGoals:after {
+  bottom: 100%;
+  left: 89%;
+  border: solid transparent;
+  content: " ";
+  height: 0;
+  width: 0;
+  position: absolute;
+  pointer-events: none;
+  border-bottom-color: white;
+  border-width: 8px;
+  margin-left: -8px;
+}
+
+.d-grid {
+  display: grid;
+}
+.justify-content-rigth {
+  justify-content: right;
+}
+
+button {
+  cursor: pointer;
+  margin-top: 10px;
+
+  padding: 10px 20px;
+
+  color: white;
+  font-size: 12px;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+
+::ng-deep .filter-listGoals .mat-form-field-infix {
+  border-top: 0px !important;
+  padding: 0.25rem !important;
+}
+
+@media (max-width: 1024px) {
+  .filter-listGoals {
+    width: 38vw;
+    top: 96px;
+  }
+
+  @media (max-width: 768px) {
+    .filter-listGoals {
+      width: 47vw;
+    }
+
+    @media (max-width: 425px) {
+      .filter-listGoals {
+        width: 73vw;
+        top: 134px;
+      }
+
+      .datePickerAte {
+        margin-top: 10px;
+      }
+
+      @media (max-width: 375px) {
+        .filter-listGoals {
+          width: 77vw;
+          top: 132px;
+        }
+
+        @media (max-width: 320px) {
+          .filter-listGoals {
+            width: 85vw;
+            top: 216px;
+          }
+        }
+      }
+    }
+  }
+}

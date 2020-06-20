@@ -1,0 +1,19 @@
+
+var partner= new Partner();
+partner.corporateName = "Lorem Ipsum is simply";
+partner.commercialName = "Lorem Ipsum is simply";
+partner.cnpj = "000000000000-0";
+partner.cep = "01234-786";
+partner.address = "Av Jornalista Roberto Marinho";
+partner.number = "85";
+partner.complement = "Tower Bridge";
+partner.neighborhood = "Brooklin";
+partner.city = "São Paulo";
+partner.state = "São Paulo";
+partner.responsible = new Responsible();
+partner.responsible.name = "José da Silva";
+partner.responsible.genre = "M";
+partner.responsible.phone = "11 965432871";
+partner.responsible.email = "jose@gmail.com";
+
+this.http.post<any>(`${environment.apiUrl}/Partners`, partner);

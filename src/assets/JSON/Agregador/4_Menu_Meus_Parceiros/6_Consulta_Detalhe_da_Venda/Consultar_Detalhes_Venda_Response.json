@@ -1,0 +1,35 @@
+{
+  "data": {
+      "insurance":{
+          "description": "Seguro Roubo",
+          "value": "400",
+          "installments": 1,
+          "policyNumber": "000000000000123",
+          "image": "assets/img/thumb_insurance1.png"
+      },
+      "product":{
+          "name": "Smartphone Samsung Galaxy A50",
+          "value": "1407",
+          "image": "assets/img/phone-float.png"
+      },
+      "consumer":{
+          "name": "Roberto da Costa",
+          "birthDate": "12/12/1990",
+          "cpf": "12345678978",
+          "rg": "1234567897",
+          "postalCode": "00000000",
+          "address": "Av Jornalista Roberto Marinho",
+          "complement": "Tower Bridge",
+          "neighborhood": "Brooklin",
+          "city": "São Paulo",
+          "state": "São Paulo",
+          "email": "roberto.costa@gmail.com",
+          "cellPhone": "11987654321",
+          "phone": "1178945632"
+      }
+  },
+  "message": "Ok",
+  "hasError": false,
+  "errorDataCollection": null,
+  "statusCode": 200
+}

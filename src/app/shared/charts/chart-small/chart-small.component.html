@@ -1,0 +1,85 @@
+<div class="card mb-3 shadow-sm">
+    <div class="card-body">                    
+        <div class="row">
+            <div class="col-12 col-sm-12 col-md-6 col-lg-9 col-xl-9">
+                <h5 class="page-info ">{{ chartTitle }}</h5>
+            </div>
+            <div class="col-12 col-sm-12 col-md-6 col-lg-3 col-xl-3 pl-0">
+                <div class="d-flex justify-content-between">
+                    <a *ngIf="!exportId"></a>
+                    <a *ngIf="exportId" id="filter-Exportar" (click)="showContainerExport()">{{'ComercialTrainingStatisticExport' | translate}}<i id="{{ iconExportId }}" class="fas fa-chevron-down ml-1"></i></a>
+                    <div class="filter-div container mt-0 export mt-0 shadow" id="{{ exportId }}">
+                        <div class="col-12">
+                            <div class="row">
+                                <div class="col-4 col-sm-4 col-md-4 col-lg-4 col-lx-3 p-0">
+                                    <ul class="listStyle p-2 d-contents">
+                                        <li> <img class="img-fluid" src="assets/img/csv.svg" /><small class="text-center d-block">CSV</small></li>
+                                    </ul>
+                                </div>
+                                <div class="col-4 col-sm-4 col-md-4 col-lg-4 col-lx-3 p-0">
+                                    <ul class="listStyle p-2 d-contents">
+                                        <li> <img class="img-fluid" src="assets/img/pdf.svg" /><small class="text-center d-block">PDF</small></li>
+                                    </ul>
+                                </div>
+                                <div class="col-4 col-sm-4 col-md-4 col-lg-4 col-lx-3 p-0">
+                                    <ul class="listStyle p-2 d-contents">
+                                        <li> <img class="img-fluid" src="assets/img/xls.svg" /><small class="text-center d-block">XLS</small></li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <mat-radio-group class="col-12 p-0 pl-2" aria-label="Select an option">
+                                    <div class="text-center col-4 float-left">
+                                        <mat-radio-button color="primary" value="csv"></mat-radio-button>
+                                    </div>
+                                    <div class="text-center col-4 float-left">
+                                        <mat-radio-button color="primary" value="pdf"></mat-radio-button>
+                                    </div>
+                                    <div class="text-center col-4 float-left">
+                                        <mat-radio-button color="primary" value="xls"></mat-radio-button>
+                                    </div>
+                                </mat-radio-group>
+                            </div>
+                        </div>
+                        <div class="float-right">
+                            <button class="btn btn-primary rounded-pill">{{'ComercialTrainingStatisticExport' | translate}}</button>
+                        </div>
+                    </div>
+                    <a *ngIf="!filterDataId"></a>
+                    <a *ngIf="filterDataId" (click)="showFilterCalendar()"><i class="far fa-calendar-alt"></i></a>
+                    <div class="filter-div container filter-data mt-0 shadow" id="{{ filterDataId }}">
+                        <div class="row">
+                            <div class="col-sm-5 ml-3 mb-0 pr-0">
+                                <mat-form-field class="mat-width">
+                                    <input [(ngModel)]="dateDe" matInput [matDatepicker]="pickerDe" placeholder="{{'place-de' | translate}}" (dateChange)="dateRangeChange()">
+                                    <mat-datepicker-toggle matSuffix [for]="pickerDe">
+                                    <mat-icon matDatepickerToggleIcon>keyboard_arrow_down</mat-icon>
+                                    </mat-datepicker-toggle>
+                                    <mat-datepicker #pickerDe></mat-datepicker>
+                                </mat-form-field>
+                            </div>
+                            <div class="col-sm-5 mb-0 ml-3 pr-0">
+                                <mat-form-field class="mat-width">
+                                    <input [(ngModel)]="dateAte" [min]="dateDe" matInput [matDatepicker]="pickerAte" placeholder="{{'place-ate' | translate}}" (dateChange)="dateRangeChange()">
+                                    <mat-datepicker-toggle matSuffix [for]="pickerAte">
+                                    <mat-icon matDatepickerToggleIcon>keyboard_arrow_down</mat-icon>
+                                    </mat-datepicker-toggle>
+                                    <mat-datepicker #pickerAte></mat-datepicker>
+                                </mat-form-field>
+                            </div>
+                        </div>
+                        <div class="float-right">
+                            <button class="btn btn-primary rounded-pill">
+                              {{ "dash-cancel-filtrar" | translate }}
+                            </button>
+                          </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="chk-block-content">
+            <canvas *ngIf="barLineChartData" baseChart [datasets]="barLineChartData" [labels]="barLineChartLabels" [options]="barLineChartOptions"
+            [legend]="barLineChartLegend" [chartType]="barLineChartType" [colors]="barLineChartColors"></canvas>
+        </div>
+    </div>
+</div>

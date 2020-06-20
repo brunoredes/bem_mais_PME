@@ -1,0 +1,220 @@
+<!--Register-->
+<section>
+  <h5>{{'AggregatorNewPartSubt' | translate}}</h5>
+  <div class="row">
+    <div class="mb-3 col-12 col-sm-6 col-md-6 col-lg-6 col-xl-6 p-0">
+      <div class="col-md-12 col-sm-12 radioInput">
+        <div class="toggle">
+          <input type="radio" name="category" value="I" id="cadIndividual" checked (click)="changeindividual()" />
+          <label for="cadIndividual"><i class="fas fa-users mr-2"></i><small
+              class="fontSM">{{'AggregatorRegSing' | translate}}</small></label>
+          <input type="radio" name="category" value="M" id="cadMassa" (click)="changemassa()" />
+          <label for="cadMassa"><i class="fas fa-cloud-upload-alt mr-2"></i><small
+              class="fontSM">{{'AggregatorRegBulk' | translate}}</small></label>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<form [formGroup]="storeForm" (ngSubmit)="submit()">
+  <section *ngIf="individual">
+    <div class="row">
+      <div class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12">
+        <div class="massaMobile mb-4">
+          <div class="dropzone-wrapperr container col-md-12">
+            <div class="dropzone-desc">
+              <p>{{ "edituser-arraste" | translate }}</p>
+              <button type="submit" class="btn btn-darkk btn-lg btn-square ml-auto">
+                <i class="fas fa-camera-retro fa-1x"></i>
+              </button>
+            </div>
+            <input type="file" name="img_logo" class="dropzone" accept="image/*" />
+          </div>
+        </div>
+
+
+
+        <div class="row">
+
+          <div class="col-12 col-sm-12 col-md-10 col-lg-10 col-xl-10">
+            <div class="row">
+              <div class="col-12 col-sm-12 col-md-6 col-lg-6 col-xl-6">
+                <div class="label-float">
+                  <label>{{'ComercialAdvFilterFancComp' | translate}}</label>
+                  <br>
+                  <input id="companyName" placeholder=" " formControlName="companyName" />
+
+                </div>
+              </div>
+
+              <div class="col-12 col-sm-12 col-md-6 col-lg-6 col-xl-6 ">
+                <div class="label-float">
+                  <label for="cnpj">CNPJ/CPF</label>
+                  <br>
+                  <input id="cnpj" placeholder=" " formControlName="cnpj" />
+
+                </div>
+              </div>
+
+              <div class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 mt-4">
+                <div class="label-float">
+                  <label for="commercialname">{{'ComercialSalesPartnersEditCompFancNam' | translate}}</label>
+                  <br>
+                  <input id="commercialname" placeholder=" " formControlName="commercialname" />
+
+                </div>
+              </div>
+
+              <div class="col-12 col-sm-12 col-md-4 col-lg-4 col-xl-4  mt-4">
+                <div class="label-float">
+                  <label for="postalCode">{{'AggregatorSalesDetailsZipCd' | translate}}</label>
+                  <br>
+                  <input id="postalCode" placeholder=" " formControlName="postalCode" />
+
+                </div>
+              </div>
+
+              <div class="col-12 col-sm-12 col-md-8 col-lg-8 col-xl-8  mt-4">
+                <div class="label-float">
+                  <label for="address">{{'AggregatorSalesDetailsAddress' | translate}}</label>
+                  <br>
+                  <input id="address" placeholder=" " formControlName="address" />
+
+                </div>
+              </div>
+
+
+            </div>
+          </div>
+
+          <div class="col-12 col-sm-12 col-md-2 col-lg-2 col-xl-2">
+
+            <div class=" massaDesktop">
+              <div class="dropzone-wrapperr container col-md-12">
+                <div class="dropzone-desc">
+                  <p>{{ "edituser-arraste" | translate }}</p>
+                  <button type="submit" class="btn btn-darkk btn-lg btn-square ml-auto">
+                    <i class="fas fa-camera-retro fa-1x"></i>
+                  </button>
+                </div>
+                <input type="file" name="img_logo" class="dropzone" accept="image/*" />
+              </div>
+            </div>
+
+
+          </div>
+
+
+
+          <div class="col-12 col-sm-12 col-md-2 col-lg-2 col-xl-2 mt-4">
+            <div class="label-float">
+              <label for="addressNumber">{{'AggregatorNewPartnerFisPerAddrNumb' | translate}}</label>
+              <br>
+              <input id="addressNumber" placeholder=" " formControlName="addressNumber" />
+
+            </div>
+          </div>
+
+          <div class="col-12 col-sm-12 col-md-5 col-lg-5 col-xl-5 mt-4">
+            <div class="label-float">
+              <label for="neighborhood">{{'AggregatorNewPartnerFisPerNeigh' | translate}}</label>
+              <br>
+              <input id="neighborhood" placeholder=" " formControlName="neighborhood" />
+
+            </div>
+          </div>
+
+          <div class="col-12 col-sm-12 col-md-3 col-lg-1 col-xl-1 mt-4">
+            <div class="label-float">
+              <label for="state">{{'AggregatorSalesDetailsUf' | translate}}</label>
+              <br>
+              <mat-form-field class="col-xl-12 pl-0">
+                <mat-select formControlName="state" matSelect (selectionChange)="change()">
+                  <mat-option></mat-option>
+                  <mat-option *ngFor="let state of states" [value]="state.sigla">
+                    {{ state.sigla }}
+                  </mat-option>
+                </mat-select>
+              </mat-form-field>
+            </div>
+          </div>
+
+          <div class="col-12 col-sm-12 col-md-4 col-lg-4 col-xl-4 mt-4">
+            <div class="label-float">
+              <label for="city">{{'AggregatorSalesDetailsCity' | translate}}</label>
+              <br>
+              <mat-form-field class="col-xl-12 pl-0">
+                <mat-select formControlName="city" matSelect>
+                  <mat-option></mat-option>
+                  <mat-option *ngFor="let cidade of cities" value="{{ cidade }}">
+                    {{ cidade.substr(8) }}
+                  </mat-option>
+                </mat-select>
+              </mat-form-field>
+            </div>
+          </div>
+
+          <div class="col-12 col-sm-12 col-md-3 col-lg-4 col-xl-4 ">
+            <div class="label-float">
+              <label for="complement">{{'AggregatorSalesDetailsCompl' | translate}}</label>
+              <br>
+              <input id="complement" placeholder=" " formControlName="complement" />
+            </div>
+          </div>
+
+          <div class="col-12 col-sm-12 col-md-4 col-lg-4 col-xl-4 ">
+            <div class="label-float">
+              <label for="phone">{{'AggregatorSalesDetailsPhone' | translate}}</label>
+              <br>
+              <input id="phone" placeholder=" " formControlName="phone" />
+            </div>
+          </div>
+
+          <div class="col-12 col-sm-12 col-md-4 col-lg-4 col-xl-4">
+            <div class="label-float">
+              <label for="email">E-mail</label>
+              <br>
+              <input id="email" placeholder=" " formControlName="email" />
+
+            </div>
+          </div>
+
+          <div class="col-12 col-sm-12 col-md-6 col-lg-6 col-xl-6 mt-3">
+            <div class="label-float">
+              <label for="site">{{'AggregatorNewPartnerJurPerSite' | translate}}</label>
+              <br>
+              <input id="site" placeholder=" " formControlName="site" />
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section *ngIf="massa">
+    <div class="row">
+      <div class="col-12">
+        <div class="dropzone-file container">
+          <div class="dropzone-desc">
+            <p>{{ "edituser-arraste" | translate }}</p>
+            <button type="submit" class="btn btn-darkk btn-lg btn-square ml-auto">
+              <i class="fas fa-cloud-upload-alt fa-1x"></i> {{'AggregatorNewPartnerBulkRegDrag' | translate}}
+            </button>
+          </div>
+          <input type="file" name="img_logo" class="dropzone" accept="file/*" />
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div class="d-flex justify-content-between mt-5">
+    <a (click)="goBack()" class="btn btn-redz">
+      {{'AggregatorSalesGoBack' | translate}}
+    </a>
+
+    <button type="submit" class="btn btn-greenz btn-lg btn-square ml-auto">
+      {{'ComercialNewCampNewAdd' | translate}}
+    </button>
+  </div>
+</form>

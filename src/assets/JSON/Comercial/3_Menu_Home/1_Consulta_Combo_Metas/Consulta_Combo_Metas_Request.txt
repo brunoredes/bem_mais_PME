@@ -1,0 +1,3 @@
+var userId = 2;
+
+this.http.get<any>(`${environment.apiUrl}/Vendors/${userId}/Goals`);

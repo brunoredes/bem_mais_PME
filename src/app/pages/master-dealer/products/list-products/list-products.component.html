@@ -1,0 +1,110 @@
+<!-- Filtro -->
+<section>
+  <form class="row" [formGroup]="formFilter" (ngSubmit)="findProducts()">
+    <mat-form-field class="col-md-10">
+      <mat-label>{{'MasterDealerSearchProduct' | translate}}</mat-label>
+      <input matInput (keyup)="applyFilter($event)">
+      <mat-icon matSuffix>search</mat-icon>
+    </mat-form-field>
+    <div class="col-md-2 text-right pl-0" >
+      <ul class="pl-0">
+        <li class="filter-button">
+          <a id="filter-products"><small>{{'dash-cancel-filtrar' | translate}} &nbsp;</small><i
+                  class="fa fa-sliders" aria-hidden="true"></i></a>
+        </li>
+        <div class="container mt-0">
+          <div class="filter-div filter-products mt-0 shadow-sm">
+            <div class="row">
+              <div class="col-md-12">
+                <div class="col-xl-12">
+                  <label for="brand">{{'MasterDealerProdFilterBrand' | translate}}</label>
+                </div>
+                <mat-form-field class="col-xl-12">
+                  <mat-select matSelect id="brand" name="brand" formControlName="brand">
+                    <mat-option value="1">Marca 1</mat-option>
+                    <mat-option value="2">Marca 2</mat-option>
+                    <mat-option value="3">Marca 3</mat-option>
+                  </mat-select>
+                </mat-form-field>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-md-12">
+                <div class="col-xl-12">
+                  <label for="model">{{'MasterDealerProdFilterModel' | translate}}</label>
+                </div>
+                <mat-form-field class="col-xl-12">
+                  <mat-select matSelect id="model" name="model" formControlName="model">
+                    <mat-option value="1">Modelo 1</mat-option>
+                    <mat-option value="2">Modelo 2</mat-option>
+                    <mat-option value="3">Modelo 3</mat-option>
+                  </mat-select>
+                </mat-form-field>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-md-12">
+                <div class="col-xl-12">
+                  <label for="category">{{'MasterDealerProdFilterCateg' | translate}}</label>
+                </div>
+                <mat-form-field class="col-xl-12">
+                  <mat-select matSelect id="category" name="category" formControlName="category">
+                    <mat-option value="{{ c.id }}" *ngFor="let c of categoryProducts">{{ c.name }}</mat-option>
+                  </mat-select>
+                </mat-form-field>
+              </div>
+            </div>
+            <div class="row">
+              <div class="mb-12 col-md-12">
+                <div class="col-xl-12">
+                  <label for="category">{{'MasterDealerProductFilterPrice' | translate}}</label>
+                  <br>         
+                  <ng5-slider [(value)]="minValue" [(highValue)]="maxValue" [options]="options"></ng5-slider>
+                </div>
+              </div>
+            </div>
+            <div class="float-rigth">
+              <button class="btn btn-primary rounded-pill">
+                {{ "dash-cancel-filtrar" | translate }}
+              </button>
+            </div>
+          </div>
+        </div>
+      </ul>
+    </div>
+  </form>
+</section>
+<!-- Fim filtro -->
+
+<app-table [dataSource]="dataSource" [displayedColumns]="displayedColumns" [columnsTitle]="columnsTitle"
+  (recordDelete)='setRecordDelete($event)' (updateElement)="updateRecord($event)">
+</app-table>
+
+<!--Modal remover uma revenda-->
+<div class="modal fade" id="deleteModal" tabindex="-1" role="dialog" aria-labelledby="deleteModal" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="bd-t-red"></div>
+    <div class="modal-content bordertopModal">
+
+      <div class="modal-header modalFormat">
+        <img class="m-auto d-block" src="assets/img/deseja-descartar.png" />
+      </div>
+      <div class="modal-body">
+        <h1 class="text-center">
+          {{'MasterDealerListModal' | translate}}
+        </h1>
+      </div>
+      <div class="row btn-center">
+        <a href="#" class="col-4 badgeModal btn-br50 text-center p-3 border border-primary" data-dismiss="modal"
+          aria-label="Fechar">
+          {{'CompareStateModalRemovNo' | translate}}
+        </a>
+        <a href="#" (click)="deleteRecord()" class="col-4 badgeModal badge-danger btn-br50 text-center p-3 "
+          data-dismiss="modal" aria-label="Fechar">
+          {{'CompareStateModalRemovYes' | translate}}
+        </a>
+      </div>
+    </div>
+  </div>
+</div>
+<!--final remover-->

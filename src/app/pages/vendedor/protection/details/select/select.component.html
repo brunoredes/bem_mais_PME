@@ -1,0 +1,410 @@
+<!-- Seleciona Produto-->
+<div class="row" style="padding-top: 15px;">
+    <div class="searchbox  col-8 col-sm-8 col-md-9 col-lg-10  col-xl-11 form-group has-search">
+        <span class="mr-3 fa fa-search form-control-feedback"></span>
+        <input type="text" autocomplete="off" class="pt-3 searchbar col-xl-12 col-lg-12"
+            placeholder="{{'vend-protection-details-select-buscar' | translate}}" id="search"
+            (keyup)="onKeyUpFilter('search')" [attr.data-target]="searchModal" data-toggle="modal"
+            (click)="showSearchModal()">
+        <div id="search-autocomplete" class="search-autocomplete" style="position: absolute;z-index: 10000000;">
+            <li class="search-result p-3" *ngIf="dataFilterAutoComplete.length == 0">
+                <div class="row">
+                    <div class="col-12 text-center">
+                        {{'vend-protection-details-select-naoencontrado' | translate}}
+                    </div>
+                </div>
+            </li>
+            <li class="search-result p-3" *ngFor="let d of dataFilterAutoComplete">
+                <div class="row">
+                    <div class="col-6 colsm-6 col-md-2 col-lg-1 col-xl-1 mt-3"><img class="img-fluid"
+                            src="{{ d.image }}" /></div>
+                    <div class="col-md-6 col-lg-8 colxl-8">
+                        <p class="m-0">{{ d.category + " " + d.name + " " + d.description }}</p>
+                        <small class="m-0">{{'vend-protection-details-select-valoraparelho' | translate}} R$
+                            1.407,12</small>
+                        <br>
+                        <div class="radio row">
+                            <div class="custom-radio newGreen tmGreen">
+                                <input type="radio" name="newUsedRadio" id="newSearch{{ d.id }}">
+                                <label class="mb-0 ml-1 text-white"
+                                    for="new{{ d.id }}">{{'vend-protection-details-select-novo' | translate}}</label>
+                            </div>
+                            <div class="newUsed tmUsed  custom-radio">
+                                <input type="radio" name="newUsedRadio" id="usedSearch{{ d.id }}">
+                                <label class="mb-0 ml-1 text-white"
+                                    for="used{{ d.id }}">{{'vend-protection-details-select-usado' | translate}}</label>
+                            </div>
+                        </div>
+                        <div class="collapse" id="collapseNewUsed{{ d.id }}" aria-expanded="false">
+                            <small
+                                class="text-danger mt-0">{{'vend-protection-details-select-campoobrigatorio' | translate}}</small>
+                        </div>
+                    </div>
+                    <div class="col-md-4 col-lg-3 col-xl-3 mt-3">
+                        <button style="border-radius: 50px!important;" type="button" class="btn btn-outline-primary"
+                            (click)="selectProduct(d, 'ConsultaSeguro')" data-toggle="collapse"
+                            [attr.href]="requiredNewUsed">{{'vend-protection-details-select-seguro' | translate}}
+                        </button>
+                    </div>
+                    <span class="border-bottom">
+                    </span>
+                </div>
+            </li>
+        </div>
+    </div>
+    <div class="col-3 col-sm-3 col-md-3 col-lg-2 col-xl-1 zIndex-9">
+        <nav>
+            <ul class="navbar-right" style="display: contents;">
+                <li>
+                    <a id="cart" class="cart-bg rounded border-cart shadow-sm" matTooltip="{{'shopping-icon' | translate}}" >
+                        <i class="fas fa-shopping-cart"></i><span class="badge badge-light">{{qtdInsuranceInCart - 1}}</span></a>
+                </li>
+            </ul>
+        </nav>
+    </div>
+</div>
+
+<div class="row">
+    <div class="col-xl-6">
+      <bem-mais-title></bem-mais-title>
+
+    </div>
+    <div class="col-12 col-sm-12 col-md-6 col-lg-9 col-xl-4" style="text-align: right; z-index: 100;">
+        <nav>
+            <div class="nav nav-tabs nav-fill project-tab p-top-0 d-flex" id="nav-tab" role="tablist">
+
+                <a class="nav-item nav-link active in show" id="smartphone" data-toggle="tab"
+                    (click)="alterTab('Smartphone')" role="tab" aria-controls="nav-condicoes"
+                    aria-selected="true">Smartphones</a>
+
+                <a class="nav-item nav-link" id="tablet" data-toggle="tab" role="tab" (click)="alterTab('Tablet')"
+                    aria-controls="nav-cobertura" aria-selected="false">Tablets</a>
+
+                <a class="nav-item nav-link" id="smartwatchs" data-toggle="tab" role="tab"
+                    (click)="alterTab('Smartwatchs')" aria-controls="nav-franquia" aria-selected="false">Smartwatchs</a>
+
+            </div>
+        </nav>
+    </div>
+    <div class="col-12 col-sm-12 col-md-5 col-lg-3 col-xl-2" style="text-align: right;">
+        <ul>
+            <!-- <li class="filter-button"><small>Filtrar &nbsp;</small><i class="fa fa-sliders" aria-hidden="true"></i></li> -->
+            <li class="filter-button shadow-sm">
+                <a id="filter"><small>{{'vend-protection-details-select-filtrar' | translate}} &nbsp;</small><i
+                        class="fa fa-sliders" aria-hidden="true"></i></a>
+            </li>
+
+            <div class="container mt-0">
+                <div class="filter-div filter mt-0 shadow-sm filterGeral">
+                    <div class="row ml-1">
+                        <h5>{{'vend-protection-details-select-marca' | translate}}</h5>
+                    </div>
+                    <div class="row ml-1">
+                        <label class="col-sm-4 p-0"><input type="checkbox" (click)="filterProduct('Samsung','marca')"
+                                id="Samsung">
+                            Samsung</label>
+                        <label class="col-sm-4 p-0"><input type="checkbox" (click)="filterProduct('LG','marca')"
+                                id="LG"> LG</label>
+                        <label class="col-sm-4 p-0"><input type="checkbox" (click)="filterProduct('Motorola','marca')"
+                                id="Motorola"> Motorola</label>
+                        <label class="col-sm-4 p-0"><input type="checkbox" (click)="filterProduct('Positivo','marca')"
+                                id="Positivo"> Positivo</label>
+                        <label class="col-sm-4 p-0"><input type="checkbox" (click)="filterProduct('Asus','marca')"
+                                id="Asus">
+                            Asus</label>
+                        <label class="col-sm-4 p-0"><input type="checkbox" (click)="filterProduct('Iphone','marca')"
+                                id="Iphone">
+                            Iphone</label>
+                    </div>
+                    <hr>
+                    <div class="row ml-1">
+                        <h5>{{'vend-protection-details-select-memoria' | translate}}</h5>
+                    </div>
+                    <div class="row ml-1">
+                        <label class="col-sm-4 p-0"><input type="checkbox" (click)="filterProduct('8GB','memoria')"
+                                id="8GB"> 8.0
+                            GB</label>
+                        <label class="col-sm-4 p-0"><input type="checkbox" (click)="filterProduct('16GB','memoria')"
+                                id="16GB"> 16.0
+                            GB</label>
+                        <label class="col-sm-4 p-0"><input type="checkbox" (click)="filterProduct('32GB','memoria')"
+                                id="32GB"> 32.0
+                            GB</label>
+                        <label class="col-sm-4 p-0"><input type="checkbox" (click)="filterProduct('64GB','memoria')"
+                                id="64GB"> 64.0
+                            GB</label>
+                        <label class="col-sm-4 p-0"><input type="checkbox" (click)="filterProduct('128GB','memoria')"
+                                id="128GB">
+                            128.0 GB</label>
+                    </div>
+                    <hr>
+                    <div class="row ml-1">
+                        <h5>{{'vend-protection-details-select-celularcor' | translate}}</h5>
+                    </div>
+                    <div class="row ml-1">
+                        <label class="col-sm-4 p-0"><input type="checkbox" (click)="filterProduct('Preto','cor')"
+                                id="Preto">
+                            Preto</label>
+                        <label class="col-sm-4 p-0"><input type="checkbox" (click)="filterProduct('Dourado','cor')"
+                                id="Dourado">
+                            Dourado</label>
+                        <label class="col-sm-4 p-0"><input type="checkbox" (click)="filterProduct('Branco','cor')"
+                                id="Branco">
+                            Branco</label>
+                        <label class="col-sm-4 p-0"><input type="checkbox" (click)="filterProduct('Cinza','cor')"
+                                id="Cinza">
+                            Cinza</label>
+                        <label class="col-sm-4 p-0"><input type="checkbox" (click)="filterProduct('Azul','cor')"
+                                id="Azul">
+                            Azul</label>
+                    </div>
+                    <br>
+                    <button class="btn btn-primary rounded-pill pull-right">{{'btn-filtrar' | translate}}</button>
+                    <!-- <button class="btn btn-secondary ml-3" (click)="clearFilter(true)">Limpar</button> -->
+                </div>
+            </div>
+        </ul>
+    </div>
+</div>
+<div>
+    <p style="text-align: center;" *ngIf="productNotFound">
+        {{'vend-protection-details-select-naoencontrado' | translate}}
+    </p>
+</div>
+<div class="row">
+    <div class="col-12 col-sm-12 col-md-6 col-lg-3 col-xl-3 mb-3" *ngFor="let i of dataFilter">
+        <div class="col-xl-12 container rounded border-box whitebg shadow-sm">
+
+            <div class="product_inner">
+                <div class="col-xl-12 padding-heart">
+                    <div class="col-4 pull-right"> <i class="fa fa-heart-o mclose" aria-hidden="true"  matTooltip="{{'heart-icon' | translate}}" ></i></div>
+                    <div style="clear: both;"></div>
+                    <div
+                        class="col-5 col-sm-5 col-md-4 col-lg-6 col-xl-4 custom-control custom-radio label-new newGreen">
+                        <input type="radio" class=" custom-control-input " id="new{{i.id}}" name="estado">
+                        <label class="custom-control-label" for="new{{i.id}}"><small
+                                style="font-size:x-small">{{'vend-protection-details-select-novo' | translate}}</small></label>
+                    </div>
+                    <div style="clear: both;"></div>
+                    <div
+                        class="col-5 col-sm-5 col-md-4 col-lg-6 col-xl-4 custom-control custom-radio label-new newUsed">
+                        <input type="radio" class=" custom-control-input " id="used{{i.id}}" name="estado">
+                        <label class="custom-control-label" for="used{{i.id}}"><small
+                                style="font-size:x-small">{{'vend-protection-details-select-usado' | translate}}</small></label>
+                    </div>
+                </div>
+                <span>
+                    <img src="{{i.image}}" class="fit-img">
+                    <div class="col-xl-12 product-title">
+                        <h5 class="mt-2">{{i.name}}</h5>
+
+                    </div>
+                    <div>
+                        <small>{{i.description}}</small>
+                    </div>
+                </span>
+
+                <button (click)="selectProduct(i, 'addProduto')"
+                    id="addProduct{{i.id}}">{{'vend-protection-details-select-addproduto' | translate}}</button>
+
+            </div>
+
+            <div class="product_overlay" id="product_overlay_addProduct{{i.id}}">
+                <h2>{{'vend-protection-details-select-produtoadicionado' | translate}}</h2>
+                <i class="fa fa-check" style="color: #62BC00!important;"></i>
+            </div>
+
+        </div>
+
+    </div>
+    <ngx-loading [show]="this.loading.getLoadingSelectProduct()" [config]="{backdropBorderRadius: '10px',
+                          backdropBackgroundColour: 'rgba(0, 0, 0, 0)',
+                          animationType: ngxLoadingAnimationTypes.threeBounce,
+                          fullScreenBackdrop: true,
+                          primaryColour: '#D3D3D3',
+                          secondaryColour: '#D3D3D3',
+                          tertiaryColour: '#D3D3D3'}" [template]="loadingTemplate">
+    </ngx-loading>
+
+</div>
+
+
+<!--Modal descartar-->
+
+<div class="modal fade" id="modaldeletaprod" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+    aria-hidden="true">
+
+    <div class="modal-dialog" role="document">
+        <div class="bd-t-red"></div>
+        <div class="modal-content bordertopModal">
+
+            <div class="modal-header modalFormat">
+                <img class="m-auto d-block" src="assets/img/deseja-descartar.png" />
+            </div>
+            <div class="modal-body">
+                <h1 class="text-center">{{'vend-protection-details-select-modaldeletarproduto' | translate}}</h1>
+            </div>
+
+            <div class="row btn-center">
+                <a href="#" class="col-4 badge btn-br50 text-center p-3 border border-primary" data-dismiss="modal"
+                    aria-label="Fechar">
+                    {{'vend-protection-details-select-modalnao' | translate}}
+                </a>
+
+                <a href="#" class="col-4 badge badge-danger btn-br50 text-center p-3 " data-dismiss="modal"
+                    aria-label="Fechar" (click)="removeSelected()">
+                    {{'vend-protection-details-select-modalsim' | translate}}
+                </a>
+            </div>
+
+        </div>
+    </div>
+</div>
+
+<!-- modal buscar produto -->
+<div aria-labelledby="myModalLabel" class="modalSearch fade search-modal" id="search-modal" role="dialog">
+    <button aria-label="Close" class="close" data-dismiss="modal" type="button">
+        <span aria-hidden="true">×</span>
+    </button>
+    <div class="modal-dialog ml-0">
+        <div class="container">
+            <div class="mb-2">
+                <input class="overlay-modalSearch" placeholder="{{'vend-protection-details-select-buscar' | translate}}"
+                    id="searchModal" (keyup)="onKeyUpFilter('searchModal')">
+            </div>
+            <div class="search-suggestion">
+                <span class="d-block mb-1">
+                    <strong>{{'vend-protection-details-select-sugestoes' | translate}}</strong>
+                </span>
+                <ul class="row search-list">
+                    <li class="search-result p-3" *ngFor="let d of dataFilterAutoCompleteModal">
+                        <div class="row">
+                            <div class="col-3">
+                                <img class="img-fluid" src="{{ d.image }}" />
+                            </div>
+                            <div class="col-9">
+                                <p class="m-0">{{ d.name }}</p>
+                                <small class="m-0">{{ d.description }}</small>
+                                <small class="m-0">{{'"vend-protection-details-select-valoraparelho' | translate}} R$
+                                    1.407,12</small>
+                                <br>
+
+                                <div class="radio row pl-3 mt-2">
+                                    <mat-radio-group>
+                                        <mat-radio-button color="primary" value="Novo" id="newSearchModal{{ d.id }}"
+                                            class="ml-0 newSearch">
+                                            <strong>{{'vend-protection-details-select-novo' | translate}}</strong>
+                                        </mat-radio-button>
+                                        <mat-radio-button color="primary" value="Usado" id="usedSearchModal{{ d.id }}"
+                                            class="ml-4 usedSearch">
+                                            <strong>{{'vend-protection-details-select-usado' | translate}}</strong>
+                                        </mat-radio-button>
+                                    </mat-radio-group>
+                                </div>
+                                <div class="collapse" id="collapseNewUsed" aria-expanded="false">
+                                    <small
+                                        class="text-danger mt-0">{{'vend-protection-details-select-campoobrigatorio' | translate}}</small>
+                                </div>
+                            </div>
+                            <div class="col-12 mt-2">
+                                <button style="border-radius: 8px!important; width: 100%; pointer-events: all;"
+                                    type="button" class="btn btn-primary"
+                                    (click)="selectProduct(d, 'ConsultaSeguroModal')"
+                                    [attr.data-dismiss]="dimissModalSearch" [attr.href]="requiredNewUsed">
+                                    {{'vend-protection-details-select-consultseguro' | translate}}
+                                </button>
+                            </div>
+                            <span class="border-bottom">
+                            </span>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<div id="content-grid-feed" class="col-12 col-sm-6 col-md-6 col-lg-3 col-xl-3 p-2 pt-5">
+    <span id="sidebar__close" class="iconClose" style="display: none;"><i class="fas fa-lg fa-times-circle"></i></span>
+
+    <div id="image" class="rounded border-box-cart mt-0 bg-card-light-blue mb-2"
+        *ngFor="let item of cart; let i = index;">
+        <ul class="shopping-cart-items mb-0 p-0">
+            <H4 class="greyDark">{{'vend-protection-details-select-seguro' | translate}} - {{ item.name }}</H4>
+            <li class="row clearfix mb-0 mt-2">
+                <div class="col-3">
+                    <img class="img-fluid rounded-circle" src="/assets/img/thumb_insurance2.png"
+                        alt="imagem do seguro" />
+                </div>
+
+                <div class="col-2 p-0 ">
+                    <h5 class="greyDark">{{'vend-protection-details-select-seguro' | translate}}</h5>
+                    <small class="greyDark">{{item.name}}</small>
+                </div>
+
+                <div class="col-3 p-0 ">
+                    <h5 class="greyDark">{{'vend-protection-details-select-coberturas' | translate}}</h5>
+                    <small class="greyDark">12 meses de Roubo & Furto Qualificado</small>
+                </div>
+
+                <div class="col-3 p-0">
+                    <h5 class="greyDark">{{'vend-protection-details-select-valorseguro' | translate}}</h5>
+                    <small class="greyDark">R$ {{item.planPriceSelected?.amount || 0}},00</small>
+                </div>
+
+                <div class="col-1 pl-1">
+
+
+                    <a class="nostyle  d-grid" matTooltip="{{'view-icon' | translate}}">
+                        <i class="fas fa-lg fa-eye bg-icon-blue"></i>
+                    </a>
+                    <a id="descartarReply" href="#" data-toggle="modal" (click)="selectInsuranceToRemove(i)"
+                        data-target='#modaldeletaprod' class="nostyle  d-grid" matTooltip="{{'view-icon' | translate}}" >
+                        <i class="fas fa-times-circle fa-lg bg-icon-red "></i>
+                    </a>
+                </div>
+
+                <div class="row clearfix mb-0" *ngIf="item.productSelected as product">
+
+                    <span class="border-bottom col-xl-12 mt-1 mb-3 ml-3 mr-3 p-2"></span>
+
+                    <div class="col-3 ml-3">
+                        <img class="img-fluid rounded-circle" [src]="product.image" alt="imagem do produto" />
+                    </div>
+
+                    <div class="col-2 p-0">
+                        <h5 class="greyDark">{{product.category}}</h5>
+                        <small class="greyDark"> {{product.name}} </small>
+                    </div>
+
+                    <div class="col-3 p-0 pl-4 pr-4">
+                        <h5 class="greyDark">{{'vend-protection-details-select-produto' | translate}}</h5>
+                        <div class="col-12 newGreen border-box3 ml-1">
+                            <span class="text-white"><small> {{product.status}} </small></span>
+                        </div>
+                    </div>
+
+                    <div class="col-3 p-0">
+                        <h5 class="greyDark">{{'vend-protection-details-select-fabricante' | translate}}</h5>
+                        <small class="greyDark">Samsung</small>
+                    </div>
+
+                </div>
+            </li>
+            <div *ngIf="!qtdInsuranceInCart">
+                <div class="d-flex justify-content-center">
+                    <img src="/assets/img/empty-cart.png" style="width: 35%;">
+                </div>
+                <p style="text-align: center; color: #bfd2e3; margin-top: 10px; font-size: 2em;">
+                    {{'vend-protection-details-select-cardvazio' | translate}}
+                </p>
+            </div>
+        </ul>
+    </div>
+    <div _ngcontent-iwy-c21="" class="col-12 col-sm-12 col-lg-6 d-flex justify-content-between mt-2 float-right">
+        <a _ngcontent-iwy-c21="" (click)="addInsurance()" class="col btn pr-4 pl-4 pull-right">
+            <i class="fas fa-plus"></i> {{'vend-protection-details-select-adicionar' | translate}}</a>
+    </div>
+
+</div>

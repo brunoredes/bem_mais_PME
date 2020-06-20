@@ -1,0 +1,14 @@
+<div class="box" (click)="file.click()" (drop)="onDrop($event)" (dragover)="onDragOver($event)">
+  <div class="title">
+    <div class="fileName" *ngIf="_imageName; else default">{{ _imageName }}</div>
+    <ng-template #default >{{ placeholder | translate }}</ng-template>
+  </div>
+  <img [src]="_imageData" alt="">
+  <button class="btn btn-primary" [disabled]="_disable" type="button">
+    <i class="fas fa-camera-retro fa-1x"></i>
+  </button>
+  <input type="file" class="d-none" accept="image/*" (change)="_changeImage($event)" #file/>
+</div>
+
+
+

@@ -1,0 +1,6 @@
+
+var userId = 234;
+var categoryId = 1; (Produtos)
+
+this.http.get<any>(`${environment.apiUrl}/Sales/Cancellations?userId=${userId}&categoryId=${categoryId}`);
+

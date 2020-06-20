@@ -1,0 +1,34 @@
+{
+    "data": {
+        "categories": [
+            {
+                "id":1,
+                "name": "Problemas de Comissões"
+            },
+            {
+                "id":2,
+                "name": "Problemas de Pagamento"
+            },
+            {
+                "id":3,
+                "name": "Reclamações de Clientes na Loja"
+            },
+            {
+                "id":4,
+                "name": "Falha no Sistema"
+            },
+            {
+                "id":5,
+                "name": "Elogios"
+            },
+            {
+                "id":6,
+                "name": "Sugestões"
+            }
+        ]
+    },
+    "message": "Ok",
+    "hasError": false,
+    "errorDataCollection": null,
+    "statusCode": 200
+}

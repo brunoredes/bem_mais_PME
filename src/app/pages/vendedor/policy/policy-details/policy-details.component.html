@@ -1,0 +1,168 @@
+<bem-mais-title></bem-mais-title>
+<div class="row">
+    <div class="col-12">
+        <nav>
+            <section class="main-contents" id="main-contents">
+                <div class="row">
+                    <div class="col-xl-12">
+                        <div class="col-xl-6 row" style="float:right; text-align:right;">
+                            <div class="col-xl-4">
+                                <a data-toggle="modal" data-target="#modalEmail">
+                                    <small>{{'vend-consultavendas-details-viaemail' | translate}}</small>
+                                </a>
+                            </div>
+                            <div class="col-xl-4">
+                                <a (click)="print()">
+                                    <small>{{'vend-consultavendas-details-imprimir' | translate}}</small>
+                                </a>
+                            </div>
+                            <div class="col-xl-4">
+                                <a href="#" data-toggle="modal" data-target="#modalCancelamento" class="nostyle"><small>
+                                        {{'vend-consultavendas-details-cancelar' | translate}}</small></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-xl-12">
+                        <div class="col-xl-12 container rounded border-box whitebg shadow-sm pr-0 pl-0 mt-3">
+                            <div class="col-xl-12 product-title pt-3" style="border-bottom: 1px solid #DEE4E8">
+                                <h5>{{'vend-consultavendas-details-seguro' | translate}}</h5>
+                            </div>
+                            <div class="col-xl-12 row pt-2">
+                                <div class="col-xl-6 row">
+                                    <div class="col-xl-2"><img src="{{insurance.image}}" alt="img"></div>
+                                    <div class="col-xl-10">{{insurance.description}}
+                                    </div>
+                                </div>
+                                <div class="col-xl-6">{{'vend-consultavendas-details-valortotal' | translate}}
+                                    {{format(insurance.value)}}</div>
+                            </div>
+                        </div>
+                        <div class="col-xl-12 container rounded border-box whitebg shadow-sm pr-0 pl-0 mt-3">
+                            <div class="col-xl-12 product-title pt-3" style="border-bottom: 1px solid #DEE4E8">
+                                <h5>{{'vend-consultavendas-details-produto' | translate}}</h5>
+                            </div>
+                            <div class="col-xl-12 row pt-2">
+                                <div class="col-xl-6 row">
+                                    <div class="col-xl-2"><img src="{{product.image}}" alt="img"></div>
+                                    <div class="col-xl-10">{{product.name}}</div>
+                                </div>
+                                <div class="col-xl-6">
+                                    {{'vend-consultavendas-details-valortotal-produto' | translate}}
+                                    {{format(product.value)}}</div>
+                            </div>
+                        </div>
+                        <div class="col-xl-12 container rounded border-box whitebg shadow-sm pr-0 pl-0 mt-3">
+                            <div class="col-xl-12 product-title pt-3" style="border-bottom: 1px solid #DEE4E8">
+                                <h5>{{'vend-consultavendas-details-detalhescliente' | translate}}</h5>
+                            </div>
+                            <div class="col-xl-12 row pt-2">
+                                <div class="col-xl-4">
+                                    {{'vend-consultavendas-details-nome' | translate}}
+                                    <small>{{consumer.name}}</small><br>
+                                    {{'vend-consultavendas-details-dtnasc' | translate}}
+                                    <small>{{consumer.birthDate}}</small><br>
+                                    {{'vend-consultavendas-details-cpf' | translate}}
+                                    <small>{{consumer.cpf}}</small><br>
+                                    {{'vend-consultavendas-details-rg' | translate}} <small>{{consumer.rg}}</small>
+                                </div>
+                                <div class="col-xl-4">
+                                    {{'vend-consultavendas-details-endereco' | translate}}
+                                    <small>{{consumer.address}}</small><br>
+                                    {{'vend-consultavendas-details-complemento' | translate}}
+                                    <small>{{consumer.complement}}</small><br>
+                                    {{'vend-consultavendas-details-cep' | translate}}
+                                    <small>{{consumer.postalCode}}</small><br>
+                                    {{'vend-consultavendas-details-cidade' | translate}}
+                                    <small>{{consumer.city}}</small><br>
+                                    {{'vend-consultavendas-details-estado' | translate}}
+                                    <small>{{consumer.state}}</small>
+                                </div>
+                                <div class="col-xl-4">
+                                    {{'vend-consultavendas-details-telefone' | translate}}
+                                    <small>{{consumer.phone}}</small><br>
+                                    {{'vend-consultavendas-details-celular' | translate}}
+                                    <small>{{consumer.cellPhone}}</small><br>
+                                    {{'vend-consultavendas-details-email' | translate}}
+                                    <small>{{consumer.email}}</small>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+                <div class="modal fade" id="modalCancelamento" tabindex="-1" role="dialog"
+                    aria-labelledby="exampleModalLabel" aria-hidden="true">
+                    <div class="modal-dialog" role="document">
+                        <div class="modal-content bordertopModal">
+                            <div class="modal-header modalFormat pl-4 ml-1">
+                                <h5 class="modal-title" id="exampleModalLabel">
+                                    {{'vend-consultavendas-details-selecionado' | translate}}</h5><br>
+                                <strong>{{'vend-consultavendas-details-apolice' | translate}}</strong><br><small>{{'vend-consultavendas-details-data' | translate}}
+                                    19/11/2019 - {{'vend-consultavendas-details-cliente' | translate}} André Luiz -
+                                    {{'vend-consultavendas-details-vendedor' | translate}}
+                                    Jhonatas</small>
+                                <button type="button" class="close mclose" data-dismiss="modal" aria-label="Fechar">
+                                    <span aria-hidden="true">&times;</span>
+                                </button>
+                            </div>
+                            <div class="modal-body">
+                                <div class="col-xl-12">
+                                    <label>
+                                        <small>{{'vend-consultavendas-details-informecancel' | translate}}</small>
+                                    </label><br>
+                                    <mat-select name="perfil" id="perfil" class="col-xl-12 select">
+                                        <mat-option value="slc" class="select"></mat-option>
+                                        <mat-option value="insat" class="select">
+                                            {{'vend-consultavendas-details-insatisfacao' | translate}}</mat-option>
+                                        <mat-option value="desist" class="select">
+                                            {{'vend-consultavendas-details-desistencia' | translate}}</mat-option>
+                                    </mat-select>
+                                    <!-- <i class="fa fa-chevron-down"></i> -->
+                                </div>
+                                <div class="col-xl-12 pt-3">
+                                    <label><small>{{'vend-consultavendas-details-descricao' | translate}}</small></label><br>
+                                    <textarea name="comment" class="col-xl-12" form="usrform" rows="5"></textarea>
+                                </div>
+                            </div>
+                            <div class="col-xl-12 pt-3 pl-4 ml-1">
+                                <small>{{'vend-consultavendas-details-desejacancelar' | translate}}</small>
+                            </div>
+                            <div class="modal-footer modalFormat p-4">
+                                <button type="button" class="btn mbtn btn-outline-danger pl-4 pr-4"
+                                    data-dismiss="modal">{{'vend-consultavendas-details-nao' | translate}}</button>
+                                <button type="button" class="btn mbtn btn-success msuccess pl-4 pr-4"
+                                    style="float:right;"
+                                    data-dismiss="modal">{{'vend-consultavendas-details-sim' | translate}}</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="modal fade" id="modalEmail" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+                    aria-hidden="true">
+
+                    <div class="modal-dialog" role="document">
+                        <div class="bd-t-blue"></div>
+                        <div class="modal-content bordertopModal">
+
+                            <div class="modal-header modalFormat">
+                                <img class="img-fluid col-12 m-120" src="assets/img/confirmacao-feedback.png" />
+                            </div>
+                            <div class="modal-body">
+                                <h1 class="text-center">{{email}}</h1>
+                            </div>
+
+
+                            <a id="btnsuccessfully" class="col-4 badge badge-success text-center p-3 "
+                                data-dismiss="modal" aria-label="Fechar">OK!</a>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </nav>
+    </div>
+
+</div>

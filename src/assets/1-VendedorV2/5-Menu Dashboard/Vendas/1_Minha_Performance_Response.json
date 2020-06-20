@@ -1,0 +1,12 @@
+{
+    "data": {
+        "name": "Roberto Luiz",
+        "office": "Vendedor",
+        "salesAmount": 500,
+        "percent": 100
+    },
+    "message": "Ok",
+    "hasError": false,
+    "errorDataCollection": null,
+    "statusCode": 200
+}

@@ -1,0 +1,142 @@
+$green: #62bc00;
+$red: #ff3636;
+$Darkblue: #02296a;
+$LightBlue: #005aab;
+
+.filter-button {
+  padding: 5px 20px;
+  display: inline-block;
+  text-decoration: none;
+  border-radius: 50px;
+  border: 1px solid #787878;
+  color: #707070;
+}
+
+// Modal Inicio
+.modal-header {
+  border-bottom: 0 !important;
+}
+
+.modal-footer {
+  border-top: 1px solid transparent;
+}
+
+.btn-center {
+  margin: 2px;
+  display: flex;
+  justify-content: space-around;
+}
+.badgeModal {
+  border-radius: 50px !important;
+  margin: auto;
+}
+
+.bd-t-red {
+  background-color: #ff3636;
+  border-radius: 0.3rem 0.3rem 0 0;
+  height: 7px;
+  position: absolute;
+  width: 100%;
+  z-index: 1;
+}
+// Modal Fim
+
+.filter-products {
+  background: white;
+  width: 33vw;
+  position: absolute;
+  border-radius: 3px;
+  padding: 20px;
+  z-index: 99;
+  border-radius: 20px;
+  top: 50px;
+  text-align: left;
+  right: 0;
+  display: none;
+  margin-right: 10px;
+  label {
+    margin-bottom: 2px;
+  }
+}
+
+.filter-products:after {
+  bottom: 100%;
+  left: 89%;
+  border: solid transparent;
+  content: " ";
+  height: 0;
+  width: 0;
+  position: absolute;
+  pointer-events: none;
+  border-bottom-color: white;
+  border-width: 8px;
+  margin-left: -8px;
+}
+
+.d-grid {
+  display: grid;
+}
+.justify-content-rigth {
+  justify-content: right;
+}
+
+button {
+  cursor: pointer;
+  margin-top: 10px;
+
+  padding: 10px 20px;
+
+  color: white;
+  font-size: 12px;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+
+::ng-deep .filter-products .mat-form-field-infix {
+  border-top: 0px !important;
+  padding: 0.25rem !important;
+}
+
+::ng-deep {
+  .ng5-slider span {
+    font-size: 14px !important;
+  }
+  .ng5-slider .ng5-slider-pointer {
+    width: 22px !important;
+    height: 22px !important;
+    top: -9px !important;
+    background-color: $LightBlue !important;
+  }
+  .ng5-slider .ng5-slider-pointer:after {
+    display: none !important;
+  }
+  .ng5-slider .ng5-slider-selection {
+    background: $LightBlue !important;
+  }
+}
+
+@media (max-width: 1024px) {
+  @media (max-width: 768px) {
+    .filter-products {
+      width: 40vw;
+    }
+
+    @media (max-width: 425px) {
+      .filter-products {
+        width: 73vw;
+      }
+
+      @media (max-width: 375px) {
+        .filter-products {
+          width: 77vw;
+        }
+
+        @media (max-width: 320px) {
+          .filter-products {
+            width: 85vw;
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,24 @@
+{
+  "data": {
+    "banners": [
+      {
+        "title": "Voe coma ZURICH",
+        "description": "lorem ipsum voe com a zurich ",
+        "backgroundImage": "assets/img/banner-1.jpg",
+        "url": "http://www.zurich.com.br"
+      }
+      
+    ]
+  },
+  "message": "OK",
+  "hasError": false,
+  "errorDataCollection": [
+    {
+      "code": "string",
+      "message": "string",
+      "url": "string",
+      "detail": "string"
+    }
+  ],
+  "statusCode": 200
+}

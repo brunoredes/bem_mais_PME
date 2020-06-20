@@ -1,0 +1,4 @@
+
+var partnerId = 123;
+
+this.http.delete<any>(`${environment.apiUrl}/Partners/${partnerId}`);

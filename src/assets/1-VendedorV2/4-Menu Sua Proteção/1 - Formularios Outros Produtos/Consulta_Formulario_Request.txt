@@ -1,0 +1,2 @@
+var insuranceId = 5; (Viagem)
+this.http.get<any>(`${environment.apiUrl}/Insurances/Form?insuranceId=${insuranceId}`);

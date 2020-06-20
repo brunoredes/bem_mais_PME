@@ -1,0 +1,198 @@
+<!-- Filtro -->
+<section>
+  <form [formGroup]="formFilter" (ngSubmit)="findSellers()">
+    <div class="text-right">
+      <ul>
+        <li class="filter-button">
+          <a id="filter-listSellers">
+            <small>{{'dash-cancel-filtrar' | translate}} &nbsp;</small>
+            <i class="fa fa-sliders" aria-hidden="true"></i>
+          </a>
+        </li>
+        <div class="container mt-0">
+          <div class="filter-div filter-listSellers mt-0 shadow-sm">
+            <div class="row">
+              <div class="col-md-6 pr-0 pl-0">
+                <div class="col-xl-12">
+                  <label for="code">{{'ManagerFilterIdSalesman' | translate}}</label>
+                </div>
+                <mat-form-field class="col-xl-12">
+                  <input matInput id="code" name="code" formControlName="code">
+                </mat-form-field>
+              </div>
+              <div class="col-md-6 pr-0 pl-0">
+                <div class="col-xl-12">
+                  <label for="profile">{{'ComercialNewCampFilterProf' | translate}}</label>
+                </div>
+                <mat-form-field class="col-xl-12">
+                  <mat-select matSelect id="profile" name="profile" formControlName="profile">
+                    <mat-option value="1">Perfil 1</mat-option>
+                    <mat-option value="2">Perfil 2</mat-option>
+                    <mat-option value="3">Perfil 3</mat-option>
+                  </mat-select>
+                </mat-form-field>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-md-12 pr-0 pl-0">
+                <div class="col-xl-12">
+                  <label for="name">{{'AggregatorSalesDetailsClientName' | translate}}</label>
+                </div>
+                <mat-form-field class="col-xl-12">
+                  <input matInput id="name" name="name" formControlName="name">
+                </mat-form-field>
+              </div>
+            </div>
+            <div class="row mb-2">
+              <div class="col-md-12">
+                <div class="row pr-0 pl-0">
+                  <div class="col-xl-12">
+                    <label>{{'ManagerFilterRegDate' | translate}}</label>
+                  </div>
+                </div>
+                <div class="row mt-3">
+                  <div class="col-md-6 pr-0 pl-0">
+                    <mat-form-field class="col-xl-12">
+                      <input formControlName="startDate" matInput [matDatepicker]="pickerSellerDe"
+                        placeholder="{{'place-de' | translate}}">
+                      <mat-datepicker-toggle matSuffix [for]="pickerSellerDe"></mat-datepicker-toggle>
+                      <mat-datepicker #pickerSellerDe></mat-datepicker>
+                    </mat-form-field>
+                  </div>
+                  <div class="col-md-6 pr-0 pl-0">
+                    <mat-form-field class="col-xl-12 datePickerAte">
+                      <input formControlName="endDate" matInput [matDatepicker]="pickerSellerAte"
+                        placeholder="{{'place-ate' | translate}}">
+                      <mat-datepicker-toggle matSuffix [for]="pickerSellerAte"></mat-datepicker-toggle>
+                      <mat-datepicker #pickerSellerAte></mat-datepicker>
+                    </mat-form-field>
+                  </div>
+                </div>
+
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-md-12 pr-0 pl-0">
+                <div class="col-xl-12">
+                  <label for="store">{{'MasterDealerStore' | translate}}</label>
+                </div>
+                <mat-form-field class="col-xl-12">
+                  <mat-select matSelect id="store" name="store" formControlName="store">
+                    <mat-option value="1">Loja 1</mat-option>
+                    <mat-option value="2">Loja 2</mat-option>
+                    <mat-option value="3">Loja 3</mat-option>
+                  </mat-select>
+                </mat-form-field>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-md-4 pr-0 pl-0">
+                <div class="col-xl-12">
+                  <label for="uf">UF</label>
+                </div>
+                <mat-form-field class="col-xl-12">
+                  <mat-select matSelect id="uf" name="uf" formControlName="uf" (selectionChange)="change()">
+                    <mat-option></mat-option>
+                    <mat-option *ngFor="let state of uf" [value]="state.sigla">
+                      {{ state.sigla }}
+                    </mat-option>
+                  </mat-select>
+                </mat-form-field>
+              </div>
+              <div class="col-md-8 pr-0 pl-0">
+                <div class="col-xl-12">
+                  <label for="city">{{'ComercialSalesPartnersTableCity' | translate}}</label>
+                </div>
+                <mat-form-field class="col-xl-12">
+                  <mat-select matSelect id="city" name="city" formControlName="city">
+                    <mat-option></mat-option>
+                    <mat-option *ngFor="let cidade of cities" value="{{ cidade }}">
+                      {{ cidade.substr(8) }}
+                    </mat-option>
+                  </mat-select>
+                </mat-form-field>
+              </div>
+            </div>
+            <div class="float-rigth">
+              <button class="btn btn-primary rounded-pill">
+                {{ "dash-cancel-filtrar" | translate }}
+              </button>
+            </div>
+          </div>
+        </div>
+      </ul>
+    </div>
+  </form>
+</section>
+<!-- Fim filtro -->
+
+<app-table [dataSource]="dataSource" [displayedColumns]="displayedColumns" [columnsTitle]="columnsTitle"
+  (recordDelete)='setRecordDelete($event)' (viewElement)="viewRecord($event)" (updateElement)="updateRecord($event)">
+</app-table>
+
+<!--Modal remover uma revenda-->
+<div class="modal fade" id="deleteModal" tabindex="-1" role="dialog" aria-labelledby="deleteModal" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="bd-t-red"></div>
+    <div class="modal-content bordertopModal">
+
+      <div class="modal-header modalFormat">
+        <img class="m-auto d-block" src="assets/img/deseja-descartar.png" />
+      </div>
+      <div class="modal-body">
+        <h1 class="text-center">
+          {{'MasterDealerListModal' | translate}}
+        </h1>
+      </div>
+      <div class="row btn-center">
+        <a href="#" class="col-4 badgeModal btn-br50 text-center p-3 border border-primary" data-dismiss="modal"
+          aria-label="Fechar">
+          {{'ComercialAdvFilterModalNo' | translate}}
+        </a>
+        <a href="#" (click)="deleteRecord()" class="col-4 badgeModal badge-danger btn-br50 text-center p-3 "
+          data-dismiss="modal" aria-label="Fechar">
+          {{'ComercialAdvFilterModalYes' | translate}}
+        </a>
+      </div>
+    </div>
+  </div>
+</div>
+<!--final remover-->
+
+<!--card vendedores-->
+<div class="hoverWrapper">
+  <div id="hoverShow1">
+    <div id="close" (click)="viewRecord()" style="cursor: pointer;">
+      <i class="fas fa-times"></i>
+    </div>
+    <img src="/assets/img/user-8.jpg">
+
+    <div class="row p-3">
+
+      <div class="col-12 col-sm-12 col-md-8 col-lg-8 col-xl-8">
+        <span>{{ nameManager }}</span>
+      </div>
+
+      <div class="col-12 col-sm-12 col-md-4 col-lg-4 col-xl-4 text-right">
+        <span>{{ ageManager }} anos</span>
+      </div>
+
+      <div class="col-12 col-sm-12 col-md-5 col-lg-5 col-xl-5">
+        <span>{{ profileManager }}</span>
+      </div>
+
+      <div class="col-12 col-sm-12 col-md-7 col-lg-7 col-xl-7 text-right">
+        <span>{{ cityManager }}</span>
+      </div>
+
+      <div class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12">
+        <span>{{ emailManager }}</span>
+      </div>
+
+      <div class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12">
+        <span>{{ cellPhoneManager }}</span>
+      </div>
+    </div>
+  </div>
+</div>
+<!--fim card vendedores-->

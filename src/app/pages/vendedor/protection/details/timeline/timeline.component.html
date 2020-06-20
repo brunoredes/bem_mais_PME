@@ -1,0 +1,334 @@
+<div id="menu-overlay"></div>
+<section class="pr-4" id="Title">
+    <div class="row">
+        <div class="col-6 col-sm-6 col-md-9 col-lg-10 col-xl-10">
+            <div class="d-flex justify-content-between align-items-center page-info w-100 d-none d-md-block p-0">
+                <span class="navbar-brand">{{title}}</span>
+            </div>
+        </div>
+        <div class="col-sm-12 col-md-3 col-lg-2 col-xl-2" style="text-align: right;">
+            <nav>
+                <div class="container">
+                    <ul class="navbar-right">
+                        <li>
+                            <a id="cart" class="cart-bg rounded border-cart shadow-sm">
+                                <i class="fas fa-shopping-cart"></i><span
+                                    class="badge badge-light">{{qtdInsuranceInCart}}</span></a>
+                        </li>
+                    </ul>
+                    <!--end navbar-right -->
+                </div>
+                <!--end container -->
+            </nav>
+
+            <div class="container mt-0">
+                <div class="shopping-cart mt-0 shadow-sm">
+                    <div id="image" class="rounded border-box mt-0 bg-card-light-blue mb-2"
+                        *ngFor="let item of cart; let i = index">
+                        <div class="shopping-cart-items mb-0">
+                            <H4 class="greyDark">{{'vend-protection-details-timeline-detalhe' | translate}}</H4>
+                          
+                               <div class="row">
+
+                                <div class="col-3 col-sm-3 col-md-3 col-lg-2 col-xl-2">
+                                    <img class="img-fluid rounded-circle" src="/assets/img/thumb_insurance2.png"
+                                        alt="imagem do seguro" />
+                                </div>
+                        
+                                <div class="col-6 col-sm-6 col-md-7 col-lg-2 col-xl-2 p-0 ">
+                                    <h5 class="lineHeight mt-4 greyDark">
+                                        {{'vend-protection-details-timeline-seguro' | translate}}</h5>
+                                    <small class="greyDark">{{item.name}}</small>
+                                </div>
+                        
+                                <div class="col p-0 ">
+                                    <h5 class="lineHeight mt-4 greyDark">
+                                        {{'vend-protection-details-timeline-coberturas' | translate}}</h5>
+                                    <small class="greyDark">12 meses de Roubo & Furto Qualificado</small>
+                                </div>
+                        
+                                <div class="col-6 col-sm-6 col-md-7 col-lg-4 col-xl-3 p-0 ">
+                                    <h5 class="lineHeight mt-4 greyDark">
+                                        {{'vend-protection-details-timeline-valorseguro' | translate}}</h5>
+                                    <small class="greyDark">R$ {{item.planPriceSelected?.amount || 0}},00</small>
+                                </div>
+                        
+                                <div class="col-1 btn-cart-ev">
+                        
+
+                                    <a class="nostyle  d-grid" matTooltip="{{'view-icon' | translate}}">
+                                        <i class="fas fa-lg fa-eye bg-icon-blue"></i>
+                                    </a>
+                                    <a id="descartarReply" href="#" data-toggle="modal" matTooltip="{{'delete-icon' | translate}}"
+                                        (click)="selectInsuranceToRemove(i)" data-target='#modaldeletaprod'
+                                        class="nostyle  d-grid">
+                                        <i class="fas fa-times-circle fa-lg bg-icon-red "></i>
+                                    </a>
+                                </div>
+
+
+                               </div>
+
+                               <hr/>
+
+                               <div class="row" *ngIf="item.productSelected as product">
+
+                                <div class="col-3 col-sm-3 col-md-3 col-lg-2 col-xl-2">
+                                    <img class="img-fluid rounded-circle" [src]="product.image"
+                                        alt="imagem do seguro" />
+                                </div>
+                    
+                                <div class="col-6 col-sm-6 col-md-7 col-lg-3 col-xl-3 p-0 ">
+                                    <h5 class="lineHeight mt-4 greyDark">{{product.category}}</h5>
+                                    <small class="greyDark"> {{product.name}} </small>
+                                </div>
+                    
+                                <div class="col p-0 ">
+                                    <h5 class="lineHeight mt-4 greyDark">
+                                        {{'vend-protection-details-timeline-produto' | translate}}</h5>
+                                    <div class="col-5 newGreen border-box3">
+                                        <span class="text-white"><small> {{product.status}} </small></span>
+                                    </div>
+                                </div>
+                    
+                                <div class="col-6 col-sm-6 col-md-7 col-lg-4 col-xl-3 p-0 ">
+                                    <h5 class="lineHeight mt-4 greyDark">
+                                        {{'vend-protection-details-timeline-fabricante' | translate}}</h5>
+                                    <small class="greyDark">Samsung</small>
+                                </div>
+                    
+                                <div class="col-1 btn-cart-ev">
+&nbsp;
+                                </div>
+
+
+                               </div>
+
+                            <div *ngIf="!qtdInsuranceInCart">
+                                <div class="d-flex justify-content-center">
+                                    <img src="/assets/img/empty-cart.png" style="width: 35%;">
+                                </div>
+                                <p style="text-align: center; color: #bfd2e3; margin-top: 10px; font-size: 2em;">
+                                    {{'vend-protection-details-timeline-carrinhovazio' | translate}}
+                                </p>
+                            </div>
+
+                        </div>
+                    </div>
+                    <div _ngcontent-iwy-c21=""
+                        class="col-12 col-sm-12 col-lg-6 d-flex justify-content-between mt-2 float-right">
+                        <a _ngcontent-iwy-c21="" (click)="addInsurance()"
+                            class="col btn btn-secondaryz pr-4 pl-4 pull-right">
+                            <i class="fas fa-plus"></i>{{'vend-protection-details-timeline-adicionar' | translate}}</a>
+                    </div>
+                </div>
+                <!--end shopping-cart -->
+            </div>
+            <!--end container -->
+        </div>
+    </div>
+</section>
+
+<section>
+    <mat-horizontal-stepper linear labelPosition="bottom" #stepper (selectionChange)="noneTitle($event)">
+        <ng-template matStepperIcon="edit">
+            <mat-icon>check</mat-icon>
+        </ng-template>
+
+        <mat-step completed="false">
+            <ng-template matStepLabel>{{'vend-protection-details-timeline-selecioneseguro' | translate}}</ng-template>
+            <app-product></app-product>
+            <div>
+                <div class="col-md-12 d-flex justify-content-between">
+                    <a (click)="removeProduct()" class="btn btn-secondaryz pr-4 pl-4">{{'btn-voltar' | translate}}</a>
+                    <button class="btn btn-secundaryzz btn-lg btn-square pr-4 pl-4"
+                        (click)="product(stepper)">{{'btn-avancar' | translate}}</button>
+                </div>
+            </div>
+        </mat-step>
+
+        <mat-step completed="false">
+            <ng-template matStepLabel>{{'vend-protection-details-timeline-dadosproduto' | translate}}</ng-template>
+            <app-safe (isInvalidForm)="invalidFormTwoStep = $event" *ngIf="safe"></app-safe>
+            <div>
+                <div class="col-md-12 d-flex justify-content-between">
+                    <button type="submit" class="btn btn-secondaryz pr-4 pl-4" (click)="select()"
+                        matStepperPrevious>{{'btn-voltar' | translate}}</button>
+
+                    <button type="submit" class="btn btn-secundaryzz btn-lg btn-square pr-4 pl-4"
+                        (click)="register(stepper)"
+                        [disabled]="invalidFormTwoStep">{{'btn-avancar' | translate}}</button>
+                </div>
+            </div>
+        </mat-step>
+
+        <mat-step completed="false">
+            <ng-template matStepLabel>{{'vend-protection-details-timeline-cadastrocliente' | translate}}</ng-template>
+            <app-register-client (isInvalidForm)="displayEvent($event)"></app-register-client>
+            <div>
+                <div class="col-md-12 d-flex justify-content-between">
+                    <button type="submit" class="btn btn-secondaryz pr-4 pl-4"
+                        matStepperPrevious>{{'btn-voltar' | translate}}</button>
+                    <button class="btn btn-secundaryzz btn-lg btn-square pr-4 pl-4"
+                        (click)="nextCustomerRegistration(stepper)">{{'btn-avancar' | translate}}</button>
+                    <!-- <button data-toggle="modal" [attr.data-target]="informePgto"
+            class="btn btn-secundaryzz btn-lg btn-square pr-4 pl-4" (click)="nextCustomerRegistration()">{{'btn-avancar' | translate}}</button>
+          <div class="modal fade" id="informePgto" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+            aria-hidden="true">
+            <div class="modal-dialog" role="document">
+              <div class="modal-content bordertopModal">
+                <img class="img-fluid" src="./assets/img/img-select-pay.png" />
+                <div class="modal-body">
+                  <div class="text-center mb-4">
+                    <h1>{{'vend-protection-details-timeline-informepgto' | translate}}</h1>
+                  </div>
+                  <button type="button" class="btn rounded-button btn-gradient-blue-green btn-lg btn-block"
+                    data-dismiss="modal" (click)="noneTitle(stepper)" matStepperNext>{{'vend-protection-details-timeline-pgtocartao' | translate}}</button>
+                  <button type="button" class="btn rounded-button btn-outline-primary btn-lg btn-block"
+                    data-dismiss="modal">{{'vend-protection-details-timeline-pgtolink' | translate}}</button>
+                </div>
+              </div>
+            </div>
+          </div> -->
+                </div>
+            </div>
+        </mat-step>
+
+        <mat-step completed="false">
+            <ng-template matStepLabel>{{'vend-protection-details-timeline-informepgto' | translate}}</ng-template>
+            <app-pay></app-pay>
+            <div>
+                <div class="col-md-12 d-flex flex-row-reverse">
+                    <button (click)="nextInformPayment(stepper)" type="submit"
+                        class="btn btn-secundaryzz btn-lg btn-square pr-4 pl-4">{{'btn-avancar' | translate}}</button>
+                </div>
+            </div>
+        </mat-step>
+
+        <mat-step completed="false">
+            <ng-template matStepLabel>{{'vend-protection-details-timeline-comprovante' | translate}}</ng-template>
+            <app-finish></app-finish>
+        </mat-step>
+    </mat-horizontal-stepper>
+</section>
+
+<!--Modal descartar-->
+
+<div class="modal fade" id="modaldeletaprod" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+    aria-hidden="true">
+
+    <div class="modal-dialog" role="document">
+        <div class="bd-t-red"></div>
+        <div class="modal-content bordertopModal">
+
+            <div class="modal-header modalFormat">
+                <img class="m-auto d-block" src="assets/img/deseja-descartar.png" />
+            </div>
+            <div class="modal-body">
+                <h1 class="text-center">{{'vend-protection-details-timeline-modaldeletar' | translate}}</h1>
+            </div>
+
+            <div class="row btn-center">
+                <a href="#" class="col-4 badge btn-br50 text-center p-3 border border-primary" data-dismiss="modal"
+                    aria-label="Fechar">
+                    {{'vend-protection-details-timeline-modalnao' | translate}}
+                </a>
+
+                <a href="#" class="col-4 badge badge-danger btn-br50 text-center p-3 " data-dismiss="modal"
+                    aria-label="Fechar" (click)="removeSelected()">
+                    {{'vend-protection-details-timeline-modalsim' | translate}}
+                </a>
+            </div>
+
+        </div>
+    </div>
+</div>
+
+<div id="content-grid-feed" class="col-12 col-sm-6 col-md-6 col-lg-3 col-xl-3 p-2 pt-5">
+    <span id="sidebar__close" class="iconClose" style="display: none;"><i class="fas fa-lg fa-times-circle"></i></span>
+
+    <div id="image" class="rounded border-box-cart mt-0 bg-card-light-blue mb-2"
+        *ngFor="let item of cart; let i = index;">
+        <ul class="shopping-cart-items mb-0 p-0">
+            <H4 class="greyDark">{{'vend-protection-details-timeline-seguro' | translate}} - {{ item.name }}</H4>
+            <li class="row clearfix mb-0 mt-2">
+                <div class="col-3">
+                    <img class="img-fluid rounded-circle" src="/assets/img/thumb_insurance2.png"
+                        alt="imagem do seguro" />
+                </div>
+
+                <div class="col-2 p-0 ">
+                    <h5 class="greyDark">{{'vend-protection-details-timeline-seguro' | translate}}</h5>
+                    <small class="greyDark">{{item.name}}</small>
+                </div>
+
+                <div class="col-3 p-0 ">
+                    <h5 class="greyDark">{{'vend-protection-details-timeline-coberturas' | translate}}</h5>
+                    <small class="greyDark">12 meses de Rouvo & Furto Qualificado</small>
+                </div>
+
+                <div class="col-3 p-0">
+                    <h5 class="greyDark">{{'vend-protection-details-timeline-valorseguro' | translate}}</h5>
+                    <small class="greyDark">R$ {{item.planPriceSelected?.amount || 0}},00</small>
+                </div>
+
+                <div class="col-1 pl-1">
+
+                    <a class="nostyle  d-grid" matTooltip="{{'view-icon' | translate}}">
+                        <i class="fas fa-lg fa-eye bg-icon-blue"></i>
+                    </a>
+                    <a id="descartarReply" href="#" data-toggle="modal" (click)="selectInsuranceToRemove(i)" matTooltip="{{'delete-icon' | translate}}"
+                        data-target='#modaldeletaprod' class="nostyle  d-grid">
+                        <i class="fas fa-times-circle fa-lg bg-icon-red "></i>
+                    </a>
+                </div>
+
+                <div class="row clearfix mb-0" *ngIf="item.productSelected as product">
+
+                    <span class="border-bottom col-xl-12 mt-1 mb-3 ml-3 mr-3 p-2"></span>
+
+                    <div class="col-3 ml-3">
+                        <img class="img-fluid rounded-circle" [src]="product.image" alt="imagem do produto" />
+                    </div>
+
+                    <div class="col-2 p-0">
+                        <h5 class="greyDark">{{product.category}}</h5>
+                        <small class="greyDark"> {{product.name}} </small>
+                    </div>
+
+                    <div class="col-2 p-0">
+                        <h5 class="greyDark">{{'vend-protection-details-timeline-produto' | translate}}</h5>
+                        <div class="col-12 newGreen border-box3 ml-1" style="text-align:center;">
+                            <span class="text-white"><small> {{product.status}} </small></span>
+                        </div>
+                    </div>
+
+                    <div class="col-3 p-0">
+                        <h5 class="greyDark">{{'vend-protection-details-timeline-fabricante' | translate}}</h5>
+                        <small class="greyDark">Samsung</small>
+                    </div>
+
+                    <div class="col-1 btn-cart-ev">
+                        <a id="descartarReply" href="#" data-toggle="modal" (click)="selectProductToRemove(i)"
+                            data-target="#modaldeletaprod" class="nostyle  d-grid">
+                            <i class="fas fa-times-circle fa-lg bg-icon-red "></i>
+                        </a>
+                    </div>
+                </div>
+            </li>
+            <div *ngIf="!qtdInsuranceInCart">
+                <div class="d-flex justify-content-center">
+                    <img src="/assets/img/empty-cart.png" style="width: 35%;">
+                </div>
+                <p style="text-align: center; color: #bfd2e3; margin-top: 10px; font-size: 2em;">
+                    {{'vend-protection-details-timeline-carrinhovazio' | translate}}
+                </p>
+            </div>
+        </ul>
+    </div>
+    <div _ngcontent-iwy-c21="" class="col-12 col-sm-12 col-lg-6 d-flex justify-content-between mt-2 float-right">
+        <a _ngcontent-iwy-c21="" (click)="addInsurance()" class="col btn pr-4 pl-4 pull-right">
+            <i class="fas fa-plus"></i> {{'vend-protection-details-timeline-adicionar' | translate}}</a>
+    </div>
+
+</div>

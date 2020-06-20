@@ -1,0 +1,89 @@
+<bem-mais-title></bem-mais-title>
+<a href="{{url}}" target="_blanck">
+    <div class="card mb-4 shadow-sm zInddex">
+        <div class="card-body p-0 ">
+            <div id="myCarousel" class="carousel slide" data-ride="carousel">
+                <div class="carousel-inner">
+                    <div class="tiem active">
+                        <img class="img-fluid border-banner" src="./assets/img/banner-1.jpg" width="100%"
+                            alt="Los Angeles">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</a>
+<div class="row pt-1" *ngIf="intitutional">
+    <div class="col-sm-12 col-md-6 col-lg-3 zInddex" *ngFor="let i of intitutional">
+        <a href="{{i.url}}" target="_blank">
+            <div class="card mb-3 shadow-sm h-100">
+                <img class="img-fluid mx-auto mt-3" width="190" src="{{i.picture}}" alt="">
+
+                <div class="card-body">
+                    <h5 class="text-center">{{i.title}}</h5>
+                    <p class="card-text text-center">{{i.description}}</p>
+                    <div class="d-flex justify-content-between align-items-center">
+                    </div>
+                </div>
+            </div>
+        </a>
+    </div>
+
+    <div class="col-sm-12 col-md-12 col-lg-6" *ngIf="!!bestWeek">
+        <div class="card mb-4 shadow-sm h-100">
+            <div class="card-body">
+                <perfect-scrollbar style="max-height: 260px;">
+                <h5>{{'vend-home-melhoresdasemana' | translate}}</h5>
+
+
+                <div class="col-xl-12" id="style-4">
+                    <div class="force-overflow" id="scroll">
+                        <div class="row lightBlue-bg rounded-pill p-2 mb-3" *ngFor="let i of bestWeek">
+                            <div class="col-4 col-sm-4 col-md-2 col-lg-2 m-auto" >
+                                <img src="./assets/img/user-1.jpg" class="img-fluid rounded-circle" alt="Responsive image">
+                            </div>
+                            <div class="col-md-4 pt-2">
+                                <h5>{{i.name}}</h5>
+                                <span>{{i.profile}}</span>
+                            </div>
+                            <div class="col-md-4 pl-0">
+                                <p class="text-muted mb-1">
+                                    {{'vend-home-vendas' | translate}}
+                                    {{i.sales}}
+                                </p>
+                                <div class="progress over-visible mb-0" style="height: 5px">
+                                    <div class="progress-bar customize-progress-bar" role="progressbar" aria-valuenow="100"
+                                        aria-valuemin="0" aria-valuemax="100" id="sales{{i.id}}">
+                                        <span id="porcentSales{{i.id}}">{{i.salesPercent}}%</span>
+                                    </div>
+                                </div>
+                                <p class="text-muted mb-1">
+                                    {{'vend-home-meta' | translate}}
+                                    {{i.goal}}
+                                </p>
+                                <div class="progress over-visible mb-1" style="height: 5px">
+                                    <div class="progress-bar customize-progress-bar"
+                                        role="progressbar" aria-valuenow="100" aria-valuemin="0"
+                                        aria-valuemax="100" id="goal{{i.id}}">
+                                        <span
+                                            id="porcentGoals{{i.id}}">{{i.goalPercent}}%</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-4 col-sm-4 col-md-2 col-lg-2 m-auto">
+                                <img src="./assets/img/trophy-parceiro.svg"  style="width: 70%;" class="img-fluid " alt="Responsive image">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </perfect-scrollbar>
+            </div>
+        </div>
+    </div>
+
+
+</div>
+
+
+

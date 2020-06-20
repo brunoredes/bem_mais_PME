@@ -1,0 +1,15 @@
+<div class="card mb-4 shadow-sm">
+    <div class="card-body">
+        <div class="col-xl-12 row">
+            <h5>{{'AggregatorDashGoalSetting' | translate}}</h5>
+        </div>
+        <div  class="pb-0 mb-0 metas">
+            <strong>{{ goalsBeats.qtdGoals}}x</strong>
+        </div><br>
+        <div class="pt-0 mt-0 pb-2" style="text-align: center">
+            <small>{{'AggregatorDashGoalInTheLast' | translate}}<br>{{ goalsBeats.qtdMonths}}
+                {{'vend-protection-details-product-meses' | translate}}</small></div>
+        <br>
+        <div><small><strong>{{'AggregatorDashGoalNextGoal' | translate}}: </strong>{{ format(goalsBeats.nextGoal) }}</small> </div>
+    </div>
+</div>

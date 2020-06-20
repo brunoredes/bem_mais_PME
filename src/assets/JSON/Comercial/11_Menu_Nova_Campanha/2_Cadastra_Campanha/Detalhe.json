@@ -1,0 +1,18 @@
+{
+    "data": {
+        "code": 123,
+        "profile": "Corretor",
+        "title": "Lorem ipsum dolor",
+        "startDate": "10/11/2019",
+        "endDate": "12/12/2019",
+        "insurance": "Roubo e Furto",
+        "goal": "Meta Roubo e Furto",
+        "amount": 123.42,
+        "goalDescription": "Atingir 50 mil em vendas",
+        "image": "image.png"
+    },
+    "message": "Ok",
+    "hasError": false,
+    "errorDataCollection": null,
+    "statusCode": 200
+}

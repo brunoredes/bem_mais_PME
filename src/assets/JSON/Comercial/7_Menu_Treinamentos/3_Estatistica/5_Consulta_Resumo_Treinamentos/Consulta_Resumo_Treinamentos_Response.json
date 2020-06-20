@@ -1,0 +1,42 @@
+{
+    "data": {
+        "trainings": [
+            {
+                "id": 1,
+                "name": "Manual de Boas Práticas",
+                "profile": "Revendedor",
+                "title": "Lorem Ipsum Dolor",
+                "description": "Lorem ipsum is symple, lorem ipsum is symple",
+                "rating": 80
+            },
+            {
+                "id": 2,
+                "name": "Manual de Boas Práticas",
+                "profile": "Corretor",
+                "title": "Lorem Ipsum Dolor",
+                "description": "Lorem ipsum is symple, lorem ipsum is symple",
+                "rating": 60
+            },
+            {
+                "id": 3,
+                "name": "Manual de Boas Práticas",
+                "profile": "Revendedor",
+                "title": "Lorem Ipsum Dolor",
+                "description": "Lorem ipsum is symple, lorem ipsum is symple",
+                "rating": 40
+            },
+            {
+                "id": 4,
+                "name": "Manual de Boas Práticas",
+                "profile": "Corretor",
+                "title": "Lorem Ipsum Dolor",
+                "description": "Lorem ipsum is symple, lorem ipsum is symple",
+                "rating": 70
+            }
+        ]
+    },
+    "message": "Ok",
+    "hasError": false,
+    "errorDataCollection": null,
+    "statusCode": 200
+}

@@ -1,0 +1,4 @@
+var retailerId = 123; (Loja Samsung 123)
+var productId = 1234; (Samsung Galaxy A50)
+
+this.http.get<any>(`${environment.apiUrl}/Insurances/Retails?retailerId=${retailerId}&productId=${productId}`);

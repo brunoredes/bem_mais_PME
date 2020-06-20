@@ -1,0 +1,13 @@
+{
+    "data": {
+        "paymentSuccess": true,
+        "idPayment": 654987,
+        "idOrder": 12345,
+        "statusOrder": 2,
+        "message": ""
+    },
+    "message": "Ok",
+    "hasError": false,
+    "errorDataCollection": null,
+    "statusCode": 200
+}

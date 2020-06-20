@@ -1,0 +1,62 @@
+.sizeTicket small {
+  font-size: 0.7vw;
+  padding: 0;
+  margin: 0;
+}
+#sizeTicket {
+  padding: .93rem !important;
+}
+
+.cardWidth{width: 8.6vw;}
+
+
+@media(max-width:1440px){
+
+  #sizeTicket {
+    padding: .8rem !important;
+  }
+
+  .cardWidth{width: 17.7vw;}
+
+  @media(max-width:1366px){
+
+    .cardWidth{
+      width: 17.3vw;
+  }
+
+
+  }
+
+}
+
+
+
+
+@media(max-width:1024px){
+
+  .cardWidth{width: 18.95vw;}
+
+
+  @media(max-width: 768px){
+
+    .cardWidth{width: 17.4vw;}
+
+
+  }
+}
+
+
+@media(max-width:425px){
+
+  .cardWidth{width:auto}
+
+  .sizeTicket{padding: 10px;}
+
+  .sizeTicket small {
+    font-size: 3vw!important;
+    font-weight: 500;
+    padding: 0;
+    margin: 0;
+ }
+
+}

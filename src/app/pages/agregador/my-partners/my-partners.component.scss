@@ -1,0 +1,100 @@
+#myDIV{
+  
+    position: absolute;
+    right: 0;
+  
+  
+  }
+  #myDIV>.btnDash {
+    border: none;
+    outline: none;
+    padding: 10px 16px;
+    cursor: pointer;
+    border-radius: 50px;
+    margin-right: 15px;
+    }
+    
+    /* Style the active class, and buttons on mouse-over */
+    #myDIV>.active, .btnDash:hover {
+    background-color: #666;
+    color: white!important;
+    border-radius: 50px;
+    margin-right: 15px;
+    box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.075) !important;
+    }
+    #myDIV>.btnDash a{font-size: 0.8em;}
+    
+    #baseNav>nav {
+      position: relative;
+      z-index: 0;
+      display: flex;
+      flex-wrap: wrap;
+      //width: 600px;
+      //height: 300px;
+      margin: auto;
+      
+    }
+    
+    // .item {
+    //   //display: flex;
+    //   justify-content: center;
+    //   align-items: center;
+    //   width: calc(280px / 2);
+    //   text-align: center;
+    //   font-family: sans-serif;
+    //   font-size: .75em;
+    //   text-decoration: none;
+    //   //height: 100px;
+    //   margin-top: 10px;
+    //   text-transform: uppercase;
+    //   // background: white; // Uncomment to mask
+    //   color: #a1a1a1;
+    //   transition: color .2s;
+      
+    //   &.hover,
+    //   &:hover {
+    //     background: 0;
+    //     color: #fff;
+    //     transition: color .2s .1s;
+    //   }
+    // }
+    
+    .item-indicator {
+      position: absolute;
+      z-index: -1;
+      width: calc(100% / 3);
+      height: calc(123px / 3);
+      background: #707070;
+      transition: top .2s ease-in-out, left .2s ease-in-out;
+      border-radius: 50px;
+    }
+  
+    @media only screen and(max-width:425px){
+  
+      #myDIV {
+          
+        position: relative;
+        right: 0!important; 
+        display: grid;
+        text-align: center;
+        top: 10px;
+    }
+  
+  
+    @media only screen and(max-width:320px){
+  
+      #myDIV {
+        position: relative;
+      /* right: 0 !important; */
+      top: 10px;
+      /* clear: both; */
+      display: inline-grid;
+      width: 100%;
+      text-align: center;
+       }
+  }
+  
+  
+    }
+
+    a {color: #414658!important}

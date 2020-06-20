@@ -1,0 +1,46 @@
+{
+    "data": {
+        "feedbacks": [
+            {
+                "userName": "Elvis Coelho",
+                "category": "Sugestão",
+                "content": "Lorem Ipsum os simply dummy text of the printing",
+                "status": 1,
+                "statusDescription": "Pendente",
+                "startDate": "01/12/2019",
+                "endDate": ""
+            },
+            {
+                "userName": "Elvis Coelho",
+                "category": "Sugestão",
+                "content": "Lorem Ipsum os simply dummy text of the printing",
+                "status": 1,
+                "statusDescription": "Atendido",
+                "startDate": "01/12/2019",
+                "endDate": "05/12/2019"
+            },
+            {
+                "userName": "Elvis Coelho",
+                "category": "Sugestão",
+                "content": "Lorem Ipsum os simply dummy text of the printing",
+                "status": 1,
+                "statusDescription": "Pendente",
+                "startDate": "01/12/2019",
+                "endDate": ""
+            },
+            {
+                "userName": "Elvis Coelho",
+                "category": "Sugestão",
+                "content": "Lorem Ipsum os simply dummy text of the printing",
+                "status": 1,
+                "statusDescription": "Atendido",
+                "startDate": "01/12/2019",
+                "endDate": "05/12/2019"
+            }
+        ]
+    },
+    "message": "Ok",
+    "hasError": false,
+    "errorDataCollection": null,
+    "statusCode": 200
+}

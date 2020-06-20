@@ -1,0 +1,109 @@
+<div>
+
+    <div ng-sidebar-content>
+
+        <div class="wrapper">
+            <!-- Sidebar  -->
+            <nav id="sidebar">
+
+                <div class="row ">
+                    <div class="col pt-3 mr-3">
+                        <button type="button" id="sidebarCollapse" class="btn float-right sc">
+                            <span><img src="./assets/img/arrow-close.png" width="30"></span>
+                        </button>
+                    </div>
+                </div>
+                <div class="sidebar-header text-center">
+                    <h3 class="mx-autoe"><img class="img-fluid text-center" src="./assets/img/logo-bem-mais-full.png">
+                    </h3>
+                    <strong><img src="./assets/img/logo-bem-mais-thumb.png"></strong>
+                </div>
+                <!-- <div class="row container">
+                    <div class="sidebar-user-name mt-1 mr-2 d-none">
+                        <small>Trocar idioma</small>
+                    </div> -->
+                <div class="d-flex justify-content-center container mb-2" id="lang">
+
+                    <a class="d-flex wh " (click)="language('en')">
+                        <img width="20" src="./assets/img/icon-ingles.png" matTooltip="{{'idioma-ingles' | translate}}"/>
+                        <span id="en" [className]="iconMudaEn" ></span>
+                    </a>
+                    <a class="d-flex mr-3 ml-3 wh " (click)="language('es')">
+                        <img width="20" src="./assets/img/incon-espanha.png" matTooltip="{{'idioma-espanhol' | translate}}"/>
+                        <span id="es" [className]="iconMudaEs"></span>
+                    </a>
+                    <a class="d-flex wh " (click)="language('pt')">
+                        <img width="20" src="./assets/img/icon-brasil.png" matTooltip="{{'idioma-portugues' | translate}}"/>
+                        <span id="pt" [className]="iconMudaPt"></span>
+                    </a>
+                </div>
+                <!-- </div> -->
+
+
+                <ul class="list-unstyled components text-center">
+                    <li>
+                        <div class="sidebar-container">
+                            <div class="user-section text-center">
+                                <div class="sidebar-user-wrap">
+                                    <div class="sidebar-user-inner">
+
+                                        <div class="row">
+                                            <div class="col-12">
+                                                <div class="thumb-wrap">
+                                                    <img alt="Chankya Admin" [src]="currentUser?.picture" width="70"
+                                                        height="70">
+                                                </div>
+                                                <div id="trofeu" class="trophy">
+
+                                                    <img alt="Chankya Admin" class="img-fluid"
+                                                        src="./assets/img/trophy.png" width="15" height="15">
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="sidebar-user-info-wrap">
+                                            <div class="sidebar-user-name">{{currentUser?.name}}</div>
+                                            <div class="sidebar-user-name"><span>{{currentUser?.profile?.name}}</span>
+                                            </div>
+                                            <div id="retailer" class="sidebar-user-name">
+                                                <div class="bg-client">{{currentUser?.retailer.name}}</div>
+                                            </div>
+                                            <div class="sidebar-user-name">
+                                                <div class="edit-profile" (click)="editProfile()"><i
+                                                        class="material-icons d-none">edit</i>
+                                                    <span>{{'edituser-title' | translate}}</span></div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+
+                </ul>
+                <ul class="components" id="tag_li" style="color: #fff;">
+                    <perfect-scrollbar id="item">
+                        <li *ngFor="let i of itemsMenu">
+                            <a id="menu-{{i.id}}" [routerLink]="i.router" routerLinkActive="active" matTooltip="{{i.name | translate}}" matTooltipPosition="right">
+                                <i class="material-icons">{{i.icon}}</i>
+                                <span>{{i.name | translate}}</span>
+                            </a>
+                        </li>
+
+                        <li>
+                            <a (click)="logout()" matTooltip="{{'menu-vendedor-deslogar' | translate}}" matTooltipPosition="right">
+                                <i class="material-icons">power_settings_new</i>
+                                <span>{{'menu-vendedor-deslogar' | translate}}</span>
+                            </a>
+                        </li>
+                    </perfect-scrollbar>
+                </ul>
+            </nav>
+        </div>
+    </div>
+    <div class="red-width pull-right" id="red-width">
+        <div class="red mt-1 px-4" id="red">
+            <ng-content></ng-content>
+        </div>
+    </div>
+</div>

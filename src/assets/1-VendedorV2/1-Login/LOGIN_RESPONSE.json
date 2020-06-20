@@ -1,0 +1,32 @@
+{
+  "data": {
+    "user": {
+      "id": "100",
+      "name": "Elvis",
+      "profile": {
+        "id": 1,
+        "name": "Vendedor"
+      },
+      "picture": "assets/user.png",
+      "retailer": {
+        "id": "59999",
+        "name": "FASTSHOP",
+        "store": {
+          "id": "1",
+          "name": "Loja Shopping Eldorado"
+        }
+      }
+    }
+  },
+  "message": "OK",
+  "hasError": false,
+  "errorDataCollection": [
+    {
+      "code": "string",
+      "message": "string",
+      "url": "string",
+      "detail": "string"
+    }
+  ],
+  "statusCode": 200
+}

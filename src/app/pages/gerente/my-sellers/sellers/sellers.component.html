@@ -1,0 +1,18 @@
+
+<section class="pr-0 pb-0" *ngIf="!update">
+    <div class="row  ml-0">
+        <div class="col-12 col-sm-12 col-md-4 col-lg-4 col-xl-4 mt-0 p-0">
+            
+            <bem-mais-title></bem-mais-title>
+           
+        </div>
+
+        <div class="col-12 col-sm-12 col-md-8 col-lg-8 col-xl-8 mt-3" *ngIf="!update">
+            <div id="myDIV">
+                <a id="btnDashLista" routerLink="list" routerLinkActive="active" class="btnDash ">{{'ManagerSellerList' | translate}}</a>
+                <a id="btnDashMinhas" routerLink="create" routerLinkActive="active" class="btnDash "><i class="fa fa-plus"></i> {{'ManagerSellerNewSal' | translate}}</a>
+            </div>
+        </div>
+    </div>
+</section>
+<router-outlet></router-outlet>

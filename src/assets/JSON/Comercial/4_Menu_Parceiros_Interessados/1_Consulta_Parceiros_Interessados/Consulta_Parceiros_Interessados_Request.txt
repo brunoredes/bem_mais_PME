@@ -1,0 +1,16 @@
+
+var partnerFilter = new PartnerFilter();
+partnerFilter.code = null;
+partnerFilter.corporateName = null;
+partnerFilter.cnpj = null;
+partnerFilter.category = null; (Campo Categoria não deve existir)
+partnerFilter.hierarchy = null; (Campo Hierarquia do Parceiro não deve existir)
+partnerFilter.insuranceId = null; (Campo Hierarquia do Parceiro não deve existir)
+partnerFilter.level = null;
+partnerFilter.registrationStartDate = null;
+partnerFilter.registrationEndDate = null;
+partnerFilter.state = null;
+partnerFilter.city = null;
+partnerFilter.status = 1; (1- Interessado, 2- Aprovado, 3- Reprovado)
+
+this.http.post<any>(`${environment.apiUrl}/InterestedPartners?partnersStatus=${partnersStatus}`, partnerFilter);

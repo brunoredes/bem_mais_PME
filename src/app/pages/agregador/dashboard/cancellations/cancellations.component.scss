@@ -1,0 +1,113 @@
+.filter-button{
+    padding: 5px 20px;
+    display: inline-block;
+    text-decoration: none;
+    border-radius: 50px;
+    border: 1px solid #787878;
+    color: #707070;
+}
+
+.btn-filter {
+  background-color: #666;
+  color: white !important;
+  border-radius: 50px;
+  box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.075) !important;
+  width: 100px;
+}
+
+
+.filter-dashCancellations {
+   
+  background: white;
+  width: 27vw;
+  position: absolute;
+  border-radius: 3px;
+  padding: 20px;
+  z-index: 99;
+  border-radius: 20px;
+  top: 50px;
+  text-align: left;
+  right: 0;
+  display: none;
+  margin-right: 10px;
+}
+  
+
+.filter-dashCancellations:after {
+  bottom: 100%;
+  left: 89%;
+  border: solid transparent;
+  content: " ";
+  height: 0;
+  width: 0;
+  position: absolute;
+  pointer-events: none;
+  border-bottom-color: white;
+  border-width: 8px;
+  margin-left: -8px;
+}
+
+.d-grid {
+  display: grid;
+}
+.justify-content-rigth {
+  justify-content: right;
+}
+
+button {
+  cursor: pointer;
+  margin-top: 10px;
+
+  padding: 10px 20px;
+
+  color: white;
+  font-size: 12px;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+
+::ng-deep .filter-dashCancellations .mat-form-field-infix {
+  border-top: 0px !important;
+  padding: 0.25rem !important;
+}
+
+@media (max-width: 1024px) {
+
+  .filter-dashCancellations {
+      width: 32vw;
+  }
+
+  @media (max-width: 768px) {
+
+    .filter-dashCancellations {
+      width: 40vw;
+    }
+
+    @media (max-width: 425px) {
+
+      .filter-dashCancellations {
+        width: 73vw;
+      }
+
+      .datePickerAte {
+        margin-top: 10px;
+      }
+
+      @media (max-width: 375px) {
+
+        .filter-dashCancellations {
+          width: 77vw;
+        }
+
+        @media (max-width: 320px) {
+
+          .filter-dashCancellations {
+            width: 85vw;
+          }
+
+        }
+      }
+
+    }
+  }
+}

@@ -1,0 +1,127 @@
+<form class="p-1" [formGroup]="formCampaign" (ngSubmit)="submit()">
+  <div class="row mt-3">
+    <div class="mb-3 col-md-3 p-0">
+      <div class="col-md-12">
+        <label class="mb-0">{{'ComercialNewCampFilterId' | translate}}</label>
+      </div>
+      <mat-form-field class="col-xl-12">
+        <input matInput id="code" name="code" formControlName="code">
+      </mat-form-field>
+    </div>
+    <div class="mb-3 col-md-3 p-0">
+      <div class="col-md-12">
+        <label class="mb-0">{{'ComercialNewCampNewTitl' | translate}}</label>
+      </div>
+      <mat-form-field class="col-xl-12">
+        <input matInput id="title" name="title" formControlName="title">
+      </mat-form-field>
+    </div>
+    <div class="mb-3 col-md-3 p-0">
+      <div class="col-md-12">
+        <label class="mb-0">{{'ComercialNewCampFilterInsur' | translate}}</label>
+      </div>
+      <mat-form-field class="col-xl-12">
+        <mat-select name="insurnce" id="insurnce" formControlName="insurnce">
+          <mat-option value="{{ i.id }}" *ngFor="let i of insuranceList">{{ i.name }}</mat-option>
+        </mat-select>
+      </mat-form-field>
+    </div>
+    <div class="mb-3 col-md-3 p-0">
+      <div class="col-md-12">
+        <label class="mb-0">{{'ComercialNewCampFilterProf' | translate}}</label>
+      </div>
+      <mat-form-field class="col-xl-12">
+        <mat-select name="profile" id="profile" formControlName="profile">
+          <mat-option value="{{ p.id }}" *ngFor="let p of profileList">{{ p.name }}</mat-option>
+        </mat-select>
+      </mat-form-field>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="mb-3 col-md-3 p-0">
+      <div class="col-md-12">
+        <label class="mb-0">{{'ComercialNewCampNewGoal' | translate}}</label>
+      </div>
+      <mat-form-field class="col-xl-12">
+        <mat-select name="goal" id="goal" formControlName="goal">
+          <mat-option value="{{ g.id }}" *ngFor="let g of goalsList">{{ g.name }}</mat-option>
+        </mat-select>
+      </mat-form-field>
+    </div>
+
+    <div class="mb-3 col-md-3 p-0">
+      <div class="col-md-12">
+        <label class="mb-0">{{'ComercialNewCampNewVal' | translate}}</label>
+      </div>
+      <mat-form-field class="col-xl-12">
+        <input matInput id="amount" name="amount" formControlName="amount">
+      </mat-form-field>
+    </div>
+    <div class="mb-3 col-md-6 pl-3 p-0">
+
+      <div class="row pl-0">
+        <div class="col-md-12 ml-2 pl-1">
+          <label class="mb-0">{{'ComercialNewCampFilterVal' | translate}}</label>
+        </div>
+      </div>
+      <div class="row pl-0">
+        <div class="col-md-1 mt-1 pr-1">
+          <label class="mb-0">{{'ComercialNewCampNewFrom' | translate}}:</label>
+        </div>
+        <div class="col-md-5 pl-3">
+          <mat-form-field class="pl-2 pr-3" style="width: 100%;">
+            <input matInput [matDatepicker]="picker" formControlName="startDate">
+            <mat-datepicker-toggle matSuffix [for]="picker">
+            </mat-datepicker-toggle>
+            <mat-datepicker #picker></mat-datepicker>
+          </mat-form-field>
+        </div>
+        <div class="col-md-1 mt-1 pr-1">
+          <label class="mb-0">{{'ComercialNewCampNewTo' | translate}}:</label>
+        </div>
+        <div class="col-md-5 pl-0">
+          <mat-form-field class="pl-2 pr-3" style="width: 100%;">
+            <input matInput [matDatepicker]="picker2" formControlName="endDate">
+            <mat-datepicker-toggle matSuffix [for]="picker2">
+            </mat-datepicker-toggle>
+            <mat-datepicker #picker2></mat-datepicker>
+          </mat-form-field>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="row">
+    <div class="mb-6 col-md-6 p-0">
+      <div class="col-md-12">
+        <label class="mb-0">{{'ComercialNewCampNewInsImg' | translate}}</label>
+      </div>
+      <div class="label-float upload pl-3 mb-3">
+        <input type="text" [value]="imageName" (click)="file.click()" accept="image/x-png,image/gif,image/jpeg"
+          readonly />
+        <i class="fas fa-cloud-upload-alt upload-icon" (click)="file.click()"></i>
+        <input type="file" class="d-none" (change)="changeImageInput($event)" #file />
+      </div>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="mb-12 col-md-12 p-0">
+      <div class="col-md-12 mb-3">
+        <label class="mb-0">{{'ComercialNewCampNewDescr' | translate}}</label>
+      </div>
+      <div class="col-md-12">
+        <textarea id="goalDescription" name="goalDescription" formControlName="goalDescription"></textarea>
+      </div>
+    </div>
+  </div>
+
+  <div id="footer" class="footer-goals-btns pt-4">
+    <button type="reset" class="btn btnDash" (click)="goBack()">
+      {{ "btn-cancelar" | translate }}
+    </button>
+    <button type="submit" class="btn btnDash active" [disabled]="formIsInvalid()">
+      {{ "btn-adicionar" | translate }}
+    </button>
+  </div>
+</form>

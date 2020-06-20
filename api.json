@@ -1,0 +1,789 @@
+{
+    "login": {
+        "user": [
+            {
+                "id": "100",
+                "name": "Elvis",
+                "profile": {
+                    "id": 1,
+                    "name": "Vendedor"
+                },
+                "picture": "assets/user.png",
+                "retailer": {
+                    "id": "59999",
+                    "name": "FASTSHOP",
+                    "store": {
+                        "id": "1",
+                        "name": "Loja Shopping Eldorado"
+                    }
+                }
+            }
+        ]
+    },
+    "home": {
+        "vendors": [
+            {
+                "id": "100",
+                "name": "Roberto Luiz",
+                "profile": "VENDEDOR",
+                "sales": "500",
+                "position": "1",
+                "picture": "assets/user1.png"
+            },
+            {
+                "id": "101",
+                "name": "Maria Roberta",
+                "profile": "VENDEDOR",
+                "sales": "250",
+                "position": "2",
+                "picture": "assets/user2.png"
+            },
+            {
+                "id": "102",
+                "name": "Elvis",
+                "profile": "VENDEDOR",
+                "sales": "250",
+                "position": "3",
+                "picture": "assets/user3.png"
+            }
+        ],
+        "market": [
+            {
+                "title": "Voe coma ZURICH",
+                "description": "lorem ipsum voe com a zurich ",
+                "backgroundImage": "assets/voe.png",
+                "url": "http://www.zurich.com.br"
+            },
+            {
+                "title": "Dia das mês com a zurich",
+                "description": "lorem ipsum dia das maes",
+                "backgroundImage": "assets/mae.png",
+                "url": "http://www.zurich.com.br"
+            }
+        ],
+        "institucional": [
+            {
+                "id": "100",
+                "order": "1",
+                "title": "INSTITUCIONAL ZURICH",
+                "description": "lorem ipsum",
+                "picture": "assets/img/institucional.png",
+                "url": "http://www.zurich.com.br"
+            },
+            {
+                "id": "101",
+                "order": "1",
+                "title": "PRODUTOS E SERVIÇOS",
+                "description": "lorem ipsum",
+                "picture": "assets/img/produtos.png",
+                "url": "http://www.zurich.com.br"
+            }
+        ]
+    },
+    "protection": {
+        "products": [
+            {
+                "id": 1234,
+                "name": "Samsung Galaxy A50",
+                "description": "128GB, 4GB RAM, Tela Infinita de 6.4, Octa Core, Leitor de Digital na Tela, Câmera Tripla",
+                "image": "https://29028l.ha.azioncdn.net/img/2019/04/produto/162787/19/large/smartphone-samsung-galaxy-a50-preto.jpg",
+                "thumbs": [
+                    {
+                        "thumbUrl": "https://29028l.ha.azioncdn.net/img/2019/04/produto/162787/19/large/smartphone-samsung-galaxy-a50-preto.jpg"
+                    },
+                    {
+                        "thumbUrl": "https://29028l.ha.azioncdn.net/img/2019/04/produto/162787/19/large/smartphone-samsung-galaxy-a50-preto.jpg"
+                    }
+                ],
+                "category": "Smartphone",
+                "categoryId": 1,
+                "favorito": false
+            },
+            {
+                "id": 1235,
+                "name": "Samsung Galaxy A50",
+                "description": "128GB, 4GB RAM, Tela Infinita de 6.4, Octa Core, Leitor de Digital na Tela, Câmera Tripla",
+                "image": "https://29028l.ha.azioncdn.net/img/2019/04/produto/162787/19/large/smartphone-samsung-galaxy-a50-preto.jpg",
+                "thumbs": [
+                    {
+                        "thumbUrl": "https://29028l.ha.azioncdn.net/img/2019/04/produto/162787/19/large/smartphone-samsung-galaxy-a50-preto.jpg"
+                    },
+                    {
+                        "thumbUrl": "https://29028l.ha.azioncdn.net/img/2019/04/produto/162787/19/large/smartphone-samsung-galaxy-a50-preto.jpg"
+                    }
+                ],
+                "category": "Smartphone",
+                "categoryId": 1,
+                "favorito": false
+            }
+        ]
+    },
+    "dashboard": {
+        "vendas": {
+            "perfomance": [
+                {
+                    "name": "Roberto Luiz",
+                    "office": "Vendedor",
+                    "salesAmount": 500,
+                    "percent": 100
+                }
+            ],
+            "dadosOrders": [
+                {
+                    "title": "Total de ordens realizadas",
+                    "amount": 1624
+                },
+                {
+                    "title": "Ordens Confirmadas",
+                    "amount": 1460
+                },
+                {
+                    "title": "Ordens Não Confirmadas",
+                    "amount": 160
+                },
+                {
+                    "title": "Ticket Médio",
+                    "amount": 228
+                },
+                {
+                    "title": "Total de seguros Vendidos",
+                    "amount": 1922
+                },
+                {
+                    "title": "Prêmio Vendido $",
+                    "amount": 332924
+                },
+                {
+                    "title": "Prêmio Cancelado $",
+                    "amount": 23600
+                },
+                {
+                    "title": "% Conversão",
+                    "amount": 89.9
+                }
+            ],
+            "minhaPerformace": [
+                {
+                    "data": [
+                        65,
+                        59,
+                        80,
+                        81,
+                        56,
+                        55,
+                        40,
+                        65,
+                        59,
+                        80,
+                        81,
+                        56,
+                        55,
+                        40,
+                        42
+                    ],
+                    "name": "Roberto Luiz"
+                },
+                {
+                    "data": [
+                        65,
+                        59,
+                        80,
+                        81,
+                        56,
+                        55,
+                        40,
+                        65,
+                        59,
+                        80,
+                        81,
+                        56,
+                        55,
+                        40,
+                        42
+                    ],
+                    "name": "Melhor Vendedor da Loja"
+                },
+                {
+                    "data": [
+                        65,
+                        59,
+                        80,
+                        81,
+                        56,
+                        55,
+                        40,
+                        65,
+                        59,
+                        80,
+                        81,
+                        56,
+                        55,
+                        40,
+                        42
+                    ],
+                    "name": "Média da Loja"
+                }
+            ],
+            "VolumeVendas": [
+                {
+                    "data": [
+                        65,
+                        59,
+                        80,
+                        81,
+                        56,
+                        55,
+                        40,
+                        65,
+                        59,
+                        80,
+                        81,
+                        56,
+                        55,
+                        40,
+                        42
+                    ],
+                    "name": "Qtd"
+                },
+                {
+                    "data": [
+                        65,
+                        59,
+                        80,
+                        81,
+                        56,
+                        55,
+                        40,
+                        65,
+                        59,
+                        80,
+                        81,
+                        56,
+                        55,
+                        40,
+                        42
+                    ],
+                    "name": "Premio Vendido"
+                }
+            ],
+            "vendasSeguro": [
+                {
+                    "insurance": "Celular",
+                    "value": 33,
+                    "percent": 33
+                },
+                {
+                    "insurance": "Tablet",
+                    "value": 22,
+                    "percent": 22
+                },
+                {
+                    "insurance": "Notebooks",
+                    "value": 15,
+                    "percent": 15
+                },
+                {
+                    "insurance": "Cameras Digitais",
+                    "value": 10,
+                    "percent": 10
+                },
+                {
+                    "insurance": "Acidentes Pessoais",
+                    "value": 8,
+                    "percent": 8
+                }
+            ],
+            "vendasCategoria": [
+                {
+                    "insurance": "Roubo e Furto",
+                    "value": 33,
+                    "percent": 33
+                },
+                {
+                    "insurance": "Garantia Estendida",
+                    "value": 22,
+                    "percent": 22
+                },
+                {
+                    "insurance": "Seguro Viagem",
+                    "value": 15,
+                    "percent": 15
+                },
+                {
+                    "insurance": "Prestamista",
+                    "value": 10,
+                    "percent": 10
+                },
+                {
+                    "insurance": "Acidentes Pessoais",
+                    "value": 8,
+                    "percent": 8
+                }
+            ]
+        },
+        "cancelamento": {
+            "volumeCancelamento": [
+                {
+                    "data": [
+                        65,
+                        59,
+                        80,
+                        81,
+                        56,
+                        55,
+                        40,
+                        65,
+                        59,
+                        80,
+                        81,
+                        56,
+                        55,
+                        40,
+                        42
+                    ],
+                    "name": "Qtd"
+                },
+                {
+                    "data": [
+                        65,
+                        59,
+                        80,
+                        81,
+                        56,
+                        55,
+                        40,
+                        65,
+                        59,
+                        80,
+                        81,
+                        56,
+                        55,
+                        40,
+                        42
+                    ],
+                    "name": "Premio Vendido"
+                }
+            ],
+            "cancelamentoSeguro": [
+                {
+                    "insurance": "Roubo e Furto",
+                    "value": 33,
+                    "percent": 33
+                },
+                {
+                    "insurance": "Garantia Estendida",
+                    "value": 22,
+                    "percent": 22
+                },
+                {
+                    "insurance": "Seguro Viagem",
+                    "value": 15,
+                    "percent": 15
+                },
+                {
+                    "insurance": "Prestamista",
+                    "value": 10,
+                    "percent": 10
+                },
+                {
+                    "insurance": "Acidentes Pessoais",
+                    "value": 8,
+                    "percent": 8
+                },
+                {
+                    "insurance": "Seguro Auto",
+                    "value": 7,
+                    "percent": 7
+                },
+                {
+                    "insurance": "Seguro Pet",
+                    "value": 5,
+                    "percent": 5
+                }
+            ],
+            "cancelamentoCategoria": [
+                {
+                    "category": "CELULAR",
+                    "value": 33,
+                    "percent": 33
+                },
+                {
+                    "category": "TABLETS",
+                    "value": 22,
+                    "percent": 22
+                },
+                {
+                    "category": "NOTEBOOKS",
+                    "value": 15,
+                    "percent": 15
+                },
+                {
+                    "category": "SMARTWATCH",
+                    "value": 10,
+                    "percent": 10
+                },
+                {
+                    "category": "CAMERAS DIGITAIS",
+                    "value": 20,
+                    "percent": 20
+                }
+            ]
+        },
+        "metas": {
+            "atingimentoMeta": [
+                {
+                    "percent": 80,
+                    "goal": "5000",
+                    "amount": "4000"
+                }
+            ],
+            "batimentoMetas": [
+                {
+                    "qtdGoals": 2,
+                    "qtdMonths": 6,
+                    "nextGoal": "5000"
+                }
+            ],
+            "melhoresMes": [
+                {
+                    "name": "Roberto Luiz",
+                    "office": "Vendedor",
+                    "salesAmount": 500,
+                    "percent": 100
+                },
+                {
+                    "name": "Maria Roberta",
+                    "office": "Vendedora",
+                    "salesAmount": 500,
+                    "percent": 50
+                },
+                {
+                    "name": "Elvis",
+                    "office": "Vendedor",
+                    "salesAmount": 500,
+                    "percent": 20
+                }
+            ],
+            "metasSeguro": [
+                {
+                    "insurance": "Roubo e Furto",
+                    "value": 33,
+                    "percent": 33
+                },
+                {
+                    "insurance": "Garantia Estendida",
+                    "value": 22,
+                    "percent": 22
+                },
+                {
+                    "insurance": "Seguro Viagem",
+                    "value": 15,
+                    "percent": 15
+                },
+                {
+                    "insurance": "Prestamista",
+                    "value": 10,
+                    "percent": 10
+                },
+                {
+                    "insurance": "Acidentes Pessoais",
+                    "value": 10,
+                    "percent": 10
+                }
+            ],
+            "metasCategoria": [
+                {
+                    "insurance": "Celular",
+                    "value": 33,
+                    "percent": 33
+                },
+                {
+                    "insurance": "Tablet",
+                    "value": 22,
+                    "percent": 22
+                },
+                {
+                    "insurance": "Notebooks",
+                    "value": 15,
+                    "percent": 15
+                },
+                {
+                    "insurance": "Cameras Digitais",
+                    "value": 10,
+                    "percent": 10
+                }
+            ],
+            "comparativoVendas": [
+                {
+                    "name": "Júlio Macedo",
+                    "position": 1,
+                    "percent": 100,
+                    "amount": "7537.32"
+                },
+                {
+                    "name": "Você",
+                    "position": 13,
+                    "percent": 80,
+                    "amount": "4000"
+                }
+            ],
+            "sugestaoMetas": [
+                {
+                    "amount": "516",
+                    "days": 5
+                }
+            ]
+        }
+    },
+    "apolice": {
+        "policies": [
+            {
+                "code": 133,
+                "order": 12345689792,
+                "consumerName": "João da Silva",
+                "cpf": "12345678978",
+                "vendor": "Elvis Costello",
+                "state": "São Paulo",
+                "status": 1
+            },
+            {
+                "code": 133,
+                "order": 12345689792,
+                "consumerName": "João da Silva",
+                "cpf": "12345678978",
+                "vendor": "Elvis Costello",
+                "state": "São Paulo",
+                "status": 1
+            },
+            {
+                "code": 133,
+                "order": 12345689792,
+                "consumerName": "João da Silva",
+                "cpf": "12345678978",
+                "vendor": "Elvis Costello",
+                "state": "São Paulo",
+                "status": 1
+            },
+            {
+                "code": 133,
+                "order": 12345689792,
+                "consumerName": "João da Silva",
+                "cpf": "12345678978",
+                "vendor": "Elvis Costello",
+                "state": "São Paulo",
+                "status": 1
+            },
+            {
+                "code": 133,
+                "order": 12345689792,
+                "consumerName": "João da Silva",
+                "cpf": "12345678978",
+                "vendor": "Elvis Costello",
+                "state": "São Paulo",
+                "status": 1
+            }
+        ],
+        "datalhes": {
+            "insurance": {
+                "description": "Seguro Roubo",
+                "value": "400",
+                "installments": 1,
+                "policyNumber": "000000000000123",
+                "image": "www.zurich.com.br"
+            },
+            "product": {
+                "name": "Smartphone Samsung Galaxy A50",
+                "value": "1407",
+                "image": "www.zurich.com.br"
+            },
+            "consumer": {
+                "name": "Roberto da Costa",
+                "birthDate": "12/12/1990",
+                "cpf": "12345678978",
+                "rg": "1234567897",
+                "postalCode": "00000000",
+                "address": "Av Jornalista Roberto Marinho",
+                "complement": "Tower Bridge",
+                "neighborhood": "Brooklin",
+                "city": "São Paulo",
+                "state": "São Paulo",
+                "email": "roberto.costa@gmail.com",
+                "cellPhone": "11987654321",
+                "phone": "1178945632"
+            }
+        },
+        "email": {
+            "message": "2ª via enviada por email com sucesso!"
+        }
+    },
+    "trainings": [
+        {
+            "title": "Manula de boas práticas",
+            "description": "Lorem Ipsum os simply dummy text of the printing",
+            "type": 1,
+            "typeDescription": "PDF",
+            "status": 2,
+            "statusDescription": "Atrasado",
+            "url": "http://www.zurich.com.br",
+            "image": "assets/img/book.svg",
+            "Classification": 3
+        },
+        {
+            "title": "Manula de boas práticas",
+            "description": "Lorem Ipsum os simply dummy text of the printing",
+            "type": 1,
+            "typeDescription": "PDF",
+            "status": 1,
+            "statusDescription": "Concluído",
+            "url": "http://www.zurich.com.br",
+            "image": "assets/img/book.svg",
+            "Classification": 3
+        },
+        {
+            "title": "Manula de boas práticas",
+            "description": "Vídeo 1 Tema",
+            "type": 2,
+            "typeDescription": "VIDEO",
+            "status": 1,
+            "statusDescription": "Concluído",
+            "url": "http://www.zurich.com.br",
+            "image": "assets/img/book.svg",
+            "Classification": 3
+        },
+        {
+            "title": "Manula de boas práticas",
+            "description": "Vídeo 2 Tema",
+            "type": 2,
+            "typeDescription": "VIDEO",
+            "status": 2,
+            "statusDescription": "Atrasado",
+            "url": "http://www.zurich.com.br",
+            "image": "assets/img/book.svg",
+            "Classification": 3
+        }
+    ],
+    "feedbacks": [
+        {
+            "userName": "Elvis Coelho",
+            "category": "Sugestão",
+            "content": "Lorem Ipsum os simply dummy text of the printing",
+            "status": 1,
+            "statusDescription": "Pendente",
+            "startDate": "01/12/2019",
+            "endDate": ""
+        },
+        {
+            "userName": "Elvis Coelho",
+            "category": "Sugestão",
+            "content": "Lorem Ipsum os simply dummy text of the printing",
+            "status": 1,
+            "statusDescription": "Atendido",
+            "startDate": "01/12/2019",
+            "endDate": "05/12/2019"
+        },
+        {
+            "userName": "Elvis Coelho",
+            "category": "Sugestão",
+            "content": "Lorem Ipsum os simply dummy text of the printing",
+            "status": 1,
+            "statusDescription": "Pendente",
+            "startDate": "01/12/2019",
+            "endDate": ""
+        },
+        {
+            "userName": "Elvis Coelho",
+            "category": "Sugestão",
+            "content": "Lorem Ipsum os simply dummy text of the printing",
+            "status": 1,
+            "statusDescription": "Atendido",
+            "startDate": "01/12/2019",
+            "endDate": "05/12/2019"
+        }
+    ],
+    "faq": [
+        {
+            "id": 1,
+            "categoryId": 1,
+            "question": "Where can I see my policy?",
+            "answer": "Access Zurich Insurance portal to get information about your policy.",
+            "urlAttachment": "www://zurich.com.BemMais/attachments/faq1.pdf"
+        },
+        {
+            "id": 2,
+            "categoryId": 1,
+            "question": "question 2",
+            "answer": "answer 2",
+            "urlAttachment": "www://zurich.com.BemMais/attachments/faq2.pdf"
+        },
+        {
+            "id": 3,
+            "categoryId": 1,
+            "question": "question 3",
+            "answer": "answer 3",
+            "urlAttachment": "www://zurich.com.BemMais/attachments/faq3.pdf"
+        },
+        {
+            "id": 4,
+            "categoryId": 1,
+            "question": "question 4",
+            "answer": "answer 4",
+            "urlAttachment": "www://zurich.com.BemMais/attachments/faq4.pdf"
+        },
+        {
+            "id": 5,
+            "categoryId": 1,
+            "question": "question 5",
+            "answer": "answer 5",
+            "urlAttachment": "www://zurich.com.BemMais/attachments/faq5.pdf"
+        },
+        {
+            "id": 6,
+            "categoryId": 1,
+            "question": "question 6",
+            "answer": "answer 6",
+            "urlAttachment": "www://zurich.com.BemMais/attachments/faq6.pdf"
+        },
+        {
+            "id": 7,
+            "categoryId": 1,
+            "question": "question 7",
+            "answer": "answer 7",
+            "urlAttachment": "www://zurich.com.BemMais/attachments/faq7.pdf"
+        },
+        {
+            "id": 8,
+            "categoryId": 1,
+            "question": "question 8",
+            "answer": "answer 8",
+            "urlAttachment": "www://zurich.com.BemMais/attachments/faq8.pdf"
+        },
+        {
+            "id": 9,
+            "categoryId": 1,
+            "question": "question 9",
+            "answer": "answer 9",
+            "urlAttachment": "www://zurich.com.BemMais/attachments/faq9.pdf"
+        },
+        {
+            "id": 10,
+            "categoryId": 1,
+            "question": "question 10",
+            "answer": "answer 10",
+            "urlAttachment": "www://zurich.com.BemMais/attachments/faq10.pdf"
+        },
+        {
+            "id": 11,
+            "categoryId": 1,
+            "question": "question 11",
+            "answer": "answer 11",
+            "urlAttachment": "www://zurich.com.BemMais/attachments/faq11.pdf"
+        },
+        {
+            "id": 12,
+            "categoryId": 1,
+            "question": "question 12",
+            "answer": "answer 12",
+            "urlAttachment": "www://zurich.com.BemMais/attachments/faq12.pdf"
+        }
+    ]
+}

@@ -1,0 +1,24 @@
+{
+  "data": {
+    "dealerId": 1,
+    "name": "Roberto Luiz",
+    "birthDate": "01/02/1990",
+    "cpf": "12345678998",
+    "rg": "123456789",
+    "genre": "M",
+    "email": "roberto.luiz@zurich.com.br",
+    "phone": "11 12345678",
+    "storeId": 1,
+    "postalCode": "1234567",
+    "address": "Av Jornalista Roberto Marinho",
+    "addressNumber": "85",
+    "neighborhood": "Brooklin",
+    "city": "São Paulo",
+    "state":"São Paulo",
+    "complement": null
+  },
+  "message": "Ok",
+  "hasError": false,
+  "errorDataCollection": null,
+  "statusCode": 200
+}

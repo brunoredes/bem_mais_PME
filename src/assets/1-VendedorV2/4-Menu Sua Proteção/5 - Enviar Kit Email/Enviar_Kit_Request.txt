@@ -1,0 +1,2 @@
+var orderId = 123;
+this.http.get<any>(`${environment.apiUrl}/Orders/{orderId}/Print`);

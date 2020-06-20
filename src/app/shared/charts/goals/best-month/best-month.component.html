@@ -1,0 +1,43 @@
+<div class="card mb-4 shadow-sm" style="min-height: 321px;">
+    <div class="card-body">
+        <perfect-scrollbar class="height">
+        <div class="row">
+            <div class="col-xl-6">
+                <h5>{{'Best Partners of the Month' | translate}}</h5>
+            </div>
+            <div class="col-xl-6 pt-2 mt-1">
+                <span style="float:right">{{'your-position' | translate}} 13º</span>
+            </div>
+        </div>
+
+
+        <div class="col-xl-12" id="style-4">
+            <div class="force-overflow" id="scroll">
+                <div class="row lightBlue-bg rounded-pill p-2 mb-3" *ngFor="let i of bestMonth.vendors">
+                    <div class="col-4 col-sm-4 col-md-2 col-lg-2 m-auto" >
+                        <img src="./assets/img/user-1.jpg" class="rounded-circle" width="60" alt="Responsive image">
+                    </div>
+                    <div class="col-md-4 pt-2">
+                        <h5>{{i.name}}</h5>
+                        <span>{{i.office}}</span>
+                    </div>
+                    <div class="col-md-4 pl-0">
+                        <p class="text-muted mb-1">
+                            Vendas: {{i.salesAmount}}
+                        </p>
+                        <div class="progress over-visible mb-4" style="height: 5px">
+                            <div class="progress-bar customize-progress-bar" role="progressbar" aria-valuenow="100"
+                                aria-valuemin="0" aria-valuemax="100" id="sales{{i.id}}">
+                                <span>{{i.percent}}%</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-4 col-sm-4 col-md-2 col-lg-2 m-auto">
+                        <img src="./assets/img/trophy-parceiro.svg"  style="width: 70%;" class="img-fluid " alt="Responsive image">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </perfect-scrollbar>
+    </div>
+</div>

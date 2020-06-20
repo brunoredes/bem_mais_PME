@@ -1,0 +1,3 @@
+var categoryId = 1;
+
+this.http.get<any>(`${environment.apiUrl}/Faqs?categoryId=${categoryId}`);

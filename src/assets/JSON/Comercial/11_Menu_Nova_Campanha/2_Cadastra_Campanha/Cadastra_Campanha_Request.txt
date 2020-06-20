@@ -1,0 +1,13 @@
+
+var campaign = new Campaign();
+campaign.code = 654;
+campaign.title = "Lorem ipsum dolor";
+campaign.insurnce = 5; (Perda Total)
+campaign.profile = 1; (Revendas)
+campaign.goal = 1; (Atingir 50 mil)
+campaign.amount = 50000;
+campaign.startDate = "10/11/2019";
+campaign.endDate = "12/12/2019";
+campaign.image = "http://www.zurich.com.br";
+
+this.http.post<any>(`${environment.apiUrl}/Campaigns`, campaign);

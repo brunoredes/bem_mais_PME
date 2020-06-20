@@ -1,0 +1,11 @@
+{
+    "data": {
+        "approveStatus": 1,
+        "approveDescription": "Ok",
+        "message": ""
+    },
+    "message": "Ok",
+    "hasError": false,
+    "errorDataCollection": null,
+    "statusCode": 200
+}

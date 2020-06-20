@@ -1,0 +1,42 @@
+{
+    "data":{
+        "access":[
+            {
+                "region": "Ac",
+                "amount": 1624
+            },
+            {
+                "region": "BA",
+                "amount": 1460
+            },
+            {
+                "region": "MT",
+                "amount": 1600
+            },
+            {
+                "region": "MG",
+                "amount": 2280
+            },
+            {
+                "region": "RJ",
+                "amount": 1922
+            },
+            {
+                "region": "RO",
+                "amount": 33292
+            },
+            {
+                "region": "SP",
+                "amount": 23600
+            },
+            {
+                "region": "TO",
+                "amount": 8000
+            }
+        ]
+    },
+    "message": "Ok",
+    "hasError": false,
+    "errorDataCollection": null,
+    "statusCode": 200
+}

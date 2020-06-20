@@ -1,0 +1,82 @@
+{
+    "data": {
+        "goals": [
+            {
+                "id": 123,
+                "code": 123,
+                "profile": "Revendas",
+                "title": "Lorem ipsum dolor",
+                "description": "Atingir 50 mil em vendas",
+                "startDate": "10/11/2019",
+                "endDate": "12/12/2019",
+                "insurance": "Seguro Ultra",
+                "goal": 1,
+                "goalDescription":"Atingir 50 Mil"
+            },
+            {
+                "id": 123,
+                "code": 123,
+                "profile": "Corretores",
+                "title": "Lorem ipsum dolor",
+                "description": "Atingir 50 mil em vendas",
+                "startDate": "10/11/2019",
+                "endDate": "12/12/2019",
+                "insurance": "Perda Total",
+                "goal": null,
+                "goalDescription": null
+            },
+            {
+                "id": 123,
+                "code": 123,
+                "profile": "Revendas",
+                "title": "Lorem ipsum dolor",
+                "description": "Atingir 50 mil em vendas",
+                "startDate": "10/11/2019",
+                "endDate": "12/12/2019",
+                "insurance": "Seguro Ultra",
+                "goal": 1,
+                "goalDescription":"Atingir 50 Mil"
+            },
+            {
+                "id": 123,
+                "code": 123,
+                "profile": "Corretores",
+                "title": "Lorem ipsum dolor",
+                "description": "Atingir 50 mil em vendas",
+                "startDate": "10/11/2019",
+                "endDate": "12/12/2019",
+                "insurance": "Perda Total",
+                "goal": null,
+                "goalDescription": null
+            },
+            {
+                "id": 123,
+                "code": 123,
+                "profile": "Revendas",
+                "title": "Lorem ipsum dolor",
+                "description": "Atingir 50 mil em vendas",
+                "startDate": "10/11/2019",
+                "endDate": "12/12/2019",
+                "insurance": "Seguro Ultra",
+                "goal": 1,
+                "goalDescription":"Atingir 50 Mil"
+            },
+            {
+                "id": 123,
+                "code": 123,
+                "profile": "Corretores",
+                "title": "Lorem ipsum dolor",
+                "description": "Atingir 50 mil em vendas",
+                "startDate": "10/11/2019",
+                "endDate": "12/12/2019",
+                "insurance": "Perda Total",
+                "goal": null,
+                "goalDescription": null
+            }
+        ]
+    },
+    "message": "Ok",
+    "hasError": false,
+    "errorDataCollection": null,
+    "statusCode": 200
+}

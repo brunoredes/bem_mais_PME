@@ -1,0 +1,29 @@
+{
+  "data": {
+    "vendors": [
+      {
+        "name": "Júlio Macedo",
+        "position": 1,
+        "percent": 100,
+        "amount": "7537.32"
+      },
+      {
+        "name": "Você",
+        "position": 13,
+        "percent": 80,
+        "amount": "4000"
+      }
+    ]
+  },
+  "message": "OK",
+  "hasError": false,
+  "errorDataCollection": [
+    {
+      "code": "string",
+      "message": "string",
+      "url": "string",
+      "detail": "string"
+    }
+  ],
+  "statusCode": 200
+}

@@ -1,0 +1,44 @@
+{
+    "data": {
+        "products":[
+            {
+                "id": 1234,
+                "name": "Samsung Galaxy A50",
+                "description": "128GB, 4GB RAM, Tela Infinita de 6.4, Octa Core, Leitor de Digital na Tela, Câmera Tripla",
+                "image": "https://29028l.ha.azioncdn.net/img/2019/04/produto/162787/19/large/smartphone-samsung-galaxy-a50-preto.jpg",
+                "thumbs": [
+                    {
+                        "thumbUrl": "https://29028l.ha.azioncdn.net/img/2019/04/produto/162787/19/large/smartphone-samsung-galaxy-a50-preto.jpg"
+                    },
+                    {
+                        "thumbUrl": "https://29028l.ha.azioncdn.net/img/2019/04/produto/162787/19/large/smartphone-samsung-galaxy-a50-preto.jpg"
+                    }
+                ],
+                "category": "Smartphone",
+                "categoryId": 1,
+                "favorito": false
+            },
+            {
+                "id": 1235,
+                "name": "Samsung Galaxy A50",
+                "description": "128GB, 4GB RAM, Tela Infinita de 6.4, Octa Core, Leitor de Digital na Tela, Câmera Tripla",
+                "image": "https://29028l.ha.azioncdn.net/img/2019/04/produto/162787/19/large/smartphone-samsung-galaxy-a50-preto.jpg",
+                "thumbs": [
+                    {
+                        "thumbUrl": "https://29028l.ha.azioncdn.net/img/2019/04/produto/162787/19/large/smartphone-samsung-galaxy-a50-preto.jpg"
+                    },
+                    {
+                        "thumbUrl": "https://29028l.ha.azioncdn.net/img/2019/04/produto/162787/19/large/smartphone-samsung-galaxy-a50-preto.jpg"
+                    }
+                ],
+                "category": "Smartphone",
+                "categoryId": 1,
+                "favorito": false
+            }
+        ]
+    },
+    "message": "Ok",
+    "hasError": false,
+    "errorDataCollection": null,
+    "statusCode": 200
+}

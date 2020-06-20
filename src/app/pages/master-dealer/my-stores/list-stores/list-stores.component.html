@@ -1,0 +1,101 @@
+<!-- Filtro -->
+<section>
+  <form class="row" [formGroup]="formFilter" (ngSubmit)="findStores()">
+    <mat-form-field class="col-md-10">
+      <mat-label>{{'MasterDealerSearchStore' | translate}}</mat-label>
+      <input matInput (keyup)="applyFilter($event)">
+      <mat-icon matSuffix>search</mat-icon>
+    </mat-form-field>
+    <div class="col-md-2 text-right pl-0" >
+      <ul class="pl-0">
+        <li class="filter-button">
+          <a id="filter-myStores"><small>{{'dash-cancel-filtrar' | translate}} &nbsp;</small><i
+                  class="fa fa-sliders" aria-hidden="true"></i></a>
+        </li>
+        <div class="container mt-0">
+          <div class="filter-div filter-myStores mt-0 shadow-sm">
+            <div class="row">
+              <div class="col-md-4 pr-0 pl-0">
+                <div class="col-xl-12">
+                  <label for="brand">{{'AggregatorListId' | translate}}</label>
+                </div>
+                <mat-form-field class="col-xl-12">
+                  <input matInput id="code" name="code" formControlName="code">
+                </mat-form-field>
+              </div>
+              <div class="col-md-8 pr-0 pl-0">
+                <div class="col-xl-12">
+                  <label for="brand">{{'MasterDealerStore' | translate}}</label>
+                </div>
+                <mat-form-field class="col-xl-12">
+                  <input matInput id="store" name="store" formControlName="store">
+                </mat-form-field>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-md-7 pr-0 pl-0">
+                <div class="col-xl-12">
+                  <label for="brand">{{'comercialInterestedPartnersViewCnpj' | translate}}</label>
+                </div>
+                <mat-form-field class="col-xl-12">
+                  <input matInput id="cnpj" name="cnpj" formControlName="cnpj">
+                </mat-form-field>
+              </div>
+              <div class="col-md-5 pr-0 pl-0">
+                <div class="col-xl-12">
+                  <label for="brand">{{'AggregatorListStat' | translate}}</label>
+                </div>
+                <mat-form-field class="col-xl-12">
+                  <mat-select matSelect id="status" name="status" formControlName="status">
+                    <mat-option value="1">Status 1</mat-option>
+                    <mat-option value="2">Status 2</mat-option>
+                    <mat-option value="3">Status 3</mat-option>
+                  </mat-select>
+                </mat-form-field>
+              </div>
+            </div>
+            <div class="float-rigth">
+              <button class="btn btn-primary rounded-pill">
+                {{ "dash-cancel-filtrar" | translate }}
+              </button>
+            </div>
+          </div>
+        </div>
+      </ul>
+    </div>
+  </form>
+</section>
+<!-- Fim filtro -->
+
+<app-table [dataSource]="dataSource" [displayedColumns]="displayedColumns" [columnsTitle]="columnsTitle"
+           (recordDelete)='setRecordDelete($event)' (viewElement)="viewEvent($event)" (updateElement)="updateEvent($event)">
+</app-table>
+
+<!--Modal remover uma revenda-->
+<div class="modal fade" id="deleteModal" tabindex="-1" role="dialog" aria-labelledby="deleteModal" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="bd-t-red"></div>
+      <div class="modal-content bordertopModal">
+
+        <div class="modal-header modalFormat">
+          <img class="m-auto d-block" src="assets/img/deseja-descartar.png" />
+        </div>
+        <div class="modal-body">
+          <h1 class="text-center">
+            {{'MasterDealerListModal' | translate}}
+          </h1>
+        </div>
+        <div class="row btn-center">
+          <a href="#" class="col-4 badgeModal btn-br50 text-center p-3 border border-primary" data-dismiss="modal"
+            aria-label="Fechar">
+            {{'AggregatorListRemoveModalN' | translate}}
+          </a>
+          <a href="#" (click)="deleteRecord()" class="col-4 badgeModal badge-danger btn-br50 text-center p-3 "
+            data-dismiss="modal" aria-label="Fechar">
+            {{'AggregatorListRemoveModalY' | translate}}
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!--final remover-->

@@ -1,0 +1,144 @@
+<section>
+    <form class="row" [formGroup]="formFilter" (ngSubmit)="findCommission()">
+        <div class="col-md-12 text-right pl-0">
+            <ul class="pl-0">
+                <li class="filter-button">
+                    <a id="filter-dashCommission"><small>{{'dash-cancel-filtrar' | translate}} &nbsp;</small><i
+                            class="fa fa-sliders" aria-hidden="true"></i></a>
+                </li>
+                <div class="container mt-0">
+                    <div class="filter-div filter-dashCommission mt-0 shadow-sm">
+                        <div class="row mb-2">
+                            <div class="col-md-12">
+                                <div class="row pr-0 pl-0">
+                                    <div class="col-xl-12">
+                                        <label>{{'ComercialHomeNovosParcData' | translate}}</label>
+                                    </div>
+                                </div>
+                                <div class="row mt-3">
+                                    <div class="col-md-6 pr-0 pl-0">
+                                        <mat-form-field class="col-xl-12">
+                                            <input formControlName="startDate" matInput [matDatepicker]="pickerSalesDe"
+                                                placeholder="{{'place-de' | translate}}">
+                                            <mat-datepicker-toggle matSuffix [for]="pickerSalesDe">
+                                            </mat-datepicker-toggle>
+                                            <mat-datepicker #pickerSalesDe></mat-datepicker>
+                                        </mat-form-field>
+                                    </div>
+                                    <div class="col-md-6 pr-0 pl-0">
+                                        <mat-form-field class="col-xl-12 datePickerAte">
+                                            <input formControlName="endDate" matInput [matDatepicker]="pickerSalesAte"
+                                                placeholder="{{'place-ate' | translate}}">
+                                            <mat-datepicker-toggle matSuffix [for]="pickerSalesAte">
+                                            </mat-datepicker-toggle>
+                                            <mat-datepicker #pickerSalesAte></mat-datepicker>
+                                        </mat-form-field>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-12 pr-0 pl-0">
+                                <div class="col-xl-12">
+                                    <label for="partner">{{'ComercialHomeRankParceiros' | translate}}</label>
+                                </div>
+                                <mat-form-field class="col-xl-12">
+                                    <input matInput id="partner" name="partner" formControlName="partner">
+                                </mat-form-field>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-12 pr-0 pl-0">
+                                <div class="col-xl-12">
+                                    <label for="store">{{'dash-cancel-loja' | translate}}</label>
+                                </div>
+                                <mat-form-field class="col-xl-12">
+                                    <mat-select matSelect id="store" name="store" formControlName="store">
+                                        <mat-option value="1">Loja 1</mat-option>
+                                        <mat-option value="2">Loja 2</mat-option>
+                                        <mat-option value="3">Loja 3</mat-option>
+                                    </mat-select>
+                                </mat-form-field>
+                            </div>
+                        </div>
+                        <div class="float-right">
+                            <button class="btn btn-primary rounded-pill">
+                                {{ "dash-cancel-filtrar" | translate }}
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </ul>
+        </div>
+    </form>
+</section>
+
+<section>
+    <div class="row">
+        <div class="col-12 col-sm-12 col-md-6 col-lg-6 col-xl-6">
+            <app-chart-small [barLineChartData]="comissaoVendaData" [barLineChartLabels]="comissaoVendaLabels"
+                [barLineChartColors]="comissaoVendaColor" [barLineChartOptions]="comissaoVendasOptions"
+                [barLineChartType]="comissaoVendasType" [exportId]="comissaoVendaExportId"
+                [iconExportId]="comissaoVendaExportIconId" [filterDataId]="comissaoVendaFilterDataId"
+                (changeDate)="comissaoVendaChangeDate($event)" [chartTitle]="comissaoVendaTitle">
+            </app-chart-small>
+        </div>
+
+        <div class="col-12 col-sm-12 col-md-6 col-lg-6 col-xl-6">
+            <div class="card mb-3 shadow-sm">
+                <div class="card-body">
+                    <perfect-scrollbar class="height">	
+                    <h5 >{{'AggregatorDashComissTopF' | translate}}</h5>
+                    <div id="style-4">
+                        <div class="force-overflow">
+                            <div class="card col-md-auto mb-3 light-blue mb-1 p-3" *ngFor="let i of top">
+                                <div class="row">
+                                    <div class="col-4 col-sm-4 col-md-2 col-lg-2 m-auto">
+                                        <img src="./assets/img/logo-revenda.png" class="img-fluid rounded-circle"
+                                            alt="Responsive image">
+                                    </div>
+                                    <div class="col-md-3">
+                                        <span class="mt-3 d-flex justify-content-center">{{i.reseller}}</span>
+                                    </div>
+                                    <div class="col-md-4">
+                                        <p class="text-muted mb-1">
+                                            <small>{{'AggregatorDashComiss' | translate}}: {{format(i.comission)}}</small>
+                                        </p>
+                                        <div class="progress over-visible mb-4" style="height: 5px">
+                                            <div class="progress-bar customize-progress-bar" role="progressbar"
+                                                aria-valuenow="100" aria-valuemin="0" id="top{{i.id}}"
+                                                style="width: 100%;" aria-valuemax="100">
+                                                <span>{{i.percent}}%</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-4 col-sm-4 col-md-3 col-lg-3 m-auto" style="text-align: center;">
+                                        <img src="./assets/img/revenda.svg" class="img-fluid " alt="Responsive image">
+                                        <br>
+                                        <small>Revenda 01</small>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    </perfect-scrollbar>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<app-chart-large [barLineChartData]="historySalesTriData" [barLineChartLabels]="historySalesTriLabels"
+    [barLineChartColors]="historySalesTriColor" [barLineChartOptions]="historySalesTriOptions"
+    [barLineChartType]="historySalesTriType" [exportId]="historySalesTriExportId"
+    [iconExportId]="historySalesTriExportIconId" [filterDataId]="historySalesTriFilterDataId"
+    (changeDate)="historySalesTriChangeDate($event)" [chartTitle]="historySalesTriTitle">
+</app-chart-large>
+
+<app-chart-large [barLineChartData]="lossCommissionsData" [barLineChartLabels]="lossCommissionsLabels"
+    [barLineChartColors]="lossCommissionsColor" [barLineChartOptions]="lossCommissionsOptions"
+    [barLineChartType]="lossCommissionsType" [exportId]="lossCommissionsExportId"
+    [iconExportId]="lossCommissionsExportIconId" [filterDataId]="lossCommissionsFilterDataId"
+    (changeDate)="lossCommissionsChangeDate($event)" [chartTitle]="lossCommissionsTitle">
+</app-chart-large>

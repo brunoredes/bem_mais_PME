@@ -1,0 +1,352 @@
+<!--Filtro-->
+
+<section>
+    <div>
+        <div class="float-right ">
+           
+               
+                    <a id="filter-estatistica" class="filter-button">
+                        <small>{{'dash-cancel-filtrar' | translate}} &nbsp;</small>
+                        <i class="fa fa-sliders" aria-hidden="true"></i>
+                    </a>
+                
+            
+        </div>
+        <!--filtro-->
+        <form [formGroup]="_buildFilterForm">
+            <div class="container mb-2">
+                <div class="filter-div filter-estatistica mt-0 shadow-sm">
+                    <div class="row ml-1">
+                        <h5 class="mb-1">{{'dash-cancel-data' | translate}}</h5>
+                    </div>
+                    <div class="row ml-1 mr-1 pb-0 mb-2">
+                        <div class="col-5 p-0">
+                            <mat-form-field class="pt-0" style="width: 100%;">
+                                <input formControlName="startDate" matInput [matDatepicker]="picker"
+                                    placeholder="{{'place-de' | translate}}" (dateChange)="dateRangeChange()">
+                                <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+                                <mat-datepicker #picker></mat-datepicker>
+                            </mat-form-field>
+                        </div>
+                        <div class="col-5 p-0 ml-5">
+                            <mat-form-field class="pt-0" style="width: 100%;">
+                                <input formControlName="endDate" matInput [matDatepicker]="picker2"
+                                    placeholder="{{'place-ate' | translate}}" (dateChange)="dateRangeChange()">
+                                <mat-datepicker-toggle matSuffix [for]="picker2"></mat-datepicker-toggle>
+                                <mat-datepicker #picker2></mat-datepicker>
+                            </mat-form-field>
+                        </div>
+                    </div>
+                    <div class="row ml-1">
+                        <h5 class="mb-0">{{'ComercialTrainingStatisticTrain' | translate}}</h5>
+                    </div>
+                    <div class="row ml-1 mr-1 pb-0 mb-2">
+                        <mat-form-field class="pt-0" style="width: 100%;">
+                            <mat-select formControlName="training">
+                                <mat-option *ngFor="let item of mockList" [value]="item.id">{{ item.name }}</mat-option>
+                            </mat-select>
+                        </mat-form-field>
+                    </div>
+                    <div class="row ml-1">
+                        <h5 class="mb-0">{{'ComercialTrainingFilterStatus' | translate}}</h5>
+                    </div>
+                    <div class="row ml-1 mr-1 pb-0">
+                        <mat-form-field class="pt-0" style="width: 100%;">
+                            <mat-select formControlName="trainingStatus">
+                                <mat-option *ngFor="let item of mockList" [value]="item.id">{{ item.name }}</mat-option>
+                            </mat-select>
+                        </mat-form-field>
+                    </div>
+                    <div class="row ml-1">
+                        <h5 class="mb-0">{{'ComercialTrainingFilterResponsByTrain' | translate}}</h5>
+                    </div>
+                    <div class="row ml-1 mr-1 pb-0">
+                        <mat-form-field class="pt-0" style="width: 100%;">
+                            <mat-select formControlName="trainingManager">
+                                <mat-option *ngFor="let item of mockList" [value]="item.id">{{ item.name }}</mat-option>
+                            </mat-select>
+                        </mat-form-field>
+                    </div>
+                    <div class="row ml-1">
+                        <h5 class="mb-0">{{'ComercialTrainingFilterHyerachPart' | translate}}</h5>
+                    </div>
+                    <div class="row ml-1 mr-1 pb-0">
+                        <mat-form-field class="pt-0" style="width: 100%;">
+                            <mat-select formControlName="partnerHierarchy">
+                                <mat-option *ngFor="let item of mockList" [value]="item.id">{{ item.name }}</mat-option>
+                            </mat-select>
+                        </mat-form-field>
+                    </div>
+                    <div class="row ml-1">
+                        <h5 class="mb-0">{{'ComercialTrainingFilterTrainByReg' | translate}}</h5>
+                    </div>
+                    <div class="row ml-1 mr-1 pb-0">
+                        <div class="col-12 col-sm-12 col-md-4 col-lg-4 col-xl-4 pl-0">
+                            <mat-form-field class="pt-0" style="width: 100%;">
+                                <mat-select formControlName="state">
+                                    <mat-option *ngFor="let item of mockList" [value]="item.id">UF</mat-option>
+                                </mat-select>
+                            </mat-form-field>
+                        </div>
+                        <div class="col-12 col-sm-12 col-md-8 col-lg-8 col-xl-8 pr-0">
+                            <mat-form-field class="pt-0" style="width: 100%;">
+                                <mat-select formControlName="city">
+                                    <mat-option *ngFor="let item of mockList" [value]="item.id">Cidade</mat-option>
+                                </mat-select>
+                            </mat-form-field>
+                        </div>
+                    </div>
+                    <div class="d-flex justify-content-between">
+
+                        <a class="text-decoration-underline mt-3"
+                                routerLink="/private/comercial/filter">{{'ComercialInterestedPartnersFiltroAv' | translate}}<i
+                                    class="fas fa-chevron-right"></i></a>
+
+                        <button class="btn btn-primary rounded-pill"
+                            (click)="filter()">{{'dash-cancel-filtrar' | translate}}</button>
+                    </div>
+                </div>
+            </div>
+        </form>
+
+     
+    </div>
+    <br>
+    <div class="row mt-4">
+        <div class="col-12 col-sm-12 col-md-6 col-lg-3 col-xl-3" *ngFor="let i of trainings">
+            <div class="card mb-3 shadow-sm">
+                <div class="card-body">
+                    <span>{{i.status}}</span>
+                    <div class="chart__width charDonut">
+                        <div class="chartTitle">
+                            {{i.percentage}}%
+                        </div>
+                        <canvas id="revenda{{i.id}}" height="350"></canvas>
+                    </div>
+                    <div class="d-flex justify-content-between mt-3">
+                        <div class="col-8 p-0 font-sm">
+                            <span>{{'ComercialTrainingStatisticTotalView' | translate}}</span>
+                        </div>
+                        <div class="col-6 font-sm"><span>{{i.visualizationAmount}}</span></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!--fim -->
+
+<owl-carousel [options]="SlideOptions" [carouselClasses]="['owl-theme', 'sliding']">
+    <div class="item" *ngFor="let i of supportsMaterial; let index = index;">
+        <div id="tamanho" class="row">
+            <div style="max-width: 140px;" class="col-4 col-xl-4 col-sm-4 col-md-4 col-lg-4 col-xl-4">
+                <div id="mobileCard{{index}}" class="card mb-3 shadow-sm">
+                    <span class="border-size-book rounded-circle border border-dark mt-3 bg-border-green">
+                        <img class="col-12 py-3" src={{i.image}} />
+                    </span>
+                    <div class="card-body">
+                        <a href="{{i.url}}">
+                            <div class="card-download card"><span>Download</span></div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-12 col-xl-6 col-sm-6 col-md-7 col-lg-7 col-xl-7">
+                <div class="p-0 col-5 col-xl-12 col-sm-5 col-md-12 col-lg-12 col-xl-12">
+                    <div class="d-flex float-right" *ngIf="corretor &&  !vendedor">
+                        <a id="edit-material" id="editar-material-btn" (click)="showEditMaterial(index)"><i
+                                class="fas fa-lg fa-ellipsis-v"></i></a>
+                    </div>
+
+                    <!--Editar material-->
+                    <div class="container mt-0">
+                        <div class="filter-div edit-material mt-0 shadow-sm p-3" id="editMaterial{{index}}">
+                            <div class="row">
+                                <div class="col-12">
+                                    <a><i
+                                            class="far fa-file-alt mr-2"></i>{{'ComercialTrainingMaterialEdit' | translate}}</a>
+                                </div>
+                                <div class="col-12 mt-1">
+                                    <a><i
+                                            class="fas fa-trash-alt mr-2"></i>{{'ComercialTrainingMaterialDelete' | translate}}</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <h5 class="mb-1">{{i.title}}</h5>
+                    <p class="font-sm mb-1">{{i.description}}</p>
+                    <span>{{'treina-material' | translate}} <b>{{i.typeDescription}}</b></span>
+                    <div class="guide">
+                        <span class="badges badges-success">{{i.statusDescription}}</span>
+                    </div>
+                    <p class="font-sm mb-0">{{'treina-foiutil' | translate}}</p>
+                    <div class="star-rating dropdown" matTooltip="{{'star-icon' | translate}}">
+                        <a data-toggle="modal" data-target="#myModal">
+                            <span class="fa fa-star-o" data-rating="1"></span>
+                            <span class="fa fa-star-o" data-rating="2"></span>
+                            <span class="fa fa-star-o" data-rating="3"></span>
+                            <span class="fa fa-star-o" data-rating="4"></span>
+                            <span class="fa fa-star-o" data-rating="5"></span>
+                            <input type="hidden" name="whatever1" class="rating-value" value="2.56">
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</owl-carousel>
+
+
+<div class="row">
+    <div class="col-lg-12 mb-3">
+        <div class="pull-left">
+            <h5 >{{'treina-emvideo' | translate}}</h5>
+        </div>
+        <div class="pull-right">
+            <div class="btn-group btn-hide">
+                <button class="btn btn-info" id="list" (click)="showListGrid = false">
+                    <i class="fas fa-list-ul"></i>
+                </button>
+                <button class="btn btn-danger" id="grid" (click)="showListGrid = true">
+                    <i class="fas fa-th"></i>
+                </button>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- <div id="products" *ngIf="showListGrid" class="row view-group p-1"> -->
+<div id="products" *ngIf="showListGrid">
+    <div class="row">
+
+        <div class="item col-xs-4 col-lg-4" *ngFor="let i of videoTrainings">
+            <div class="card mb-2 shadow-sm">
+                <iframe class="col-12 p-0" [src]="i.url" style="min-height:350px; border-radius: 20px;" frameborder="0"
+                    allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+                    allowfullscreen></iframe>
+            </div>
+            <div class="card mb-4 shadow-sm">
+                <div class="card-body mt-3 ml-1 mb-2 p-0">
+                    <div class="row">
+                        <div class="col-7 col-sm-7 col-lg-7">
+                            <h6 class="mb-0 ml-2">{{i.title}}</h6>
+                            <p class="font-sm ml-2">{{i.description}}</p>
+                        </div>
+                        <div class="col-5 col-sm-5 col-lg-5" style="margin-top: -7px;">
+                            <div class="star-rating float-right" matTooltip="{{'star-icon' | translate}}">
+                                <a data-toggle="modal" data-target="#myModal">
+                                <span class="fa fa-star-o m-0" data-rating="1"></span>
+                                <span class="fa fa-star-o m-0" data-rating="2"></span>
+                                <span class="fa fa-star-o m-0" data-rating="3"></span>
+                                <span class="fa fa-star-o m-0" data-rating="4"></span>
+                                <span class="fa fa-star-o m-0" data-rating="5"></span>
+                                <input type="hidden" name="whatever1" class="rating-value" value="2.56">
+                            </a>
+                            </div>
+                            <span class="badges badges-success float-right mr-2">{{i.statusDescription}}</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div id="column" *ngIf="!showListGrid">
+    <div class="container-fluid p-0">
+        <div class="row">
+            <div class="col-sm-12 col-md-4 col-lg-4 p-0 pl-4 pr-4 mb-3" *ngFor="let i of videoTrainings">
+                <div class="card mb-3 shadow-sm">
+                    <div class="row">
+                        <iframe class="col-lg-5 p-0" width="125" height="140px;" [src]="i.url"
+                            style="border-top-left-radius:20px; border-bottom-left-radius:20px; margin-left: 0px;"
+                            frameborder="0"
+                            allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+                            allowfullscreen></iframe>
+                        <div class="col-lg-7">
+                            <h6 class="pt-2 mb-0 ml-2">{{i.title}}</h6>
+                            <p class="font-sm ml-2">{{i.description}}</p>
+                            <div class="star-rating float-right">
+                                <span class="fa fa-star-o" data-rating="1"></span>
+                                <span class="fa fa-star-o" data-rating="2"></span>
+                                <span class="fa fa-star-o" data-rating="3"></span>
+                                <span class="fa fa-star-o" data-rating="4"></span>
+                                <span class="fa fa-star-o" data-rating="5"></span>
+                                <input type="hidden" name="whatever1" class="rating-value" value="2.56">
+                            </div>
+                            <span class="badges badges-success float-right mr-2">{{i.statusDescription}}</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="modal fade" *ngIf="!comercial" id="myModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document" style="margin-top: 180px;">
+        <div class="linha"></div>
+        <div class="clearflix"></div>
+        <div class="modal-content" style="border-radius: 15px;">
+            <div class="modal-body">
+                <div id="starPoints">
+                    <div class="star0">
+                        <div class="mask-img object-mask">
+                            <div class="efeito-star">
+                                <span class="porcentoStar">47%</span>
+                                <span class="avaliacaoStar">{{'treina-avaliado' | translate}}</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="mt-6">
+                    <div class="classificar zIndex">
+                        <p>{{'treina-classificar' | translate}}</p>
+                        <div class="rating" data-vote="0">
+                            <div class="star hidden">
+                                <span class="full" data-value="0"></span>
+                                <span class="half" data-value="0"></span>
+                            </div>
+                            <div class="star">
+                                <span class="full" data-value="1"></span>
+                                <span class="half" data-value="0.5"></span>
+                                <span class="selected"></span>
+                            </div>
+                            <div class="star">
+                                <span class="full" data-value="2"></span>
+                                <span class="half" data-value="1.5"></span>
+                                <span class="selected"></span>
+                            </div>
+                            <div class="star">
+                                <span class="full" data-value="3"></span>
+                                <span class="half" data-value="2.5"></span>
+                                <span class="selected"></span>
+                            </div>
+                            <div class="star">
+                                <span class="full" data-value="4"></span>
+                                <span class="half" data-value="3.5"></span>
+                                <span class="selected"></span>
+                            </div>
+                            <div class="star">
+                                <span class="full" data-value="5"></span>
+                                <span class="half" data-value="4.5"></span>
+                                <span class="selected"></span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-group shadow-textarea">
+                        <small>{{'treina-fale' | translate}}</small>
+                        <textarea class="form-control z-depth-1" id="exampleFormControlTextarea6" rows="3"
+                            placeholder="Lorem ipsum dolor sit amet consectetur adipisicing elit. Laudantium dolor sunt, fugiat dolorem nihil, deserunt officiis ab dolores dicta placeat saepe vero, odio nobis. Officiis inventore alias nesciunt dolorem repellat?"></textarea>
+                    </div>
+                    <div class="spaceJust">
+                        <button type="button" class="btn btn-outline-danger ml-5 border-radius"
+                            data-dismiss="modal">{{'btn-cancelar' | translate}}</button>
+                        <button type="button"
+                            class="btn btn-success border-radius">{{'feedback-enviar' | translate}}</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

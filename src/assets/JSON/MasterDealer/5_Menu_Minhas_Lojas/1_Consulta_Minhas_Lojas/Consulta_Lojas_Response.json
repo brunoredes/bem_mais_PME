@@ -1,0 +1,58 @@
+{
+    "data": {
+        "stores": [
+            {
+                "id": 123,
+                "code": 123,
+                "store": "Loja teste 1",
+                "cnpj": "000000000000000",
+                "email": "loja1@zurich.com.br",
+                "status": "Ativo"
+            },
+            {
+                "id": 123,
+                "code": 123,
+                "store": "Loja teste 2",
+                "cnpj": "000000000000000",
+                "email": "loja2@zurich.com.br",
+                "status": "Ativo"
+            },
+            {
+                "id": 123,
+                "code": 123,
+                "store": "Loja teste 3",
+                "cnpj": "000000000000000",
+                "email": "loja3@zurich.com.br",
+                "status": "Ativo"
+            },
+            {
+                "id": 123,
+                "code": 123,
+                "store": "Loja teste 4",
+                "cnpj": "000000000000000",
+                "email": "loja4@zurich.com.br",
+                "status": "Ativo"
+            },
+            {
+                "id": 123,
+                "code": 123,
+                "store": "Loja teste 5",
+                "cnpj": "000000000000000",
+                "email": "loja5@zurich.com.br",
+                "status": "Ativo"
+            },
+            {
+                "id": 123,
+                "code": 123,
+                "store": "Loja teste 6",
+                "cnpj": "000000000000000",
+                "email": "loja6@zurich.com.br",
+                "status": "Ativo"
+            }
+        ]
+    },
+    "message": "Ok",
+    "hasError": false,
+    "errorDataCollection": null,
+    "statusCode": 200
+}

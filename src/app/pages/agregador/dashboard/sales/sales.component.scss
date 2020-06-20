@@ -1,0 +1,195 @@
+$green: #62bc00;
+$red: #ff3636;
+$Darkblue: #02296a;
+$LightBlue: #005aab;
+
+.filter-button {
+  padding: 5px 20px;
+  display: inline-block;
+  text-decoration: none;
+  border-radius: 50px;
+  border: 1px solid #787878;
+  color: #707070;
+}
+
+.sizeTicket small {
+  font-size: 0.7vw;
+  font-weight: 900;
+  padding: 0;
+  margin: 0;
+}
+#sizeTicket {
+  padding: 1.25rem !important;
+}
+
+
+.btn-filter {
+  background-color: #666;
+  color: white !important;
+  border-radius: 50px;
+  box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.075) !important;
+  width: 100px;
+}
+
+.textGreen {
+  color: $green;
+}
+.textRed {
+  color: $red;
+}
+
+//responsive
+
+@media (max-width: 1920px) {
+  #sizeTicket {
+    padding: 0;
+  }
+
+  .sizeTicket small {
+    font-size: 0.85vw !important;
+    font-weight: 900;
+    padding: 0;
+    margin: 0;
+  }
+
+  @media (max-width: 1440px) {
+    .sizeTicket small {
+      font-size: 0.75vw !important;
+      font-weight: 900;
+      padding: 0;
+      margin: 0;
+    }
+  }
+
+  @media (max-width: 1024px) {
+    #sizeTicket {
+      padding: 0.5rem !important;
+    }
+
+    @media screen and (max-width: 768px) {
+      .sizeTicket small {
+        font-size: 1.5vw !important;
+        font-weight: 900;
+        padding: 0;
+        margin: 0;
+      }
+
+      @media (max-width: 425px) {
+
+        @media (max-width: 375px) {
+
+          @media (max-width: 320px) {
+            .sizeTicket small {
+              font-size: 4.5vw !important;
+              font-weight: 900;
+              padding: 0;
+              margin: 0;
+            }
+            .sizeTicket h6{ font-size: 4.5vw !important;}
+            #sizeTicket { padding: 0;}
+
+            .img-fluid {
+              display: none;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+.filter-dashSales {
+   
+  background: white;
+  width: 27vw;
+  position: absolute;
+  border-radius: 3px;
+  padding: 20px;
+  z-index: 99;
+  border-radius: 20px;
+  top: 50px;
+  text-align: left;
+  right: 0;
+  display: none;
+  margin-right: 10px;
+}
+  
+
+.filter-dashSales:after {
+  bottom: 100%;
+  left: 89%;
+  border: solid transparent;
+  content: " ";
+  height: 0;
+  width: 0;
+  position: absolute;
+  pointer-events: none;
+  border-bottom-color: white;
+  border-width: 8px;
+  margin-left: -8px;
+}
+
+.d-grid {
+  display: grid;
+}
+.justify-content-rigth {
+  justify-content: right;
+}
+
+button {
+  cursor: pointer;
+  margin-top: 10px;
+
+  padding: 10px 20px;
+
+  color: white;
+  font-size: 12px;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+
+::ng-deep .filter-dashSales .mat-form-field-infix {
+  border-top: 0px !important;
+  padding: 0.25rem !important;
+}
+
+@media (max-width: 1024px) {
+
+  .filter-dashSales {
+      width: 32vw;
+  }
+
+  @media (max-width: 768px) {
+
+    .filter-dashSales {
+      width: 40vw;
+    }
+
+    @media (max-width: 425px) {
+
+      .filter-dashSales {
+        width: 73vw;
+      }
+
+      .datePickerAte {
+        margin-top: 10px;
+      }
+
+      @media (max-width: 375px) {
+
+        .filter-dashSales {
+          width: 77vw;
+        }
+
+        @media (max-width: 320px) {
+
+          .filter-dashSales {
+            width: 85vw;
+          }
+
+        }
+      }
+
+    }
+  }
+}

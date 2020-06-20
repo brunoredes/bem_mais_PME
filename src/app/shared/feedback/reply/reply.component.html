@@ -1,0 +1,130 @@
+<perfect-scrollbar style="max-height: 600px;" class="pr-3">
+    <div class="table-striped" *ngFor="let i of answers">
+        <section class="row">
+
+            <div class="col-md-2 col-lg-2 col-xl-2"><img class="img-fluid rounded-circle"
+                    src="assets/img/user-12.jpg" /></div>
+            <div class="col-md-7 col-lg-7 col-xl-7">
+
+                <h2 class="mt-3">{{i.userName}}</h2>
+                <ul class="list-inline">
+                    <li class=" list-inline-item"><small><b>{{'feedback-perfil' | translate}}</b> {{i.profile}}</small>
+                    </li>
+                    <li class="list-inline-item"><small><b>{{'feedback-datarespondido' | translate}}</b>
+                            {{i.answerDate}}</small></li>
+                </ul>
+
+            </div>
+
+            <div class="col-md-3 col-lg-3 col-xl-3">
+
+                <ul class="list-inline mt-4 justify-btn">
+                    <li class=" list-inline-item text-center">
+                        <a id="descartarReply" href="#" data-toggle="modal" data-target="#modalInfo"
+                            class="nostyle  d-grid">
+                            <i class="far fa-lg fa-trash-alt"></i>
+                            <div class="clearflix"></div><small>{{'feedback-descartar' | translate}}</small>
+                        </a>
+                    </li>
+                    <li class="list-inline-item text-center">
+                        <a id="replyNone-{{i.id}}" class="none" (click)="reply()">
+                            <i class="fas fa-lg fa-reply-all"></i>
+                            <div class="clearflix"></div>
+                            <small>{{'feedback-responder' | translate}}</small>
+                        </a>
+
+                        <a id="enviarReply" href="#" data-toggle="modal" data-target="#modalEnviar"
+                            class="nostyle  d-grid">
+                            <i class="fas fa-lg text-center">
+                                <img src="/assets/img/send-button.svg" /></i>
+                            <div class="clearflix"></div>
+                            <small>{{'feedback-enviar' | translate}}</small>
+                        </a>
+                    </li>
+                </ul>
+
+            </div>
+
+        </section>
+        <hr>
+        <section id="respostaComercial">
+
+            <div id="reply" class="mt-2">
+                <!-- <textarea name="message" id="message" cols="30" rows="10" placeholder="Escreva algo..."
+                    style="width: 100%; background: #F9F8F8;"></textarea> -->
+                <app-ngx-editor [config]="edit" [placeholder]="'Escreva algo...'" [spellcheck]="true">
+                </app-ngx-editor>
+
+            </div>
+
+            <div class="row">
+                <div class="col-12 col-md-12 col-lg-12 col-xl-12">
+                    <div class="d-flex justify-content-between align-items-center page-info w-100 d-none d-md-block">
+                        <span class="navbar-brand">{{i.title}}</span>
+                    </div>
+                    <div class="clearflix"></div>
+                    <p>{{i.description}}</p>
+                    <figure>
+                        <img class="img-fluid" src="../../../../assets/img/error_print.png" />
+                    </figure>
+                </div>
+            </div>
+
+        </section>
+    </div>
+</perfect-scrollbar>
+
+<!--Modal descartar-->
+
+<div class="modal fade" id="modalInfo" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+    aria-hidden="true">
+
+    <div class="modal-dialog" role="document">
+        <div class="bd-t-red"></div>
+        <div class="modal-content bordertopModal">
+
+            <div class="modal-header modalFormat">
+                <img class="m-auto" src="assets/img/deseja-descartar.png" />
+            </div>
+            <div class="modal-body">
+                <h1 class="text-center">{{'feedback-messade-excluir' | translate}}</h1>
+            </div>
+
+            <div class="row btn-center">
+                <a href="#" class="col-4 badge btn-br50 text-center p-3 border border-primary" data-dismiss="modal"
+                    aria-label="Fechar">
+                    {{'feedback-nao' | translate}}
+                </a>
+
+                <a href="#" class="col-4 badge badge-danger btn-br50 text-center p-3 " (click)="deleted()"
+                    data-dismiss="modal" aria-label="Fechar">
+                    {{'feedback-sim' | translate}}
+                </a>
+            </div>
+
+        </div>
+    </div>
+</div>
+
+<!--Modal de envio-->
+
+<div class="modal fade" id="modalEnviar" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+    aria-hidden="true">
+
+    <div class="modal-dialog" role="document">
+        <div class="bd-t-blue"></div>
+        <div class="modal-content bordertopModal">
+
+            <div class="modal-header modalFormat">
+                <img class="img-fluid col-12 m-120" src="assets/img/confirmacao-feedback.png" />
+            </div>
+            <div class="modal-body">
+                <h1 class="text-center">{{'feedback-reaberto' | translate}}</h1>
+            </div>
+
+
+            <a id="btnsuccessfully" (click)="successfully()" class="col-4 badge badge-success text-center p-3 "
+                data-dismiss="modal" aria-label="Fechar">OK!</a>
+        </div>
+    </div>
+</div>

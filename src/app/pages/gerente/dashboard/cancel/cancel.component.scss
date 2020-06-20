@@ -1,0 +1,109 @@
+$green: #62bc00;
+$red: #ff3636;
+$Darkblue: #02296a;
+$LightBlue: #005aab;
+
+.filter-button {
+  padding: 5px 20px;
+  display: inline-block;
+  text-decoration: none;
+  border-radius: 50px;
+  border: 1px solid #787878;
+  color: #707070;
+}
+
+.filter-dashCancelation {
+   
+  background: white;
+  width: 27vw;
+  position: absolute;
+  border-radius: 3px;
+  padding: 20px;
+  z-index: 99;
+  border-radius: 20px;
+  top: 50px;
+  text-align: left;
+  right: 0;
+  display: none;
+  margin-right: 10px;
+}
+  
+
+.filter-dashCancelation:after {
+  bottom: 100%;
+  left: 89%;
+  border: solid transparent;
+  content: " ";
+  height: 0;
+  width: 0;
+  position: absolute;
+  pointer-events: none;
+  border-bottom-color: white;
+  border-width: 8px;
+  margin-left: -8px;
+}
+
+.d-grid {
+  display: grid;
+}
+.justify-content-rigth {
+  justify-content: right;
+}
+
+button {
+  cursor: pointer;
+  margin-top: 10px;
+
+  padding: 10px 20px;
+
+  color: white;
+  font-size: 12px;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+
+::ng-deep .filter-dashCancelation .mat-form-field-infix {
+  border-top: 0px !important;
+  padding: 0.25rem !important;
+}
+
+@media (max-width: 1024px) {
+
+  .filter-dashCancelation {
+      width: 32vw;
+  }
+
+  @media (max-width: 768px) {
+
+    .filter-dashCancelation {
+      width: 40vw;
+    }
+
+    @media (max-width: 425px) {
+
+      .filter-dashCancelation {
+        width: 73vw;
+      }
+
+      .datePickerAte {
+        margin-top: 10px;
+      }
+
+      @media (max-width: 375px) {
+
+        .filter-dashCancelation {
+          width: 77vw;
+        }
+
+        @media (max-width: 320px) {
+
+          .filter-dashCancelation {
+            width: 85vw;
+          }
+
+        }
+      }
+
+    }
+  }
+}

@@ -1,0 +1,70 @@
+{
+    "data": {
+        "insurance": {
+            "id": 1,
+            "name": "Roubo e Furto",
+            "planPrice": [
+                {
+                    "planId": "11111",
+                    "planPriceId": "11122",
+                    "name": "Plano 1",
+                    "timeCoverage": 12,
+                    "installments": 12,
+                    "installmentValue": "170",
+                    "amount": "2040"
+                },
+                {
+                    "planId": "22222",
+                    "planPriceId": "222111",
+                    "name": "Plano 2",
+                    "timeCoverage": 24,
+                    "installments": 12,
+                    "installmentValue": "240",
+                    "amount": "2880"
+                },
+                {
+                    "planId": "33333",
+                    "planPriceId": "333111",
+                    "name": "Assinatura",
+                    "timeCoverage": null,
+                    "installments": null,
+                    "installmentValue": null,
+                    "amount": "24.90"
+                }
+            ]
+        },
+        "arguments": [
+            {
+                "description": "Além da cobertura básica, você tem inúmeros serviços agregados"
+            },
+            {
+                "description": "Maior rede de atendimento do Brasil"
+            },
+            {
+                "description": "Maior e mais tradicional seguradora do país"
+            }
+        ],
+        "details": [
+            {
+                "title": "Condições Gerais",
+                "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."
+            },
+            {
+                "title": "Coberturas",
+                "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."
+            },
+            {
+                "title": "Franquia",
+                "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."
+            },
+            {
+                "title": "Carência",
+                "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."
+            }
+        ]
+    },
+    "message": "Ok",
+    "hasError": false,
+    "errorDataCollection": null,
+    "statusCode": 200
+}

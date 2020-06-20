@@ -1,0 +1,34 @@
+{
+    "data": {
+        "partners": [
+            {
+                "id": 123,
+                "corporateName": "Lorem Ipsum is simply"
+            },
+            {
+                "id": 321,
+                "corporateName": "Lorem Ipsum is simply"
+            },
+            {
+                "id": 456,
+                "corporateName": "Lorem Ipsum is simply"
+            },
+            {
+                "id": 654,
+                "corporateName": "Lorem Ipsum is simply"
+            },
+            {
+                "id": 789,
+                "corporateName": "Lorem Ipsum is simply"
+            },
+            {
+                "id": 987,
+                "corporateName": "Lorem Ipsum is simply"
+            }
+        ]
+    },
+    "message": "Ok",
+    "hasError": false,
+    "errorDataCollection": null,
+    "statusCode": 200
+}

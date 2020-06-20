@@ -1,0 +1,16 @@
+{
+    "data": {
+        "code": 123,
+        "type": "Meta Pessoal",
+        "title": "Lorem ipsum dolor",
+        "description": "Atingir 50 mil em vendas",
+        "startDate": "10/11/2019",
+        "endDate": "12/12/2019",
+        "amount": 356,
+        "insurance": "Roubo e furto"
+    },
+    "message": "Ok",
+    "hasError": false,
+    "errorDataCollection": null,
+    "statusCode": 200
+}

@@ -1,0 +1,52 @@
+<div class="chk-block shadow-sm">
+    <!-- Pie Chart -->
+    <div class="chk-block-title pb-0">
+        <div class="d-flex justify-content-between">
+            <div class="col-xl-12 row d-flex align-items-start flex-row pr-0 mr-0">
+                <div class="col-xl-10">
+                    <h5 class="text-capitalize mb-0">Meta de vendas por Tipo de Seguro</h5>
+                    <h6 class="mb-1">
+                        {{ api.dateDeGoalsSafe | date:'dd/MM/yyyy' }} - {{ api.dateAteGoalsSafe | date:'dd/MM/yyyy' }}
+                    </h6> 
+                </div>
+                <!-- <div class="col-xl-1" style="float: right;text-align: right;"><i
+                        class="far fa-calendar-alt"></i></div> -->
+                <div class="col-xl-2" style="float: right;text-align: right;">
+                    <a id="chart-goals-safe"><i class="far fa-calendar-alt"></i></a>
+                    <div class="container mt-0">
+                        <div class="chart-goals-safe mt-0 shadow">
+                            <div class="row">
+                                <div class="col-sm-5 ml-3 mb-0">
+                                    <mat-form-field class="example-full-width" style="width: 120px;">
+                                        <input [(ngModel)]="api.dateDeGoalsSafe" matInput [matDatepicker]="picker" placeholder="{{'place-de' | translate}}" id="dateDe" (dateChange)="dateRangeChange()">
+                                        <mat-datepicker-toggle matSuffix [for]="picker">
+                                            <mat-icon matDatepickerToggleIcon>keyboard_arrow_down</mat-icon>
+                                        </mat-datepicker-toggle>
+                                        <mat-datepicker #picker></mat-datepicker>
+                                    </mat-form-field>
+                                </div>
+                                <div class="col-sm-5 mb-0 ml-2">
+                                    <mat-form-field class="example-full-width" style="width: 120px;">
+                                        <input [(ngModel)]="api.dateAteGoalsSafe" matInput [min]="api.dateDeGoalsSafe" [matDatepicker]="picker2" placeholder="{{'place-ate' | translate}}" id="dateAte" (dateChange)="dateRangeChange()">
+                                        <mat-datepicker-toggle matSuffix [for]="picker2">
+                                            <mat-icon matDatepickerToggleIcon>keyboard_arrow_down</mat-icon>
+                                        </mat-datepicker-toggle>
+                                        <mat-datepicker #picker2></mat-datepicker>
+                                    </mat-form-field>
+                                </div>
+                            </div>
+                            <div class="float-right">
+                                <button class="btn btn-primary rounded-pill">
+                                  {{ "dash-cancel-filtrar" | translate }}
+                                </button>
+                              </div>
+                        </div>
+                    </div>
+                </div>  
+            </div>
+        </div>
+    </div>
+    <div class="chk-block-content">
+        <canvas height="150" id="goalsSafeChart"></canvas>
+    </div>
+</div>

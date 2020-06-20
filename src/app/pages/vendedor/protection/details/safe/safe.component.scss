@@ -1,0 +1,242 @@
+.details-title {
+  letter-spacing: 2px;
+}
+
+.card-details {
+  font-size: 70%;
+  font-weight: 100;
+}
+
+//modal
+
+.bordertopModal{
+  border-top-color: #FF3636!important;
+  border-top: 10px solid;
+}
+
+.modal-header {
+  padding: 0!important; 
+}
+  
+.modal-header {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  padding: 0!important; 
+  border-bottom: 0!important ;
+}
+  
+.btn-br50{border-radius: 50px !important;}
+.btn-center{margin: 2px;display: flex!important;justify-content: space-around!important;}
+
+.modal-content {
+
+  margin: none!important;
+  position: relative;
+  margin-top: 25%;
+}
+
+.modal-header {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  padding: 1rem 1rem;
+  border-bottom: transparent;
+  border-top-left-radius: 0.3rem;
+  border-top-right-radius: 0.3rem;
+}
+
+.rounded-button {
+  border-radius: 20px !important;
+  padding: 0.7rem 1rem !important;
+}
+
+.btn-gradient-blue-green {
+  color: #fff;
+  background: linear-gradient(90deg, rgba(14, 108, 213, 1) 0%, rgba(85, 176, 39, 1) 100%);
+  border: 1px solid rgba(14, 108, 213, 1);
+}
+
+
+
+
+input {
+    outline: 0;
+    border-width: 0 0 1px;
+    background: transparent;
+    border-color: #005AAB
+  }
+  input:focus {
+    background: transparent;
+    border-color: #005AAB
+  }
+  input[type="text"] {
+    font-size: 13px;
+  }
+  ::-webkit-input-placeholder {
+   font-size: 13px;
+  }
+  ::-moz-placeholder {
+    font-size: 13px;
+  }
+  :-ms-input-placeholder {
+    font-size: 13px;
+  }
+  ::placeholder {
+    font-size: 13px;
+  }
+  select{
+    outline: 0;
+    border-width: 0 0 1px;
+    background: transparent;
+    border-color: #005AAB
+  }
+  .select {
+      font-size:13px;
+  }
+  /* remove the original arrow */
+select.col-xl-12.select {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  -o-appearance: none;
+  /* no standardized syntax available, no ie-friendly solution available */
+}
+
+select + i.fa {
+  float: right;
+  margin-top: -30px;
+  margin-right: 5px;
+  /* this is so when you click on the chevron, your click actually goes on the dropdown menu */
+  pointer-events: none;
+  /* everything after this is just to cover up the original arrow */
+  /* (for browsers that don't support the syntax used above) */
+ padding-right: 5px;
+}
+.mbtn {
+    border-radius: 5rem;
+  }
+  .mclose{
+    color:red;opacity:1;
+  }
+  .msuccess{
+    background: #62BC00;
+    border: 1px solid #62BC00;
+    color: #FFF!important;
+  }
+  .table-round-corner {
+    margin-top: 15px;
+    width: 100%;
+    text-align: center;
+    overflow:hidden;
+    border-collapse:separate;
+    -webkit-border-radius: 10px;
+       -moz-border-radius: 10px;
+            border-radius: 10px;
+  }
+table th, table td {
+    border:none;
+  }
+
+
+
+
+  //Accordion
+
+
+
+.border-warning{border-color: #FF3636!important;color: #FF3636;}
+.newGreen {background: #62BC00;}
+.newUsed {background: #FF3636;}
+.borderRadius3 {border-radius:3px!important;}
+
+
+
+#accordion .panel-title a {
+  display: block;
+  font-size: 16px;
+  padding: 17px 40px 17px 65px;
+  border-bottom: none;
+  position: relative;
+  transition: all 0.5s ease 0s;
+  color: #414658;
+}
+
+#accordion .panel-title a.collapsed {
+
+  color: #414658;
+}
+
+#accordion .panel-title a.collapsed:hover {
+  color: #414658;
+}
+
+#accordion .panel-title a:after,
+#accordion .panel-title a.collapsed:after {
+  content: "\f068";
+  font-family: FontAwesome;
+  font-size: 15px;
+  color: #414658;
+  width: 45px;
+  height: 100%;
+  line-height: 54px;
+  text-align: center;
+  position: absolute;
+  top: 0px;
+  right: 10px;
+  transition: all .2s;
+}
+
+#accordion .panel-title a.collapsed:after {
+  content: "\f067";
+  color: #414658;
+
+  transition: all 0.5s ease 0s;
+
+}
+
+#accordion .panel-title a.collapsed:hover:after {
+  color: #414658;
+}
+
+#accordion .panel-title a:before {
+  content: "";
+  position: absolute;
+  bottom: -11px;
+  left: -1px;
+}
+
+#accordion .panel-title a.collapsed:before {
+  display: none;
+}
+
+
+
+.btn-outline-success {
+  color: #62BC00;
+  border-color: #62BC00;
+}
+
+.btn-outline-success:hover {
+  color: #fff;
+  background-color: #62BC00;
+  border-color: #62BC00;
+}
+
+#status-Novo {background: #62BC00;}
+#status-Usado {background: #FF3636;}
+
+
+.paddingAuto{display: none;}
+
+@media(max-width:1920px){
+
+
+  .paddingAuto{
+
+    display: block;
+    padding: 20px;;
+
+  }
+
+
+}

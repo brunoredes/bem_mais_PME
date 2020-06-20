@@ -1,0 +1,70 @@
+{
+    "data": {
+        "goals": [
+            {
+                "id": 123,
+                "code": 123,
+                "profile": "Revendas",
+                "title": "Lorem ipsum dolor",
+                "description": "Atingir 50 mil em vendas",
+                "startDate": "10/11/2019",
+                "endDate": "12/12/2019",
+                "insurance": "Seguro Ultra"
+            },
+            {
+                "id": 123,
+                "code": 123,
+                "profile": "Revendas",
+                "title": "Lorem ipsum dolor",
+                "description": "Atingir 15 mil em vendas",
+                "startDate": "10/11/2019",
+                "endDate": "12/12/2019",
+                "insurance": "Perda Total"
+            },
+            {
+                "id": 123,
+                "code": 123,
+                "profile": "Revendas",
+                "title": "Lorem ipsum dolor",
+                "description": "Atingir 50 mil em vendas",
+                "startDate": "10/11/2019",
+                "endDate": "12/12/2019",
+                "insurance": "Seguro Ultra"
+            },
+            {
+                "id": 123,
+                "code": 123,
+                "profile": "Revendas",
+                "title": "Lorem ipsum dolor",
+                "description": "Atingir 15 mil em vendas",
+                "startDate": "10/11/2019",
+                "endDate": "12/12/2019",
+                "insurance": "Perda Total"
+            },
+            {
+                "id": 123,
+                "code": 123,
+                "profile": "Revendas",
+                "title": "Lorem ipsum dolor",
+                "description": "Atingir 50 mil em vendas",
+                "startDate": "10/11/2019",
+                "endDate": "12/12/2019",
+                "insurance": "Seguro Ultra"
+            },
+            {
+                "id": 123,
+                "code": 123,
+                "profile": "Revendas",
+                "title": "Lorem ipsum dolor",
+                "description": "Atingir 15 mil em vendas",
+                "startDate": "10/11/2019",
+                "endDate": "12/12/2019",
+                "insurance": "Perda Total"
+            }
+        ]
+    },
+    "message": "Ok",
+    "hasError": false,
+    "errorDataCollection": null,
+    "statusCode": 200
+}

@@ -1,0 +1,17 @@
+{
+  "data": {
+    "userId": "2",
+    "name": "Aline Madalena"
+  },
+  "message": "OK",
+  "hasError": false,
+  "errorDataCollection": [
+    {
+      "code": "string",
+      "message": "string",
+      "url": "string",
+      "detail": "string"
+    }
+  ],
+  "statusCode": 200
+}

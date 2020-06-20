@@ -1,0 +1,78 @@
+<!--Login Wrapper-->
+<div class="panel">
+	<div class="panel panel--1"></div>
+	<!--<div class="panel panel--2"></div>-->
+
+	<div class="container text-center">
+		<div class="col-12 col-md-12 col-lg-12 col-xl-12  mt-3">
+			<img src="./assets/img/logo-zurich.png" alt="Logo zurich" class="width">
+		</div>
+		<div class="login-content login-inner-wrapper-2 shadow-boxx">
+			<div class="col-12 sidebar-logo loginn d-flex justify-content-center mb-4 bg-primary d-flexNone"></div>
+			<div class="container">
+				<div class="mb-4 mt-5 pl-2">
+					<h2 class="text-left font-weight-normal">{{'login-bemvindo' | translate}} Bem Mais Seguros</h2>
+				</div>
+				<form #form="ngForm" (ngSubmit)=logIn(form.value) class="login-form" action="javascript:void(0)"
+					method="post">
+					<div class="form-group">
+						<input type="email" [(ngModel)]="username" name="username"
+							class="form-control session-input-font input-square" placeholder="{{'login-usuario' | translate}}" required>
+					</div>
+					<div class="form-group">
+						<input name="password" type="password" [(ngModel)]="password" placeholder="{{'login-senha' | translate}}"
+							class="form-control session-input-font input-square" required>
+					</div>
+					<div class="login-meta mb-3 d-flex justify-content-around">
+						<div class="flex-row">
+							<div class="col-3 pl-0">
+								<button type="submit" class="btn btn-primary btn-sm btn-squaree"
+									style="padding: 0.5rem 2rem; border-radius: 50px;">{{'login-entrar' | translate}}</button>
+							</div>
+							<div class="col-9 pt-2 mt-1">
+								<div class="custom-control custom-checkbox">
+									<label class="mb-2 ml-2	d-flex">
+										<div class="onoffswitch align-self-center">
+											<input type="checkbox" name="onoffswitch" class="onoffswitch-checkbox"
+												id="switch-nofications">
+											<label class="onoffswitch-label mb-0" for="switch-nofications">
+												<span class="onoffswitch-inner"></span>
+												<span class="onoffswitch-switch"></span>
+											</label>
+										</div>
+										<span
+											class=" ml-2 my-2 custom-control-description d-inline-block align-text-top permanecer"><small>{{'login-permanecer' | translate}}</small></span>
+									</label>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="mb-3 text-left pl-2">
+						<a (click)="Mudarestado('minhaDiv')" data-toggle="collapse" data-target="#collapseExample"
+							aria-expanded="false" aria-controls="collapseExample"
+							class="text-muted">{{'login-esquecisenha' | translate}}</a>
+					</div>
+				</form>
+			</div>
+			<div class="collapse" id="collapseExample">
+				<div class="card  card-none card-body pt-5">
+					<form class="form-inline container row d-flex justify-content-between">
+						<div class="form-group mb-2">
+							<label for="email" class="sr-only">E-mail</label>
+							<input type="email" class="form-control" id="email" placeholder="seuemail@br.zurich.com">
+						</div>
+						<button type="submit" class="btn btn-primary btn-sm btn-squareee"
+							style="padding: 0.5rem 3rem; border-radius: 50px;">{{'feedback-enviar' | translate}}</button>
+					</form>
+				</div>
+			</div>
+		</div>
+		<div class="col-12 col-sm-12 col-md-12 col-lg-5 col-xl-5 mt-3 d-flex text-white footer-copyright">
+			<p>{{'login-parceiro' | translate}}</p> <a routerLink="/register"><u> {{'login-parceiro-clique' | translate}}</u></a>
+		</div>
+	</div>
+</div>
+
+
+
+

@@ -1,0 +1,250 @@
+
+
+// Custom Theming for Angular Material
+// For more information: https://material.angular.io/guide/theming
+@import "~@angular/material/theming";
+// Plus imports for other components in your app.
+
+// Include the common styles for Angular Material. We include this here so that you only
+// have to load a single css file for Angular Material in your app.
+// Be sure that you only ever include this mixin once!
+@include mat-core();
+
+// Define the palettes for your theme using the Material Design palettes available in palette.scss
+// (imported above). For each palette, you can optionally specify a default, lighter, and darker
+// hue. Available color palettes: https://material.io/design/color/
+$chankya-primary: mat-palette($mat-indigo);
+$chankya-accent: mat-palette($mat-pink, A200, A100, A400);
+
+// The warn palette is optional (defaults to red).
+$chankya-warn: mat-palette($mat-red);
+
+// Create the theme object (a Sass map containing all of the palettes).
+$chankya-theme: mat-light-theme($chankya-primary, $chankya-accent, $chankya-warn);
+
+// Include theme styles for core and each component used in your app.
+// Alternatively, you can import and @include the theme mixins for each component
+// that you are using.
+@include angular-material-theme($chankya-theme);
+
+.cdk-global-overlay-wrapper,
+.cdk-overlay-container {
+  z-index: 99999 !important;
+}
+
+//Table of Content
+
+/*--------------
+1.0 Bootstrap
+----------------*/
+/*--------------
+2.0 Mixin
+----------------*/
+/*--------------
+3.0 Core
+   3.1 Main Content
+   3.2 Scaffolding
+   3.3 Button
+   3.4 Form Elements
+   3.5 Progress Bar
+   3.6 Tabs
+   3.7 Accordions
+   3.8 Pagination
+   3.9 Cards
+   3.10 Typography
+   3.11 Badge
+   3.12 Dropdowns
+   3.13 Social
+   3.14 Table
+   3.15 Ribbon
+   3.16 Header
+   3.17 Sidebar
+   3.18 Preloader
+   3.19 Dash-section
+   3.20 Timeline
+   3.21 Dark
+   3.22 Rtl
+----------------*/
+/*--------------
+4.0 Elements
+   4.1 Effect
+   4.2 Slick
+   4.3 Session
+   4.4 User
+   4.5 Pricing
+   4.6 Blog
+   4.7 Gallery
+   4.8 Ecommerce
+   4.9 Icons
+   4.10 Datepicker
+   4.11 Calendar
+   4.12 Grid
+   4.13 Testimonial
+   4.14 Inbox
+   4.15 Editor
+   4.16 Sidebar-option
+   4.17 Animate
+   4.18 Tour
+   4.19 Courses
+   4.20 Video-player
+   4.21 Pages
+----------------*/
+/*--------------  
+5.0 Utilities
+   5.1 Bg
+   5.2 Base
+   5.3 Font Text
+----------------*/
+
+article,
+aside,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+main,
+nav,
+section {
+  display: block;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: bold !important;
+}
+
+aside {
+  background-color: #ffffff;
+}
+
+* {
+  -webkit-text-size-adjust: 100% !important;
+  -moz-text-size-adjust: 100% !important;
+  -ms-text-size-adjust: 100% !important;
+  text-rendering: optimizeLegibility !important;
+  -webkit-font-smoothing: antialiased !important;
+  -moz-font-smoothing: antialiased !important;
+  -ms-font-smoothing: antialiased !important;
+  -o-font-smoothing: antialiased !important;
+  -moz-osx-font-smoothing: grayscale !important;
+  -webkit-text-stroke: 1px transparent !important;
+  -moz-text-stroke: 1px transparent !important;
+  -ms-text-stroke: 1px transparent !important;
+  -moz-text-shadow: 0 0 1px rgba(0, 0, 0, 0.01) !important;
+  -ms-text-shadow: 0 0 1px rgba(129, 106, 106, 0.01) !important;
+  text-shadow: 0 0 1px rgba(0, 0, 0, 0.01) !important;
+}
+
+html {
+  font-family: FontFrutiger, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif,
+    "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+}
+
+body {
+  font-family: FontFrutiger, Roboto, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial,
+    sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji", "Segoe UI Symbol",
+    "Noto Color Emoji" !important;
+}
+@font-face {
+  font-family: FontFrutiger;
+  src: url("../fonts/frutiger.eot");
+}
+@font-face {
+  font-family: FontFrutiger;
+  src: url("../fonts/frutiger.eot");
+}
+
+.navbar-brand {
+  letter-spacing: 0.56px;
+  line-height: 24px;
+}
+
+.material-icons {
+  -webkit-font-smoothing: antialiased !important;
+  font-weight: bold !important;
+}
+
+@import "bootstrap";
+@import "mixins";
+@import "core";
+@import "elements";
+@import "utilities/utilities";
+
+::-webkit-scrollbar {
+  width: 7px;
+}
+::-webkit-scrollbar-thumb {
+  -webkit-border-radius: 10px;
+  border-radius: 10px;
+  background: #707070;
+}
+
+.mat-horizontal-content-container {
+  padding: 0px !important;
+}
+
+// #sidebar {
+//     -webkit-text-stroke: 0.1px;
+//   font-size: 14px !important;
+//     font-weight: bold !important;
+// }
+
+// .sidebar-user-name {
+//   font-size: 20px !important;
+// }
+
+.sidebar-user-name span {
+  //   font-size: 14px !important;
+  margin-top: 5px !important;
+}
+.float-rigth{float: right!important;}
+
+
+a#filter-Exportar {
+  font-size: 1vw!important;
+}
+.mat-sort-header-button {
+  font-size: 14px!important;
+  color: #444856!important;
+  font: normal!important;
+  font-weight: 500!important;
+}
+@media(max-width:1366px){
+
+  h5, .h5 {
+    font-size: .90rem;
+  }
+
+  @media(max-width: 1024px){
+
+    h5, .h5 {
+      font-size: .80rem;
+    }
+
+  }
+
+}
+
+@media(max-width:768px){
+
+  a#filter-Exportar {
+    font-size: 1.5vw!important;
+  }
+  @media(max-width:425px){
+    a#filter-Exportar {
+      font-size: 3.5vw !important;
+    }
+
+    h5, .h5 {
+      font-size: 1rem;
+    }
+  
+  
+  }
+
+}

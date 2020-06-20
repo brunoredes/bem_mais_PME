@@ -1,0 +1,57 @@
+{
+  "data": [
+    {
+      "id": "1",
+      "category": "Roubo e furto",
+      "description": "lorem ipsum voe com a zurich",
+      "image": "assets/img/faq1.png"
+    },
+    {
+      "id": "2",
+      "category": "Roubo furto e Dano",
+      "description": "lorem ipsum voe com a zurich",
+      "image": "assets/img/faq2.png"
+    },
+    {
+      "id": "3",
+      "category": "Ultra Resist�ncia",
+      "description": "lorem ipsum voe com a zurich",
+      "image": "assets/img/faq3.png"
+    },
+    {
+      "id": "4",
+      "category": "Seguro Auto",
+      "description": "lorem ipsum voe com a zurich",
+      "image": "assets/img/faq4.png"
+    },
+    {
+      "id": "5",
+      "category": "Viagem",
+      "description": "lorem ipsum voe com a zurich",
+      "image": "assets/img/faq5.png"
+    },
+    {
+      "id": "6",
+      "category": "Pet",
+      "description": "lorem ipsum voe com a zurich",
+      "image": "assets/img/faq6.png"
+    },
+    {
+      "id": "7",
+      "category": "Prestamista",
+      "description": "lorem ipsum voe com a zurich",
+      "image": "assets/img/faq7.png"
+    }
+  ],
+  "message": "OK",
+  "hasError": false,
+  "errorDataCollection": [
+    {
+      "code": "string",
+      "message": "string",
+      "url": "string",
+      "detail": "string"
+    }
+  ],
+  "statusCode": 200
+}

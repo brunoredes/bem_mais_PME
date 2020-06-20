@@ -1,0 +1,229 @@
+<div class="w-100 mb-3">
+    <form class="searchbox md-form form-sm active-purple active-purple-2 mt-4">
+        <span class="fa fa-search form-control-feedback iconLupa" style="position:absolute;"></span>
+        <input type="text" class="searchbar col-xl-12 mb-4" placeholder="{{'faq-busca' | translate}}"
+            [(ngModel)]="faqSearch">
+    </form>
+</div>
+
+<div id="padding">
+    <div class="faq-wrap">
+        <div class="banner-wrap pt-4 pb-4">
+            <div class="tablist-wrap d-flex justify-content-center mb-0 mb-sm-4 mr-3">
+                <ul class="nav nav-pills faq-list-wrap" id="pills-tab" role="tablist" (click)="faqListActive()">
+                    <li class="nav-item faq-list-item" *ngFor="let i of category">
+                        <a class="nav-link rounded faq-list mr-2 mr-md-3 d-flex justify-content-center align-items-center"
+                            id="pills-welcome-tab{{i.id}}" data-toggle="pill" href="#pills-welcome" role="tab"
+                            aria-controls="pills-welcome" (click)="showQuesContent()">
+                            <div class="font-x icon"><img src="{{i.image}}" alt="img" class="img-fluid">    
+                                <br>                            
+                                <span class="font-title-faq">{{i.category}}</span>
+                            </div>
+                        </a>
+                    </li>
+                    
+                </ul>
+                <div class="drop-icon">
+                    <i class="fa fa-caret-down" aria-hidden="true"></i>
+                </div>
+            </div>
+        </div>
+        <div class="tab-content pt-5" id="pills-tabContent" *ngIf="showFaqQuesStatus">
+            <div class="tab-pane fade show active" id="pills-welcome" role="tabpanel"
+                aria-labelledby="pills-welcome-tab">
+                <div>
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-12 col-sm-6 col-md-6 col-lg-6" *ngFor="let i of data | filter: faqSearch">
+                                <div class="grid-b-space">
+                                    <div>
+                                        <h4>{{i.question}}</h4>
+                                    </div>
+                                    <div>
+                                        <p>{{i.answer}}
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="tab-pane fade" id="pills-create" role="tabpanel" aria-labelledby="pills-create-tab">
+                <div>
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-12 col-sm-4 col-md-4 col-lg-4 mb-4"
+                                *ngFor="let i of data | filter: faqSearch">
+                                <div class="mrgn-b-2 border-bottom border-dark">
+                                    <h4 class="mb-3">{{i.question}}</h4>
+                                </div>
+                                <div class="tab-list">
+                                    <ul class="list-unstyled">
+                                        <li class="mb-4" *ngFor="let i of data" (click)="onMyFaqPageContent()">
+                                            <a class="text-dark" id="createpillsCreate.id">{{i.answer}}</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="tab-pane fade" id="pills-connect" role="tabpanel" aria-labelledby="pills-connect-tab">
+                <div>
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-12 col-sm-4 col-md-4 col-lg-4 mb-4"
+                                *ngFor="let i of data | filter: faqSearch">
+                                <div class="mrgn-b-2 border-bottom border-dark">
+                                    <h4 class="mb-3">{{i.question}}</h4>
+                                </div>
+                                <div class="tab-list">
+                                    <ul class="list-unstyled">
+                                        <li class="mb-4" *ngFor="let i of data" (click)="onMyFaqPageContent()">
+                                            <a class="text-dark">{{i.answer}}</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="tab-pane fade" id="pills-result" role="tabpanel" aria-labelledby="pills-result-tab">
+                <div>
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-12 col-sm-4 col-md-4 col-lg-4 mb-4"
+                                *ngFor="let i of data | filter: faqSearch" (click)="onMyFaqPageContent()">
+                                <div class="mrgn-b-2 border-bottom border-dark">
+                                    <h4 class="mb-3">{{i.question}}</h4>
+                                </div>
+                                <div class="tab-list">
+                                    <ul class="list-unstyled">
+                                        <li class="mb-4" *ngFor="let i of data">
+                                            <a class="text-dark">{{i.answer}}</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="tab-pane fade" id="pills-account" role="tabpanel" aria-labelledby="pills-account-tab">
+                <div>
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-12 col-sm-4 col-md-4 col-lg-4 mb-4"
+                                *ngFor="let i of data | filter: faqSearch">
+                                <div class="mrgn-b-2 border-bottom border-dark">
+                                    <h4 class="mb-3">{{i.question}}</h4>
+                                </div>
+                                <div class="tab-list">
+                                    <ul class="list-unstyled">
+                                        <li class="mb-4" (click)="onMyFaqPageContent()" *ngFor="let i of data">
+                                            <a class="text-dark">{{i.answer}}</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="tab-pane fade" id="pills-share" role="tabpanel" aria-labelledby="pills-share-tab">
+                <div>
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-12 col-sm-4 col-md-4 col-lg-4 mb-4"
+                                *ngFor="let i of data | filter: faqSearch">
+                                <div class="mrgn-b-2 border-bottom border-dark">
+                                    <h4 class="mb-3">{{i.question}}</h4>
+                                </div>
+                                <div class="tab-list">
+                                    <ul class="list-unstyled">
+                                        <li class="mb-4" (click)="onMyFaqPageContent()" *ngFor="let i of data">
+                                            <a class="text-dark">{{i.answer}}</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!--	Contact Section	-->
+            <div class="bg-light call-in-action px-3">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-12 col-sm-10 col-md-10 col-lg-10 mx-auto">
+                            <div class="text-center">
+                                <div class="mb-4">
+                                    <h2 class="font-2x">{{'faq-naoencontrou' | translate}}</h2>
+                                </div>
+                                <div class="grid-b-space text-nowrap">
+                                    <button class="btn btn-large btn-dark">{{'faq-suporte' | translate}}</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--	Faq Popup-->
+        <div *ngIf="showFaqStatus">
+            <div class="container">
+                <div class="row pt-5 pt-sm-4">
+                    <div class="col-12 col-sm-8 col-md-8 col-lg-8">
+                        <div class="mb-5">
+                            <div class="mb-3">
+                                <h2 class="mb-0">{{'faq-minhapagina' | translate}}</h2>
+                            </div>
+                            <div>
+                                <h3 class="mb-0 font-weight-normal">Lorem ipsum dolor sit amet, consectetur adipisicing
+                                    elit,
+                                    sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
+                                    veniam,
+                                    quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                                    Duis aute
+                                    irure dolor in reprehenderit in voluptate.</h3>
+                            </div>
+                        </div>
+                        <div>
+                            <ol class="mb-5">
+                                <li class="mb-5" *ngFor="let i of data">
+                                    <div class="mb-5">
+                                        <p class="mb-0">{{faq.content}}</p>
+                                    </div>
+                                </li>
+                            </ol>
+                        </div>
+                    </div>
+                    <div class="col-12 col-sm-4 col-md-4 col-lg-4">
+                        <div>
+                            <div class="mb-4">
+                                <h4 class="mb-0">{{'faq-relacionados' | translate}}</h4>
+                            </div>
+                            <div class="tab-list">
+                                <ul class="list-unstyled">
+                                    <li class="mb-3" *ngFor="let i of data">
+                                        <a class="text-dark">thi.answer</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- <ngx-loading [show]="this.loading.getLoadingMenuComponents()" [config]="{backdropBorderRadius: '10px',
+                   backdropBackgroundColour: 'rgba(0, 0, 0, 0)',
+                   animationType: ngxLoadingAnimationTypes.threeBounce,
+                   primaryColour: '#D3D3D3',
+                   secondaryColour: '#D3D3D3',
+         tertiaryColour: '#D3D3D3'}" [template]="loadingTemplate">
+</ngx-loading> -->

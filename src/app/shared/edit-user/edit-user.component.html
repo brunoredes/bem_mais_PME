@@ -1,0 +1,204 @@
+<bem-mais-title></bem-mais-title>
+<!--Register-->
+<div class="row" *ngIf="this.loading.getLoadingMenuComponents() == false">
+    <div class="position-relative col-12">
+        <form [formGroup]="editProfileForm" class="login-form" action="javascript:;" method="post">
+            <div class="row">
+                <div class="col-md-10">
+                    <div class="row">
+                        <div class="mb-3 col-md-10">
+                            <div class="label-float">
+                                <label id="nameLabel">{{'edituser-nome' | translate}}</label><br>
+                                <input type="text" name="name" id="name" placeholder=" " formControlName="name"
+                                    (keyup)="clearValidate('name')" />
+                            </div>
+                        </div>
+                        <div class="col-md-2 col-sm-12 radioInput mt-4">
+                            <div class="toggle">
+                                <input type="radio" name="gender" value="M" formControlName="gender" id="male" />
+                                <label for="male"><i class="fas fa-male mr-2"></i><small
+                                        class="fontSM">{{'edituser-masculino' | translate}}</small></label>
+                                <input type="radio" name="gender" value="F" formControlName="gender" id="female" />
+                                <label for="female"><i class="fas fa-female mr-2"></i><small
+                                        class="fontSM">{{'edituser-feminino' | translate}}</small></label>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="mb-3 col-md-4">
+                            <div class="label-float ">
+                                <label id="cpfLabel">{{'edituser-cpf' | translate}}</label><br>
+                                <input type="text" name="cpf" id="cpf" placeholder=" " formControlName="cpf"
+                                    mask="000.000.000-00" (keyup)="clearValidate('cpf')" />
+                            </div>
+                        </div>
+                        <div class="mb-3 col-md-4">
+                            <div class="label-float ">
+                                <label id="rgLabel">{{'edituser-rg' | translate}}</label><br>
+                                <input type="text" name="rg" id="rg" placeholder=" " formControlName="rg"
+                                    mask="00.000.000-0" (keyup)="clearValidate('rg')" />
+                            </div>
+                        </div>
+                        <div class="mb-3 col-md-4">
+                            <div class="label-float">
+                                <label id="birthDateLabel">{{'edituser-dtnasc' | translate}} </label><br>
+                                <input type="text" id="birthDate" name="birthDate" placeholder=" " mask="00/00/0000"
+                                    formControlName="birthDate" (keyup)="clearValidate('birthDate')" />
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="mb-3 col-md-4">
+                            <div class="label-float ">
+                                <label id="nacionalidade">{{'nacionalidade' | translate}}</label><br>
+                                <input type="text" name="nacionalidade" id="nacionalidade" placeholder=" "
+                                    formControlName="nacionalidade" (keyup)="clearValidate('nacionalidade')" />
+                            </div>
+                        </div>
+                        <div class="mb-3 col-md-4">
+                            <div class="label-float ">
+                                <label id="orgaoExpeditor">{{'orgao' | translate}}</label><br>
+                                <input type="text" name="orgaoExpeditor" id="orgaoExpeditor" placeholder=" "
+                                    formControlName="orgaoExpeditor" (keyup)="clearValidate('orgaoExpeditor')" />
+                            </div>
+                        </div>
+                        <div class="mb-3 col-md-4">
+                            <div class="label-float">
+                                <label id="dataExpedicao">{{'dataExpedicao' | translate}}</label><br>
+                                <input type="text" id="dataExpedicao" name="dataExpedicao" placeholder=" "
+                                    mask="00/00/0000" formControlName="dataExpedicao"
+                                    (keyup)="clearValidate('dataExpedicao')" />
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-2">
+                    <div class="dropzone-wrapperr container col-md-12">
+                        <div class="dropzone-desc">
+                            <p>{{'edituser-arraste' | translate}}</p>
+                            <button type="submit" class="btn btn-drag btn-lg btn-square ml-auto"><i
+                                    class="fas fa-camera-retro fa-1x"></i></button>
+                        </div>
+                        <input type="file" name="img_logo" class="dropzone" (change)="onPictureChange($event)"
+                            accept="image/*">
+                    </div>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="mb-3 col-md-3">
+                    <div class="label-float">
+                        <label id="zipCodeLabel">{{'edituser-cep' | translate}}</label><br>
+                        <input type="text" name="zipCode" id="zipCode" placeholder=" " formControlName="zipCode"
+                            (keyup)="clearValidate('zipCode')" mask="00000-000" />
+                    </div>
+                </div>
+                <div class="mb-3 col-md-7">
+                    <div class="label-float">
+                        <label id="addressLabel">{{'edituser-endereco' | translate}}</label><br>
+                        <input type="text" name="address" id="address" placeholder=" " formControlName="address"
+                            (keyup)="clearValidate('address')" />
+                    </div>
+                </div>
+                <div class="mb-3 col-md-2">
+                    <div class="label-float">
+                        <label id="numberLabel">{{'edituser-numero' | translate}}</label><br>
+                        <input type="text" name="number" id="number" placeholder=" " formControlName="number"
+                            (keypress)="onlyNumber($event)" (keyup)="clearValidate('number')" />
+                    </div>
+                </div>
+            </div>
+
+            <div class="row ">
+                <div class="mb-3 col-md-4">
+                    <div class="label-float">
+                        <label id="complementLabel">{{'edituser-complemento' | translate}}</label><br>
+                        <input type="text" name="complement" id="complement" placeholder=" "
+                            formControlName="complement" (keyup)="clearValidate('complement')" />
+                    </div>
+                </div>
+                <div class="mb-3 col-md-2">
+                    <div class="label-float">
+                        <label id="ufLabel">{{'edituser-uf' | translate}}</label><br>
+                        <mat-form-field class="col-xl-12 pl-0 pr-0">
+                            <mat-select matSelect id="uf" name="uf" formControlName="uf" (selectionChange)="change()">
+                                <mat-option></mat-option>
+                                <mat-option *ngFor="let state of uf" [value]="state.sigla">
+                                    {{ state.sigla }}
+                                </mat-option>
+                            </mat-select>
+                        </mat-form-field>
+                    </div>
+                </div>
+                <div class="mb-3 col-md-3">
+                    <div class="label-float">
+                        <label id="cityLabel">{{'edituser-cidade' | translate}}</label><br>
+                        <mat-form-field class="col-xl-12 pl-0 pr-0">
+                            <mat-select matSelect id="city" name="city" formControlName="city">
+                                <mat-option></mat-option>
+                                <mat-option *ngFor="let cidade of cities" value="{{ cidade }}">
+                                    {{ cidade.substr(8) }}
+                                </mat-option>
+                            </mat-select>
+                        </mat-form-field>
+                    </div>
+                </div>
+                <div class="mb-3 col-md-3">
+                    <div class="label-float">
+                        <label id="discrictLabel">{{'edituser-bairro' | translate}}</label><br>
+                        <input type="text" name="discrict" id="discrict" placeholder=" " formControlName="discrict"
+                            (keyup)="clearValidate('discrict')" />
+                    </div>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="mb-3 col-md-4">
+                    <div class="label-float">
+                        <label id="emailLabel">E-mail</label><br>
+                        <input type="text" name="email" id="email" placeholder=" " formControlName="email"
+                            (keyup)="clearValidate('email')" />
+                    </div>
+                </div>
+                <div class="mb-3 col-md-4">
+                    <div class="label-float">
+                        <label id="phoneNumberLabel">{{'edituser-telefone' | translate}}</label><br>
+                        <input type="text" name="phoneNumber" id="phoneNumber" placeholder=" "
+                            formControlName="phoneNumber" mask="(00) 00000-0000" (blur)="getMaskPhone('phoneNumber')"
+                            (focus)="getMaskPhone('phoneNumber', true)" (keyup)="clearValidate('phoneNumber')" />
+                    </div>
+                </div>
+            </div>
+
+            <div class="row mb-5 p-4">
+                <a [routerLink]="lastUrl" class="btn btn-redz">{{'edituser-voltar' | translate}}</a>
+                <button type="submit" (click)="update()" class="btn btn-greenz btn-lg btn-square ml-auto"
+                    data-toggle="modal"
+                    [attr.data-target]="modalEditUser">{{'btn-salvaralteracoes' | translate}}</button>
+            </div>
+        </form>
+        <!-- Login Form closed -->
+    </div>
+</div>
+<!-- login wrapper closed  [disabled]="editProfileForm.invalid" -->
+
+<div class="modal fade" id="modalEditUser" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+    aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="bd-t-blue"></div>
+        <div class="modal-content bordertopModal">
+
+            <div class="modal-header modalFormat">
+                <img class="img-fluid col-12 m-120" src="assets/img/confirmacao-feedback.png" />
+            </div>
+            <div class="modal-body">
+                <h1 class="text-center"><b>{{'edituser-atualizado' | translate}}</b></h1>
+            </div>
+            <a href="#" class="col-4 badge badge-success text-center p-3 " data-dismiss="modal"
+                aria-label="Fechar">OK!</a>
+        </div>
+    </div>
+</div>

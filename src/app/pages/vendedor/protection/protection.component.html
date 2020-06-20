@@ -1,0 +1,165 @@
+<div class="w-100 mb-3">
+    <form class="searchbox form-inline md-form form-sm active-purple active-purple-2 mt-4">
+        <i class="fas fa-search  iconLupa" aria-hidden="true"></i>
+        <input class="form-control" type="search" placeholder="{{'vend-protection-buscarseguro' | translate}}"
+            id="search" autocomplete="off" name="search" [(ngModel)]="searchProtection" maxlength="140">
+
+        <div id="search-autocomplete" class="search-autocomplete" style="position: absolute;z-index: 10000000;">
+            <ul>
+
+                <li class="load-more"><a href="#">{{'vend-protection-carreguemais' | translate}}</a></li>
+                <li class="no-results">{{'vend-protection-semresultados' | translate}}</li>
+                <li class="error">%err%</li>
+
+            </ul>
+            <div class="loader">
+                <div class="spinner">
+                    <div class="bounce1"></div>
+                    <div class="bounce2"></div>
+                    <div class="bounce3"></div>
+                </div>
+            </div>
+        </div>
+    </form>
+</div>
+
+<!-- <div *ngIf="this.loading.getLoadingMenuComponents() == false" class="w-100 mb-3">
+    
+</div> -->
+
+<bem-mais-title></bem-mais-title>
+
+<div *ngIf="this.loading.getLoadingMenuComponents() == false">
+    <div class="row" *ngIf="insurances">
+        <div class="mb-3  col-md-6 col-sm-12 col-lg-4 col-xl-3"
+            *ngFor="let item of insurances | filter: searchProtection">
+            <div class="card mb-3 pb-3 shadow-sm border-insurance border-insurance">
+
+                <div class="row">
+                    <div class="col-xl-12" style="justify-content: space-between;display: flex;"
+                        (click)="insuranceSelected = item">
+
+                        <a class="ml-4 nostyle" data-toggle="modal" data-target="#modalEmail">
+                            <i class="far fa-lg fa-envelope"></i><br>
+                            <span style="font-size:14px;">E-mail</span>
+                        </a>
+
+                        <a class="mr-4 nostyle" data-toggle="modal" data-target="#modalInfo">
+                            <img class="ml-2" src="./assets/img/eyefile.png"><br>
+                            <span style="font-size:14px;">+ info</span>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div (click)="addCart(item)" class="col-xl-12" [attr.data-toggle]="modalCliente" data-target="#modalCliente"
+                        style="cursor:pointer">
+                        <img class="img-border" [src]="item.image">
+                    </div>
+                </div>
+
+                <div class="card-body">
+                    <div (click)="addCart(item)" class="col-xl-12 pt-2 pb-2" [attr.data-toggle]="modalCliente"
+                        data-target="#modalCliente" style="cursor:pointer">
+                        <div class="product-title">
+                            <h5>{{item.name}}</h5>
+                        </div>
+                        <div><small>{{item.description}}</small></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Modal Info Seguro -->
+<div class="modal fade" id="modalInfo" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+    aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content bordertopModal">
+            <div class="modal-header modalFormat">
+                <h5 class="modal-title" id="exampleModalLabel">{{'vend-protection-infosseguro' | translate}}</h5>
+                <button type="button" class="close mclose" data-dismiss="modal" aria-label="Fechar">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                {{insuranceSelected?.information}}
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Modal Info Cliente -->
+<div class="modal fade" id="modalCliente" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+    aria-hidden="true">
+    <form [formGroup]="clientForm">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content bordertopModal">
+                <div class="modal-header modalFormat pl-4 ml-1">
+                    <h5 class="modal-title" id="exampleModalLabel">{{'vend-protection-infoscliente' | translate}}</h5>
+                    <button type="button" class="close mclose" data-dismiss="modal" aria-label="Fechar">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <div class="col-xl-12 pt-3">
+                        <label><small>{{'vend-protection-infoscliente-nomecompleto' | translate}}</small></label>
+                        <input class="col-xl-12 p-0" formControlName="name">
+                    </div>
+                    <div class="col-xl-12 pt-3">
+                        <label><small>{{'vend-protection-infoscliente-email' | translate}}</small></label>
+                        <input class="col-xl-12 p-0" formControlName="email">
+                    </div>
+                    <div class="col-xl-12 pt-3">
+                        <label><small>{{'vend-protection-infoscliente-celular' | translate}}</small></label>
+                        <input class="col-xl-12 p-0" formControlName="cellPhone" [mask]="maskPhone"
+                            (blur)="getMaskPhone('cellPhone')" (focus)="getMaskPhone('cellPhone', true)">
+                    </div>
+                    <div class="col-xl-12 pt-3">
+                        <label
+                            class="pb-0 mb-0"><small>{{'vend-protection-infoscliente-cep' | translate}}</small></label>
+                        <div class="col-xl-12 p-0 form-group has-search">
+                            <span class="fa fa-search form-control-feedback" style="right: 0; bottom: 5px;"></span>
+                            <input type="text" class="pt-2 pl-0 cep col-xl-12" formControlName="postalCode"
+                                mask="00000-000">
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer modalFormat">
+                    <button type="button" class="btn mbtn btn-outline-danger"
+                        data-dismiss="modal">{{'btn-cancelar' | translate}}</button>
+                    <button type="button" class="btn mbtn btn-success msuccess" [disabled]="clientForm.invalid"
+                        (click)="saveProspect()" routerLink="/private/vendedor/select" style="float:right;"
+                        data-dismiss="modal">{{'btn-iniciarcadastro' | translate}}</button>
+                </div>
+            </div>
+        </div>
+    </form>
+</div>
+
+<!-- Modal Email -->
+<div class="modal fade" id="modalEmail" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+    aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content bordertopModal">
+            <form class="form-inline container row d-flex justify-content-between">
+                <div class="form-group mb-2">
+                    <label for="email" class="sr-only">E-mail</label>
+                    <input type="email" class="form-control" id="email"
+                        placeholder="{{'VendedorYourMail' | translate}}">
+                </div>
+                <button type="submit" class="btn btn-primary btn-sm btn-squareee" data-dismiss="modal"
+                    style="padding: 0.5rem 3rem; border-radius: 50px;">{{'login-entrar' | translate}}</button>
+            </form>
+        </div>
+    </div>
+</div>
+
+<ngx-loading [show]="this.loading.getLoadingMenuComponents()" [config]="{backdropBorderRadius: '10px',
+                    backdropBackgroundColour: 'rgba(0, 0, 0, 0)',
+                    animationType: ngxLoadingAnimationTypes.threeBounce,
+                    primaryColour: '#D3D3D3',
+                    secondaryColour: '#D3D3D3',
+                    tertiaryColour: '#D3D3D3'}" [template]="loadingTemplate">
+</ngx-loading>

@@ -1,0 +1,34 @@
+{
+    "data": {
+        "comparative": {
+            "aggregators": [
+                {
+                    "id":657,
+                    "name": "AgregaMais",
+                    "salesAmount": "7537.32",
+                    "position": 1,
+                    "percent": 100
+                },
+                {
+                    "id":234,
+                    "name": "TamuJunto",
+                    "salesAmount": "4000",
+                    "position": 13,
+                    "percent": 80
+                }
+            ]
+        }
+    },
+    "message": "OK",
+    "hasError": false,
+    "errorDataCollection": [
+      {
+        "code": "string",
+        "message": "string",
+        "url": "string",
+        "detail": "string"
+      }
+    ],
+    "statusCode": 200
+  }
+  

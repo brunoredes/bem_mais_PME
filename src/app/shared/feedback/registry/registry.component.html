@@ -1,0 +1,38 @@
+<div class="row  mt-0">
+    <div class="col-xl-12">
+        <div class="pull-left mt-0">
+            <h5>{{'feedback-novo' | translate}}</h5>
+        </div>
+        <div class="pull-right">
+            <div class="form-group">
+                <a href="#" data-toggle="modal" data-target="#modalInfo" class="nostyle d-grid" matTooltip="{{'feedback-enviar' | translate}}">
+                    <i class="fas fa-3x text-center"><img src="./assets/img/send-button.svg" /></i>
+                    <!-- <small>{{'feedback-enviar' | translate}}</small> -->
+                </a>
+            </div>
+        </div>
+    </div>
+    <div class="row col-xl-12 mb-3">
+        <div class="col-xl-6">
+            <label><small class="fontGuide">{{'feedback-categoria' | translate}}</small></label><br>
+            <mat-form-field class="col-12 pl-0">
+            <mat-select name="perfil" id="perfil" class="col-xl-12 select">
+                <mat-option class="select"></mat-option>
+                <mat-option *ngFor="let i of category" value="{{i.name}}" class="select">{{i.name}}</mat-option>
+            </mat-select>
+        </mat-form-field>
+            <!-- <i class="fa fa-chevron-down"></i> -->
+        </div>
+        <div class="col-xl-6">
+            <label><small class="fontGuide">{{'feedback-titulo' | translate}}</small></label>
+            <input class="col-xl-12 mt-1">
+        </div>
+    </div>
+</div>
+
+
+
+
+
+<app-ngx-editor [config]="edit" [placeholder]="'Escreva algo...'" [spellcheck]="true" >
+</app-ngx-editor>

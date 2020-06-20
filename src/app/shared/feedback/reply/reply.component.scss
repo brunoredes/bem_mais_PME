@@ -1,0 +1,98 @@
+#style-4 .my-custom-scrollbar {
+    margin-right: 5px!important;
+}
+
+#perguntaCliente{opacity: 0.5;}
+
+.my-custom-scrollbar {
+    position: relative;
+    height: 75vh;
+    overflow: auto;
+    padding: 17px;
+}
+
+.table-wrapper-scroll-y {
+    display: block;
+    margin-left: -6px;
+}
+
+
+//responder 
+
+#reply{display: none;}
+#descartarReply{display: none;}
+#enviarReply{display: none;}
+.justify-btn{display: flex;justify-content: space-between;   margin-left: 30px;}
+
+
+
+//modal
+
+.modal-header {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    padding: 0!important; 
+    border-bottom: 0!important ;
+  
+}
+
+.bd-t-red{
+    background-color: #FF3636;
+    border-radius: 0.3rem 0.3rem 0 0;
+    height: 7px;
+    position: absolute;
+    width: 100%;
+    z-index: 1;
+}
+
+.btn-br50{border-radius: 50px !important;}
+.btn-center{margin: 2px;display: flex;justify-content: space-around;}
+
+.modal-content {
+  
+    margin: none!important;
+    position: relative;
+    margin-top: 25%;
+  }
+  .modal-header {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    padding: 1rem 1rem;
+    border-bottom: transparent;
+    border-top-left-radius: 0.3rem;
+    border-top-right-radius: 0.3rem;
+  }
+  .badge {border-radius: 50px!important;margin: auto;}
+  .badge-success{background-color: #62BC00!important;}
+  .m-120{margin-top: -120px; position: relative;z-index: 2;}
+  
+  .bd-t-blue{background-color: #005AAB;border-radius: 0.3rem 0.3rem 0 0;height: 7px;position: absolute;width: 100%;z-index: 1;}
+  .badge-primary{background-color:#62BC00!important;color: #fff;}
+  .badge-secundary{background-color:#FF3636!important;color: #fff;}
+  .badge {font-weight: 100;}
+  
+  .color-grey{color: #787878;}
+  .color-grey-light{color: #949494;}
+
+  //efeito modal
+
+ .table-striped:nth-child(0n+2){opacity: .5;}
+
+  .none{display: none;}
+
+  @media(max-width:768px){
+   
+    .my-custom-scrollbar{
+       
+        height: auto; 
+        position: relative;
+        z-index: 1;
+       
+    }
+
+
+
+
+  }

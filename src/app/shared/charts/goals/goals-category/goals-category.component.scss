@@ -1,0 +1,30 @@
+.chart-goals-category {
+    margin: 0 0 0 -300px;
+    float: left;
+    background: white;
+    width: 22vw;
+    position: absolute;
+    // border-radius: 3px;
+    padding: 10px 5px 0px 5px;
+    left: 0;
+    display: none;
+    // z-index: 99999953;
+    border-radius: 10px;
+    top: 32px; 
+    left: 90px;
+    text-align: left;
+}
+
+.chart-goals-category:after {
+    bottom: 100%;
+    left: 89%;
+    border: solid transparent;
+    content: " ";
+    height: 0;
+    width: 0;
+    position: absolute;
+    pointer-events: none;
+    border-bottom-color: white;
+    border-width: 8px;
+    margin-left: -8px;
+}

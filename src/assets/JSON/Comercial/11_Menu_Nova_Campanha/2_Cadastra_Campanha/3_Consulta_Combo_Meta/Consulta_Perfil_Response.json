@@ -1,0 +1,28 @@
+{
+    "data": [
+        {
+            "id": 1,
+            "name": "Meta Roubo e Furto"
+        },
+        {
+            "id": 2,
+            "name": "Meta Garantia Estendida"
+        },
+        {
+            "id": 3,
+            "name": "Meta Seguro Viagem"
+        },
+        {
+            "id": 4,
+            "name": "Meta Seguro Auto"
+        },
+        {
+            "id": 5,
+            "name": "Meta Seguro Pet"
+        }
+    ],
+    "message": "Ok",
+    "hasError": false,
+    "errorDataCollection": null,
+    "statusCode": 200
+}

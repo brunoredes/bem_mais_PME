@@ -1,0 +1,216 @@
+<!--Register-->
+<section *ngIf="!update">
+    <h5>{{'AggregatorNewPartSubt' | translate}}</h5>
+    <div class="row">
+        <div class="mb-3 col-12 col-sm-6 col-md-6 col-lg-6 col-xl-6 p-0">
+            <div class="col-md-12 col-sm-12 radioInput">
+                <div class="toggle">
+                    <input type="radio" name="category" value="I" id="cadIndividual" checked
+                        (click)="changeindividual()" />
+                    <label for="cadIndividual"><i class="fas fa-users mr-2"></i><small
+                            class="fontSM">{{'AggregatorRegSing' | translate}}</small></label>
+                    <input type="radio" name="category" value="M" id="cadMassa" (click)="changemassa()" />
+                    <label for="cadMassa"><i class="fas fa-cloud-upload-alt mr-2"></i><small
+                            class="fontSM">{{'AggregatorRegBulk' | translate}}</small></label>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<div class="row">
+    <div class="position-relative col-12">
+        <form class="login-form" [formGroup]="newSellerForm" action="javascript:;" method="post">
+            <section *ngIf="individual">
+                <div class="row">
+                    <div class="col-md-10">
+                        <div class="row">
+                            <div class="col-md-4">
+                                <div class="label-float">
+                                    <label for="dealerId">{{'ComercialNewCampFilterProf' | translate}}</label><br>
+                                    <mat-form-field style="width: 100%; margin-top: -20px;">
+                                        <mat-select formControlName="dealerId">
+                                            <mat-option *ngFor="let profile of profiles" [value]="profile"
+                                                id="dealerId">
+                                                {{ profile }}
+                                            </mat-option>
+                                        </mat-select>
+                                    </mat-form-field>
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+                                <div class="label-float">
+                                    <label id="username">{{'edituser-nomeusuario' | translate}}</label><br>
+                                    <input type="text" id="username" name="username" placeholder=" "
+                                        formControlName="username" />
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+                                <div class="label-float">
+                                    <label for="storeId">{{'ManagerSellerLinkStore' | translate}}</label><br>
+                                    <mat-form-field style="width: 100%; margin-top: -20px;">
+                                        <mat-select formControlName="storeId">
+                                            <mat-option *ngFor="let profile of profiles" [value]="profile" id="profile">
+                                                {{ profile }}
+                                            </mat-option>
+                                        </mat-select>
+                                    </mat-form-field>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="row">
+                            <div class="col-md-8">
+                                <div class="label-float">
+                                    <label id="nome">{{'edituser-nome' | translate}}</label><br>
+                                    <input type="text" id="nome" name="nome" placeholder=" " formControlName="name" />
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+                                <div class="label-float ">
+                                    <label id="nascimento">{{'edituser-dtnasc' | translate}}</label><br>
+                                    <input type="text" name="nascimento" id="nascimento" placeholder=" "
+                                        formControlName="birthDate" />
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-2">
+                        <div class="dropzone-wrapperr container col-md-12">
+                            <div class="dropzone-desc">
+                                <p>{{ "edituser-arraste" | translate }}</p>
+                                <button type="submit" class="btn btn-darkk btn-lg btn-square ml-auto"><i
+                                        class="fas fa-camera-retro fa-1x"></i></button>
+                            </div>
+                            <input type="file" name="img_logo" class="dropzone" accept="image/*">
+                        </div>
+                    </div>
+                </div>
+                <div class="row ">
+                    <div class="col-md-6">
+                        <div class="label-float">
+                            <label id="cpf">{{'edituser-cpf' | translate}}</label><br>
+                            <input type="text" name="cpf" id="cpf" placeholder=" " formControlName="cpf" />
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="label-float">
+                            <label id="rg">{{'edituser-rg' | translate}}</label><br>
+                            <input type="text" name="rg" id="rg" placeholder=" " formControlName="rg" />
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-2">
+                        <div class="label-float">
+                            <label id="cep">{{'edituser-cep' | translate}}</label><br>
+                            <input type="text" name="cep" id="cep" placeholder=" " formControlName="postalCode" />
+                        </div>
+                    </div>
+                    <div class="col-md-8">
+                        <div class="label-float">
+                            <label id="endereco">{{'edituser-endereco' | translate}}</label><br>
+                            <input type="text" name="endereco" id="endereco" placeholder=" "
+                                formControlName="address" />
+                        </div>
+                    </div>
+                    <div class="col-md-2">
+                        <div class="label-float">
+                            <label for="addressNumber" id="addressNumber">{{'edituser-numero' | translate}}</label><br>
+                            <input type="text" name="addressNumber" id="addressNumber" placeholder=" "
+                                formControlName="addressNumber" />
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-3">
+                        <div class="label-float">
+                            <label id="discrictLabel">{{'edituser-bairro' | translate}}</label><br>
+                            <input type="text" name="discrict" id="discrict" placeholder=" "
+                                formControlName="neighborhood" />
+                        </div>
+                    </div>
+                    <div class="col-md-2">
+                        <div class="label-float">
+                            <label id="ufLabel">{{'edituser-uf' | translate}}</label><br>
+                            <mat-form-field class="col-xl-12 pr-0 pl-0">
+                                <mat-select matSelect id="state" name="state" formControlName="state"
+                                    (selectionChange)="change()">
+                                    <mat-option></mat-option>
+                                    <mat-option *ngFor="let state of uf" [value]="state.sigla">
+                                        {{ state.sigla }}
+                                    </mat-option>
+                                </mat-select>
+                            </mat-form-field>
+                        </div>
+                    </div>
+                    <div class="col-md-3">
+                        <div class="label-float">
+                            <label id="cityLabel">{{'edituser-cidade' | translate}}</label><br>
+                            <mat-form-field class="col-xl-12 pr-0 pl-0">
+                                <mat-select matSelect id="city" name="city" formControlName="city">
+                                    <mat-option></mat-option>
+                                    <mat-option *ngFor="let cidade of cities" value="{{ cidade }}">
+                                        {{ cidade.substr(8) }}
+                                    </mat-option>
+                                </mat-select>
+                            </mat-form-field>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="label-float">
+                            <label id="complemento">{{'edituser-complemento' | translate}}</label><br>
+                            <input type="text" name="complemento" id="complemento" placeholder=" "
+                                formControlName="complement" />
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-md-4">
+                        <div class="label-float">
+                            <label id="email">{{'AggregatorListEmail' | translate}}</label><br>
+                            <input type="text" id="email" name="email" placeholder=" " formControlName="email" />
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="label-float">
+                            <label id="site">{{'AggregatorNewPartnerJurPerSite' | translate}} </label><br>
+                            <input type="text" id="site" name="site" placeholder=" " formControlName="site" />
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="label-float ">
+                            <label for="phone" id="phone">{{'edituser-telefone' | translate}}</label><br>
+                            <input type="text" name="phone" id="phone" placeholder=" " formControlName="phone" />
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section *ngIf="massa">
+                <div class="row">
+                    <div class="col-12">
+                        <div class="dropzone-file">
+                            <div class="dropzone-desc">
+                                <p>{{ "edituser-arraste" | translate }}</p>
+                                <button type="submit" class="btn btn-drag btn-lg btn-square ml-auto">
+                                    <i class="fas fa-cloud-upload-alt fa-1x"></i>
+                                    {{'AggregatorNewPartnerBulkRegDrag' | translate}}
+                                </button>
+                            </div>
+                            <input type="file" name="img_logo" class="dropzone"
+                                accept="file/*" />
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <div class="d-flex justify-content-between mt-5">
+                <a (click)="voltar()"class="btn btn-redz">{{'edituser-voltar' | translate}}</a>
+
+                <button type="submit" class="btn btn-greenz btn-lg btn-square ml-auto">
+                    {{'AggregatorNewPartnerReg' | translate}}
+                </button>
+            </div>
+        </form>
+    </div>
+</div>

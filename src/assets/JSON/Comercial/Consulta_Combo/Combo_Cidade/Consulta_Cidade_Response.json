@@ -1,0 +1,26 @@
+{
+    "data": {
+        "cities": [
+            {
+                "id":1,
+                "name": "São Paulo"
+            },
+            {
+                "id":2,
+                "name": "São Caetano"
+            },
+            {
+                "id":3,
+                "name": "Santo André"
+            },
+            {
+                "id":4,
+                "name": "São Bernardo"
+            }
+        ]
+    },
+    "message": "Ok",
+    "hasError": false,
+    "errorDataCollection": null,
+    "statusCode": 200
+}

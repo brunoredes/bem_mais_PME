@@ -1,0 +1,10 @@
+
+var sellingPoints = new SellingPoints();
+sellingPoints.Title = "";
+sellingPoints.validityStartDate = null;
+sellingPoints.validityEndDate = null;
+sellingPoints.responsible = null;
+sellingPoints.hierarchy = null; (Esse campo não deve existir)
+sellingPoints.insurance = null;
+
+this.http.post<any>(`${environment.apiUrl}/SellingPoints`, sellingPoints);

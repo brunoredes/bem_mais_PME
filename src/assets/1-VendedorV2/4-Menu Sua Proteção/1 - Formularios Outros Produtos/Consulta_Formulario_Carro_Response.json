@@ -1,0 +1,132 @@
+{
+    "data": {
+        "form": [
+            {
+                "type": "select",
+                "name": "typeUse",
+                "label": "Tipo de uso",
+                "required": true,
+                "maxLenght":null,
+                "mask": null,
+                "dependency": null,
+                "options":[
+                    {
+                        "id": 1,
+                        "value": "Particular"
+                    },
+                    {
+                        "id": 2,
+                        "value": "Alugado"
+                    }
+                ]
+            },
+            {
+                "type": "select",
+                "name": "brand",
+                "label": "Marca",
+                "required": true,
+                "maxLenght":null,
+                "mask": null,
+                "dependency": null,
+                "options":[
+                    {
+                        "id": 1,
+                        "value": "GM"
+                    },
+                    {
+                        "id": 2,
+                        "value": "Fiat"
+                    },
+                    {
+                        "id": 3,
+                        "value": "Volkswagen"
+                    }
+                ]
+            },
+            {
+                "type": "select",
+                "name": "fabricationModel",
+                "label": "Fabricação/Modelo",
+                "required": true,
+                "maxLenght":null,
+                "mask": null,
+                "dependency": "brand",
+                "options": null
+            },
+            {
+                "type": "select",
+                "name": "model",
+                "label": "Modelo",
+                "required": true,
+                "maxLenght":null,
+                "mask": null,
+                "dependency": "brand, fabricationModel",
+                "options": null
+            },
+            {
+                "type": "radio",
+                "name": "own",
+                "label": "Possui o veículo?",
+                "required": true,
+                "maxLenght":null,
+                "mask": null,
+                "dependency": null,
+                "options":null
+            },
+            {
+                "type": "radio",
+                "name": "fundedAliened",
+                "label": "Financiado/Alienado",
+                "required": true,
+                "maxLenght":null,
+                "mask": null,
+                "dependency": null,
+                "options":null
+            },
+            {
+                "type": "radio",
+                "name": "renovation",
+                "label": "Renovação de Seguro?",
+                "required": true,
+                "maxLenght":null,
+                "mask": null,
+                "dependency": null,
+                "options":null
+            },
+            {
+                "type": "radio",
+                "name": "armored",
+                "label": "Blindado?",
+                "required": true,
+                "maxLenght":null,
+                "mask": null,
+                "dependency": null,
+                "options":null
+            },
+            {
+                "type": "radio",
+                "name": "adapted",
+                "label": "Adaptado para PCD?",
+                "required": true,
+                "maxLenght":null,
+                "mask": null,
+                "dependency": null,
+                "options":null
+            },
+            {
+                "type": "radio",
+                "name": "gasKit",
+                "label": "Kit Gás?",
+                "required": true,
+                "maxLenght":null,
+                "mask": null,
+                "dependency": null,
+                "options":null
+            }
+        ]
+    },
+    "message": "Ok",
+    "hasError": false,
+    "errorDataCollection": null,
+    "statusCode": 200
+}

@@ -1,0 +1,25 @@
+{
+  "data": {
+    "user": {
+      "id": "100",
+      "name": "Tamu Junto",
+      "profile": {
+        "id": 3,
+        "name": "Agregador"
+      },
+      "picture": "assets/user.png",
+      "retailer": null
+    }
+  },
+  "message": "OK",
+  "hasError": false,
+  "errorDataCollection": [
+    {
+      "code": "string",
+      "message": "string",
+      "url": "string",
+      "detail": "string"
+    }
+  ],
+  "statusCode": 200
+}

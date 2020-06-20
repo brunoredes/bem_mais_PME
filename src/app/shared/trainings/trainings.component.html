@@ -1,0 +1,23 @@
+<section class="pr-0">
+    <div class="row ml-0">
+        <div class="col-12 col-sm-12 col-md-5 col-lg-7 col-xl-7 mt-0 p-0">
+         <bem-mais-title></bem-mais-title>
+        </div>
+        <div class="col-12 col-sm-12 col-md-7 col-lg-5 col-xl-5 mt-3 pr-0" *ngIf="!vendedor">
+            <div id="myDIV">
+                <a id="btnMaterial" routerLinkActive="active" class="btnDash" routerLink="material"
+                    style="cursor: pointer;font-size: 1rem;">{{'treina-material' | translate}}</a>
+
+                <a id="btnNovoTreinamento" routerLinkActive="active" class="btnDash" *ngIf="!corretor"
+                    routerLink="new-trainings" style="cursor: pointer;font-size: 1rem;"><i class="fas fa-plus"
+                        style="font-size: 0.8rem;"></i>
+                    {{'treina-novotreinamento' | translate}}</a>
+
+                <a id="btnEstatistica" routerLinkActive="active" class="btnDash" routerLink="statistic"
+                    style="cursor: pointer;font-size: 1rem;">{{'treina-estatistica' | translate}}</a>
+            </div>
+        </div>
+    </div>
+</section>
+
+<router-outlet></router-outlet>

@@ -1,0 +1,7 @@
+var dash = new DashForm();
+dash.startDate = null;
+dash.endDate = null;
+dash.saleStatus = null;
+
+//Exemplo de Requisição -- Haverá uma requisição dessa para cada SubMenu/Gráfico
+this.http.post<any>(`${environment.apiUrl}/Dashboards/Sales`, dash);

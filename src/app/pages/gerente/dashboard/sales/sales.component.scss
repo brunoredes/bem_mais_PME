@@ -1,0 +1,199 @@
+$green: #62bc00;
+$red: #ff3636;
+$Darkblue: #02296a;
+$LightBlue: #005aab;
+
+.height{height: 385px;}
+
+.filter-button {
+  padding: 5px 20px;
+  display: inline-block;
+  text-decoration: none;
+  border-radius: 50px;
+  border: 1px solid #787878;
+  color: #707070;
+}
+
+.scrollbar {
+  float: left;
+  max-height: 220px;
+  overflow-y: scroll;
+  overflow-x: hidden;
+  -ms-overflow-style: -ms-autohiding-scrollbar;
+}
+
+.force-overflow {
+  min-height: 450px;
+  width: 36vw;
+}
+
+.scrollbar-content {
+  float: left;
+  max-height: 100vh;
+  overflow-y: scroll;
+  overflow-x: hidden;
+}
+
+.force-overflow-content {
+  min-height: 100vh;
+}
+
+/*
+ *  STYLE 4
+ */
+
+#style-4::-webkit-scrollbar-track {
+  -webkit-box-shadow: inset 0 0 6px rgba(255, 255, 255, 0.3);
+  background-color: transparent;
+  border-radius: 10px;
+}
+
+#style-4::-webkit-scrollbar {
+  width: 8px;
+  background-color: transparent;
+  margin-right: 8px;
+}
+
+#style-4::-webkit-scrollbar-thumb {
+  background-color: rgba(112, 112, 112, 0.8);
+  border: 1px solid transparent;
+  border-radius: 10px;
+}
+
+.svg-sale {
+  max-width: 80%;
+  height: auto;
+}
+
+.card{display: block!important;}
+
+@media(max-width:1440px){
+
+
+  .height{height: 280px;}
+
+  @media(max-width:1366px){
+ 
+    .height{height: 260px;}
+
+
+  }
+
+  @media(max-width: 1024px){
+
+    .height{height: 220px;}
+
+
+  }
+
+}
+
+@media (max-width: 425px) {
+  .force-overflow {
+    min-height: 450px;
+    width: 100%;
+  }
+
+  .rounded-pill {
+    border-radius: 2rem !important;
+    padding: 10px;
+  }
+
+  #style-4 > .force-overflow span,
+  small {
+    text-align: center;
+    // display: flex;
+    justify-content: center;
+  }
+}
+
+.filter-dashSales {
+  background: white;
+  width: 27vw;
+  position: absolute;
+  border-radius: 3px;
+  padding: 20px;
+  z-index: 99;
+  border-radius: 20px;
+  top: 50px;
+  text-align: left;
+  right: 0;
+  display: none;
+  margin-right: 10px;
+}
+
+.filter-dashSales:after {
+  bottom: 100%;
+  left: 89%;
+  border: solid transparent;
+  content: " ";
+  height: 0;
+  width: 0;
+  position: absolute;
+  pointer-events: none;
+  border-bottom-color: white;
+  border-width: 8px;
+  margin-left: -8px;
+}
+
+.d-grid {
+  display: grid;
+}
+.justify-content-rigth {
+  justify-content: right;
+}
+
+button {
+  cursor: pointer;
+  margin-top: 10px;
+
+  padding: 10px 20px;
+
+  color: white;
+  font-size: 12px;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+
+::ng-deep .filter-dashSales .mat-form-field-infix {
+  border-top: 0px !important;
+  padding: 0.25rem !important;
+}
+
+@media (max-width: 1024px) {
+  .filter-dashSales {
+    width: 32vw;
+  }
+
+  @media (max-width: 768px) {
+    .filter-dashSales {
+      width: 40vw;
+    }
+
+    @media (max-width: 425px) {
+      .filter-dashSales {
+        width: 73vw;
+      }
+
+      .datePickerAte {
+        margin-top: 10px;
+      }
+
+      @media (max-width: 375px) {
+        .filter-dashSales {
+          width: 77vw;
+        }
+
+        @media (max-width: 320px) {
+          .filter-dashSales {
+            width: 85vw;
+          }
+        }
+      }
+    }
+  }
+}
+
+.light-blue {
+  background: rgba(231, 241, 250, 0.3);
+}

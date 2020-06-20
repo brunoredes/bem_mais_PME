@@ -1,0 +1,254 @@
+<div class="container-fluid">
+
+	<div class="row">
+
+		<div class="col-12 col-sm-12 col-md-4 col-lg-4 col-xl-4 p-0">
+
+			<div class="menu">
+
+				<div class="sidebar-header text-center">
+					<h3 class="mx-autoe  mt-5">
+						<img class="img-fluid text-center" src="./assets/img/logo-bem-mais-full.png">
+					</h3>
+
+				</div>
+
+			</div>
+
+		</div>
+
+	</div>
+
+	<div class="col-12 col-sm-12 col-md-9 col-lg-9 col-xl-10 px-5" style="float: right;">
+
+		<div class="w-100 mb-3">
+			<span class="navbar-brand">{{'RegisterUser'|translate}}</span>
+		  </div>
+
+		  <form [formGroup]="ngForm" class="login-form" action="javascript:;" method="post">
+
+
+			<div class="row">
+				<div class="col-md-10">
+					<div class="row">
+						<div class="mb-3 col-md-8">
+							<div class="label-float">
+								<label>{{'ComercialSalesPartnersEditCompName' | translate}}</label>
+								<br />
+								<input type="text" name="corporateName" placeholder=" " formControlName="corporateName" />
+								
+							</div>
+						</div>
+						<div class="mb-3 col-md-4">
+							<div class="label-float">
+
+								<label>{{'ComercialInterestedPartnersCpfCnpj' | translate}}</label>
+								<br />
+								<input type="text" name="cnpjOrCpf" placeholder=" " [mask]="setMaskcpfOrCnpj()"
+									(blur)="getMaskCpfCnpj()" (focus)="getMaskCpfCnpj(true)" formControlName="cnpjOrCpf" />
+								
+							</div>
+						</div>
+					</div>
+					<div class="row">
+						<div class="mb-3 col-md-12">
+							<div class="label-float ">
+
+								<label>{{'comercialInterestedPartnersViewFancName' | translate}}</label>
+								<br/>
+								<input type="text" name="name" placeholder=" " formControlName="name" />
+								
+							</div>
+						</div>
+					</div>
+					<div class="row">
+						<div class="mb-3 col-md-4">
+							<div class="label-float">
+                               <label>{{'AggregatorSalesDetailsZipCd' | translate}}</label>
+								<br />
+								<input type="text" name="zipCode" placeholder=" " formControlName="zipCode" mask="00000-000" />
+								
+							</div>
+						</div>
+						<div class="mb-3 col-md-8">
+							<div class="label-float">
+								<label>{{'AggregatorSalesDetailsAddress' | translate}}</label>
+								<br />
+								<input type="text" name="address" placeholder=" " formControlName="address" />
+								
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="dropzone-wrapperr container col-md-2">
+					<div class="dropzone-desc">
+						<p>{{'forms-arrastesolte' | translate}}</p>
+						<button type="submit" class="btn btn-darkk btn-lg btn-square ml-auto"><i
+								class="fas fa-camera-retro fa-1x"></i></button>
+					</div>
+					<input type="file" name="img_logo" class="dropzone" (change)="onPictureChange($event)" accept="image/*">
+				</div>
+			</div>
+
+			<div class="row ">
+				<div class="mb-3 col-md-2">
+					<div class="label-float">
+
+						<label>{{'forms-numero' | translate}}</label>
+						<br />
+						<input type="text" name="number" placeholder=" " formControlName="number" (keypress)="onlyNumber($event)" />
+						
+					</div>
+				</div>
+				<div class="mb-3 col-md-2">
+					<div class="label-float">
+						<label>{{'ComercialSalesPartnersEditAddrCompl' | translate}}</label>
+						<br />
+						<input type="text" name="complement" placeholder=" " formControlName="complement" />
+						
+					</div>
+				</div>
+				<div class="mb-3 col-md-3">
+					<div class="label-float">
+
+						<label>{{'forms-bairro' | translate}}</label>
+						<br />
+						<input type="text" name="discrict" placeholder=" " formControlName="discrict" />
+						
+					</div>
+				</div>
+				<div class="mb-3 col-md-3">
+					<div class="label-float">
+
+						<label>{{'forms-cidade' | translate}}</label>
+						<br />
+						<input type="text" name="city" placeholder=" " formControlName="city" />
+						
+					</div>
+				</div>
+				<div class="mb-3 col-md-2">
+					<div class="label-float">
+
+						<label>{{'AggregatorSalesDetailsUf' | translate}}</label>
+						<br />
+						<input type="text" name="uf" placeholder=" " formControlName="uf" />
+						
+					</div>
+				</div>
+			</div>
+
+			<div class="form-row ">
+				<div class="mb-3 col-md">
+					<div class="label-float">
+
+						<label>{{'AggregatorSalesDetailsPhone' | translate}}</label>
+						<br />
+						<input type="text" name="phone" placeholder=" " formControlName="phone" [mask]="maskPhone"
+							(blur)="getMaskPhone('phone')" (focus)="getMaskPhone('phone', true)" />
+						
+					</div>
+				</div>
+				<div class="mb-3 col-md">
+					<div class="label-float">
+
+						<label>{{'AggregatorListEmail' | translate}}</label>
+						<br />
+						<input type="text" name="email" placeholder=" " formControlName="email" />
+						
+					</div>
+				</div>
+				<div class="mb-3 col-md">
+					<div class="label-float">
+
+						<label>{{'AggregatorNewPartnerJurPerSite' | translate}}</label>
+						<br />
+						<input type="text" name="website" placeholder=" " formControlName="website" />
+						
+					</div>
+				</div>
+			</div>
+
+			<div class="text-left mt-3 mb-2">
+				<h3>{{'forms-cadresponsavel' | translate}}</h3>
+			</div>
+
+			<div class="row">
+				<div class="col-md-9">
+					<div class="form-row ">
+						<div class="mb-3 col-md">
+							<div class="label-float">
+								<label>{{'forms-cadresponsavel-nome' | translate}}</label>
+								<br />
+								<input type="text" name="nameResponsible" placeholder=" " formControlName="nameResponsible" />
+								
+							</div>
+						</div>
+					</div>
+					<div class="form-row ">
+						<div class="mb-3 col-md-4">
+							<div class="label-float">
+
+								<label>{{'ComercialSalesPartnersEditPhon' | translate}}</label>
+								<br />
+								<input type="text" name="phoneResponsible" placeholder=" " formControlName="phoneResponsible"
+									[mask]="maskPhoneResponsabible" (blur)="getMaskPhone('phoneResponsible')"
+									(focus)="getMaskPhone('phoneResponsible', true)" />
+								
+							</div>
+						</div>
+						<div class="mb-3 col-md-8">
+							<div class="label-float">
+
+								<label>{{'ComercialSalesPartnersEditEmail' | translate}}</label>
+								<br />
+								<input type="text" name="emailResponsible" placeholder=" " formControlName="emailResponsible" />
+								
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="col-md-3 col-sm-12 radioInput mt-5">
+					<div class="toggle">
+						<input type="radio" name="gender" value="Male" formControlName="gender" id="genderMale" />
+						<label for="genderMale"><i
+								class="fas fa-male mr-2"></i>{{'comercialInterestedPartnersViewMal' | translate}}</label>
+						<input type="radio" name="gender" value="Female" formControlName="gender" id="genderFemale" />
+						<label for="genderFemale"><i
+								class="fas fa-female mr-2"></i>{{'comercialInterestedPartnersViewFem' | translate}}</label>
+					</div>
+				</div>
+			</div>
+
+			<div class="dropzone-wrapper mb-5">
+				<div class="dropzone-desc">
+					<i class="glyphicon glyphicon-download-alt"></i>
+					<p>{{'treina-arrastesolte' | translate}}</p>
+					<button type="submit"
+						class="btn btn-darkk btn-lg btn-square ml-auto">{{'AggregatorNewPartnerBulkRegDrag'|translate}}</button>
+				</div>
+				<input type="file" name="img_logo" class="dropzone" (change)="onFileChange($event)" multiple>
+
+				<div *ngIf='selectedFiles.length > 0'>
+
+					<ul *ngFor="let item of selectedFiles;">
+						<li style="color:black">
+							{{item.name}}
+						</li>
+					</ul>
+				</div>
+			</div>
+
+			<div class="row mb-5">
+				<a routerLink="/login" class="btn btn-redz">{{'Voltar'|translate}}</a>
+				<button type="submit" (click)="register()" [disabled]="ngForm.invalid"
+					class="btn btn-greenz btn-lg btn-square ml-auto">{{'Adicionar'|translate}}</button>
+			</div>
+
+		  </form>
+
+
+	</div>
+
+
+
+</div>

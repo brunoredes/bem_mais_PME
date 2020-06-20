@@ -1,0 +1,320 @@
+<!--Register-->
+<section>
+  <h5>{{'AggregatorNewPartSubt' | translate}}</h5>
+  <div class="row">
+    <div class="mb-3 col-12 col-sm-6 col-md-6 col-lg-6 col-xl-6 p-0">
+      <div class="col-md-12 col-sm-12 radioInput">
+        <div class="toggle">
+          <input type="radio" name="category" value="I" id="cadIndividual" checked (click)="changeindividual()" />
+          <label for="cadIndividual"><i class="fas fa-users mr-2"></i><small
+              class="fontSM">{{'AggregatorRegSing' | translate}}</small></label>
+          <input type="radio" name="category" value="M" id="cadMassa" (click)="changemassa()" />
+          <label for="cadMassa"><i class="fas fa-cloud-upload-alt mr-2"></i><small
+              class="fontSM">{{'AggregatorRegBulk' | translate}}</small></label>
+        </div>
+      </div>
+    </div>
+    <div class=" col-12 col-sm-6 col-md-6 col-lg-6 col-xl-6">
+      <div class="radioInput">
+        <div class="toggle" style="float:right;">
+          <input type="radio" name="tipopessoa" value="F" id="pessoaFisica" checked (click)="changepessoafisica()" />
+          <label for="pessoaFisica"><i class="fas fa-user mr-2"></i><small
+              class="fontSM">{{'AggregatorFisPers' | translate}}</small></label>
+          <input type="radio" name="tipopessoa" value="J" id="pessoaJuridica" (click)="changepessoajuridica()" />
+          <label for="pessoaJuridica"><i class="fas fa-building mr-2"></i><small
+              class="fontSM">{{'AggregatorJurPers' | translate}}</small></label>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<form [formGroup]="partnerForm" (ngSubmit)="submitPartner()">
+
+  <!--Cadastro individual/Pessoa fisíca-->
+  <section class="mt-3" *ngIf="individual">
+    <div class="row" *ngIf="!pessoajuridica">
+      <div class="col-12 col-sm-12 col-md-10 col-lg-10 col-xl-10">
+        <div class="massaMobile mb-4">
+          <div class="dropzone-wrapperr container col-md-12">
+            <div class="dropzone-desc">
+              <p>{{ "edituser-arraste" | translate }}</p>
+              <button type="submit" class="btn btn-drag btn-lg btn-square ml-auto">
+                <i class="fas fa-camera-retro fa-1x"></i>
+              </button>
+            </div>
+            <input type="file" name="img_logo" class="dropzone" (change)="onPictureChange($event)" accept="image/*" />
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12">
+            <div class="label-float">
+              <label>{{'AggregatorNewPartnerFisPerFullName' | translate}}</label>
+              <br>
+              <input id="companyName" placeholder=" " formControlName="name" />
+            </div>
+          </div>
+          <div class="col-12 col-sm-12 col-md-6 col-lg-6 col-xl-6 mt-4">
+            <div class="label-float">
+              <label>{{'AggregatorSalesDetailsPhone' | translate}}</label>
+              <br>
+              <input id="phone" placeholder=" " formControlName="phone" mask="(00) 00000-0000"  />
+            </div>
+          </div>
+          <div class="col-12 col-sm-12 col-md-6 col-lg-6 col-xl-6  mt-4">
+            <div class="label-float">
+              <label>{{'AggregatorListEmail' | translate}}</label>
+              <br>
+              <input id="email" placeholder=" " formControlName="email" />
+            </div>
+          </div>
+          <div class="col-12 col-sm-12 col-md-6 col-lg-6 col-xl-6  mt-4">
+            <div class="label-float">
+              <label>{{'AggregatorSalesDetailsCpf' | translate}}</label>
+              <br>
+              <input id="cpf" placeholder=" " formControlName="cpf" mask="000.000.000-00"/>
+            </div>
+          </div>
+          <div class="col-12 col-sm-12 col-md-6 col-lg-6 col-xl-6  mt-4">
+            <div class="label-float">
+              <label>{{'AggregatorSalesDetailsRg' | translate}}</label>
+              <br>
+              <input id="rg" placeholder=" " formControlName="rg"  mask="00.000.000-0"/>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-2 col-lg-2 col-xl-2 massaDesktop">
+        <!-- <input-image formControlName="image"></input-image> -->
+        <div class="dropzone-wrapperr container col-md-12">
+          <div class="dropzone-desc">
+            <p>{{ "edituser-arraste" | translate }}</p>
+            <button type="submit" class="btn btn-drag btn-lg btn-square ml-auto">
+              <i class="fas fa-camera-retro fa-1x"></i>
+            </button>
+          </div>
+          <input type="file" name="img_logo" class="dropzone" (change)="onPictureChange($event)" accept="image/*" />
+        </div>
+      </div>
+      <div class="col-12 col-sm-12 col-md-3 col-lg-3 col-xl-3 mt-4">
+        <div class="label-float">
+          <label>{{'AggregatorSalesDetailsZipCd' | translate}}</label>
+          <br>
+          <input id="cep" placeholder=" " formControlName="cep" mask="00000-000" />
+        </div>
+      </div>
+      <div class="col-12 col-sm-12 col-md-9 col-lg-9 col-xl-9 mt-4">
+        <div class="label-float">
+          <label>{{'AggregatorSalesDetailsAddress' | translate}}</label>
+          <br>
+          <input id="address" placeholder=" " formControlName="address" />
+        </div>
+      </div>
+      <div class="col-12 col-sm-12 col-md-1 col-lg-1 col-xl-1 mt-4">
+        <div class="label-float">
+          <label>{{'AggregatorNewPartnerFisPerAddrNumb' | translate}}</label>
+          <br>
+          <input id="number" placeholder=" " formControlName="number" />
+        </div>
+      </div>
+      <div class="col-12 col-sm-12 col-md-2 col-lg-2 col-xl-2 mt-4">
+        <div class="label-float">
+          <label>{{'AggregatorSalesDetailsCompl' | translate}}</label>
+          <br>
+          <input id="complement" placeholder=" " formControlName="complement" />
+        </div>
+      </div>
+      <div class="col-12 col-sm-12 col-md-4 col-lg-4 col-xl-4 mt-4">
+        <div class="label-float">
+          <label>{{'AggregatorNewPartnerFisPerNeigh' | translate}}</label>
+          <br>
+          <input id="neighborhood" placeholder=" " formControlName="neighborhood" />
+        </div>
+      </div>
+      <div class="col-12 col-sm-12 col-md-4 col-lg-4 col-xl-4 mt-4">
+        <div class="label-float">
+          <label>{{'AggregatorSalesDetailsCity' | translate}}</label>
+          <br>
+          <input id="city" placeholder=" " formControlName="city" />
+        </div>
+      </div>
+      <div class="col-12 col-sm-12 col-md-1 col-lg-1 col-xl-1 mt-4">
+        <div class="label-float">
+          <label>{{'AggregatorSalesDetailsUf' | translate}}</label>
+          <br>
+          <input id="state" placeholder=" " formControlName="state" />
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!--Cadastro em massa pessoa física/jurídica-->
+  <section *ngIf="massa">
+    <div class="row">
+      <div class="col-12">
+        <div class="dropzone-file ">
+          <div class="dropzone-desc">
+            <p>{{ "edituser-arraste" | translate }}</p>
+            <button type="submit" class="btn btn-drag btn-lg btn-square ml-auto">
+              <i class="fas fa-cloud-upload-alt fa-1x"></i> {{'AggregatorNewPartnerBulkRegDrag' | translate}}
+            </button>
+          </div>
+          <input type="file" name="img_logo" class="dropzone" (change)="onPictureChange($event)" accept="file/*" />
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!--Cadastro de pessoa jurídica-->
+  <section *ngIf="pessoajuridica  && individual">
+    <div class="massaMobile mb-4">
+      <div class="dropzone-wrapperr container col-md-12">
+        <div class="dropzone-desc">
+          <p>{{ "edituser-arraste" | translate }}</p>
+          <button type="submit" class="btn btn-drag btn-lg btn-square ml-auto">
+            <i class="fas fa-camera-retro fa-1x"></i>
+          </button>
+        </div>
+        <input type="file" name="img_logo" class="dropzone" (change)="onPictureChange($event)" accept="image/*" />
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-12 col-sm-12 col-md-10 col-lg-10 col-xl-10">
+        <div class="row">
+          <div class="col-12 col-sm-12 col-md-7 col-lg-7 col-xl-7">
+            <div class="label-float">
+              <label>{{'AggregatorNewPartnerJurPerCompNam' | translate}}</label>
+              <br>
+              <input id="corporateName" placeholder=" " formControlName="corporateName" />
+            </div>
+          </div>
+          <div class="col-12 col-sm-12 col-md-5 col-lg-5 col-xl-5">
+            <div class="label-float">
+              <label>{{'AggregatorListCpfCnpj' | translate}}</label>
+              <br>
+              <input id="cnpj" placeholder=" " formControlName="cnpj" mask="00.000.000/0000-00"  />
+            </div>
+          </div>
+          <div class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12  mt-4">
+            <div class="label-float">
+              <label>{{'forms-nomecomercial' | translate}}</label>
+              <br>
+              <input id="corporateName" placeholder=" " formControlName="corporateName" />
+            </div>
+          </div>
+          <div class="col-12 col-sm-12 col-md-6 col-lg-6 col-xl-6  mt-4">
+            <div class="label-float">
+              <label>{{'AggregatorSalesDetailsZipCd' | translate}}</label>
+              <br>
+              <input id="cep" placeholder=" " formControlName="cep" />
+            </div>
+          </div>
+          <div class="col-12 col-sm-12 col-md-6 col-lg-6 col-xl-6  mt-4">
+            <div class="label-float">
+              <label>{{'AggregatorSalesDetailsAddress' | translate}}</label>
+              <br>
+              <input id="address" placeholder=" " formControlName="address" />
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-2 col-lg-2 col-xl-2 massaDesktop">
+        <div class="dropzone-wrapperr container col-md-12">
+          <div class="dropzone-desc">
+            <p>{{ "edituser-arraste" | translate }}</p>
+            <button type="submit" class="btn btn-drag btn-lg btn-square ml-auto">
+              <i class="fas fa-camera-retro fa-1x"></i>
+            </button>
+          </div>
+          <input type="file" name="img_logo" class="dropzone" (change)="onPictureChange($event)" accept="image/*" />
+        </div>
+      </div>
+      <div class="col-12 col-sm-12 col-md-1 col-lg-1 col-xl-1 mt-4">
+        <div class="label-float">
+          <label>{{'AggregatorNewPartnerFisPerAddrNumb' | translate}}</label>
+          <br>
+          <input id="number" placeholder=" " formControlName="number" />
+        </div>
+      </div>
+      <div class="col-12 col-sm-12 col-md-2 col-lg-2 col-xl-2 mt-4">
+        <div class="label-float">
+          <label>{{'AggregatorSalesDetailsCompl' | translate}}</label>
+          <br>
+          <input id="complement" placeholder=" " formControlName="complement" />
+        </div>
+      </div>
+      <div class="col-12 col-sm-12 col-md-4 col-lg-4 col-xl-4 mt-4">
+        <div class="label-float">
+          <label>{{'AggregatorNewPartnerFisPerNeigh' | translate}}</label>
+          <br>
+          <input id="neighborhood" placeholder=" " formControlName="neighborhood" />
+        </div>
+      </div>
+      <div class="col-12 col-sm-12 col-md-4 col-lg-4 col-xl-4 mt-4">
+        <div class="label-float">
+          <label>{{'AggregatorSalesDetailsCity' | translate}}</label>
+          <br>
+          <input id="city" placeholder=" " formControlName="city" />
+        </div>
+      </div>
+      <div class="col-12 col-sm-12 col-md-1 col-lg-1 col-xl-1 mt-4">
+        <div class="label-float">
+          <label>{{'AggregatorSalesDetailsUf' | translate}}</label>
+          <br>
+          <input id="state" placeholder=" " formControlName="state" />
+        </div>
+      </div>
+      <div class="col-12 col-sm-12 col-md-4 col-lg-4 col-xl-4 mt-4">
+        <div class="label-float">
+          <label>{{'AggregatorSalesDetailsPhone' | translate}}</label>
+          <br>
+          <input id="phone" placeholder=" " formControlName="phone" mask="(00) 00000-0000" />
+        </div>
+      </div>
+      <div class="col-12 col-sm-12 col-md-4 col-lg-4 col-xl-4 mt-4">
+        <div class="label-float">
+          <label>{{'AggregatorListEmail' | translate}}</label>
+          <br>
+          <input id="email" placeholder=" " formControlName="email" />
+        </div>
+      </div>
+      <div class="col-12 col-sm-12 col-md-4 col-lg-4 col-xl-4 mt-4">
+        <div class="label-float">
+          <label>{{'AggregatorNewPartnerJurPerSite' | translate}}</label>
+          <br>
+          <input id="site" placeholder=" " formControlName="site" />
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <div class="d-flex justify-content-between mt-5">
+    <a routerLink="/private/agregador/my-partners/list" class="btn btn-redz">{{'AggregatorSalesGoBack' | translate}}</a>
+
+    <button type="submit" class="btn btn-greenz btn-lg btn-square ml-auto" data-toggle="modal"
+      data-target="#modalEditUser" [disabled]="formIsInvalid()">
+      {{'AggregatorNewPartnerReg' | translate}}
+    </button>
+  </div>
+
+</form>
+
+
+<div class="modal fade" id="modalEditUser" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+  aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="bd-t-blue"></div>
+    <div class="modal-content bordertopModal">
+      <div class="modal-header modalFormat">
+        <img class="img-fluid col-12 m-120" src="assets/img/confirmacao-feedback.png" />
+      </div>
+      <div class="modal-body">
+        <h1 class="text-center"><b>Dados cadastrados com sucesso!</b></h1>
+      </div>
+
+      <a href="#" class="col-4 badge badge-success text-center p-3 " data-dismiss="modal" aria-label="Fechar"
+        (click)="goBack()">OK!</a>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,146 @@
+<div class="row">
+    <div class="col-12 col-sm-5 col-md-5 col-lg-5 col-xl-5">
+        <div class="card shadow-sm">
+            <div class="p-4">
+                <form card container=".card-container" card-width="270" formatting="false" debug="true"
+                    *ngIf="paymentForm" [formGroup]="paymentForm">
+                    <div class="details-title">
+                        <h5>{{'vend-protection-details-pay-pagamento' | translate}}</h5>
+                    </div>
+                    <div class="mt-2">
+                        <div class="row">
+                            <div class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 mb-2">
+                                <div class="label-float">
+                                    <label>{{'vend-protection-details-pay-pagamento-nometitular' | translate}}</label>
+                                    <br>
+                                    <input type="text" class="col-xl-12" formControlName="cardName" name="first-name"
+                                        card-name />
+
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 mb-2">
+                                <div class="label-float">
+                                    <label>{{'vend-protection-details-pay-pagamento-numerocartao' | translate}}</label>
+                                    <br>
+                                    <input type="text" class="col-xl-12" formControlName="cardNumber" name="number"
+                                        card-number />
+
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row mb-2">
+                            <div class="col-6 col-sm-6 col-md-6 col-lg-6 col-xl-6 mb-2">
+                                <div class="label-float">
+                                    <label>CCV</label>
+                                    <br>
+                                    <input type="text" class="col-xl-12" formControlName="cvv" name="cvc" card-cvc />
+
+                                </div>
+                            </div>
+                            <div class="col-6 col-sm-6 col-md-6 col-lg-6 col-xl-6 mb-2">
+                                <div class="label-float">
+
+                                    <label>{{'vend-protection-details-pay-pagamento-datavalid' | translate}}</label>
+                                    <br>
+                                    <input type="text" class="col-xl-12" formControlName="expirationDate" name="expiry"
+                                        card-expiry />
+
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-12 mb-2">
+                                <label>{{'vend-protection-details-pay-pagamento-numparcelas' | translate}}</label>
+                                <br>
+                                <mat-form-field class="col-12 pl-0 pr-0">
+                                    <mat-select name="perfil" id="perfil">
+                                        <mat-option *ngFor="let i of parcelas" [value]="i.value">
+                                            {{i.value}}
+                                        </mat-option>
+                                    </mat-select>
+                                </mat-form-field>
+                            </div>
+                        </div>
+                        <div class="card-container"></div>
+                    </div>
+
+                </form>
+            </div>
+        </div>
+    </div>
+    <div class="col-12 col-sm-7 col-md-7 col-lg-7 col-xl-7">
+        <div class="card shadow-sm mb-3">
+            <div class="p-0">
+                <div class="row">
+                    <div class="col-6 col-sm-6 col-md-6 col-lg-6 col-xl-6">
+                        <div class="details-title p-4">
+                            <h5>{{'vend-protection-details-pay-pagamento-message' | translate}}</h5>
+                        </div>
+
+                        <div class="clearflix"></div>
+
+                        <div class="details-title text-gray p-4" style="bottom: 0; position: absolute; width: 95%;">
+
+                            <h5>{{'vend-protection-details-pay-pagamento-valortotalseguro' | translate}}</h5>
+                            <hr class="col-12" />
+                            <h5>{{format(totalValue)}}</h5>
+                            <!-- <h5
+                                *ngIf="getInsurancePlanPriceAmount(i) && item.planPriceSelected && item.planPriceSelected.name != 'Assinatura'">
+                                R$ {{getInsurancePlanPriceAmount(i)}},00</h5>
+                            <h5
+                                *ngIf="getInsurancePlanPriceAmount(i) && item.planPriceSelected && item.planPriceSelected.name == 'Assinatura'">
+                                R$ {{getInsurancePlanPriceAmount(i)}}
+                                {{'vend-protection-details-product-mensais' | translate}}</h5> -->
+                        </div>
+
+
+                    </div>
+                    <div class="col-6 col-sm-6 col-md-6 col-lg-6 col-xl-6" style="height: 250px;">
+                        <div class="h-100 pl-4 pt-4 pb-4 pr4+1"
+                            style="background-color: #1862c6; color: #ffffff; border-top-right-radius: 15px; border-bottom-right-radius: 15px;">
+                            <perfect-scrollbar id="item">
+
+                            <div class="row mb-3"  *ngFor="let item of _cartService.cart; let i = index">
+                                <hr *ngIf="i > 1">
+                                <div class="col-12 lineHeight mb-3">
+                                    <h5>{{item.name}}</h5>
+                                    <small
+                                        *ngIf="getInsurancePlanPriceAmount(i) && item.planPriceSelected && item.planPriceSelected.name != 'Assinatura'">{{'vend-protection-details-pay-pagamento-valorseguro' | translate}}
+                                        {{format(getInsurancePlanPriceAmount(i))}}</small>
+                                    <small
+                                        *ngIf="getInsurancePlanPriceAmount(i) && item.planPriceSelected && item.planPriceSelected.name == 'Assinatura'">{{'vend-protection-details-pay-pagamento-valorseguro' | translate}}
+                                        {{format(getInsurancePlanPriceAmount(i))}}
+                                        {{'vend-protection-details-product-mensais' | translate}}</small>
+                                </div>
+                                <div class="clearflix"></div>
+                                <div class="col-12 lineHeight mb-3">
+                                    <h5>{{'vend-protection-details-pay-pagamento-coberturas' | translate}}</h5>
+                                    <small>12 meses de Roubo & Furto Qualificado</small>
+                                </div>
+                                <div class="clearflix"></div>
+                                <div class="col-12 lineHeight mb-3">
+                                    <h5>{{'vend-protection-details-pay-pagamento-toitem' | translate}}
+                                        {{item.productSelected.category}}</h5>
+                                    <small>{{item.productSelected.name}}</small>
+                                </div>
+
+                                <!--<h3>{{item.name}}</h3>
+                                <small>{{item.description}}</small><br />
+                                <div class="mt-3 mb-3" style="border-bottom: 1px solid #ffffff;"></div>-->
+                            </div>
+                        </perfect-scrollbar>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="pb-3 text-right">
+            <button type="button" class="btn rounded-button btn-outline-success btn-lg btn-block" (click)="addInsurance()"><i class="fa fa-plus"></i>
+                {{'btn-adicionarseguro' | translate}}
+            </button>
+        </div>
+    </div>
+</div>

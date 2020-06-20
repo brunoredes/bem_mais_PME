@@ -1,0 +1,21 @@
+
+var vendor = new Vendor();
+vendor.dealerId = 1;
+vendor.storeId = 1;
+vendor.name = "Roberto Luiz";
+vendor.birthDate = "01/02/1990";
+vendor.cpf = "12345678998";
+vendor..rg = "123456789";
+vendor.genre = "M";
+vendor.email = "roberto.luiz@zurich.com.br";
+vendor.phone = "11 12345678";
+vendor.storeId = 1; (Fast São Paulo)
+vendor.postalCode = "1234567";
+vendor.address = "Av Jornalista Roberto Marinho";
+vendor.addressNumber = "85";
+vendor.neighborhood = "Brooklin";
+vendor.city = "São Paulo";
+vendor.state= "São Paulo";
+vendor.complement = null;
+
+this.http.post<any>(`${environment.apiUrl}/Vendors`, vendor);

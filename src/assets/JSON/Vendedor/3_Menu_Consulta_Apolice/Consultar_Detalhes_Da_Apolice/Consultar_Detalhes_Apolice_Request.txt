@@ -1,0 +1,3 @@
+var policyId = 133;
+
+this.http.get<any>(`${environment.apiUrl}/Policies/${policyId}`);

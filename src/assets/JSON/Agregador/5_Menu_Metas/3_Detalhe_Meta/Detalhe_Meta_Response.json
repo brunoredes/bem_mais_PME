@@ -1,0 +1,15 @@
+{
+  "data": {
+    "profile": 1,
+    "insurance": 5,
+    "amount": 50000,
+    "code": 789,
+    "title": "Teste",
+    "description": "Atingir 50 mil em vendas",
+    "type": 1
+  },
+  "message": "Ok",
+  "hasError": false,
+  "errorDataCollection": null,
+  "statusCode": 200
+}

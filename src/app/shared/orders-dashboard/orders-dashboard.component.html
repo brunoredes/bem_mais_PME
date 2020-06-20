@@ -1,0 +1,12 @@
+<section class="row row-cols-1 row-cols-md-3">
+    <div class="col-md-auto" *ngFor="let o of orderData">
+        <div class="cardWidth card mb-3 pl-1 shadow-sm h-75">
+            <div id="sizeTicket" class="card-body">
+                <div class="sizeTicket">
+                    <h5>{{ o.title }}</h5>
+                    <h4>{{format(o.amount, o.options.locale, o.options.style, o.options.currency)}}</h4>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

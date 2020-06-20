@@ -1,0 +1,265 @@
+.p-cursor{cursor: pointer;}
+
+.modal-header {border-bottom: 0 !important}
+
+.modal-footer {border-top: 1px solid transparent;}
+
+.d-grid{display: grid;}
+
+.mat-checkbox {display: grid!important;justify-content: center!important;border-radius: 50px!important;}
+
+.btn-success{background-color: #62BC00!important;border-color: #62BC00!important;}
+
+.card-body {
+  height: 200px;
+}
+
+.matCheckbox {
+  width: 10px;
+  height: 10px;
+  position: relative;
+  left: 43%;
+}
+
+.collapsible {
+  background-color: #F9F8F8;
+  color: black;
+  cursor: pointer;
+  padding: 18px;
+  width: 100%;
+  border: none;
+  text-align: left;
+  outline: none;
+  font-size: 15px;
+  border-top: 2px solid rgba(0, 0, 0, 0.1);
+}
+
+.content {
+  font-size: 15px;
+}
+
+.export{
+
+  margin: auto;
+  float: left;
+  background: white;
+  width: 25vw;
+  position: absolute;
+  border-radius: 3px;
+  padding: 20px;
+  right: 0;
+  display: none;
+  z-index: 99;
+  border-radius: 20px;
+  text-align: left;
+  margin-right: 22px;
+  top: 41px;
+
+}
+
+.export:after {
+  bottom: 100%;
+  left: 89%;
+  border: solid transparent;
+  content: " ";
+  height: 0;
+  width: 0;
+  position: absolute;
+  pointer-events: none;
+  border-bottom-color: white;
+  border-width: 8px;
+  margin-left: -8px;
+}
+
+.matOptionExportCsv {
+  position: absolute;
+  left: 40px;
+}
+
+.matOptionExportPdf {
+  position: absolute;
+  left: 141px;
+}
+
+.matOptionExportXml {
+  position: absolute;
+  left: 242px;
+}
+
+@media(max-width: 1024px){
+
+	.export{
+    width: 32vw;
+  }
+
+}
+
+@media(max-width: 768px){
+
+	.export{
+    width: 40vw;
+  }
+
+}
+
+@media(max-width: 425px){
+
+	.export{
+    width: 76vw;
+    margin-right: -158px;
+  }
+
+  .export:after {
+    margin-left: -168px;
+  }
+}
+
+@media(max-width: 375px){
+
+	.export{
+    width: 85vw;
+  }
+}
+
+@media(max-width: 320px){
+
+	.export{
+    width: 85vw;
+    margin-right: -115px;
+  }
+
+  .export:after {
+    margin-left: -128px;
+  }
+}
+
+//select lebel
+
+.label-float {
+    position: relative;
+    padding-top: 13px;
+  }
+  
+  .label-float input {
+    border: 0;
+    border-bottom: 1px solid #d8d8d8;
+    outline: none;
+    font-size: 15px;
+    transition: all 0.3s ease-out;
+    -webkit-transition: all 0.3s ease-out;
+    -moz-transition: all 0.3s ease-out;
+    -webkit-appearance: none;
+    border-radius: 0;
+    width: 100%;
+    background: transparent;
+  }
+  
+  .label-float input:focus {
+    border-bottom: 2px solid #005aab;
+  }
+  
+  .label-float input::placeholder {
+    color: transparent;
+  }
+  
+  .label-float select {
+    border: 0;
+    border-bottom: 1px solid #d8d8d8;
+    outline: none;
+    font-size: 15px;
+    transition: all 0.3s ease-out;
+    -webkit-transition: all 0.3s ease-out;
+    -moz-transition: all 0.3s ease-out;
+    -webkit-appearance: none;
+    border-radius: 0;
+    width: 100%;
+    background: transparent;
+    padding: 0 !important;
+  }
+  
+  .custom-select {
+    height: 27px;
+  }
+  .label-float select:focus {
+    border-bottom: 2px solid #005aab;
+  }
+  
+  .label-float select::placeholder {
+    color: transparent;
+  }
+  
+  .label-float label {
+    pointer-events: none;
+    position: absolute;
+    top: 0;
+    left: 0;
+    margin-top: 13px;
+    transition: all 0.3s ease-out;
+    -webkit-transition: all 0.3s ease-out;
+    -moz-transition: all 0.3s ease-out;
+  }
+  
+  .label-float input:required:invalid + label:before {
+    content: "*";
+  }
+  .label-float input:focus + label,
+  .label-float input:not(:placeholder-shown) + label {
+    font-size: 13px;
+    margin-top: 0;
+    color: #005aab;
+  }
+  
+  .label-float select:required:invalid + label:before {
+    content: "*";
+  }
+  .label-float select:focus + label,
+  .label-float select:not(:placeholder-shown) + label {
+    font-size: 13px;
+    margin-top: 0;
+    color: #005aab;
+  }
+  
+  select + i.fa {
+    float: right;
+    margin-top: -30px;
+    margin-right: 5px;
+    /* this is so when you click on the chevron, your click actually goes on the dropdown menu */
+    pointer-events: none;
+    /* everything after this is just to cover up the original arrow */
+    /* (for browsers that don't support the syntax used above) */
+    padding-right: 5px;
+  }
+
+//select add
+
+ul {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+}
+
+.bordSelectUF{
+    background: #E7F1FA;
+    border-radius: 50px;
+    padding: 8px;
+    color: #1A1A1A;
+    margin-right: 10px;
+
+}
+
+
+.bordSelectUF i{color:#FF3636 ;margin-right: 10px;}
+
+.btn-center{margin: 2px;display: flex;justify-content: space-around;}
+.badge{border-radius: 50px !important;margin: auto;}
+
+.bd-t-red{
+    background-color: #FF3636;
+    border-radius: 0.3rem 0.3rem 0 0;
+    height: 7px;
+    position: absolute;
+    width: 100%;
+    z-index: 1;
+    
+}
+

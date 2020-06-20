@@ -1,0 +1,32 @@
+{
+    "data": [
+        {
+            "id": 1,
+            "name": "Vendedor"
+        },
+        {
+            "id": 2,
+            "name": "Comercial"
+        },
+        {
+            "id": 3,
+            "name": "Agregador"
+        },
+        {
+            "id": 4,
+            "name": "Corretor"
+        },
+        {
+            "id": 5,
+            "name": "Master Dealer"
+        },
+        {
+            "id": 6,
+            "name": "Gerente"
+        }
+    ],
+    "message": "Ok",
+    "hasError": false,
+    "errorDataCollection": null,
+    "statusCode": 200
+}

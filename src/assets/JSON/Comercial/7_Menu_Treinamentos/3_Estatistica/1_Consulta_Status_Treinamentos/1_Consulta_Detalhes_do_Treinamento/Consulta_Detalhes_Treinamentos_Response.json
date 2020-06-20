@@ -1,0 +1,38 @@
+{
+    "data": {
+        "status": [
+            {
+                "id": 133,
+                "profile": "Revenda 1",
+                "training": "Lorem ipsum dolor",
+                "startDate": "10/11/2019",
+                "endDate": "12/12/2019"
+            },
+            {
+                "id": 133,
+                "profile": "Revenda 2",
+                "training": "Lorem ipsum dolor",
+                "startDate": "10/11/2019",
+                "endDate": "12/12/2019"
+            },
+            {
+                "id": 133,
+                "profile": "Revenda 3",
+                "training": "Lorem ipsum dolor",
+                "startDate": "10/11/2019",
+                "endDate": "12/12/2019"           
+            },
+            {
+                "id": 133,
+                "profile": "Revenda 4",
+                "training": "Lorem ipsum dolor",
+                "startDate": "10/11/2019",
+                "endDate": "12/12/2019"
+            }
+        ]
+    },
+    "message": "Ok",
+    "hasError": false,
+    "errorDataCollection": null,
+    "statusCode": 200
+}

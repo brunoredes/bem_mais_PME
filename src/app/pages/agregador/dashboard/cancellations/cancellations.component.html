@@ -1,0 +1,168 @@
+<section>
+    <form class="row" [formGroup]="formFilter" (ngSubmit)="findCancellations()">
+        <div class="col-md-12 text-right pl-0" >
+            <ul class="pl-0">
+                <li class="filter-button">
+                    <a id="filter-dashCancellations"><small>{{'dash-cancel-filtrar' | translate}} &nbsp;</small><i class="fa fa-sliders"
+                            aria-hidden="true"></i></a>
+                </li>
+                <div class="container mt-0">
+                    <div class="filter-div filter-dashCancellations mt-0 shadow-sm">
+                        <div class="row mb-2">
+                            <div class="col-md-12">
+                                <div class="row pr-0 pl-0">
+                                    <div class="col-xl-12">
+                                        <label>{{'ComercialHomeNovosParcData' | translate}}</label>
+                                    </div>
+                                </div>
+                                <div class="row mt-3">
+                                    <div class="col-md-6 pr-0 pl-0">
+                                        <mat-form-field class="col-xl-12">
+                                            <input formControlName="startDate" matInput [matDatepicker]="pickerSalesDe"
+                                                placeholder="{{'place-de' | translate}}">
+                                            <mat-datepicker-toggle matSuffix [for]="pickerSalesDe"></mat-datepicker-toggle>
+                                            <mat-datepicker #pickerSalesDe></mat-datepicker>
+                                        </mat-form-field>
+                                    </div>
+                                    <div class="col-md-6 pr-0 pl-0">
+                                        <mat-form-field class="col-xl-12 datePickerAte">
+                                            <input formControlName="endDate" matInput [matDatepicker]="pickerSalesAte"
+                                                placeholder="{{'place-ate' | translate}}">
+                                            <mat-datepicker-toggle matSuffix [for]="pickerSalesAte"></mat-datepicker-toggle>
+                                            <mat-datepicker #pickerSalesAte></mat-datepicker>
+                                        </mat-form-field>
+                                    </div>
+                                </div>
+        
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-12 pr-0 pl-0">
+                                <div class="col-xl-12">
+                                <label for="partner">{{'ComercialHomeRankParceiros' | translate}}</label>
+                                </div>
+                                <mat-form-field class="col-xl-12">
+                                    <input matInput id="partner" name="partner"
+                                        formControlName="partner">
+                                </mat-form-field>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-12 pr-0 pl-0">
+                                <div class="col-xl-12">
+                                <label for="store">{{'dash-cancel-loja' | translate}}</label>
+                                </div>
+                                <mat-form-field class="col-xl-12">
+                                    <mat-select matSelect id="store" name="store" formControlName="store">
+                                        <mat-option value="1">Loja 1</mat-option>
+                                        <mat-option value="2">Loja 2</mat-option>
+                                        <mat-option value="3">Loja 3</mat-option>
+                                    </mat-select>
+                                </mat-form-field>
+                            </div>
+                        </div>
+                        <div class="float-rigth">
+                            <button class="btn btn-primary rounded-pill">
+                                {{ "dash-cancel-filtrar" | translate }}
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </ul>
+        </div>
+    </form>
+</section>
+<!-- <Section>
+    <div class="col-xl-12 mb-3 mt-3">
+        <div class="text-right">
+            <ul>
+                <li class="filter-button">
+                    <a id="filter-dashCancellations"><small>{{'dash-cancel-filtrar' | translate}} &nbsp;</small><i class="fa fa-sliders"
+                            aria-hidden="true"></i></a>
+                </li>
+                <div class="container mt-0">
+                    <form [formGroup]="formFilter" (ngSubmit)="loadCancellations()" class="filter-div filter-dashCancellations mt-0 shadow-sm">
+                        <div class="row pt-2">
+                            <div class="mb-6 col-md-12">
+                                <label class="pl-3">{{'ComercialHomeNovosParcData' | translate}}</label>
+                            </div>
+                            <div class="mb-6 col-md-6">
+                                <mat-form-field class="pl-3 pr-3" style="width: 100%;">
+                                    <input matInput [matDatepicker]="picker" formControlName="cancellationsDateDe" placeholder="{{'place-de' | translate}}">
+                                    <mat-datepicker-toggle matSuffix [for]="picker">
+                                    </mat-datepicker-toggle>
+                                    <mat-datepicker #picker></mat-datepicker>
+                                </mat-form-field>
+                            </div>
+                            <div class="mb-6 col-md-6">
+                                <mat-form-field class="pl-3 pr-3" style="width: 100%;">
+                                    <input matInput [matDatepicker]="picker2" formControlName="cancellationsDateAte" placeholder="{{'place-ate' | translate}}">
+                                    <mat-datepicker-toggle matSuffix [for]="picker2">
+                                    </mat-datepicker-toggle>
+                                    <mat-datepicker #picker2></mat-datepicker>
+                                </mat-form-field>
+                            </div>
+                        </div>
+                        <div class="row pt-2">
+                            <div class="mb-12 col-md-12">
+                                <mat-form-field class="col-xl-12">
+                                    <input matInput placeholder="{{'ComercialHomeRankParceiros' | translate}}" id="partner" name="partner" formControlName="partner">
+                                </mat-form-field>
+                            </div>
+                        </div>
+                        <div class="row pt-2">
+                            <div class="mb-12 col-md-12">
+                                <mat-form-field class="col-xl-12">
+                                    <mat-label>{{'dash-cancel-loja' | translate}}</mat-label>
+                                    <mat-select name="store" id="store" formControlName="store">
+                                        <mat-option></mat-option>
+                                        <mat-option value="1">Loja 1</mat-option>
+                                        <mat-option value="2">Loja 2</mat-option>
+                                        <mat-option value="3">Loja 3</mat-option>
+                                        <mat-option value="4">Loja 4</mat-option>
+                                    </mat-select>
+                                </mat-form-field>
+                            </div>
+                        </div>
+                        <div class="row d-flex justify-content-end mr-2">
+                            <button class="btn btn-filter rounded-pill">
+                                {{ "dash-cancel-filtrar" | translate }}
+                            </button>
+                        </div>
+                    </form>
+                </div>
+            </ul>
+        </div>
+    </div>
+</Section> -->
+<app-chart-large [barLineChartData]="VolumeCancellationsData"
+                 [barLineChartLabels]="VolumeCancellationsLabels" [barLineChartOptions]="VolumeCancellationsOptions"
+                 [barLineChartType]="VolumeCancellationsType"
+                 [exportId]="VolumeCancellationsExportId" [iconExportId]="VolumeCancellationsExportIconId"
+                 [filterDataId]="VolumeCancellationsFilterDataId" (changeDate)="VolumeCancellationsChangeDate($event)"
+                 [chartTitle]="VolumeCancellationsTitle">
+</app-chart-large>   
+
+<section>
+    <div class="row">
+        <div class="col-12 col-sm-12 col-md-6 col-lg-6 col-xl-6">
+            <app-chart-small [barLineChartData]="insuranceCancellationsData" [barLineChartLabels]="insuranceCancellationsLabels"
+                             [barLineChartColors]="insuranceCancellationsColor" [barLineChartOptions]="insuranceCancellationsOptions"
+                             [barLineChartType]="insuranceCancellationsType"
+                             [exportId]="insuranceCancellationsExportId" [iconExportId]="insuranceCancellationsExportIconId"
+                             [filterDataId]="insuranceCancellationsFilterDataId" (changeDate)="insuranceCancellationsChangeDate($event)"
+                             [chartTitle]="insuranceCancellationsTitle">
+            </app-chart-small>
+        </div>
+        <div class="col-12 col-sm-12 col-md-6 col-lg-6 col-xl-6">
+            <app-chart-small [barLineChartData]="productCancellationData" [barLineChartLabels]="productCancellationLabels"
+                             [barLineChartColors]="productCancellationColor" [barLineChartOptions]="productCancellationOptions"
+                             [barLineChartType]="productCancellationType"
+                             [exportId]="productCancellationExportId" [iconExportId]="productCancellationExportIconId"
+                             [filterDataId]="productCancellationFilterDataId" (changeDate)="productCancellationChangeDate($event)"
+                             [chartTitle]="productCancellationTitle">
+            </app-chart-small>
+       </div>  
+    </div>
+</section>
+

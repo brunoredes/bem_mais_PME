@@ -1,0 +1,42 @@
+{
+    "data":{
+        "orders":[
+            {
+                "title": "Total de ordens realizadas",
+                "amount": 1624
+            },
+            {
+                "title": "Ordens Confirmadas",
+                "amount": 1460
+            },
+            {
+                "title": "Ordens Não Confirmadas",
+                "amount": 160
+            },
+            {
+                "title": "Ticket Médio",
+                "amount": 228
+            },
+            {
+                "title": "Total de seguros Vendidos",
+                "amount": 1922
+            },
+            {
+                "title": "Prêmio Vendido $",
+                "amount": 332924
+            },
+            {
+                "title": "Prêmio Cancelado $",
+                "amount": 23600
+            },
+            {
+                "title": "% Conversão",
+                "amount": 89.9
+            }
+        ]
+    },
+    "message": "Ok",
+    "hasError": false,
+    "errorDataCollection": null,
+    "statusCode": 200
+}

@@ -1,0 +1,93 @@
+<bem-mais-title></bem-mais-title>
+
+<section class="mt-3">
+    <div class="row">
+        <div class="col-12 col-sm-12 col-md-6 col-lg-6 col-xl-6 pr-0">
+            <div class="card mb-3 shadow-sm mr-3">
+                <div class="card-body">
+                    <div class="row">
+                        <div class="col-xl-10">
+                            {{'MasterDealerHomeAccumul' | translate}}
+                        </div>
+                        <div class="col-xl-2">
+                            <small>{{'MasterDealerHomeDetails' | translate}}</small>
+                        </div>
+                    </div>
+                    <div class="row pt-4">
+                        <div class="col-xl-10">
+                            <h1 class="font-weight-bold m-0 p-0">{{format(accumulatedValue.amount)}}</h1>
+                            <span class="percentual text-danger"><i
+                                    class="fas fa-arrow-down"></i>&nbsp;{{accumulatedValue.percent}}%</span>
+                        </div>
+                        <div class="col-xl-2">
+                            <small><i class="icon-graph icons font-xl"></i></small>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-12 col-sm-12 col-md-6 col-lg-6 col-xl-6 pr-0">
+            <div class="card mb-3 shadow-sm mr-3">
+                <div class="card-body">
+                    <div class="row">
+                        <div class="col-xl-10">
+                            {{'MasterDealerHomeCancelTotal' | translate}}
+                        </div>
+                        <div class="col-xl-2">
+                            <small>{{'MasterDealerHomeDetails' | translate}}</small>
+                        </div>
+                    </div>
+                    <div class="row pt-4">
+                        <div class="col-xl-10">
+                            <h1 class="font-weight-bold m-0 p-0">{{format(totalStoreCancellations.amount)}}
+                            </h1>
+                            <span class="percentual text-success"><i
+                                    class="fas fa-arrow-up"></i>&nbsp;{{formatPercent(totalStoreCancellations.percent)}}</span>
+                        </div>
+                        <div class="col-xl-2">
+                            <small><i class="icon-graph icons font-xl"></i></small>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section>
+    <div class="row">
+        <div class="col-12 col-sm-12 col-md-6 col-lg-6 col-xl-6">
+            <app-chart-small [barLineChartData]="PerforLojasData" [barLineChartLabels]="PerforLojasLabels"
+                [barLineChartColors]="PerforLojasColor" [barLineChartOptions]="PerforLojasOptions"
+                [barLineChartType]="PerforLojasType" [filterDataId]="PerforLojasFilterDataId"
+                (changeDate)="PerforLojasChangeDate($event)" [chartTitle]="PerforLojasTitle">
+            </app-chart-small>
+        </div>
+        <div class="col-12 col-sm-12 col-md-6 col-lg-6 col-xl-6">
+            <app-chart-small [barLineChartData]="VolVendasData" [barLineChartLabels]="VolVendasLabels"
+                [barLineChartColors]="VolVendasColor" [barLineChartOptions]="VolVendasOptions"
+                [barLineChartType]="VolVendasType" [filterDataId]="VolVendasFilterDataId"
+                (changeDate)="VolVendasChangeDate($event)" [chartTitle]="VolVendasTitle">
+            </app-chart-small>
+        </div>
+    </div>
+</section>
+
+<section>
+    <div class="row">
+        <div class="col-12 col-sm-12 col-md-6 col-lg-6 col-xl-6">
+            <app-chart-small [barLineChartData]="VendasSeguroData" [barLineChartLabels]="VendasSeguroLabels"
+                [barLineChartColors]="VendasSeguroColor" [barLineChartOptions]="VendasSeguroOptions"
+                [barLineChartType]="VendasSeguroType" [filterDataId]="VendasSeguroFilterDataId"
+                (changeDate)="VendasSeguroChangeDate($event)" [chartTitle]="VendasSeguroTitle">
+            </app-chart-small>
+        </div>
+        <div class="col-12 col-sm-12 col-md-6 col-lg-6 col-xl-6">
+            <app-chart-small [barLineChartData]="CatProdutosData" [barLineChartLabels]="CatProdutosLabels"
+                [barLineChartColors]="CatProdutosColor" [barLineChartOptions]="CatProdutosOptions"
+                [barLineChartType]="CatProdutosType" [filterDataId]="CatProdutosFilterDataId"
+                (changeDate)="CatProdutosChangeDate($event)" [chartTitle]="CatProdutosTitle">
+            </app-chart-small>
+        </div>
+    </div>
+</section>

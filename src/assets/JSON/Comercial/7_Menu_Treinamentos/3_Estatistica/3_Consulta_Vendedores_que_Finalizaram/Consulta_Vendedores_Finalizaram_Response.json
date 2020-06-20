@@ -1,0 +1,28 @@
+{
+    "data": {
+        "vendors": [
+            {
+                "name": "Vendedor 1",
+                "salesAmount": 500,
+                "percent": 100,
+                "image": "assets/img/user-1.jpg"
+            },
+            {
+                "name": "Vendedor 2",
+                "salesAmount": 500,
+                "percent": 50,
+                "image": "assets/img/user-1.jpg"
+            },
+            {
+                "name": "Vendedor 3",
+                "salesAmount": 500,
+                "percent": 20,
+                "image": "assets/img/user-1.jpg"
+            }
+        ]
+    },
+    "message": "Ok",
+    "hasError": false,
+    "errorDataCollection": null,
+    "statusCode": 200
+}

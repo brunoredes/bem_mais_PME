@@ -1,0 +1,90 @@
+<div class="mb-12 col-md-12">
+  <form [formGroup]="newGoalForm" (ngSubmit)="submit()">
+    <div class="row">
+      <div class="mb-3 col-md-1">
+        <div class="label-float">
+          <label id="codeGoalLabel">{{'ComercialInterestedPartnersCodigo' | translate}}</label><br />
+          <input type="text" name="codeGoal" id="codeGoal" placeholder=" " formControlName="code" />
+        </div>
+      </div>
+      <div class="mb-3 col-md-5">
+        <div class="label-float">
+          <label id="titleLabel">{{'feedback-titulo' | translate}}</label><br />
+          <input type="text" name="title" id="title" placeholder=" " formControlName="title" />
+        </div>
+      </div>
+      <div class="mb-3 col-md-3">
+        <div class="label-float">
+          <label id="titleLabel">{{'AggregatorQuantSale' | translate}}</label><br />
+          <input type="text" name="sales" id="sales" placeholder=" " formControlName="sales" />
+        </div>
+      </div>
+      <div class="mb-3 col-md-3">
+        <div class="label-float">
+          <label id="productLabel">{{'AggregatorInsProd' | translate}}</label><br />
+          <input type="text" name="product" id="product" placeholder=" " formControlName="product" />
+        </div>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-md-12">
+        <label class="mb-0">{{'ComercialNewCampFilterVal' | translate}}</label>
+      </div>
+
+
+      <div class="col-12 col-sm-12 col-md-3 col-lg-3 col-xl-3 ">
+
+        <mat-form-field class="example-full-width mt-4">
+          <mat-label>{{'ComercialNewCampNewFrom' | translate}}:</mat-label>
+          <input matInput [matDatepicker]="picker" formControlName="validityStartDate">
+          <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+          <mat-datepicker #picker></mat-datepicker>
+        </mat-form-field>
+
+      </div>
+
+      <div class="col-12 col-sm-12 col-md-3 col-lg-3 col-xl-3 ">
+
+        <mat-form-field class="example-full-width mt-4">
+          <mat-label>{{'ComercialNewCampNewTo' | translate}}:</mat-label>
+          <input matInput [matDatepicker]="picker2" formControlName="validityEndDate">
+          <mat-datepicker-toggle matSuffix [for]="picker2"></mat-datepicker-toggle>
+          <mat-datepicker #picker2></mat-datepicker>
+        </mat-form-field>
+
+      </div>
+
+      <div class="mb-3 col-12 col-sm-12 col-md-3 col-lg-3 col-xl-3">
+        <div class="label-float">
+          <label id="titleLabel">{{'ComercialSalesArgumentsInsur' | translate}}</label><br />
+          <input type="text" name="insurance" id="insurance" placeholder=" " formControlName="insurance" />
+        </div>
+      </div>
+      <div class="mb-3 col-12 col-sm-12 col-md-3 col-lg-3 col-xl-3 pr-0 mr-0">
+        <div class="label-float">
+          <label id="titleLabel">{{'ComercialNewCampNewVal' | translate}}</label><br />
+          <input type="text" name="value" mask="separator" thousandSeparator="." prefix="R$ " id="value" placeholder=" " formControlName="amount" />
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="mb-12 col-md-12">
+        <div class="label-float">
+          <label id="description-label">{{'ComercialTrainingStatisticDescr' | translate}}</label><br />
+          <textarea id="description" name="description" formControlName="description">
+          </textarea>
+        </div>
+      </div>
+    </div>
+
+    <div id="footer" class="footer-goals-btns">
+      <button type="reset" class="btn btnDash" (click)="goBack()">
+        {{'ComercialNewGoalsCanc' | translate}}
+      </button>
+      <button type="submit" class="btn btnDash active" [disabled]="formIsInvalid()">
+        {{'ComercialNewGoalsAdd' | translate}}
+      </button>
+    </div>
+  </form>
+</div>

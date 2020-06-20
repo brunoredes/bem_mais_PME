@@ -1,0 +1,52 @@
+<div class="card mb-4 shadow-sm">
+    <div class="card-body p-0">
+        <div class="chk-block-title pl-4 mb-4 pb-0">
+            <div class="d-flex justify-content-between">
+                <div class="col-xl-12 row d-flex align-items-start flex-row pr-0 mr-0">
+                    <div class="col-9 col-sm-9 col-md-9 col-lg-9 col-xl-10">
+                        <h5 class="mb-0">Minha Performace</h5>
+                        <h6 class="mb-1">
+                            {{ api.dateDeMyPerformance | date:'dd/MM/yyyy' }} - {{ api.dateAteMyPerformance | date:'dd/MM/yyyy' }}
+                        </h6>                      
+                    </div>
+                    <div class="col-2 col-sm-2 col-md-3 col-lg-3 col-xl-2" style="float: right;text-align: right;">
+                        <a id="chart-my-performance"><i class="far fa-calendar-alt"></i></a>
+                        <div class="container mt-0">
+                            <div class="chart-my-performance mt-0 shadow">
+                                <div class="row">
+                                    <div class="col-sm-5 ml-3 mb-0">
+                                        <mat-form-field class="example-full-width" style="width: 120px;">
+                                            <input [(ngModel)]="api.dateDeMyPerformance" matInput [matDatepicker]="picker" placeholder="{{'place-de' | translate}}" id="dateDe" (dateChange)="dateRangeChange()">
+                                            <mat-datepicker-toggle matSuffix [for]="picker">
+                                              <mat-icon matDatepickerToggleIcon>keyboard_arrow_down</mat-icon>
+                                            </mat-datepicker-toggle>
+                                            <mat-datepicker #picker></mat-datepicker>
+                                        </mat-form-field>
+                                    </div>
+                                    <div class="col-sm-5 mb-0 ml-2">
+                                        <mat-form-field class="example-full-width" style="width: 120px;">
+                                            <input [(ngModel)]="api.dateAteMyPerformance" matInput [min]="api.dateDeMyPerformance" [matDatepicker]="picker2" placeholder="{{'place-ate' | translate}}" id="dateAte" (dateChange)="dateRangeChange()">
+                                            <mat-datepicker-toggle matSuffix [for]="picker2">
+                                              <mat-icon matDatepickerToggleIcon>keyboard_arrow_down</mat-icon>
+                                            </mat-datepicker-toggle>
+                                            <mat-datepicker #picker2></mat-datepicker>
+                                        </mat-form-field>
+                                    </div>
+                                </div>
+                                <div class="float-right">
+                                    <button class="btn btn-primary rounded-pill">
+                                      {{ "dash-cancel-filtrar" | translate }}
+                                    </button>
+                                  </div>
+                            </div>
+                        </div>
+                    </div>                                         
+
+                </div>
+            </div>
+        </div>
+        <div class="chk-block-content pl-4 pr-4 pb-4">
+            <canvas  id="chart1"></canvas>
+        </div>
+    </div>
+</div>

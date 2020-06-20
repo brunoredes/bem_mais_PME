@@ -1,0 +1,183 @@
+<!-- Filtro -->
+<section>
+    <form class="row" [formGroup]="formFilter" (ngSubmit)="loadSales()">
+        <div class="col-md-12 text-right pl-0">
+            <ul class="pl-0">
+                <li class="filter-button">
+                    <a id="filter-dashSales"><small>{{'dash-cancel-filtrar' | translate}} &nbsp;</small><i
+                            class="fa fa-sliders" aria-hidden="true"></i></a>
+                </li>
+                <div class="container mt-0">
+                    <div class="filter-div filter-dashSales mt-0 shadow-sm">
+
+                        <div class="row mb-2">
+                            <div class="col-md-12">
+                                <div class="row pr-0 pl-0">
+                                    <div class="col-xl-12">
+                                        <label><h5>{{'dash-cancel-data' | translate}}</h5></label>
+                                    </div>
+                                </div>
+                                <div class="row mt-3">
+                                    <div class="col-md-6 pr-0 pl-0">
+                                        <mat-form-field class="col-xl-12">
+                                            <input formControlName="startDate" matInput [matDatepicker]="pickerDe"
+                                                placeholder="{{'place-de' | translate}}">
+                                            <mat-datepicker-toggle matSuffix [for]="pickerDe">
+                                            </mat-datepicker-toggle>
+                                            <mat-datepicker #pickerDe></mat-datepicker>
+                                        </mat-form-field>
+                                    </div>
+                                    <div class="col-md-6 pr-0 pl-0">
+                                        <mat-form-field class="col-xl-12 datePickerAte">
+                                            <input formControlName="endDate" matInput [matDatepicker]="pickerAte"
+                                                placeholder="{{'place-ate' | translate}}">
+                                            <mat-datepicker-toggle matSuffix [for]="pickerAte">
+                                            </mat-datepicker-toggle>
+                                            <mat-datepicker #pickerAte></mat-datepicker>
+                                        </mat-form-field>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="row">
+                            <div class="col-md-12 pr-0 pl-0">
+                                <div class="col-xl-12">
+                                    <label for="status"><h5>{{'dash-cancel-statusvenda' | translate}}</h5></label>
+                                </div>
+                                <mat-form-field class="col-xl-12">
+                                    <mat-select name="status" id="status" formControlName="status">
+                                        <mat-option></mat-option>
+                                        <mat-option value="{{s.id}}" *ngFor="let s of filterStatus">{{ s.name }}
+                                        </mat-option>
+                                    </mat-select>
+                                </mat-form-field>
+                            </div>
+                        </div>
+
+                        <div class="row">
+                            <div class="col-md-12 pr-0 pl-0">
+                                <div class="col-xl-12">
+                                    <label for="category"><h5>{{'dash-cancel-categprodutos' | translate}}</h5></label>
+                                </div>
+                                <mat-form-field class="col-xl-12">
+                                    <mat-select name="category" id="category" formControlName="category">
+                                        <mat-option></mat-option>
+                                        <mat-option value="{{c.id}}" *ngFor="let c of filterCategory">{{ c.name }}
+                                        </mat-option>
+                                    </mat-select>
+                                </mat-form-field>
+                            </div>
+                        </div>
+
+                        <div class="float-right">
+                            <button class="btn btn-primary rounded-pill">
+                                {{ "dash-cancel-filtrar" | translate }}
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </ul>
+        </div>
+    </form>
+</section>
+<!-- Fim filtro -->
+
+<div class="row">
+    <div class="col-sm-12 col-md-12 col-xl-12">
+        <app-order></app-order>
+    </div>
+</div>
+
+<app-chart-large [barLineChartData]="barLineChartData" [barLineChartLabels]="barLineChartLabels"
+    [barLineChartOptions]="barLineChartOptions" [exportId]="barLineChartExportId"
+    [iconExportId]="barLineChartExportIconId" [filterDataId]="barLineChartFilterDataId"
+    (changeDate)="barLineChartChangeDate($event)" [chartTitle]="barLineChartTitleVendasCom">
+</app-chart-large>
+
+<div class="clearflix"></div>
+<h5 class="page-info col-12">{{'ComercialHomeTopRev' | translate}}</h5>
+
+<div class="row ">
+    <div class="col-12 col-sm-12 col-md-12 col-lg-7 col-xl-7">
+        <div class="label-float  col-lg-5 col-xl-4 ">
+            <mat-form-field>
+                <mat-label>{{'ComercialHomeSelecMeta' | translate}}</mat-label>
+                <mat-select>
+                    <mat-option *ngFor="let g of goals" value="{{ g.id }}">
+                        {{ g.name }}
+                    </mat-option>
+                </mat-select>
+            </mat-form-field>
+        </div>
+    </div>
+    <div class="col-12 col-sm-12 col-md-12 col-lg-5 col-xl-5">
+        <div class="radioInput my-2 pull-right">
+            <div class="toggle vw" style="margin-bottom: 0px; padding-bottom: 0px;">
+                <input type="radio" name="gender" value="maior" id="maiorPerformance" (click)="maiorf()" checked />
+                <label for="maiorPerformance" class="d-flex mt-2"><i
+                        class="material-icons mr-2">trending_up</i><small>{{'ComercialHomeMaiorPerf' | translate}}</small></label>
+                <input type="radio" name="gender" value="menor" id="menorPerformance" (click)="menorf()" />
+                <label for="menorPerformance" class="d-flex mt-2"><i
+                        class="material-icons mr-2">trending_down</i><small>{{'ComercialHomeMenorPerf' | translate}}</small></label>
+            </div>
+        </div>
+    </div>
+</div>
+<div *ngIf="maior && searchGoals">
+    <app-carousel [carouselData]="searchGoals" [carouselColors]="resaleDataColors"></app-carousel>
+</div>
+<div *ngIf="menor">
+    <app-carousel [carouselData]="searchGoals" [carouselColors]="resaleDataColors"></app-carousel>
+</div>
+
+<section>
+    <div class="row">
+        <div class="col-12 col-sm-12 col-md-6 col-lg-6 col-xl-6">
+            <app-chart-small [barLineChartData]="pieSalesInsuranceChartData"
+                [barLineChartLabels]="pieSalesInsuranceChartLabels"
+                [barLineChartOptions]="pieSalesInsuranceChartOptions" [barLineChartType]="pieSalesInsuranceChartType"
+                [barLineChartColors]="pieSalesInsuranceChartColors" [exportId]="pieSalesInsuranceChartExportId"
+                [iconExportId]="pieSalesInsuranceChartExportIconId" [filterDataId]="pieSalesInsuranceChartFilterDataId"
+                (changeDate)="pieSalesInsuranceChartChangeDate($event)" [chartTitle]="pieSalesInsuranceChartTitle">
+            </app-chart-small>
+        </div>
+        <div class="col-12 col-sm-12 col-md-6 col-lg-6 col-xl-6">
+            <app-chart-small [barLineChartData]="pieSalesCategoryChartData"
+                [barLineChartLabels]="pieSalesCategoryChartLabels" [barLineChartOptions]="pieSalesCategoryChartOptions"
+                [barLineChartType]="pieSalesCategoryChartType" [barLineChartColors]="pieSalesCategoryChartColors"
+                [exportId]="pieSalesCategoryChartExportId" [iconExportId]="pieSalesCategoryChartExportIconId"
+                [filterDataId]="pieSalesCategoryChartFilterDataId"
+                (changeDate)="pieSalesCategoryChartChangeDate($event)" [chartTitle]="pieSalesCategoryChartTitle">
+            </app-chart-small>
+        </div>
+    </div>
+</section>
+
+<!--Volumede venda por estados -->
+<section>
+    <div class="row">
+        <div class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 ">
+            <div class="card mb-3 shadow-sm">
+                <div class="card-body">
+                    <div class="d-flex justify-content-between">
+                        <h5 class="page-info ">{{'ComercialHomeVolVendasPEstado' | translate}}</h5>
+                        <a class="btn btn-secondaryz pr-4 pl-4"
+                            routerLink="/private/comercial/filterStates">{{'ComercialHomeCompareEstado' | translate}}</a>
+                    </div>
+                    <app-bar-line-chart [barLineChartData]="salesStateData" [barLineChartLabels]="salesStateLabels"
+                        [barLineChartColors]="salesStateColor" [barLineChartOptions]="salesStateOptions"
+                        [barLineChartType]="salesStateType">
+                    </app-bar-line-chart>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!--Final volume de vendas-->
+
+<app-chart-large [barLineChartData]="safeVendasData" [barLineChartLabels]="safeVendasLabels"
+    [barLineChartColors]="safeVendasColor" [barLineChartOptions]="safeVendasOptions" [barLineChartType]="safeVendasType"
+    [exportId]="safeVendasExportId" [iconExportId]="safeVendasExportIconId" [filterDataId]="safeVendasFilterDataId"
+    (changeDate)="safeVendasChangeDate($event)" [chartTitle]="safeVendasTitle">
+</app-chart-large>

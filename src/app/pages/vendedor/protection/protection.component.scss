@@ -1,0 +1,348 @@
+/*Estilos da Proteção - Seleção de Produto */
+.filter-button {
+  padding: 5px 20px;
+  display: inline-block;
+  text-decoration: none;
+  border-radius: 50px;
+  border: 1px solid #787878;
+  color: #707070;
+}
+.img-border {
+  width: 90%;
+  border-radius: 95px;
+  max-width: 164px;
+  height: 164px;
+}
+.border-box {
+  padding: 15px;
+  height: 250px;
+  text-align: center;
+}
+.border-insurance {
+  padding-top: 15px;
+  padding-bottom: 15px;
+  text-align: center;
+  border-radius: 20px !important;
+  background: #fff;
+//   height: 350px;
+  position: relative;
+  z-index: 1;
+}
+.fit-img {
+  height: 50%;
+  width: 50%;
+  object-fit: contain;
+}
+input.searchbar {
+  outline: 0;
+  border-width: 0 0 1px;
+  background: transparent;
+  border-color: #787878;
+  text-align: center;
+  border-radius: 0px;
+}
+input.searchbar:focus {
+  background: transparent;
+  border-color: #707070;
+  text-align: center;
+  border-radius: 0px;
+}
+input.searchbar[type="text"] {
+  text-align: center;
+  border-radius: 0px;
+}
+::-webkit-input.searchbar-placeholder {
+  text-align: center;
+  border-radius: 0px;
+}
+::-moz-placeholder {
+  text-align: center;
+  border-radius: 0px;
+}
+:-ms-input.searchbar-placeholder {
+  text-align: center;
+  border-radius: 0px;
+}
+::placeholder {
+  text-align: center;
+  border-radius: 0px;
+}
+input {
+  outline: 0;
+  border-width: 0 0 1px;
+  background: transparent;
+  border-color: #707070;
+  border-radius: 0px;
+}
+input:focus {
+  background: transparent;
+  border-color: #707070;
+  border-radius: 0px;
+}
+input[type="text"] {
+  border-radius: 0px;
+}
+::-webkit-input-placeholder {
+  border-radius: 0px;
+}
+::-moz-placeholder {
+  border-radius: 0px;
+}
+:-ms-input-placeholder {
+  border-radius: 0px;
+}
+::placeholder {
+  border-radius: 0px;
+}
+.search {
+  position: relative;
+  color: #005aab;
+  font-size: 16px;
+}
+.padding-heart {
+  text-align: right;
+  padding: 0px;
+}
+.product-title {
+  text-align: center;
+}
+
+.has-search .form-control {
+  padding-left: 2.375rem;
+}
+
+.has-search .form-control-feedback {
+  position: absolute;
+  z-index: 2;
+  display: block;
+  width: 2.375rem;
+  height: 2.375rem;
+  line-height: 2.375rem;
+  text-align: center;
+  pointer-events: none;
+  color: #005aab;
+}
+.bgtransparent {
+  background-color: rgba(255, 255, 255, 0.8);
+}
+.whitebg {
+  background-color: #fff;
+}
+.nostyle {
+  text-decoration: none;
+  color: #005aab;
+}
+.bordertopModal {
+  border-top-color: #005aab !important;
+  border-top: 10px solid;
+}
+input.cep {
+  outline: 0;
+  font-size: 17px;
+  border-width: 0 0 1px;
+  background: transparent;
+  border-color: #707070;
+}
+input.cep:focus {
+  font-size: 17px;
+  background: transparent;
+  border-color: #707070;
+}
+select {
+  outline: 0;
+  border-width: 0 0 1px;
+  background: transparent;
+  border-color: #707070;
+}
+.select {
+  font-size: 13px;
+}
+.modalFormat {
+  border: none;
+  text-align: left !important;
+  display: inline-block;
+}
+.mbtn {
+  border-radius: 5rem;
+}
+.mclose {
+  color: red;
+  opacity: 1;
+}
+.msuccess {
+  background: #62bc00;
+  border: 1px solid #62bc00;
+}
+
+//busca estilizada
+
+$padding: 7px 10px;
+
+.description {
+  text-align: center;
+  font-size: 0.8em;
+  color: #bbb;
+  text-shadow: 0 2px 1px #fff;
+}
+
+b,
+strong {
+  font-weight: 600;
+}
+
+.wrapper {
+  margin: 0 auto;
+  display: block;
+  background: transparent;
+  width: 100%;
+  padding: 10px;
+}
+
+.iconLupa{display: flex;justify-content: right;position: absolute;right: 10px;color:#005AAB;}
+
+.searchbox {
+  width: 100%;
+  position: relative;
+
+  input[type="search"] {
+    width: 100%;
+    padding: 7px 10px;
+    -webkit-appearance: none;
+    border-bottom: 1px solid;
+    border-top: 0;
+    border-left: 0;
+    border-right: 0;
+    border-color: #c5c5c5 !important;
+  }
+
+  .search-autocomplete {
+    display: none;
+    border-radius: 0 0 20px 20px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+
+    font-size: 0.9em;
+    border: 1px solid #eee;
+    border-top: none;
+    background: #fff;
+    box-shadow: 0 4px 4px rgba(10, 10, 10, 0.1);
+
+    max-height: 300px;
+    overflow-y: auto;
+
+    ul {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+    }
+    li,
+    a {
+      display: block;
+    }
+    li {
+      border-bottom: 1px solid #eee;
+      color: #0074d9;
+    }
+    li:last-of-type {
+      border-bottom: none;
+    }
+    li:hover,
+    li:active {
+      background: #fafafa;
+      color: #ff4136;
+    }
+
+    a {
+      padding: $padding;
+      color: inherit;
+      text-decoration: none;
+    }
+
+    .search-description {
+      font-size: 0.8em;
+      color: #999;
+      font-weight: 300;
+      display: block;
+    }
+
+    .loader,
+    .load-more,
+    .no-results,
+    .error {
+      padding: $padding;
+      text-align: center;
+    }
+    .load-more {
+      font-size: 0.8em;
+      color: #005aab;
+    }
+    .error,
+    .error:hover,
+    .error:active {
+      color: #ff3636;
+    }
+    .no-results,
+    .no-results:hover,
+    .no-results:active {
+      color: #999;
+    }
+  }
+}
+
+.spinner {
+  margin: auto;
+  width: 70px;
+  text-align: center;
+}
+
+.spinner > div {
+  width: 14px;
+  height: 14px;
+  background-color: #005aab;
+  margin-top: 10px;
+  border-radius: 100%;
+  display: inline-block;
+  -webkit-animation: bouncedelay 1.4s infinite ease-in-out;
+  animation: bouncedelay 1.4s infinite ease-in-out;
+  /* Prevent first frame from flickering when animation starts */
+  -webkit-animation-fill-mode: both;
+  animation-fill-mode: both;
+}
+
+.spinner .bounce1 {
+  -webkit-animation-delay: -0.32s;
+  animation-delay: -0.32s;
+}
+
+.spinner .bounce2 {
+  -webkit-animation-delay: -0.16s;
+  animation-delay: -0.16s;
+}
+
+@-webkit-keyframes bouncedelay {
+  0%,
+  80%,
+  100% {
+    -webkit-transform: scale(0);
+  }
+  40% {
+    -webkit-transform: scale(1);
+  }
+}
+
+@keyframes bouncedelay {
+  0%,
+  80%,
+  100% {
+    transform: scale(0);
+    -webkit-transform: scale(0);
+  }
+  40% {
+    transform: scale(1);
+    -webkit-transform: scale(1);
+  }
+}
+
+.fa-envelope{color: #707070!important;}

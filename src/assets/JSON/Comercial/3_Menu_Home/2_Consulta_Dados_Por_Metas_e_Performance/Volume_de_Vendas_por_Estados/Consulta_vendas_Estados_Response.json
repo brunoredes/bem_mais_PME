@@ -1,0 +1,121 @@
+{
+    "data": {
+        "sales": [
+            {
+                "state": "AC",
+                "value": 10000
+            },
+            {
+                "state": "AL",
+                "value": 23000
+            },
+            {
+                "state": "AP",
+                "value": 26000
+            },
+            {
+                "state": "AM",
+                "value": 12000
+            },
+            {
+                "state": "BA",
+                "value": 27000
+            },
+            {
+                "state": "CE",
+                "value": 32000
+            },
+            {
+                "state": "DF",
+                "value": 15000
+            },
+            {
+                "state": "ES",
+                "value": 17000
+            },
+            {
+                "state": "GO",
+                "value": 22000
+            },
+            {
+                "state": "MA",
+                "value": 29000
+            },
+            {
+                "state": "MT",
+                "value": 19000
+            },
+            {
+                "state": "MS",
+                "value": 16000
+            },
+            {
+                "state": "MG",
+                "value": 16000
+            },
+            {
+                "state": "PA",
+                "value": 17000
+            },
+            {
+                "state": "PB",
+                "value": 18000
+            },
+            {
+                "state": "PR",
+                "value": 19000
+            },
+            {
+                "state": "PE",
+                "value": 13000
+            },
+            {
+                "state": "RJ",
+                "value": 23000
+            },
+            {
+                "state": "RN",
+                "value": 9500
+            },
+            {
+                "state": "RS",
+                "value": 19500
+            },
+            {
+                "state": "RO",
+                "value": 22000
+            },
+            {
+                "state": "RR",
+                "value": 28000
+            },
+            {
+                "state": "SC",
+                "value": 19500
+            },
+            {
+                "state": "SP",
+                "value": 29000
+            },
+            {
+                "state": "SE",
+                "value": 19000
+            },
+            {
+                "state": "TO",
+                "value": 19000
+            }
+        ]
+    },
+    "message": "OK",
+    "hasError": false,
+    "errorDataCollection": [
+        {
+            "code": "string",
+            "message": "string",
+            "url": "string",
+            "detail": "string"
+        }
+    ],
+    "statusCode": 200
+}

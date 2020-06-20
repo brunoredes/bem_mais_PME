@@ -1,0 +1,11 @@
+{
+    "data": {
+        "feedback":{
+            "percent": 75
+        }
+    },
+    "message": "Ok",
+    "hasError": false,
+    "errorDataCollection": null,
+    "statusCode": 200
+}

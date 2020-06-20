@@ -1,0 +1,188 @@
+.mat-radio-button {
+  display: block!important;
+  -webkit-tap-highlight-color: transparent;
+  outline: 0;
+}
+
+
+card h3 {
+  font-weight: 100;
+  margin: 0px;
+}
+
+.details-title {
+  letter-spacing: 2px;
+}
+
+.details-title img {
+  padding: 10px;
+  margin: 0 auto;
+}
+
+.card-details-confs {
+  font-size: .8vw;
+  font-weight: 100;
+}
+
+// Abas
+
+
+.project-tab {
+  border: 0;
+}
+.project-tab #tabs {
+  background: #007b5e;
+  color: #eee;
+}
+.project-tab #tabs h6.section-title {
+  color: #eee;
+}
+.project-tab #tabs .nav-tabs .nav-item.show .nav-link,
+.nav-tabs .nav-link.active {
+  color: #005AAB;
+  background-color: transparent;
+  border-color: transparent transparent #f3f3f3;
+  border-bottom: 3px solid #005AAB !important;
+  font-size: 15.35px!important;
+  font-weight: bold;
+}
+.project-tab .nav-link {
+  border: 1px solid transparent;
+  border-top-left-radius: 0.25rem;
+  border-top-right-radius: 0.25rem;
+  color: #686868;
+  font-size: 15.35px!important;
+  font-weight: 600;
+}
+
+.project-tab thead {
+  background: #f3f3f3;
+  color: #333;
+}
+.project-tab a {
+  text-decoration: none;
+  color: #333;
+  font-weight: 600;
+}
+
+.tab-content {
+  padding-top: 15px !important;
+  padding-bottom: 15px !important;
+}
+
+// Thumbs
+
+#thumbs {
+  padding-top: 10px;
+  overflow: hidden;
+}
+#thumbs img,
+#largeImage {
+  padding: 4px;
+  background-color: white;
+  cursor: pointer;
+}
+#thumbs img {
+  float: left;
+  margin-right: 6px;
+}
+#description {
+  background: black;
+  color: white;
+  position: absolute;
+  bottom: 0;
+  padding: 10px 20px;
+  width: 525px;
+  margin: 5px;
+}
+#panel {
+  position: relative;
+}
+
+.newGreen{background: #62BC00;}	
+.newUsed{background: #FF3636;}	
+
+.text-success{color:#62BC00!important ;}
+
+.img-auto{
+  
+  margin: auto;
+  display: block;
+
+ }
+
+.bemValue {
+  padding: 20px 0px 0px 0px;
+}
+
+.mat-horizontal-content-container {
+    padding: 0px!important;
+}
+
+
+
+
+.project-tab .nav-link {
+  border: 1px solid transparent;
+  border-top-left-radius: 0.25rem;
+  border-top-right-radius: 0.25rem;
+  color: #686868;
+  font-size: 1vw;
+  font-weight: 600;
+}
+
+@media(max-width:1024px){
+
+  .card-details-confs {
+    font-size: 1.2vw;
+    font-weight: 100;
+  }
+
+
+}
+
+@media(max-width:768px){
+
+ .img-auto{
+  
+  margin: auto;
+  display: block;
+
+ }
+
+ @media(max-width: 767px){
+
+  .border-right {
+    border-right: 0 !important;
+  }
+
+ }
+
+ @media(max-width: 425px){
+
+  .bemValue {
+    padding: 0px 0px 0px 22px;
+  }
+
+  .card-details-confs {
+    font-size: 3.1vw;
+    font-weight: 100;
+  }
+
+  .project-tab #tabs .nav-tabs .nav-item.show .nav-link, .nav-tabs .nav-link.active {
+   
+    font-size: 4vw !important;
+    font-weight: bold;
+   }
+
+   .project-tab .nav-link {
+    
+    
+    font-size: 4vw;
+    font-weight: 600;
+}
+
+ }
+
+
+}

@@ -1,0 +1,71 @@
+//Dados da compra
+var objPurchase = new Purchase();
+
+//Dados do Cliente
+objPurchase.person = new Person();
+objPurchase.person.name = "João da Silva";
+objPurchase.person.email = "joao.silva@gmail.com";
+objPurchase.person.genre = 1; (Masculino)
+objPurchase.person.cellPhone = "978945632";
+objPurchase.person.birthDate = "12/12/1990";
+objPurchase.person.cpf = "12345678901";
+objPurchase.person.rg = "123456789";
+objPurchase.person.nationality = "Brasileiro";
+objPurchase.person.postalCode = "0123567";
+objPurchase.person.address = "Av Jornalista Roberto Marinho";
+objPurchase.person.addressNumber = "85";
+objPurchase.person.addressComplement = "Tower Bridge";
+objPurchase.person.state = 1; (São Paulo)
+objPurchase.person.city = "São Paulo";
+objPurchase.person.neighborhood = "Brooklin";
+objPurchase.person.smsNews = false;
+objPurchase.person.emailNews = false;
+objPurchase.person.politicallyExposed = false;
+
+//Dados de Seguro
+objPurchase.insuranceList = new Array<Insurance>();
+
+//Seguro 1
+var insurance1 = new Insurance();
+insurance1.id = 11111;
+insurance1.contextId = 1;
+insurance1.value = "2040";
+insurance1.properties = new Array<Property>();
+
+//Propriedades do Seguro 1
+var property1 = new Property();
+property1.name = "IMEI";
+property1.value = "01535879123";
+insurance1.properties.add(property1);
+
+var property2 = new Property();
+property2.name = "Invoice";
+property2.value = "015358791234564789";
+insurance1.properties.add(property2);
+
+var property3 = new Property();
+property3.name = "InvoiceDate";
+property3.value = "06/12/2019";
+insurance1.properties.add(property3);
+
+var property4 = new Property();
+property4.name = "AmountInvoice";
+property4.value = "2040";
+insurance1.properties.add(property4);
+
+var property6 = new Property();
+property6.name = "EAN";
+property6.value = "7897564632";
+insurance1.properties.add(property6);
+
+insuranceList.add(insurance1);
+
+//Dados de pagamento
+objPurchase.payment = new Payment();
+objPurchase.payment.cardNumber = "4001 0000 0000 0001";
+objPurchase.payment.cardName = "JOAO DA SILVA";
+objPurchase.payment.expirationDate = "20/12/2020";
+objPurchase.payment.cvv = "123";
+objPurchase.payment.installments = 12;
+
+this.http.post<any>(`${environment.apiUrl}/Transactions`, objPurchase);

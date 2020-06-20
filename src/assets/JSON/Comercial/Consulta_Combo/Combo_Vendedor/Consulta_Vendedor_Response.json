@@ -1,0 +1,26 @@
+{
+    "data": {
+        "vendors": [
+            {
+                "id":1,
+                "name": "Elvis Costello"
+            },
+            {
+                "id":2,
+                "name": "Edna da Silva"
+            },
+            {
+                "id":3,
+                "name": "João da Venda"
+            },
+            {
+                "id":4,
+                "name": "Patricia Santos"
+            }
+        ]
+    },
+    "message": "Ok",
+    "hasError": false,
+    "errorDataCollection": null,
+    "statusCode": 200
+}

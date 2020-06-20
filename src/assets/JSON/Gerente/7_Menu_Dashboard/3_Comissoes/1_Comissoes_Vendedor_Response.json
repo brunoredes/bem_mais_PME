@@ -1,0 +1,40 @@
+{
+    "data": [
+      {
+        "insurance": "Jonas",
+        "value": 33,
+        "percent": 33
+      },
+      {
+        "insurance": "Luiza",
+        "value": 22,
+        "percent": 22
+      },
+      {
+        "insurance": "Augusto",
+        "value": 15,
+        "percent": 15
+      },
+      {
+        "insurance": "Joana",
+        "value": 10,
+        "percent": 10
+      },
+      {
+        "insurance": "Débora",
+        "value": 10,
+        "percent": 10
+      }
+    ],
+    "message": "OK",
+    "hasError": false,
+    "errorDataCollection": [
+      {
+        "code": "string",
+        "message": "string",
+        "url": "string",
+        "detail": "string"
+      }
+    ],
+    "statusCode": 200
+  }

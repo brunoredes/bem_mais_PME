@@ -1,0 +1,259 @@
+<bem-mais-title></bem-mais-title>
+<div class="col-xl-12 row pr-0 mr-0" *ngIf="this.loading.getLoadingMenuComponents() == false">
+    <div class="col-xl-12 row">
+        <div class="col-12 col-sm-12 col-md-2 col-lg-2 col-xl-2">
+            <div class="label-float">
+                <label>{{'vend-consultavendas-ordem' | translate}}</label>
+                <br>
+                <input [(ngModel)]="order" id="order" />
+            </div>
+        </div>
+        <div class="col-12 col-sm-12 col-md-2 col-lg-2 col-xl-2">
+            <div class="label-float">
+                <label>{{'vend-consultavendas-cpf' | translate}}</label>
+                <br>
+                <input [(ngModel)]="cpf" id="cpf" [textMask]="{mask: cpfM}" />
+            </div>
+        </div>
+        <div class="col-12 col-sm-12 col-md-2 col-lg-2 col-xl-2">
+            <div class="label-float">
+                <label>{{'vend-consultavendas-apolice' | translate}}</label>
+                <br>
+                <input placeholder=" " />
+            </div>
+        </div>
+        <div class="col-12 col-sm-12 col-md-3 col-lg-3 col-xl-3">
+            <div class="label-float">
+                <label>{{'vend-consultavendas-certificado' | translate}}</label>
+                <br>
+                <input placeholder=" " />
+            </div>
+        </div>
+        <div class="col-12 col-sm-12 col-md-3 col-lg-3 col-xl-3">
+            <div class="label-float">
+                <label>{{'vend-consultavendas-nomecliente' | translate}}</label>
+                <br>
+                <input placeholder=" " [(ngModel)]="consumerName" />
+            </div>
+        </div>
+    </div>
+    <div class="col-xl-12 row">
+        <div class="col-12 col-sm-12 col-md-3 col-lg-3 col-xl-3 ">
+
+            <mat-form-field class="example-full-width mt-4">
+              <mat-label>{{'vend-consultavendas-inicio' | translate}}</mat-label>
+              <input matInput [matDatepicker]="picker" formControlName="validityStartDate">
+              <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+              <mat-datepicker #picker></mat-datepicker>
+            </mat-form-field>
+    
+          </div>
+    
+          <div class="col-12 col-sm-12 col-md-3 col-lg-3 col-xl-3 ">
+    
+            <mat-form-field class="example-full-width mt-4">
+              <mat-label>{{'vend-consultavendas-fim' | translate}}</mat-label>
+              <input matInput [matDatepicker]="picker2" formControlName="validityEndDate">
+              <mat-datepicker-toggle matSuffix [for]="picker2"></mat-datepicker-toggle>
+              <mat-datepicker #picker2></mat-datepicker>
+            </mat-form-field>
+    
+          </div>
+        <div class="col-12 col-sm-12 col-md-6 col-lg-6 col-xl-6 mt-4">
+            <div class="label-float">
+                <label>{{'vend-consultavendas-imei' | translate}}</label>
+                <br>
+                <input [(ngModel)]="imei" id="imei" [textMask]="{mask: imeiM}" />
+            </div>
+        </div>
+    </div>
+    <div class="col-xl-12 row" style="padding-top: 20px;">
+        <div class="col-12 col-sm-12 col-md-3 col-lg-3 col-xl-3">
+            <div class="label-float">
+                <label>{{'vend-consultavendas-vendedor' | translate}}</label>
+                <br>
+                <mat-form-field class="col-xl-12 pl-0">
+                    <mat-select [(ngModel)]="vendor" matSelect>
+                        <mat-option value=""></mat-option>
+                        <mat-option value="Anderson Leonardo"> Anderson Leonardo </mat-option>
+                        <mat-option value="Elvis Costello"> Elvis Costello </mat-option>
+                    </mat-select>
+                </mat-form-field>
+            </div>
+        </div>
+        <div class="col-12 col-sm-12 col-md-3 col-lg-3 col-xl-3">
+            <div class="label-float">
+                <label>{{'vend-consultavendas-produto' | translate}}</label>
+                <br>
+                <input placeholder=" " [(ngModel)]="produto" />
+            </div>
+        </div>
+        <div class="col-12 col-sm-12 col-md-6 col-lg-6 col-xl-6 pr-0 mr-0">
+            <div class="col-xl-12 pl-0">
+                <label><small style="font-size: 1vw;">{{'ComercialHomeNovosParcStatus'|translate}}</small></label>
+            </div>
+            <div class="row p-0 m-0">
+                <div class="col-6 col-sm-6 col-md-3 col-lg-3 col-xl-3 p-0">
+                    <div class="custom-control custom-checkbox user-grid-chkbox">
+                        <label class="text-relative " for="cancel">
+                            <input class="custom-control-input ng-untouched ng-pristine ng-valid mt-2" type="checkbox"
+                                id="cancel" name="cancel">
+                            <span
+                                class="custom-control-label p-cursor mt-2 font-sm">{{'vend-consultavendas-cancelada' | translate}}</span>
+                        </label>
+                    </div>
+                </div>
+                <div class="col-6 col-sm-6 col-md-2 col-lg-2 col-xl-2 p-0">
+                    <div class="custom-control custom-checkbox user-grid-chkbox">
+                        <label class="text-relative" for="success">
+                            <input class="custom-control-input ng-untouched ng-pristine ng-valid mt-2" type="checkbox"
+                                id="success" name="success">
+                            <span
+                                class="custom-control-label p-cursor mt-2 font-sm">{{'vend-consultavendas-sucesso' | translate}}</span>
+                        </label>
+                    </div>
+                </div>
+                <div class="col-6 col-sm-6 col-md-2 col-lg-2 col-xl-2 p-0">
+                    <div class="custom-control custom-checkbox user-grid-chkbox">
+                        <label class="text-relative" for="failed">
+                            <input class="custom-control-input ng-untouched ng-pristine ng-valid mt-2" type="checkbox"
+                                id="failed" name="failed">
+                            <span
+                                class="custom-control-label p-cursor mt-2 font-sm">{{'vend-consultavendas-falha' | translate}}</span>
+                        </label>
+                    </div>
+                </div>
+                <div class="col-6 col-sm-6 col-md-2 col-lg-2 col-xl-2 p-0">
+                    <div class="custom-control custom-checkbox user-grid-chkbox">
+                        <label class="text-relative" for="pend">
+                            <input class="custom-control-input ng-untouched ng-pristine ng-valid mt-2" type="checkbox"
+                                id="pend" name="pend">
+                            <span
+                                class="custom-control-label p-cursor mt-2 font-sm">{{'vend-consultavendas-pendente' | translate}}</span>
+                        </label>
+                    </div>
+                </div>
+                <div class="col-xl-3">
+                    <div>
+                        <a class="btn mbtn btn-success msuccess pr-4 pl-4" style="float:right;"
+                            (click)="filter()">{{'vend-consultavendas-buscar' | translate}}</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!--lista 500 mais-->
+<section class="row mt-3" *ngIf="this.loading.getLoadingMenuComponents() == false">
+    <div class="col-xl-12">
+        <div>
+            <p style="text-align: center;" *ngIf="salesNotFound">
+                {{'vend-consultavendas-results' | translate}}
+            </p>
+        </div>
+        <div class="d-flex justify-content-between align-items-center page-info w-100 d-none d-md-block"
+            *ngIf="policy.length > 0">
+            <span>{{'vend-consultavendas-ultimas' | translate}}</span>
+        </div>
+       
+        <app-table *ngIf="policy.length > 0" [dataSource]="dataSource" [displayedColumns]="displayedColumns" [columnsTitle]="columnsTitle"
+                   (emailElement)="emailEvent($event)" (viewElement)="viewEvent($event)" (updateElement)="updateEvent($event)" (recordDelete)="deleteEvent($event)">
+        </app-table>
+
+        <ngx-loading [show]="this.loading.getLoadingSearchSales()" [config]="{backdropBorderRadius: '10px',
+                            backdropBackgroundColour: 'rgba(0, 0, 0, 0)',
+                            animationType: ngxLoadingAnimationTypes.threeBounce,
+                            primaryColour: '#D3D3D3',
+                            secondaryColour: '#D3D3D3',
+                            tertiaryColour: '#D3D3D3'}" [template]="loadingTemplate">
+        </ngx-loading>
+    </div>
+</section>
+
+<!-- Modal Cancelamento -->
+<div class="modal fade" id="deleteModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+    aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content bordertopModal">
+            <div class="modal-header modalFormat pl-4 ml-1">
+                <h5 class="modal-title" id="exampleModalLabel">
+                    <button type="button" class="close mclose" data-dismiss="modal" aria-label="Fechar">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </h5>
+            </div>
+            <div class="modal-body">
+                <div class="col-12 row">    
+                    <strong>{{'vend-consultavendas-selecionado' | translate}}</strong> <small>XPTO</small>
+                </div>
+                <div class="col-12 row pt-2">     
+                    <strong>{{'vend-consultavendas-apolice' | translate}}:</strong><small> 123456</small>           
+                     </div>
+                <div class="col-12 row pl-0 pr-0 pt-2">
+                    <div class="col-6">
+                    <strong>{{'dash-cancel-data' | translate}}:</strong><small>19/11/2019</small>
+                </div>    
+                <div class="col-6">
+                    <strong>{{'vend-consultavendas-vendedor' | translate}}:</strong><small>André Luiz</small>
+                </div>           
+            </div>  
+            <div class="col-12 row pt-2">     
+                <strong>{{'vend-consultavendas-details-cliente' | translate}}</strong><small> Jhonatas Guimarães da Silva</small>
+            </div>      
+                <div class="col-xl-12 p-0">
+                    <br>
+                    <label><small>{{'vend-consultavendas-motivo' | translate}}</small></label><br>
+                    <mat-select name="perfil" id="perfil" class="col-xl-12 select" style="border-bottom: 1px solid #DEE4E8">
+                        <mat-option value="slc" class="select"></mat-option>
+                        <mat-option value="insat" class="select">
+                            {{'vend-consultavendas-insatisfa' | translate}}
+                        </mat-option>
+                        <mat-option value="desist" class="select">
+                            {{'vend-consultavendas-desiste' | translate}}
+                        </mat-option>
+                    </mat-select>
+                </div>
+                <div class="col-xl-12 pt-3 pl-0 pr-0">
+                    <label><small>{{'vend-consultavendas-descricao' | translate}}</small></label><br>
+                    <textarea name="comment" class="col-xl-12" form="usrform" rows="5"></textarea>
+                </div>
+            </div>
+            <div class="col-xl-12 pt-3 pl-4 ml-1">
+                <small>{{'vend-consultavendas-cancelamento' | translate}}</small>
+            </div>
+            <div class="modal-footer modalFormat p-4">
+                <button type="button" class="btn mbtn btn-outline-danger pl-4 pr-4"
+                    data-dismiss="modal">{{'vend-consultavendas-nao' | translate}}</button>
+                <button type="button" class="btn mbtn btn-success msuccess pl-4 pr-4" style="float:right;"
+                    data-dismiss="modal">{{'vend-consultavendas-sim' | translate}}</button>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Fim modal de cancelamento -->
+
+<!-- Modal de 2 via -->
+<div class="modal fade" id="modalEmail" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+    aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="bd-t-blue"></div>
+        <div class="modal-content bordertopModal">
+            <div class="modal-header modalFormat">
+                <img class="img-fluid col-12 m-120" src="assets/img/confirmacao-feedback.png" />
+            </div>
+            <div class="modal-body">
+                <h1 class="text-center">{{email}}</h1>
+            </div>
+            <a id="btnsuccessfully" class="col-4 badge badge-success text-center p-3 " data-dismiss="modal"
+                aria-label="Fechar">OK!</a>
+        </div>
+    </div>
+</div>
+<ngx-loading [show]="this.loading.getLoadingMenuComponents()" [config]="{backdropBorderRadius: '10px',
+                    backdropBackgroundColour: 'rgba(0, 0, 0, 0)',
+                    animationType: ngxLoadingAnimationTypes.threeBounce,
+                    primaryColour: '#D3D3D3',
+                    secondaryColour: '#D3D3D3',
+                    tertiaryColour: '#D3D3D3'}" [template]="loadingTemplate">
+</ngx-loading>

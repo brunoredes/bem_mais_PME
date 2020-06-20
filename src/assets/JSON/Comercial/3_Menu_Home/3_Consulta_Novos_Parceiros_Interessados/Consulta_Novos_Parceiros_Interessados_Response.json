@@ -1,0 +1,64 @@
+{
+    "data": {
+        "interestedPartners": [
+            {
+                "id": 123,
+                "code": 123,
+                "corporateName": "Lorem Ipsum is simply",
+                "cnpj": "000000000000-0",
+                "state": "SP",
+                "city": "São Paulo",
+                "registrationDate": "12/12/2019"
+            },
+            {
+                "id": 321,
+                "code": 321,
+                "corporateName": "Lorem Ipsum is simply",
+                "cnpj": "000000000000-0",
+                "state": "SP",
+                "city": "Santos",
+                "registrationDate": "12/12/2019"
+            },
+            {
+                "id": 456,
+                "code": 456,
+                "corporateName": "Lorem Ipsum is simply",
+                "cnpj": "000000000000-0",
+                "state": "SP",
+                "city": "São Paulo",
+                "registrationDate": "12/12/2019"
+            },
+            {
+                "id": 654,
+                "code": 654,
+                "corporateName": "Lorem Ipsum is simply",
+                "cnpj": "000000000000-0",
+                "state": "SP",
+                "city": "Santos",
+                "registrationDate": "12/12/2019"
+            },
+            {
+                "id": 789,
+                "code": 789,
+                "corporateName": "Lorem Ipsum is simply",
+                "cnpj": "000000000000-0",
+                "state": "SP",
+                "city": "São Paulo",
+                "registrationDate": "12/12/2019"
+            },
+            {
+                "id": 987,
+                "code": 987,
+                "corporateName": "Lorem Ipsum is simply",
+                "cnpj": "000000000000-0",
+                "state": "SP",
+                "city": "Santos",
+                "registrationDate": "12/12/2019"
+            }
+        ]
+    },
+    "message": "Ok",
+    "hasError": false,
+    "errorDataCollection": null,
+    "statusCode": 200
+}

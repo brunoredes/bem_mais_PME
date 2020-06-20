@@ -1,0 +1,136 @@
+<div class="w-100 mb-3">
+  <span class="navbar-brand">
+    <bem-mais-title></bem-mais-title>
+  </span>
+</div>
+<div class="row">
+  <div class="position-relative col-12">
+    <form class="login-form" [formGroup]="storeForm" (ngSubmit)="submit()">
+      <div class="row">
+        <div class="col-md-10">
+          <div class="row">
+            <div class="mb-3 col-md-12">
+              <div class="label-float">
+                <label id="companyName">{{'MasterDealerListStoreName' | translate}}</label><br />
+                <input type="text" id="companyName" name="companyName" placeholder=" " formControlName="companyName" />
+              </div>
+            </div>
+          </div>
+
+          <div class="row">
+            <div class="mb-3 col-md-6">
+              <div class="label-float">
+                <label id="commercialname">{{'forms-razaosocial' | translate}} </label><br />
+                <input type="text" id="commercialname" name="commercialname" placeholder=" "
+                  formControlName="commercialname" />
+              </div>
+            </div>
+            <div class="mb-3 col-md-6">
+              <div class="label-float ">
+                <label id="cnpj">CNPJ</label><br />
+                <input type="text" name="cnpj" id="cnpj" placeholder=" " formControlName="cnpj" />
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-2">
+          <div class="dropzone-wrapperr container col-md-12">
+            <div class="dropzone-desc">
+              <p>{{ "edituser-arraste" | translate }}</p>
+              <button type="submit" class="btn btn-darkk btn-lg btn-square ml-auto">
+                <i class="fas fa-camera-retro fa-1x"></i>
+              </button>
+            </div>
+            <input type="file" name="img_logo" class="dropzone" accept="image/*" />
+          </div>
+        </div>
+      </div>
+      <div class="row ">
+        <div class="mb-3 col-md-3">
+          <div class="label-float">
+            <label id="postalCode">{{'AggregatorSalesDetailsZipCd' | translate}}</label><br />
+            <input type="text" name="postalCode" id="postalCode" placeholder=" " formControlName="postalCode" />
+          </div>
+        </div>
+        <div class="mb-3 col-md-6">
+          <div class="label-float">
+            <label id="address">{{'AggregatorSalesDetailsAddress' | translate}}</label><br />
+            <input type="text" name="address" id="address" placeholder=" " formControlName="address" />
+          </div>
+        </div>
+        <div class="mb-3 col-md-3">
+          <div class="label-float">
+            <label id="addressNumber">{{'AggregatorNewPartnerFisPerAddrNumb' | translate}}</label><br />
+            <input type="text" name="addressNumber" id="addressNumber" placeholder=" "
+              formControlName="addressNumber" />
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="mb-3 col-md-3">
+          <div class="label-float">
+            <label id="neighborhood">{{'AggregatorNewPartnerFisPerNeigh' | translate}}</label><br />
+            <input type="text" name="neighborhood" id="neighborhood" placeholder=" " formControlName="neighborhood" />
+          </div>
+        </div>
+        <div class="mb-3 col-md-2">
+          <div class="label-float">
+            <label>UF</label>
+            <br>
+            <mat-form-field class="col-xl-12 pl-0">
+              <mat-select formControlName="state" matSelect (selectionChange)="change()" id="uf">
+                <mat-option></mat-option>
+                <mat-option *ngFor="let state of states" [value]="state.sigla">
+                  {{ state.sigla }}
+                </mat-option>
+              </mat-select>
+            </mat-form-field>
+          </div>
+        </div>
+        <div class="mb-3 col-md-3">
+          <div class="label-float">
+            <label>{{'AggregatorSalesDetailsCity' | translate}}</label>
+            <br>
+            <mat-form-field class="col-xl-12 pl-0">
+              <mat-select formControlName="state" matSelect>
+                <mat-option></mat-option>
+                <mat-option *ngFor="let cidade of cities" value="{{ cidade }}">
+                  {{ cidade.substr(8) }}
+                </mat-option>
+              </mat-select>
+            </mat-form-field>
+          </div>
+        </div>
+        <div class="mb-3 col-md-4">
+          <div class="label-float">
+            <label id="complement">{{'AggregatorSalesDetailsCompl' | translate}}</label><br />
+            <input type="text" name="complement" id="complement" placeholder=" " formControlName="complement" />
+          </div>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="mb-3 col-md-6">
+          <div class="label-float">
+            <label id="site">{{'AggregatorNewPartnerJurPerSite' | translate}} </label><br />
+            <input type="text" id="site" name="site" placeholder=" " formControlName="site" />
+          </div>
+        </div>
+        <div class="mb-3 col-md-6">
+          <div class="label-float ">
+            <label id="phone">{{'AggregatorSalesDetailsPhone' | translate}}</label><br />
+            <input type="text" name="phone" id="phone" placeholder=" " formControlName="phone" />
+          </div>
+        </div>
+      </div>
+
+      <div class="d-flex justify-content-between mt-5">
+        <a (click)="goBack()" class="btn btn-redz">{{'comercialInterestedPartnersViewGoBac' | translate}}</a>
+
+        <button type="submit" class="btn btn-greenz btn-lg btn-square ml-auto">
+          {{'AggregatorNewPartnerReg' | translate}}
+        </button>
+      </div>
+    </form>
+  </div>
+</div>

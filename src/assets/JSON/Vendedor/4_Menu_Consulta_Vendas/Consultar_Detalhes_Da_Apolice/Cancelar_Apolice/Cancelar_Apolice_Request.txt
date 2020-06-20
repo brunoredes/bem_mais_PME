@@ -1,0 +1,4 @@
+var policyId = 133;
+var reason = "Por motivos financeiros";
+
+this.http.post<any>(`${environment.apiUrl}/Policies/${policyId}/Cancel?reason=${reason}`);

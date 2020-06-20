@@ -1,0 +1,22 @@
+{
+    "data": {
+        "materials": [
+            {
+                "id": 123,
+                "corporateName": "Vídeo"
+            },
+            {
+                "id": 321,
+                "corporateName": "Pdf"
+            },
+            {
+                "id": 456,
+                "corporateName": "Word"
+            }
+        ]
+    },
+    "message": "Ok",
+    "hasError": false,
+    "errorDataCollection": null,
+    "statusCode": 200
+}

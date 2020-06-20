@@ -1,0 +1,37 @@
+{
+    "data": {
+        "goals": [
+            {
+                "id": 1,
+                "name": "Roberto Luiz",
+                "img": "./assets/img/user-10.jpg",
+                "reseller": "Vendedor 1",
+                "percent": 80,
+                "comission": "40000",
+                "details": null
+            },
+            {
+                "id": 2,
+                "name": "Maria Roberta",
+                "img": "./assets/img/user-11.jpg",
+                "reseller": "Vendedor 2",
+                "percent": 80,
+                "comission": "40000",
+                "details": null
+            },
+            {
+                "id": 3,
+                "name": "Elvis",
+                "img": "./assets/img/user-3.jpg",
+                "reseller": "Vendedor 3",
+                "percent": 60,
+                "comission": "25000",
+                "details": null
+            }
+        ]
+    },
+    "message": "Ok",
+    "hasError": false,
+    "errorDataCollection": null,
+    "statusCode": 200
+}

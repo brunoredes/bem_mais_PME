@@ -1,0 +1,45 @@
+{
+    "data": {
+        "goals": [
+            {
+                "id": 1,
+                "reseller": "Vendedor 1",
+                "percent": 80,
+                "comission": "40000",
+                "details": null
+            },
+            {
+                "id": 2,
+                "reseller": "Vendedor 2",
+                "percent": 80,
+                "comission": "40000",
+                "details": null
+            },
+            {
+                "id": 3,
+                "reseller": "Vendedor 3",
+                "percent": 60,
+                "comission": "25000",
+                "details": null
+            },
+            {
+                "id": 4,
+                "reseller": "Vendedor 4",
+                "percent": 45,
+                "comission": "15000",
+                "details": null
+            },
+            {
+                "id": 5,
+                "reseller": "Vendedor 5",
+                "percent": 45,
+                "comission": "15000",
+                "details": null
+            }
+        ]
+    },
+    "message": "Ok",
+    "hasError": false,
+    "errorDataCollection": null,
+    "statusCode": 200
+}

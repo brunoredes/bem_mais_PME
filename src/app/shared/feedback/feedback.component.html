@@ -1,0 +1,175 @@
+<div id="menu-overlay" *ngIf="this.loading.getLoadingMenuComponents() == false"></div>
+
+<div class="row">
+    <div class="col-11 col-sm-11 col-md-11 col-lg-8 col-xl-8 pr-0">
+
+        <div class="row d-flex justify-content-between">
+            <div class="col-2 col-sm-2 col-md-10 col-lg-12 col-xl-12">
+                <bem-mais-title></bem-mais-title>
+            </div>
+
+            <div id="none" class="col-3 col-sm-3 col-md-2">
+
+                <a id="sidebar__trigger" class="menu-open ">
+                    <div class="bg-primary rounded-circle  text-center iconFeed shadow">
+                        <i class="fas fa-lg fa-envelope-open-text"></i>
+                    </div>
+                </a>
+
+            </div>
+
+        </div>
+        <div *ngIf="image" class="imagem__feedback ">
+            <img src="./assets/img/feedback-comercial-abertura.png" class="img-fluid" alt="image">
+            <h1>{{'feedback-bemvindo' | translate}}</h1>
+        </div>
+        <app-registry *ngIf="register"></app-registry>
+        <app-reply *ngIf="list"></app-reply>
+    </div>
+</div>
+
+<span id="sidebar__close" class="iconClose"><i class="fas fa-lg fa-times-circle"></i></span>
+
+<div id="content-grid-feed" class="col-12 col-sm-6 col-md-6 col-lg-3 col-xl-3 p-0">
+
+    <div class="row p-3">
+        <div class="col-md-8 col-lg-9 col-xl-9" *ngIf="title"><small style="display: flex;line-height: 1.2;"><b>
+                    {{'feedback-lista' | translate}}</b></small></div>
+
+        <div class="col-lg-9" *ngIf="list"><a (click)="lista()"><small style="display: flex;line-height: 1.2;"><b>
+                        {{'feedback-novo' | translate}}</b></small></a></div>
+
+        <div class="col-lg-3">
+            <div class="pr-0">
+                <ul>
+                    <li class="filter-button">
+                        <a id="filter-feedback">
+                            <small>{{'feedback-filtrar' | translate}} &nbsp;</small><i class="fa fa-sliders"
+                                aria-hidden="true"></i>
+                        </a>
+                    </li>
+                    <div class="container mt-0">
+                        <div class="filter-div filter-feedback mt-0 shadow-sm">
+                            <div class="row ml-1">
+                                <h5 class="mb-0">{{'feedback-assunto' | translate}}</h5>
+                            </div>
+                            <div class="row ml-1 mr-1 pb-0 mb-2">
+                                <mat-form-field class="pt-0" style="width: 100%;">
+                                    <mat-select [(ngModel)]="subject">
+                                        <mat-option></mat-option>
+                                        <mat-option value="{{c.name}}" *ngFor="let c of category">
+                                            {{ c.name }}
+                                        </mat-option>
+                                    </mat-select>
+                                </mat-form-field>
+                            </div>
+                            <div class="row ml-1">
+                                <h5 class="mb-1">{{'feedback-data' | translate}}</h5>
+                            </div>
+                            <div class="row ml-1 mr-1 pb-0 mb-2">
+                                <div class="col-5 p-0">
+                                    <mat-form-field class="pt-0" style="width: 100%;">
+                                        <input [(ngModel)]="dateDe" matInput [matDatepicker]="picker" placeholder="{{'ComercialAdvFilterDateFrom' | translate}}"
+                                            (dateChange)="dateRangeChange()">
+                                        <mat-datepicker-toggle matSuffix [for]="picker">
+                                        </mat-datepicker-toggle>
+                                        <mat-datepicker #picker></mat-datepicker>
+                                    </mat-form-field>
+                                </div>
+                                <div class="col-5 p-0 ml-5">
+                                    <mat-form-field class="pt-0" style="width: 100%;">
+                                        <input [(ngModel)]="dateAte" [min]="dateDe" matInput [matDatepicker]="picker2"
+                                            placeholder="{{'ComercialAdvFilterDateTo' | translate}}" (dateChange)="dateRangeChange()">
+                                        <mat-datepicker-toggle matSuffix [for]="picker2">
+                                        </mat-datepicker-toggle>
+                                        <mat-datepicker #picker2></mat-datepicker>
+                                    </mat-form-field>
+                                </div>
+                            </div>
+                            <div class="row ml-1 mr-1 pb-0">
+                                <mat-radio-group [(ngModel)]="status">
+                                    <mat-radio-button class="ml-1">{{'feedback-tudo' | translate}}
+                                    </mat-radio-button>
+                                    <mat-radio-button value="Atendido" class="ml-4">
+                                        {{'feedback-atendido' | translate}}</mat-radio-button>
+                                    <mat-radio-button value="Pendente" class="ml-4">
+                                        {{'feedback-pendente' | translate}}</mat-radio-button>
+                                </mat-radio-group>
+                            </div>
+                            <div class="row d-flex justify-content-end mr-2">
+                                <button class="btn btn-primary rounded-pill"
+                                    (click)="filter()">{{'feedback-filtrar' | translate}}</button>
+                            </div>
+                            <!-- <button class="btn btn-secondary ml-3" (click)="clearFilter(true)">Limpar</button> -->
+                        </div>
+                    </div>
+                </ul>
+            </div>
+        </div>
+        <div class="group  col-lg-12">
+            <span class="border-list"></span>
+            <span class="border-bottom d-block p-2"></span>
+        </div>
+    </div>
+    <div class="p-3  my-custom-scrollbar">
+        <div class="table-striped" *ngFor="let i of listFeed">
+            <a (click)="respondido(i.id)">
+                <div class="row" id="{{i.id}}">
+                    <div class="col-3 col-sm-3 col-md-3 col-lg-3 col-xl-3 pr-0">
+                        <div class="thumb-wrap pt-3">
+                            <img src="./assets/img/user-3.jpg" width="70" height="70">
+                        </div>
+                    </div>
+
+                    <div class="col-9 col-sm-9 col-md-9 col-lg-9 col-xl-9 pl-0">
+                        <div class="p-3">
+                            <div class="mb-0">
+                                <h6>{{i.userName}}<span id="status{{i.id}}"
+                                        class="badge pull-right font-sm">{{i.statusDescription}}</span>
+                                </h6>
+                            </div>
+                            <small class="color-grey"><strong>{{'feedback-motivo' | translate}}
+                                    {{i.category}}</strong></small><br />
+                            <small>{{i.content}}</small>
+
+                        </div>
+                    </div>
+
+                    <div class="flex-row">
+                        <div id="endDate-{{i.id}}" class="col-6 col-sm-6 col-md-6 col-lg-6 col-xl-6">
+                            <small class="color-grey-light">RE: {{i.endDate}}</small>
+                        </div>
+                        <div id="startDate-{{i.id}}" class="col-6 col-sm-6 col-md-6 col-lg-6 col-xl-6">
+                            <small class="color-grey-light">{{'feedback-enviado' | translate}}
+                                {{i.startDate}}</small>
+                        </div>
+                    </div>
+                </div>
+            </a>
+            <hr />
+        </div>
+    </div>
+</div>
+<!--Modal de envio-->
+<div class="modal fade" id="modalInfo" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+    aria-hidden="true">
+
+    <div class="modal-dialog" role="document">
+        <div class="bd-t-blue"></div>
+        <div class="modal-content bordertopModal">
+
+            <div class="modal-header modalFormat">
+                <img class="img-fluid col-12 m-120" src="assets/img/confirmacao-feedback.png" />
+            </div>
+            <div class="modal-body">
+                <h1 class="text-center"><b>{{'feedback-gerado' | translate}}</b></h1>
+            </div>
+
+
+            <a href="#" class="col-4 badge badge-success text-center p-3 " data-dismiss="modal"
+                aria-label="Fechar">OK!</a>
+
+
+        </div>
+    </div>
+</div>

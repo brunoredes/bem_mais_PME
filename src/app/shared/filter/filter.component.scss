@@ -1,0 +1,127 @@
+.list-style{list-style-type: none;}
+.justify-content-flex-end{justify-content: flex-end;}
+.position-ab{position: absolute;}
+
+.label-float {
+    position: relative;
+    padding-top: 13px;
+  }
+  
+  .label-float input {
+    border: 0;
+    border-bottom: 1px solid #d8d8d8;
+    outline: none;
+    font-size: 15px;
+    transition: all 0.3s ease-out;
+    -webkit-transition: all 0.3s ease-out;
+    -moz-transition: all 0.3s ease-out;
+    -webkit-appearance: none;
+    border-radius: 0;
+    width: 100%;
+    background: transparent;
+  }
+  
+  .label-float input:focus {
+    border-bottom: 2px solid #005aab;
+  }
+  
+  .label-float input::placeholder {
+    color: transparent;
+  }
+  
+  .label-float label {
+    pointer-events: none;
+    position: absolute;
+    top: 0;
+    left: 0;
+    margin-top: 13px;
+    transition: all 0.3s ease-out;
+    -webkit-transition: all 0.3s ease-out;
+    -moz-transition: all 0.3s ease-out;
+  }
+  
+  .label-float input:required:invalid + label:before {
+    content: "*";
+  }
+  .label-float input:focus + label,
+  .label-float input:not(:placeholder-shown) + label {
+    font-size: 13px;
+    margin-top: 0;
+    color: #005aab;
+  }
+
+  .bordSelectUF{
+    background: #E7F1FA;
+    border-radius: 50px;
+    padding: 8px;
+    color: #1A1A1A;
+    margin-right: 10px;
+
+}
+
+
+.bordSelectUF i{color:#FF3636 ;margin-right: 10px;}
+
+
+
+//tabela
+
+td.mat-cell, td.mat-footer-cell, th.mat-header-cell {
+    padding: 10px!important; 
+    border-bottom-width: 1px;
+    border-bottom-style: solid;
+}
+
+td.mat-cell, td.mat-footer-cell, th.mat-header-cell{
+    padding: 10px !important;
+    border-bottom-width: 1px;
+    border-bottom-style: solid;
+    border-color: #d8d8d8!important;
+}
+
+td.mat-cell, td.mat-footer-cell, th.mat-header-cell{}
+
+// Modal Inicio
+.modal-header {border-bottom: 0 !important}
+
+.modal-footer {border-top: 1px solid transparent;}
+
+.btn-center{margin: 2px;display: flex;justify-content: space-around;}
+.badge{border-radius: 50px !important;margin: auto;}
+
+.bd-t-red{
+    background-color: #FF3636;
+    border-radius: 0.3rem 0.3rem 0 0;
+    height: 7px;
+    position: absolute;
+    width: 100%;
+    z-index: 1;
+    
+}
+// Modal Fim
+
+.btn-greenz {
+  background: #62bc00;
+  border-radius: 50px;
+  color: #fff;
+  padding: 0.5em 2em;
+}
+.btn-greenz:hover {
+  background: #62bc00;
+  border-radius: 50px;
+  color: #fff;
+}
+
+.btn-redz {
+  background: transparent;
+  border: 1px solid #ff3636;
+  color: #ff3636 !important;
+  border-radius: 50px;
+  padding: 0.5em 2em;
+}
+.btn-redz:hover {
+  background: transparent;
+  border: 1px solid #ff3636;
+  color: #ff3636;
+  border-radius: 50px;
+}

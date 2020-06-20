@@ -1,0 +1,4 @@
+var propertyValueLst = ", 123456, 65423, 96325"; (Samsung, 64Gb, Preto)
+var categoryId = 1; (Smartphone)
+
+this.http.get<any>(`${environment.apiUrl}/Products?propertyValueLst=${propertyValueLst}, categoryId=${categoryId}`);

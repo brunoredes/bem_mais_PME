@@ -1,0 +1,220 @@
+$green: #62bc00;
+$red: #ff3636;
+$Darkblue: #02296a;
+$LightBlue: #005aab;
+
+.filter-button {
+  padding: 5px 20px;
+  display: inline-block;
+  text-decoration: none;
+  border-radius: 50px;
+  border: 1px solid #787878;
+  color: #707070;
+}
+
+.fa-minus{color:$red!important ;}
+
+.list-style{list-style:none}
+
+.chk-full-block {
+    background-color: #fff;
+    border: 1px solid transparent!important;
+    border-radius: 0;
+    margin-bottom: 30px;
+    position: relative;
+}
+
+.filter-data {
+  margin: 0 0 0 -215px;
+  float: left;
+  background: white;
+  width: 22vw;
+  position: absolute;
+  // border-radius: 3px;
+  padding: 10px 10px 10px 0px;
+  right: 0;
+  display: none;
+  // z-index: 99999953;
+  border-radius: 10px;
+  top: 42px; 
+  margin-right: 9px;
+  text-align: left;
+}
+
+.filter-data:after {
+  bottom: 100%;
+  left: 89%;
+  border: solid transparent;
+  content: " ";
+  height: 0;
+  width: 0;
+  position: absolute;
+  pointer-events: none;
+  border-bottom-color: white;
+  border-width: 8px;
+  margin-left: 10px;
+}
+
+.filter-salesBySeller {
+   
+  background: white;
+  width: 29vw;
+  position: absolute;
+  border-radius: 3px;
+  padding: 20px;
+  z-index: 99;
+  border-radius: 20px;
+  top: 63px;
+  text-align: left;
+  right: 0;
+  display: none;
+  margin-right: 10px;
+}
+  
+
+.filter-salesBySeller:after {
+  bottom: 100%;
+  left: 89%;
+  border: solid transparent;
+  content: " ";
+  height: 0;
+  width: 0;
+  position: absolute;
+  pointer-events: none;
+  border-bottom-color: white;
+  border-width: 8px;
+  margin-left: -8px;
+}
+
+.mat-width {
+  width: 100%;
+}
+
+::ng-deep .filter-salesBySeller .mat-form-field-infix {
+  border-top: 0px !important;
+  padding: 0.25rem !important;
+}
+
+.d-grid {
+  display: grid;
+}
+.justify-content-rigth {
+  justify-content: right;
+}
+
+button {
+  cursor: pointer;
+  margin-top: 10px;
+
+  padding: 10px 20px;
+
+  color: white;
+  font-size: 12px;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+
+.table th, .table td {
+  padding: 0.5rem!important;
+  vertical-align: top;
+  border-top: 0;
+}
+
+
+@media (max-width: 1920px) {
+  
+
+  @media (max-width: 1024px) {
+
+    .filter-data {
+      width: 27vw;
+      margin-right: 8px;
+    }
+
+    .filter-salesBySeller {
+      top: 57px;
+    }
+
+    @media screen and (max-width: 768px) {
+
+      .filter-data {
+        width: 35vw;
+        margin-right: 46px;
+        top: 68px;
+      }
+
+      .filter-data:after {
+        margin-left: -231px;
+      }
+
+      .filter-salesBySeller {
+        width: 39vw;
+      }
+
+      @media (max-width: 425px) {
+
+        .filter-data:after {
+          margin-left: -125px;
+        }
+    
+        .mat-width {
+            width: 77%;
+        }
+
+        .filter-data {
+          margin-right: 178px;
+        }
+
+        .filter-salesBySeller {
+          width: 58vw;
+          top: 82px;
+        }
+
+        .datePickerAte {
+          margin-top: 10px;
+        }
+
+        @media (max-width: 375px) {
+
+          .filter-data:after {
+              margin-left: -114px;
+          }
+
+          .filter-data {
+            margin-right: 143px;
+          }
+
+          .mat-width {
+              width: 74%;
+          }
+
+          .filter-salesBySeller {
+            width: 66vw;
+          }
+
+          @media (max-width: 320px) {
+
+            .filter-data {
+              margin-right: 97px;
+              width: 40vw;
+              top: 83px;
+            }
+
+            .filter-data:after {
+              margin-left: -106px;
+            }
+
+            .mat-width {
+                width: 72%;
+            }
+
+            .filter-salesBySeller {
+              width: 72vw;
+              top: 99px;
+            }
+          }
+        }
+      }
+    }
+  }
+}

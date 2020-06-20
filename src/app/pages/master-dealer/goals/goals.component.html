@@ -1,0 +1,125 @@
+<bem-mais-title></bem-mais-title>
+
+<section class="mt-3">
+    <div class="row">
+        <div class="col-12 col-sm-12 col-md-3 col-lg-3 col-xl-3">
+            <app-achievement-goals></app-achievement-goals>
+        </div>
+        <div class="col-12 col-sm-12 col-md-3 col-lg-3 col-xl-3">
+            <app-goals-beats></app-goals-beats>
+        </div>
+        <div class="col-12 col-sm-12 col-md-6 col-lg-6 col-xl-6">
+            <div class="card mb-3 shadow-sm">
+                <div class="card-body">
+                    <perfect-scrollbar class="height">
+                        <h5>{{'AggregatorDashGoals' | translate}}</h5>
+
+                        <div id="style-4">
+                            <div class="force-overflow">
+                                <div class="lightBlue-bg rounded-pill col-lg-12 mb-3 p-2" *ngFor="let i of top">
+                                    <div class="row">
+                                        <div class="col-12 col-sm-12 col-md-2 col-lg-2 col-xl-2 m-auto">
+                                            <img src="./assets/img/logo-revenda.png" width="60" class="rounded-circle"
+                                                style="display: block; margin: auto;" alt="Responsive image">
+                                        </div>
+                                        <div class="col-12 col-sm-12 col-md-3 col-lg-3 col-xl-3 ">
+                                            <h5 class="mt-3 txtCenter">{{i.name}}</h5>
+                                        </div>
+                                        <div class="col-md-5">
+                                            <p class="text-muted mb-1">
+                                                <small>{{'ComercialDashboardSales' | translate}}:
+                                                    {{format(i.salesAmount)}}</small>
+                                            </p>
+                                            <div class="progress over-visible mb-4" style="height: 5px">
+                                                <div class="progress-bar customize-progress-bar" role="progressbar"
+                                                    aria-valuenow="100" aria-valuemin="0" id="top{{i.id}}"
+                                                    aria-valuemax="100">
+                                                    <span>{{i.percent}}%</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-4 col-sm-4 col-md-2 col-lg-2 m-auto">
+                                            <img src="./assets/img/trophy-parceiro.svg" style="width: 70%;"
+                                                class="img-fluid " alt="Responsive image">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+
+                    </perfect-scrollbar>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section>
+    <div class="row">
+        <div class="col-12 col-sm-12 col-md-6 col-lg-6 col-xl-6">
+
+            <app-chart-small [barLineChartData]="SalesGoalsData" [barLineChartLabels]="SalesGoalsLabels"
+                [barLineChartOptions]="SalesGoalsOptions" [barLineChartType]="SalesGoalsType"
+                [barLineChartColors]="SalesGoalsColors" [exportId]="SalesGoalsExportId"
+                [iconExportId]="SalesGoalsExportIconId" [filterDataId]="SalesGoalsFilterDataId"
+                (changeDate)="SalesGoalsChangeDate($event)" [chartTitle]="SalesGoalsTitle">
+            </app-chart-small>
+        </div>
+        <div class="col-12 col-sm-12 col-md-6 col-lg-6 col-xl-6">
+
+            <app-chart-small [barLineChartData]="ProductGoalsData" [barLineChartLabels]="ProductGoalsLabels"
+                [barLineChartOptions]="ProductGoalsOptions" [barLineChartType]="ProductGoalsType"
+                [barLineChartColors]="ProductGoalsColors" [exportId]="ProductGoalsExportId"
+                [iconExportId]="ProductGoalsExportIconId" [filterDataId]="ProductGoalsFilterDataId"
+                (changeDate)="ProductGoalsChangeDate($event)" [chartTitle]="ProductGoalsTitle">
+            </app-chart-small>
+        </div>
+    </div>
+</section>
+
+<section>
+    <div class="card mb-3 shadow-sm">
+        <div class="card-body">
+            <div class="row">
+                <div class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12">
+                    <h5>{{'AgregadorHomeCompareSalesTitle' | translate}}</h5>
+
+                    <div class="project-status-wrap">
+                        <div class="chk-block-content widget-body mb-3">
+                            <div class="table-responsive project-status-table border-0">
+                                <table class="table  table-middle mb-0 table-borderless">
+                                    <thead>
+                                        <tr>
+                                            <th></th>
+                                            <th></th>
+                                            <th></th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr *ngFor="let i of loadingSalesComparison()">
+                                            <td>{{i.position}}º {{i.name}}</td>
+                                            <td style="width:55vw">
+                                                <div class=" m-0">
+                                                    <div class="progress-bar bg-success" role="progressbar"
+                                                        style="height: 10px;" aria-valuenow="25" aria-valuemin="0"
+                                                        aria-valuemax="100" id="position{{i.position}}">
+                                                    </div>
+                                                </div>
+                                            </td>
+                                            <td>
+                                                {{format(i.salesAmount)}}
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+        </div>
+    </div>
+</section>

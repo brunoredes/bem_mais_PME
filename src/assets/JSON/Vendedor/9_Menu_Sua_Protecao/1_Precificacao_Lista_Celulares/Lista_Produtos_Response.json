@@ -1,0 +1,124 @@
+{
+    "data": {
+        "products":[
+            {
+                "id": 1234,
+                "name": "Samsung Galaxy A50",
+                "description": "128GB, 4GB RAM, Tela Infinita de 6.4, Octa Core, Leitor de Digital na Tela, Câmera Tripla",
+                "image": "https://29028l.ha.azioncdn.net/img/2019/04/produto/162787/19/large/smartphone-samsung-galaxy-a50-preto.jpg",
+                "thumbs": [
+                    {
+                        "thumbUrl": "https://29028l.ha.azioncdn.net/img/2019/04/produto/162787/19/large/smartphone-samsung-galaxy-a50-preto.jpg"
+                    },
+                    {
+                        "thumbUrl": "https://29028l.ha.azioncdn.net/img/2019/04/produto/162787/19/large/smartphone-samsung-galaxy-a50-preto.jpg"
+                    }
+                ],
+                "category": "Smartphone",
+                "categoryId": 1,
+                "value": "2500",
+                "favorito": false,
+                "color": "Preto"
+            },
+            {
+                "id": 1235,
+                "name": "Samsung Galaxy A50",
+                "description": "128GB, 4GB RAM, Tela Infinita de 6.4, Octa Core, Leitor de Digital na Tela, Câmera Tripla",
+                "image": "https://29028l.ha.azioncdn.net/img/2019/04/produto/162787/19/large/smartphone-samsung-galaxy-a50-preto.jpg",
+                "thumbs": [
+                    {
+                        "thumbUrl": "https://29028l.ha.azioncdn.net/img/2019/04/produto/162787/19/large/smartphone-samsung-galaxy-a50-preto.jpg"
+                    },
+                    {
+                        "thumbUrl": "https://29028l.ha.azioncdn.net/img/2019/04/produto/162787/19/large/smartphone-samsung-galaxy-a50-preto.jpg"
+                    }
+                ],
+                "category": "Smartphone",
+                "categoryId": 1,
+                "value": "2500",
+                "favorito": false,
+                "color": "Branco"
+            },
+            {
+                "id": 6547,
+                "name": "Galaxy Tab A",
+                "description": "128GB, 4GB RAM, Tela Infinita de 6.4, Octa Core, Leitor de Digital na Tela, Câmera Tripla",
+                "image": "https://29028l.ha.azioncdn.net/img/2019/04/produto/162787/19/large/smartphone-samsung-galaxy-a50-preto.jpg",
+                "thumbs": [
+                    {
+                        "thumbUrl": "https://29028l.ha.azioncdn.net/img/2019/04/produto/162787/19/large/smartphone-samsung-galaxy-a50-preto.jpg"
+                    },
+                    {
+                        "thumbUrl": "https://29028l.ha.azioncdn.net/img/2019/04/produto/162787/19/large/smartphone-samsung-galaxy-a50-preto.jpg"
+                    }
+                ],
+                "category": "Tablet",
+                "categoryId": 2,
+                "value": "2500",
+                "favorito": false,
+                "color": "Preto"
+            },
+            {
+                "id": 6548,
+                "name": "IPad Pro",
+                "description": "128GB, 4GB RAM, Tela Infinita de 6.4, Octa Core, Leitor de Digital na Tela, Câmera Tripla",
+                "image": "https://29028l.ha.azioncdn.net/img/2019/04/produto/162787/19/large/smartphone-samsung-galaxy-a50-preto.jpg",
+                "thumbs": [
+                    {
+                        "thumbUrl": "https://29028l.ha.azioncdn.net/img/2019/04/produto/162787/19/large/smartphone-samsung-galaxy-a50-preto.jpg"
+                    },
+                    {
+                        "thumbUrl": "https://29028l.ha.azioncdn.net/img/2019/04/produto/162787/19/large/smartphone-samsung-galaxy-a50-preto.jpg"
+                    }
+                ],
+                "category": "Tablet",
+                "categoryId": 2,
+                "value": "2500",
+                "favorito": false,
+                "color": "Branco"
+            },
+            {
+                "id": 9632,
+                "name": "Apple Watch",
+                "description": "128GB, 4GB RAM, Tela Infinita de 6.4, Octa Core, Leitor de Digital na Tela, Câmera Tripla",
+                "image": "https://29028l.ha.azioncdn.net/img/2019/04/produto/162787/19/large/smartphone-samsung-galaxy-a50-preto.jpg",
+                "thumbs": [
+                    {
+                        "thumbUrl": "https://29028l.ha.azioncdn.net/img/2019/04/produto/162787/19/large/smartphone-samsung-galaxy-a50-preto.jpg"
+                    },
+                    {
+                        "thumbUrl": "https://29028l.ha.azioncdn.net/img/2019/04/produto/162787/19/large/smartphone-samsung-galaxy-a50-preto.jpg"
+                    }
+                ],
+                "category": "Smartwatchs",
+                "categoryId": 3,
+                "value": "2500",
+                "favorito": false,
+                "color": "Preto"
+            },
+            {
+                "id": 9635,
+                "name": "Galaxy Watch",
+                "description": "128GB, 4GB RAM, Tela Infinita de 6.4, Octa Core, Leitor de Digital na Tela, Câmera Tripla",
+                "image": "https://29028l.ha.azioncdn.net/img/2019/04/produto/162787/19/large/smartphone-samsung-galaxy-a50-preto.jpg",
+                "thumbs": [
+                    {
+                        "thumbUrl": "https://29028l.ha.azioncdn.net/img/2019/04/produto/162787/19/large/smartphone-samsung-galaxy-a50-preto.jpg"
+                    },
+                    {
+                        "thumbUrl": "https://29028l.ha.azioncdn.net/img/2019/04/produto/162787/19/large/smartphone-samsung-galaxy-a50-preto.jpg"
+                    }
+                ],
+                "category": "Smartwatchs",
+                "categoryId": 3,
+                "value": "2500",
+                "favorito": false,
+                "color": "Branco"
+            }
+        ]
+    },
+    "message": "Ok",
+    "hasError": false,
+    "errorDataCollection": null,
+    "statusCode": 200
+}

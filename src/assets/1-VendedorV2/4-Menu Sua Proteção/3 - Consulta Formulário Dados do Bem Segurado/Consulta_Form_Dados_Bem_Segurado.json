@@ -1,0 +1,60 @@
+{
+    "data": {
+        "form": [
+            {
+                "type": "text",
+                "name": "imei",
+                "label": "IMEI",
+                "required": true,
+                "maxLenght":null,
+                "mask": null,
+                "dependency": null,
+                "options": null
+            },
+            {
+                "type": "text",
+                "name": "invoice",
+                "label": "Número da Nota Fiscal",
+                "required": true,
+                "maxLenght":null,
+                "mask": null,
+                "dependency": null,
+                "options": null
+            },
+            {
+                "type": "datePicker",
+                "name": "invoiceDate",
+                "label": "Data da Nota Fiscal",
+                "required": true,
+                "maxLenght":null,
+                "mask": null,
+                "dependency": null,
+                "options":null
+            },
+            {
+                "type": "text",
+                "name": "amountInvoice",
+                "label": "Valor da Nota Fiscal",
+                "required": true,
+                "maxLenght":null,
+                "mask": null,
+                "dependency": null,
+                "options": null
+            },
+            {
+                "type": "text",
+                "name": "ean",
+                "label": "EAN",
+                "required": true,
+                "maxLenght":null,
+                "mask": null,
+                "dependency": null,
+                "options": null
+            }
+        ]
+    },
+    "message": "Ok",
+    "hasError": false,
+    "errorDataCollection": null,
+    "statusCode": 200
+}

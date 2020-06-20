@@ -1,0 +1,438 @@
+<section>
+    <div class="row">
+        <div class="float-right ">
+            <div class="d-flex justify-content-between exporat-filtro">
+                <div class="p-2 mt-2 mr-3">
+                    <a id="filter-Exportar" (click)="toggleIcon('rotetion-icon')">
+                        {{'ComercialTrainingStatisticExport' | translate}}
+                        <i id="rotetion-icon" class="fas fa-chevron-down ml-1"></i>
+                    </a>
+                </div>
+                <div class="p-2">
+                    <a id="filter-estatistica" class="filter-button">
+                        <small>{{'dash-cancel-filtrar' | translate}} &nbsp;</small>
+                        <i class="fa fa-sliders" aria-hidden="true"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+        <!--filtro-->
+        <form [formGroup]="filterForm">
+            <div class="container mt-3">
+                <div class="filter-div filter-estatistica mt-0 shadow-sm">
+                    <div class="row ml-1">
+                        <h5 class="mb-1">{{'dash-cancel-data' | translate}}</h5>
+                    </div>
+                    <div class="row ml-1 mr-1 pb-0 mb-2">
+                        <div class="col-5 p-0">
+                            <mat-form-field class="pt-0" style="width: 100%;">
+                                <input formControlName="startDate" matInput [matDatepicker]="picker"
+                                    placeholder="{{'place-de' | translate}}" (dateChange)="dateRangeChange()">
+                                <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+                                <mat-datepicker #picker></mat-datepicker>
+                            </mat-form-field>
+                        </div>
+                        <div class="col-5 p-0 ml-5">
+                            <mat-form-field class="pt-0" style="width: 100%;">
+                                <input formControlName="endDate" matInput [matDatepicker]="picker2"
+                                    placeholder="{{'place-ate' | translate}}" (dateChange)="dateRangeChange()">
+                                <mat-datepicker-toggle matSuffix [for]="picker2"></mat-datepicker-toggle>
+                                <mat-datepicker #picker2></mat-datepicker>
+                            </mat-form-field>
+                        </div>
+                    </div>
+                    <div class="row ml-1">
+                        <h5 class="mb-0">{{'ComercialTrainingStatisticTrain' | translate}}</h5>
+                    </div>
+                    <div class="row ml-1 mr-1 pb-0 mb-2">
+                        <mat-form-field class="pt-0" style="width: 100%;">
+                            <mat-select formControlName="training">
+                                <mat-option *ngFor="let item of mockList" [value]="item.id">{{ item.name }}</mat-option>
+                            </mat-select>
+                        </mat-form-field>
+                    </div>
+                    <div class="row ml-1">
+                        <h5 class="mb-0">{{'ComercialTrainingFilterStatus' | translate}}</h5>
+                    </div>
+                    <div class="row ml-1 mr-1 pb-0">
+                        <mat-form-field class="pt-0" style="width: 100%;">
+                            <mat-select formControlName="trainingStatus">
+                                <mat-option *ngFor="let item of mockList" [value]="item.id">{{ item.name }}</mat-option>
+                            </mat-select>
+                        </mat-form-field>
+                    </div>
+                    <div class="row ml-1">
+                        <h5 class="mb-0">{{'ComercialTrainingFilterResponsByTrain' | translate}}</h5>
+                    </div>
+                    <div class="row ml-1 mr-1 pb-0">
+                        <mat-form-field class="pt-0" style="width: 100%;">
+                            <mat-select formControlName="trainingManager">
+                                <mat-option *ngFor="let item of mockList" [value]="item.id">{{ item.name }}</mat-option>
+                            </mat-select>
+                        </mat-form-field>
+                    </div>
+                    <div class="row ml-1">
+                        <h5 class="mb-0">{{'ComercialTrainingFilterHyerachPart' | translate}}</h5>
+                    </div>
+                    <div class="row ml-1 mr-1 pb-0">
+                        <mat-form-field class="pt-0" style="width: 100%;">
+                            <mat-select formControlName="partnerHierarchy">
+                                <mat-option *ngFor="let item of mockList" [value]="item.id">{{ item.name }}</mat-option>
+                            </mat-select>
+                        </mat-form-field>
+                    </div>
+                    <div class="row ml-1">
+                        <h5 class="mb-0">{{'ComercialTrainingFilterTrainByReg' | translate}}</h5>
+                    </div>
+                    <div class="row ml-1 mr-1 pb-0">
+                        <div class="col-12 col-sm-12 col-md-4 col-lg-4 col-xl-4 pl-0">
+                            <mat-form-field class="pt-0" style="width: 100%;">
+                                <mat-select formControlName="state">
+                                    <mat-option *ngFor="let item of mockList" [value]="item.id">UF</mat-option>
+                                </mat-select>
+                            </mat-form-field>
+                        </div>
+                        <div class="col-12 col-sm-12 col-md-8 col-lg-8 col-xl-8 pr-0">
+                            <mat-form-field class="pt-0" style="width: 100%;">
+                                <mat-select formControlName="city">
+                                    <mat-option *ngFor="let item of mockList" [value]="item.id">Cidade</mat-option>
+                                </mat-select>
+                            </mat-form-field>
+                        </div>
+                    </div>
+                    <div class="d-flex justify-content-flex-end">
+                        <button class="btn btn-primary rounded-pill"
+                            (click)="filter()">{{'dash-cancel-filtrar' | translate}}</button>
+                    </div>
+                </div>
+            </div>
+        </form>
+
+        <!--exportar-->
+        <div class="container mt-0">
+            <div class="filter-div filter-Exportar mt-0 shadow-sm">
+                <div class="row ml-1">
+                    <h5 class="mb-1">{{'ComercialTrainingStatisticCateg' | translate}}</h5>
+                </div>
+                <div class="col-12">
+                    <ul class="listStyle mat-radio">
+                        <li>
+                            <mat-radio-group aria-label="Select an option">
+                                <mat-radio-button color="primary" value="1">{{'ComercialTrainingStatisticTrainOk' | translate}}</mat-radio-button>
+                            </mat-radio-group>
+                        </li>
+                        <li>
+                            <mat-radio-group aria-label="Select an option">
+                                <mat-radio-button color="primary" value="1">{{'ComercialTrainingStatisticTrainLate' | translate}}</mat-radio-button>
+                            </mat-radio-group>
+                        </li>
+                        <li>
+                            <mat-radio-group aria-label="Select an option">
+                                <mat-radio-button color="primary" value="1">{{'ComercialTrainingStatisticTrainNotStart' | translate}}</mat-radio-button>
+                            </mat-radio-group>
+                        </li>
+                        <li>
+                            <mat-radio-group aria-label="Select an option">
+                                <mat-radio-button color="primary" value="1">{{'ComercialTrainingStatisticTrainExpired' | translate}}</mat-radio-button>
+                            </mat-radio-group>
+                        </li>
+                    </ul>
+                    <div class="row">
+                        <div class="col-4 col-sm-4 col-md-4 col-lg-4 col-lx-3">
+                            <ul class="listStyle p-4 d-contents">
+                                <li> <img class="img-fluid" src="assets/img/csv.svg" /><small
+                                        class="text-center d-block">CSV</small></li>
+                            </ul>
+                        </div>
+                        <div class="col-4 col-sm-4 col-md-4 col-lg-4 col-lx-3">
+                            <ul class="listStyle p-4 d-contents">
+                                <li> <img class="img-fluid" src="assets/img/pdf.svg" /><small
+                                        class="text-center d-block">PDF</small></li>
+                            </ul>
+                        </div>
+                        <div class="col-4 col-sm-4 col-md-4 col-lg-4 col-lx-3">
+                            <ul class="listStyle p-4 d-contents">
+                                <li> <img class="img-fluid" src="assets/img/xls.svg" /><small
+                                        class="text-center d-block">XLS</small></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <mat-radio-group class="col-12 p-0 pl-2 mt-2" aria-label="Select an option">
+                            <div class="text-center col-4 float-left">
+                                <mat-radio-button color="primary" value="csv"></mat-radio-button>
+                            </div>
+                            <div class="text-center col-4 float-left">
+                                <mat-radio-button color="primary" value="pdf"></mat-radio-button>
+                            </div>
+                            <div class="text-center col-4 float-left">
+                                <mat-radio-button color="primary" value="xml"></mat-radio-button>
+                            </div>
+                        </mat-radio-group>
+                    </div>
+                </div>
+                <div class="float-right">
+                    <button class="btn btn-primary rounded-pill">{{'ComercialTrainingStatisticExport' | translate}}</button>
+                </div>
+                <!-- <button class="btn btn-secondary ml-3" (click)="clearFilter(true)">Limpar</button> -->
+            </div>
+        </div>
+    </div>
+    <br>
+    <div class="row mt-4">
+        <div class="col-12 col-sm-12 col-md-6 col-lg-3 col-xl-3" *ngFor="let i of trainings">
+            <div class="card mb-3 shadow-sm">
+                <div class="card-body">
+                    <span>{{i.status}}</span>
+                    <div class="chart__width charDonut">
+                        <div class="chartTitle">
+                            {{i.percentage}}%
+                        </div>
+                        <canvas id="revenda{{i.id}}" height="350"></canvas>
+                    </div>
+                    <div class="d-flex justify-content-between mt-3">
+                        <div class="col-8 p-0 font-sm">
+                            <span>{{'ComercialTrainingStatisticTotalView' | translate}}</span>
+                        </div>
+                        <div class="col-6 font-sm"><span><i class="fas fa-users"></i> {{i.visualizationAmount}}</span></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+<!--Treinamento Acessado por Regiões-->
+<section>
+    <div class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 p-0">
+        <div class="card mb-3 shadow-sm">   
+            <div class="card-body">
+                <div class="row">
+                    <div class="col-12 col-sm-12 col-md-8 col-lg-8 col-xl-9">
+                        <h5 >{{'ComercialTrainingStatisticTrainAccessByReg' | translate}}</h5>
+                    </div>
+                    <div class="col-12 col-sm-12 col-md-3 col-lg-3 col-xl-2 d-flex justify-content-between ml-5">
+                        <a id="filter-Exportar-regiao" class="btn btn-secondaryz pr-4 pl-4"
+                            (click)="toggleIcon('exportRegion')">{{'ComercialTrainingStatisticExport' | translate}} &nbsp;<i id="exportRegion"
+                                class="fas fa-chevron-down"></i></a>
+                        <a id="chart-training-region"><i class="far fa-calendar-alt mt-2 "></i></a>
+                    </div>
+                </div>
+                <div class="chk-block-content pl-4 pr-4 pb-4">
+                    <canvas height="80vh" id="chart2"></canvas>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--exportar-->
+    <div class="container mt-0">
+        <div class="filter-Exportar-regiao mt-0 shadow-sm">
+            <div class="col-12">
+                <div class="row">
+                    <div class="col-4 col-sm-4 col-md-4 col-lg-4 col-lx-3">
+                        <ul class="listStyle p-4 d-contents">
+                            <li> <img class="img-fluid" src="assets/img/csv.svg" /><small
+                                    class="text-center d-block">CSV</small></li>
+                        </ul>
+                    </div>
+                    <div class="col-4 col-sm-4 col-md-4 col-lg-4 col-lx-3">
+                        <ul class="listStyle p-4 d-contents">
+                            <li> <img class="img-fluid" src="assets/img/pdf.svg" /><small
+                                    class="text-center d-block">PDF</small></li>
+                        </ul>
+                    </div>
+                    <div class="col-4 col-sm-4 col-md-4 col-lg-4 col-lx-3">
+                        <ul class="listStyle p-4 d-contents">
+                            <li> <img class="img-fluid" src="assets/img/xls.svg" /><small
+                                    class="text-center d-block">XLS</small></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="row">
+                    <mat-radio-group class="col-12 p-0 pl-2 mt-2" aria-label="Select an option">
+                        <div class="text-center col-4 float-left">
+                            <mat-radio-button color="primary" value="csv"></mat-radio-button>
+                        </div>
+                        <div class="text-center col-4 float-left">
+                            <mat-radio-button color="primary" value="pdf"></mat-radio-button>
+                        </div>
+                        <div class="text-center col-4 float-left">
+                            <mat-radio-button color="primary" value="xml"></mat-radio-button>
+                        </div>
+                    </mat-radio-group>
+                </div>
+            </div>
+            <div class="float-right">
+                <button class="btn btn-primary rounded-pill">{{'ComercialTrainingStatisticExport' | translate}}</button>
+            </div>
+        </div>
+    </div>
+    <!--Filtro data-->
+    <div class="container mt-0">
+        <div class="chart-training-region mt-0 shadow-sm">
+            <div class="row">
+                <div class="col-sm-5 ml-3 mb-0">
+                    <mat-form-field class="example-full-width" style="width: 120px;">
+                        <input [(ngModel)]="dateDeTrainingRegion" matInput [matDatepicker]="picker3"
+                            placeholder="{{'place-de' | translate}}" id="dateDe" (dateChange)="dateRangeChange()">
+                        <mat-datepicker-toggle matSuffix [for]="picker3">
+                            <mat-icon matDatepickerToggleIcon>keyboard_arrow_down</mat-icon>
+                        </mat-datepicker-toggle>
+                        <mat-datepicker #picker3></mat-datepicker>
+                    </mat-form-field>
+                </div>
+                <div class="col-sm-5 mb-0 ml-2">
+                    <mat-form-field class="example-full-width" style="width: 120px;">
+                        <input [(ngModel)]="dateAteTrainingRegion" matInput [min]="dateDeTrainingRegion"
+                            [matDatepicker]="picker4" placeholder="{{'place-ate' | translate}}" id="dateAte"
+                            (dateChange)="dateRangeChange()">
+                        <mat-datepicker-toggle matSuffix [for]="picker4">
+                            <mat-icon matDatepickerToggleIcon>keyboard_arrow_down</mat-icon>
+                        </mat-datepicker-toggle>
+                        <mat-datepicker #picker4></mat-datepicker>
+                    </mat-form-field>
+                </div>
+            </div>
+        </div> 
+    </div>
+</section>
+
+<!--Vendedores que finalizaram-->
+<section>
+    <div class="row">
+        <div class="col-12 col-sm-12 col-md-6 col-lg-6 col-xl-6">
+            <div class="card mb-3 shadow-sm">
+                <div class="card-body">
+                    <h5>{{'ComercialTrainingStatisticSallerFinalTrain' | translate}}</h5>
+                    <div class="scrollbar" id="style-4">
+                        <div class="card-border p-2 mb-2" *ngFor="let i of vendors">
+                            <div id="justify{{i.name}}">
+                                <div class="row">
+
+                                    <div class="col-12 col-sm-12 col-md-12 col-lg-2 col-xl-2">
+                                        <img [src]="i.image" alt="user img" class="rounded-circle" width="50" height="50">
+                                    </div>
+
+                                    <div class="col-6 col-sm-6 col-md-6 col-lg-4 col-xl-4">
+
+                                        <h5>{{i.name}}</h5>
+                                        <span class="small">{{'ComercialTrainingStatisticSales' | translate}}</span> | <span class="small">{{'ComercialTrainingStatisticResale' | translate}}</span>
+
+                                    </div>
+
+                                    <div class="col-10 col-sm-10 col-md-10 col-lg-5 col-xl-5">
+                                        <div class="chk-block-content">
+                                            <small class="text-muted mb-3">{{'ComercialTrainingStatisticConclPercent' | translate}}</small>
+                                            <div class="progress over-visible mb-4" style="height: 5px">
+                                                <div class="progress-bar customize-progress-bar" role="progressbar"
+                                                    aria-valuenow="100" aria-valuemin="0" aria-valuemax="100"
+                                                    [style.width.%]="i.percent">
+                                                    <span>{{i.percent}}%</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-12 col-sm-12 col-md-6 col-lg-6 col-xl-6">
+            <div class="card mb-3 shadow-sm">
+                <div class="card-body">
+                    <h5 class="page-info ">{{'ComercialTrainingStatisticTrainMoreAccess' | translate}}</h5>
+                    <div class="scrollbar" id="style-4">
+                        <div class="card-border-light-blue p-2 mb-2" *ngFor="let i of mostAcess">
+                            <div id="justifyTrainings{{i.name}}" class="row">
+                                <div class="col-12 col-sm-12 col-md-12 col-lg-2 col-xl-2 mt-1">
+                                    <img [src]="i.image" alt="user img" class=" img-fluid d-block mx-auto my-auto"
+                                        width="40" height="40">
+                                </div>
+                                <div class="col-12 col-sm-12 col-md-12 col-lg-5 col-xl-4">
+                                    <h5>{{i.name}}</h5>
+                                </div>
+                                <div class="col-10 col-sm-10 col-md-10 col-lg-5 col-xl-5">
+                                    <div class="chk-block-content mt-3">
+                                        <div class="progress over-visible mb-4" style="height: 5px">
+                                            <div class="progress-bar customize-progress-bar" role="progressbar"
+                                                aria-valuenow="100" aria-valuemin="0" aria-valuemax="100"
+                                                [style.width.%]="i.percent">
+                                                <span>{{i.percent}}%</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!--Avaliação-->
+<section *ngIf="corretor">
+    <div class="row">
+        <div class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12">
+            <div class="card mb-3 shadow-sm">
+                <div class="card-body">
+                    <h5 >{{'ComercialTrainingStatisticEvalTrain' | translate}}</h5>
+                    <div class="chk-block-content">
+                        <div class="table-responsive chk-block-content widget-body widget-table p-2">
+                            <table class="table table-middle table-striped table-hover col-12">
+                                <thead>
+                                    <tr>
+                                        <td class="text-nowrap"><h5>{{'ComercialTrainingStatisticTrain' | translate}}</h5></td>
+                                        <td>&nbsp;</td>
+                                        <td><h5>{{'ComercialTrainingStatisticProf' | translate}}</h5></td>
+                                        <td><h5>{{'ComercialTrainingStatisticTitle' | translate}}</h5></td>
+                                        <td><h5>{{'ComercialTrainingStatisticDescr' | translate}}</h5></td>
+                                        <td>&nbsp;</td>
+                                        <td>&nbsp;</td>
+                                        <td>&nbsp;</td>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr *ngFor="let i of summary">
+                                        <td><small>{{i.name}}</small></td>
+                                        <td><img src="assets/img/user-1.jpg" alt="user img" class="rounded-circle"
+                                                width="50" height="50"></td>
+                                        <td><small>{{i.profile}}</small></td>
+                                        <td><small> {{i.title}}r</small></td>
+                                        <td>
+                                            <small>{{i.description}}</small>
+                                        </td>
+                                        <td>&nbsp;</td>
+                                        <td class="text-nowrap">
+                                            <div class="star-rating dropdown">
+                                                <a data-toggle="modal" data-target="#myModal">
+                                                    <span class="fa fa-star{{i.rating > 0 ? '' : '-o'}}"
+                                                        data-rating="1"></span>
+                                                    <span class="fa fa-star{{i.rating >= 20 ? '' : '-o'}}"
+                                                        data-rating="2"></span>
+                                                    <span class="fa fa-star{{i.rating >= 40 ? '' : '-o'}}"
+                                                        data-rating="3"></span>
+                                                    <span class="fa fa-star{{i.rating >= 60 ? '' : '-o'}}"
+                                                        data-rating="4"></span>
+                                                    <span class="fa fa-star{{i.rating >= 80 ? '' : '-o'}}"
+                                                        data-rating="5"></span>
+                                                    <input type="hidden" name="whatever1" class="rating-value"
+                                                        value="2.56">
+                                                </a>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

@@ -1,0 +1,262 @@
+.filter-div h5{font-weight: normal!important;}
+table {
+  width: 100%;
+}
+td.mat-cell,
+td.mat-footer-cell,
+th.mat-header-cell {
+  padding: 10px !important;
+  border-bottom-width: 1px;
+  border-bottom-style: solid;
+  border-color: #d8d8d8 !important;
+}
+
+th.mat-sort-header-sorted {
+  color: black;
+}
+
+.filter-button {
+  padding: 5px 20px;
+  display: inline-block;
+  text-decoration: none;
+  border-radius: 50px;
+  border: 1px solid #787878;
+  color: #707070;
+}
+
+.label-float {
+  position: relative;
+  padding-top: 13px;
+
+  input {
+    border: 0;
+    // border-bottom: 1px solid #d8d8d8;
+    outline: none;
+    font-size: 15px;
+    transition: all 0.3s ease-out;
+    -webkit-transition: all 0.3s ease-out;
+    -moz-transition: all 0.3s ease-out;
+    -webkit-appearance: none;
+    border-radius: 0;
+    width: 100%;
+    background: transparent;
+  }
+  // input:focus {
+  // border-bottom: 2px solid #005aab;
+  // }
+
+  input::placeholder {
+    color: transparent;
+  }
+
+  label {
+    pointer-events: none;
+    position: absolute;
+    top: 0;
+    left: 0;
+    margin-top: 13px;
+    transition: all 0.3s ease-out;
+    -webkit-transition: all 0.3s ease-out;
+    -moz-transition: all 0.3s ease-out;
+  }
+
+  input:required:invalid + label:before {
+    content: "*";
+  }
+  input:focus + label,
+  input:not(:placeholder-shown) + label {
+    font-size: 13px;
+    margin-top: 0;
+    color: #005aab;
+  }
+}
+
+select {
+  outline: 0;
+  border-width: 0 0 1px;
+  background: transparent;
+}
+/* .select {
+  font-size:13px;
+}   */
+/* remove the original arrow */
+select.col-xl-12.select {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  -o-appearance: none;
+  /* no standardized syntax available, no ie-friendly solution available */
+}
+
+select + i.fa {
+  float: right;
+  margin-top: -30px;
+  margin-right: 5px;
+  /* this is so when you click on the chevron, your click actually goes on the dropdown menu */
+  pointer-events: none;
+  /* everything after this is just to cover up the original arrow */
+  /* (for browsers that don't support the syntax used above) */
+  padding-right: 5px;
+}
+.fontSM {
+  font-size: 59% !important;
+  font-weight: 400;
+}
+
+.date-input {
+  margin-top: 0.5rem;
+  display: grid;
+  grid-template-columns: 11% 75% 10%;
+  align-items: self-end;
+}
+
+@media only screen and(max-width:425px) {
+  table {
+    display: block;
+    overflow: auto;
+  }
+}
+table.shadow-sm.mat-table {
+  border: 10px white solid;
+  border-radius: 20px;
+}
+.btn-filter {
+  background-color: #666;
+  color: white !important;
+  border-radius: 50px;
+  box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.075) !important;
+  width: 100px;
+}
+
+i {
+  cursor: pointer;
+}
+
+// Modal Inicio
+.modal-header {
+  border-bottom: 0 !important;
+}
+
+.modal-footer {
+  border-top: 1px solid transparent;
+}
+
+.btn-center {
+  margin: 2px;
+  display: flex;
+  justify-content: space-around;
+}
+.badge {
+  border-radius: 50px !important;
+  margin: auto;
+}
+
+.bd-t-red {
+  background-color: #ff3636;
+  border-radius: 0.3rem 0.3rem 0 0;
+  height: 7px;
+  position: absolute;
+  width: 100%;
+  z-index: 1;
+}
+
+button {
+  cursor: pointer;
+  margin-top: 10px;
+  padding: 10px 20px;
+  color: white;
+  font-size: 12px;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+
+// Modal Fim
+
+.filter-arguments {
+  background: white;
+  width: 27vw;
+  position: absolute;
+  border-radius: 3px;
+  padding: 20px;
+  z-index: 99;
+  border-radius: 20px;
+  top: 50px;
+  text-align: left;
+  right: 0;
+  display: none;
+  margin-right: 10px;
+  label {
+    margin-bottom: 2px;
+  }
+}
+
+.filter-arguments:after {
+  bottom: 100%;
+  left: 89%;
+  border: solid transparent;
+  content: " ";
+  height: 0;
+  width: 0;
+  position: absolute;
+  pointer-events: none;
+  border-bottom-color: white;
+  border-width: 8px;
+  margin-left: -8px;
+}
+
+.d-grid {
+  display: grid;
+}
+.justify-content-rigth {
+  justify-content: right;
+}
+
+button {
+  cursor: pointer;
+  margin-top: 10px;
+
+  padding: 10px 20px;
+
+  color: white;
+  font-size: 12px;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+
+::ng-deep .filter-arguments .mat-form-field-infix {
+  border-top: 0px !important;
+  padding: 0.25rem !important;
+}
+
+@media (max-width: 1024px) {
+  .filter-arguments {
+    width: 32vw;
+  }
+
+  @media (max-width: 768px) {
+    .filter-arguments {
+      width: 40vw;
+    }
+
+    @media (max-width: 425px) {
+      .filter-arguments {
+        width: 73vw;
+      }
+
+      .datePickerAte {
+        margin-top: 10px;
+      }
+
+      @media (max-width: 375px) {
+        .filter-arguments {
+          width: 77vw;
+        }
+
+        @media (max-width: 320px) {
+          .filter-arguments {
+            width: 85vw;
+          }
+        }
+      }
+    }
+  }
+}

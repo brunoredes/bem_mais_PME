@@ -1,0 +1,10 @@
+
+var goalsFilters = new GoalsFilters();
+goalsFilters.code = null;
+goalsFilters.profile = null;
+goalsFilters.goal = null;
+goalsFilters.validityStartDate = null;
+goalsFilters.validityEndDate = null;
+goalsFilters.goalAmount = null;
+
+this.http.post<any>(`${environment.apiUrl}/Goals`, goalsFilters);

@@ -1,0 +1,16 @@
+$radius: 50px;
+$verde: #62BC00;
+$azul: #005aab;
+.btn-secondaryz{
+    color: $azul;
+    background: transparent;
+    border: 1px solid $azul;
+    padding: 0.5em 1.5em;
+    border-radius: $radius;
+}
+
+.btn-secundaryzz{
+    color: #fff;
+    background: $verde;
+    border-radius: $radius;
+}

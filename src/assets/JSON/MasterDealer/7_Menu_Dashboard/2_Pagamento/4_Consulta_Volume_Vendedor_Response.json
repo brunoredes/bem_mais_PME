@@ -1,0 +1,36 @@
+{
+    "data": [
+        {
+            "id": 233,
+            "name": "Vendedor 1",
+            "salesAmount": "7537.32",
+            "position": 1,
+            "percent": 100
+        },
+        {
+            "id": 234,
+            "name": "Vendedor 2",
+            "salesAmount": "4000",
+            "position": 2,
+            "percent": 80
+        },
+        {
+            "id": 235,
+            "name": "Vendedor 3",
+            "salesAmount": "500",
+            "position": 3,
+            "percent": 30
+        },
+        {
+            "id": 236,
+            "name": "Vendedor 4",
+            "salesAmount": "200",
+            "position": 4,
+            "percent": 20
+        }
+    ],
+    "message": "Ok",
+    "hasError": false,
+    "errorDataCollection": null,
+    "statusCode": 200
+}

@@ -1,0 +1,10 @@
+<p *ngIf="this.loading.getLoadingMenuComponents() == false">&nbsp; Self-service works!</p>
+<ngx-loading [show]="this.loading.getLoadingMenuComponents()"
+			[config]="{backdropBorderRadius: '10px',
+                       backdropBackgroundColour: 'rgba(0, 0, 0, 0)',
+                       animationType: ngxLoadingAnimationTypes.threeBounce,
+                       primaryColour: '#D3D3D3',
+                       secondaryColour: '#D3D3D3',
+					   tertiaryColour: '#D3D3D3'}" 
+			[template]="loadingTemplate">
+</ngx-loading>

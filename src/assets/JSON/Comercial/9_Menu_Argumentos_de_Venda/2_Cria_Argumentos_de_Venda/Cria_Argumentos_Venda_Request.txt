@@ -1,0 +1,7 @@
+
+var sellingPoint = new SellingPoint();
+sellingPoint.title = "Teste";
+sellingPoint.insurance = "Roubo e Furto";
+sellingPoint.description = "Lorem Ipsum is simply"
+
+this.http.post<any>(`${environment.apiUrl}/SellingPoints`, sellingPoint);

@@ -1,0 +1,69 @@
+<div class="w-100 mb-3">
+    <span class="navbar-brand">Home</span>
+</div>
+
+<a class="card mb-4 shadow-sm zInddex" *ngFor="let item of marketCards" [href]="item.url">
+    <div class="card-body p-0">
+        <div id="myCarousel" class="carousel slide" data-ride="carousel">
+            <div class="carousel-inner">
+                <div class="tiem active">
+                    <img class="img-fluid border-banner" width="100%" [src]="item.backgroundImage" alt="Los Angeles" />
+                </div>
+            </div>
+        </div>
+    </div>
+</a>
+<div class="row pt-1">
+    <div class="col-sm-12 col-md-6 col-lg-3 zInddex" *ngFor="let item of linkCards">
+        <a [href]="item.url" target="_blank">
+            <div class="card mb-3 shadow-sm ">
+                <img class="img-fluid mx-auto mt-3" width="190" [src]="item.picture" [alt]="item.title" />
+                <div class="card-body">
+                    <h3 class="text-center">{{ item.title }}</h3>
+                    <p class="card-text text-center">{{ item.description }}</p>
+                    <div class="d-flex justify-content-between align-items-center"></div>
+                </div>
+            </div>
+        </a>
+    </div>
+
+    <div class="col-sm-12 col-md-12 col-lg-6" *ngIf="!!bestsOfTheWeek">
+        <div class="card mb-4 shadow-sm">
+            <div class="card-body">
+                <perfect-scrollbar class="height">	
+                <h5>{{'ger-home-ranking-vendas' | translate}}</h5>
+                <div class="col-xl-12" id="style-4">
+                    <div class="force-overflow" id="scroll">
+                        <div class="row lightBlue-bg rounded-pill p-2 mb-3" *ngFor="let i of bestsOfTheWeek">
+                            <div class="col-4 col-sm-4 col-md-2 col-lg-2 m-auto">
+                                <img src="./assets/img/user-1.jpg"  class="img-fluid rounded-circle"
+                                    alt="Responsive image">
+                            </div>
+                            <div class="col-md-4 pt-2">
+                                <h5>{{i.name}}</h5>
+                                <span>{{i.profile}}</span>
+                            </div>
+                            <div class="col-md-4 pl-0">
+
+                                <p class="text-muted mb-1">
+                                    Metas da semana {{i.sales}}
+                                </p>
+                                <div class="progress over-visible mb-1" style="height: 5px">
+                                    <div class="progress-bar customize-progress-bar"
+                                        role="progressbar" aria-valuenow="100" aria-valuemin="0"
+                                        aria-valuemax="100" id="goal{{i.id}}">
+                                        <span id="percentGoals{{i.id}}">{{i.percent}}%</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-4 col-sm-4 col-md-2 col-lg-2 m-auto">
+                                <img src="./assets/img/trophy-parceiro.svg"  style="width: 70%;" class="img-fluid " alt="Responsive image">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </perfect-scrollbar>
+            </div>
+        </div>
+    </div>
+</div>

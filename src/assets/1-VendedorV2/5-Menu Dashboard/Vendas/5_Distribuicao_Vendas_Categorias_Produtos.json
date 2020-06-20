@@ -1,0 +1,40 @@
+{
+  "data": [
+    {
+      "insurance": "Celular",
+      "value": 33,
+      "percent": 33
+    },
+    {
+      "insurance": "Tablet",
+      "value": 22,
+      "percent": 22
+    },
+    {
+      "insurance": "Notebooks",
+      "value": 15,
+      "percent": 15
+    },
+    {
+      "insurance": "Cameras Digitais",
+      "value": 10,
+      "percent": 10
+    },
+    {
+      "insurance": "Acidentes Pessoais",
+      "value": 8,
+      "percent": 8
+    }
+  ],
+  "message": "OK",
+  "hasError": false,
+  "errorDataCollection": [
+    {
+      "code": "string",
+      "message": "string",
+      "url": "string",
+      "detail": "string"
+    }
+  ],
+  "statusCode": 200
+}

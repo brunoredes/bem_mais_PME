@@ -1,0 +1,25 @@
+{
+    "data": {
+        "vendors": [
+            {
+                "name": "Corretor 1",
+                "salesAmount": 500,
+                "percent": 100
+            },
+            {
+                "name": "Corretor 2",
+                "salesAmount": 500,
+                "percent": 50
+            },
+            {
+                "name": "Corretor 3",
+                "salesAmount": 500,
+                "percent": 20
+            }
+        ]
+    },
+    "message": "Ok",
+    "hasError": false,
+    "errorDataCollection": null,
+    "statusCode": 200
+}

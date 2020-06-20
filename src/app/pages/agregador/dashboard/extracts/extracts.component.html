@@ -1,0 +1,237 @@
+<section>
+
+
+    <h5>{{'AccountExtract' | translate}}</h5>
+
+
+    <div class="row">
+
+        <div class="col-12 col-sm-12 col-md-10 col-lg-10 col-xl-10 pl-3">
+
+            <div class="row">
+                <div class="col-12 col-sm-12 col-md-3 col-lg-3 col-xl-3">
+                    <span>{{'PeriodConsult' | translate}}:</span>
+                </div>
+
+                <div class="col-4 col-sm-4 col-md-4 col-lg-4 col-xl-3 pl-5 ml-2">
+
+                    <mat-form-field style="margin-top: -22px;">
+                        <mat-label>{{'PeriodSelect' | translate}}</mat-label>
+                        <mat-select [(ngModel)]="period" (selectionChange)="changePeriod()">
+                            <mat-option value="Semanal">Semanal</mat-option>
+                            <mat-option value="Quinzenal">Quinzenal</mat-option>
+                            <mat-option value="Periodo">Especificar Periodo</mat-option>
+                        </mat-select>
+                    </mat-form-field>
+
+
+                </div>
+                <div class="col-4 col-sm-4 col-md-4 col-lg-4 col-xl-2" *ngIf="period == 'Periodo'">
+                    <mat-form-field class="pr-2" style="width: 100%; margin-top: -22px;">
+                        <input [(ngModel)]="startDate" matInput [matDatepicker]="picker"
+                            placeholder="{{'place-de' | translate}}" (dateChange)="dateRangeChange()">
+                        <mat-datepicker-toggle matSuffix [for]="picker">
+                        </mat-datepicker-toggle>
+                        <mat-datepicker #picker></mat-datepicker>
+                    </mat-form-field>
+                </div>
+
+                <div class="col-4 col-sm-4 col-md-4 col-lg-4 col-xl-2" *ngIf="period == 'Periodo'">
+                    <mat-form-field class="pr-2" style="width: 100%; margin-top: -22px;">
+                        <input [(ngModel)]="endDate" [min]="startDate" matInput [matDatepicker]="picker2"
+                            placeholder="{{'place-ate' | translate}}" (dateChange)="dateRangeChange()">
+                        <mat-datepicker-toggle matSuffix [for]="picker2">
+                        </mat-datepicker-toggle>
+                        <mat-datepicker #picker2></mat-datepicker>
+                    </mat-form-field>
+                </div>
+
+            </div>
+
+
+        </div>
+
+
+        <div class="col-12 col-sm-12 col-md-2 col-lg-2 col-xl-2 pr-5" style="text-align: right;">
+            <a id="filter-Exportar" (click)="containerExport()">
+                {{'ComercialTrainingStatisticExport' | translate}}<i id="rotetion-icon"
+                    class="fas fa-chevron-down ml-1" id="iconExport"></i></a>
+            <div class="filter-div container mt-0">
+                <div class="export mt-0 shadow-sm" id="containerExport">
+                    <div class="col-12">
+                        <div class="row">
+                            <div class="col-4 col-sm-4 col-md-4 col-lg-4 col-lx-3">
+                                <ul class="listStyle p-2 d-contents">
+                                    <li> <img class="img-fluid" src="assets/img/csv.svg" /><small
+                                            class="text-center d-block">CSV</small></li>
+                                </ul>
+                            </div>
+                            <div class="col-4 col-sm-4 col-md-4 col-lg-4 col-lx-3">
+                                <ul class="listStyle p-2 d-contents">
+                                    <li> <img class="img-fluid" src="assets/img/pdf.svg" /><small
+                                            class="text-center d-block">PDF</small></li>
+                                </ul>
+                            </div>
+                            <div class="col-4 col-sm-4 col-md-4 col-lg-4 col-lx-3">
+                                <ul class="listStyle p-2 d-contents">
+                                    <li> <img class="img-fluid" src="assets/img/xls.svg" /><small
+                                            class="text-center d-block">XLS</small></li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <mat-radio-group class="col-12 p-0 pl-2" aria-label="Select an option">
+                                <div class="text-center col-4 float-left">
+                                    <mat-radio-button color="primary" value="csv"></mat-radio-button>
+                                </div>
+                                <div class="text-center col-4 float-left">
+                                    <mat-radio-button color="primary" value="pdf"></mat-radio-button>
+                                </div>
+                                <div class="text-center col-4 float-left">
+                                    <mat-radio-button color="primary" value="xls"></mat-radio-button>
+                                </div>
+                            </mat-radio-group>
+                        </div>
+                    </div>
+                    <div class="float-right mt-3">
+                        <button class="btn btn-primary rounded-pill">{{'ComercialTrainingStatisticExport' | translate}}</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+
+    <div class="row">
+        <div class="col-12 col-sm-12 col-md-3 col-lg-3 col-xl-3" *ngFor="let i of extrato">
+            <div class="card mb-3 shadow-sm mr-3">
+                <div class="card-body">
+                    <div id="color-border{{i.id}}" class="col-6 col-sm-12 col-md-12 col-lg-12 col-xl-12 border-width rounded-circle p-3 mx-auto">
+
+                        <img width="80" height="80" class="img-fluid text-center mx-auto d-flex"
+                            src="{{i.image}}" />
+                    </div>
+                    <div class="mt-3 mb-3">
+                        <h4 class="text-center line-height">{{i.title}}</h4>
+                        <h4 class="text-center line-height">{{format(i.amount)}}</h4>
+                    </div>
+                    <div id="color-line{{i.id}}" class="border-brand"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<app-chart-large [barLineChartData]="GeralData" [barLineChartLabels]="GeralLabels"
+                 [barLineChartColors]="GeralColors" [barLineChartOptions]="GeralOptions"
+                 [barLineChartType]="GeralType"
+                 [exportId]="GeralExportId" [iconExportId]="GeralExportIconId"
+                 [filterDataId]="GeralFilterDataId" (changeDate)="GeralChangeDate($event)"
+                 [chartTitle]="GeralTitle">
+</app-chart-large>   
+
+
+<section>
+
+    <div class="row">
+
+        <div class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12">
+
+            <div class="card mb-3 shadow-sm mr-3">
+                <div class="card-body">
+
+                    <div class="row">
+
+                        <div class="col-12 col-sm-12 col-md-6 col-lg-6 col-xl-6">
+                            <h5 class="page-info ">{{'ExtractDetail' | translate}}:  (de 10/11/2019 até 20/12/2019)</h5>
+                        </div>
+                        <div class="col-12 col-sm-12 col-md-6 col-lg-6 col-xl-6">
+
+                            <div class="d-flex justify-content-between">
+
+                                <span>{{'ShowExtract' | translate}}:</span>
+                                <mat-radio-group aria-label="Select an option">
+                                    <mat-radio-button value="1" class="mr-3">Tudo</mat-radio-button>
+                                    <mat-radio-button value="2" class="mr-3">Saque</mat-radio-button>
+                                    <mat-radio-button value="3" class="mr-3">Contestação</mat-radio-button>
+                                    <mat-radio-button value="4" class="mr-3">Futuro</mat-radio-button>
+                                </mat-radio-group>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                    <div class="table-responsive table-wrapper-scroll-y my-custom-scrollbar">
+
+                        <table class="table  table-borderless table-bordered table-striped mb-0">
+                            <thead>
+                                <tr class="bg-white">
+                                    <th>{{'vend-protection-details-safe-seguro' | translate}}</th>
+                                    <th>{{'ComercialHomeRankParceiros' | translate}}</th>
+                                    <th class="numeric">{{'edituser-uf' | translate}}</th>
+                                    <th class="numeric">{{'OpDescription' | translate}}</th>
+                                    <th class="numeric">{{'MovDate' | translate}}</th>
+                                    <th class="numeric">{{'vend-protection-details-finish-valor' | translate}}</th>
+
+
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr *ngFor="let i of table">
+                                    <td>{{i.insurance}}</td>
+                                    <td>{{i.partner}}</td>
+                                    <td class="numeric">{{i.state}}</td>
+                                    <td class="numeric">{{i.description}}</td>
+                                    <td class="numeric">{{i.date}}</td>
+                                    <td class="numeric">{{format(i.amount)}}</td>
+
+                                </tr>
+                                <tr style="background-color:rgba(231,241,250,.3);">
+                                    <td>&nbsp;</td>
+                                    <td>&nbsp;</td>
+                                    <td class="numeric">&nbsp;</td>
+                                    <td class="numeric">&nbsp;</td>
+                                    <td class="numeric">&nbsp;</td>
+                                    <td class="numeric">
+                                        <span>{{'ExtractBalance' | translate}}</span>
+                                        <h2 class="colorPositive">{{format(detalhe.amountPositive)}}</h2>
+
+                                        <h2 class="colorNegative"><span class="badge"></span><i
+                                                class="fas fa-minus"></i> {{format(detalhe.amountNegative)}}</h2>
+
+                                    </td>
+                                </tr>
+
+                                <tr style="background-color:rgba(231,241,250,.3);">
+                                    <td>&nbsp;</td>
+                                    <td>&nbsp;</td>
+                                    <td class="numeric">&nbsp;</td>
+                                    <td class="numeric">&nbsp;</td>
+                                    <td class="numeric">&nbsp;</td>
+                                    <td class="numeric">
+                                        <span>{{'AggregatorSalesDetailsInsurVal' | translate}}</span>
+                                        <h2 class="colorPositive">{{format(detalhe.amount)}}</h2>
+                                    </td>
+                                </tr>
+
+
+
+
+                            </tbody>
+                        </table>
+
+                    </div>
+
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+
+</section>

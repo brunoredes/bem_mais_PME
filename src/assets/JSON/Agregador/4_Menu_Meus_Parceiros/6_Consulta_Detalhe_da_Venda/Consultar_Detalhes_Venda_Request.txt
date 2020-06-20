@@ -1,0 +1,3 @@
+var saleId = 133;
+
+this.http.get<any>(`${environment.apiUrl}/Sales/${saleId}`);

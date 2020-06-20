@@ -1,0 +1,400 @@
+.label-float {
+  position: relative;
+  padding-top: 13px;
+}
+
+.label-float input {
+  border: 0;
+  border-bottom: 1px solid #d8d8d8;
+  outline: none;
+  font-size: 15px;
+  transition: all 0.3s ease-out;
+  -webkit-transition: all 0.3s ease-out;
+  -moz-transition: all 0.3s ease-out;
+  -webkit-appearance: none;
+  border-radius: 0;
+  width: 100%;
+  background: transparent;
+}
+
+.label-float input:focus {
+  border-bottom: 2px solid #005aab;
+}
+
+.label-float input::placeholder {
+  color: transparent;
+}
+
+.label-float label {
+  pointer-events: none;
+  position: absolute;
+  top: 0;
+  left: 0;
+  margin-top: 13px;
+  transition: all 0.3s ease-out;
+  -webkit-transition: all 0.3s ease-out;
+  -moz-transition: all 0.3s ease-out;
+}
+
+.label-float input:required:invalid + label:before {
+  content: "*";
+}
+.label-float input:focus + label,
+.label-float input:not(:placeholder-shown) + label {
+  font-size: 13px;
+  margin-top: 0;
+  color: #005aab;
+}
+
+.btn-greenz {
+  background: #62bc00;
+  border-radius: 50px;
+  color: #fff;
+  padding: 0.5em 2em;
+}
+.btn-greenz:hover {
+  background: #62bc00;
+  border-radius: 50px;
+  color: #fff;
+}
+
+.btn-redz {
+  background: transparent;
+  border: 1px solid #ff3636;
+  color: #ff3636 !important;
+  border-radius: 50px;
+  padding: 0.5em 2em;
+}
+.btn-redz:hover {
+  background: transparent;
+  border: 1px solid #ff3636;
+  color: #ff3636;
+  border-radius: 50px;
+}
+
+.btn-radio1 {
+  border: 1px solid #d8d8d8;
+  display: inline-block;
+  padding: 10px;
+  border-radius: 15px 0 0 15px;
+  position: relative;
+  text-align: center;
+  transition: #000 600ms ease, color 600ms ease;
+}
+.btn-radio2 {
+  border: 1px solid #d8d8d8;
+  display: inline-block;
+  padding: 10px;
+  border-radius: 0 15px 15px 0;
+  position: relative;
+  text-align: center;
+  transition: #000 600ms ease, color 600ms ease;
+}
+
+input[type="radio"].toggle {
+  display: none;
+  & + label {
+    cursor: pointer;
+    min-width: 50px;
+    &:hover {
+      background: none;
+      color: #1a1a1a;
+    }
+    &:after {
+      background: #1a1a1a;
+      content: "";
+      height: 100%;
+      position: absolute;
+      top: 0;
+      transition: left 200ms cubic-bezier(0.77, 0, 0.175, 1);
+      width: 100%;
+      z-index: -1;
+    }
+  }
+  &.toggle-left + label {
+    border-right: 0;
+    &:after {
+      left: 100%;
+    }
+  }
+  &.toggle-right + label {
+    margin-left: -5px;
+    &:after {
+      left: -100%;
+    }
+  }
+  &:checked + label {
+    cursor: default;
+    color: #fff;
+    background: #62bc00;
+    transition: color 200ms;
+    &:after {
+      left: 0;
+    }
+  }
+}
+
+/* VARS */
+$open-sans: "Open Sans", "Helvetica", sans-serif;
+
+$darkNavy: #62bc00;
+$teal1: #62bc00;
+$teal2: #62bc00;
+
+$activeShadow: 0 0 10px rgba($teal1, 0.5);
+
+/* MIXINS */
+@mixin focusOutline {
+  outline: dotted 1px #ccc;
+  outline-offset: 0.45rem;
+}
+@mixin hideInput {
+  width: 0;
+  height: 0;
+  position: absolute;
+  left: -9999px;
+}
+@mixin breakpoint($point) {
+  @if $point == 1100 {
+    @media (max-width: 1100px) {
+      @content;
+    }
+  } @else if $point == 800 {
+    @media (max-width: 800px) {
+      @content;
+    }
+  }
+}
+
+/* TOGGLE STYLING */
+.toggle {
+  margin: 0 0 1.5rem;
+  box-sizing: border-box;
+  font-size: 0;
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: flex-start;
+  align-items: stretch;
+  input {
+    @include hideInput;
+  }
+  input + label {
+    margin: 0;
+    padding: 0.5rem 0.7rem;
+    box-sizing: border-box;
+    position: relative;
+    display: inline-block;
+    border: solid 1px #d8d8d8;
+    background-color: transparent;
+    font-size: 1rem;
+    line-height: 140%;
+    text-align: center;
+    box-shadow: 0 0 0 rgba(255, 255, 255, 0);
+    transition: border-color 0.15s ease-out, color 0.25s ease-out, background-color 0.15s ease-out,
+      box-shadow 0.15s ease-out;
+
+    /* ADD THESE PROPERTIES TO SWITCH FROM AUTO WIDTH TO FULL WIDTH */
+    /*flex: 0 0 50%; display: flex; justify-content: center; align-items: center;*/
+    /* ----- */
+
+    &:first-of-type {
+      border-radius: 20px 0 0 20px;
+      border-right: none;
+    }
+    &:last-of-type {
+      border-radius: 0 20px 20px 0;
+      border-left: none;
+    }
+  }
+  input:hover + label {
+    border-color: $darkNavy;
+  }
+  input:checked + label {
+    background-color: $teal2;
+    color: #fff;
+    box-shadow: $activeShadow;
+    border-color: $teal2;
+    z-index: 1;
+  }
+  input:focus + label {
+    @include focusOutline;
+  }
+
+  @include breakpoint(800) {
+    input + label {
+      padding: 0.75rem 0.25rem;
+      flex: 0 0 50%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+  }
+}
+
+.box {
+  position: relative;
+  background: #ffffff;
+  width: 100%;
+}
+
+.box-header {
+  color: #444;
+  display: block;
+  padding: 10px;
+  position: relative;
+  border-bottom: 1px solid #f4f4f4;
+  margin-bottom: 10px;
+}
+
+.box-tools {
+  position: absolute;
+  right: 10px;
+  top: 5px;
+}
+
+.dropzone-wrapper {
+  border: 2px dashed #91b0b3;
+  color: #92b0b3;
+  background: rgba(230, 240, 250, 0.3);
+  position: relative;
+  height: 190px;
+}
+.dropzone-wrapperr {
+  border: 2px dashed #91b0b3;
+  background: rgba(230, 240, 250, 0.3);
+  color: #92b0b3;
+  position: relative;
+  height: 120px;
+  margin-top: 2em;
+}
+
+.dropzone-desc {
+  position: absolute;
+  margin: 0 auto;
+  left: 0;
+  right: 0;
+  text-align: center;
+  width: 90%;
+  top: 30px;
+  font-size: 16px;
+}
+
+.dropzone,
+.dropzone:focus {
+  position: absolute;
+  outline: none !important;
+  width: 100%;
+  height: 150px;
+  cursor: pointer;
+  opacity: 0;
+}
+
+.dropzone-wrapper:hover,
+.dropzone-wrapper.dragover {
+  background: #ecf0f5;
+}
+
+.preview-zone {
+  text-align: center;
+}
+
+.preview-zone .box {
+  box-shadow: none;
+  border-radius: 0;
+  margin-bottom: 0;
+}
+
+.btn-drag {
+  background: #005aab;
+  border-radius: 100px;
+  color: #fff;
+  padding: 0.8em 1em;
+  margin-top: 0;
+}
+.fa-1x {
+  font-size: 1.5em !important;
+}
+@media (max-width: 770px) {
+  .radioInput {
+    display: flex;
+    margin-bottom: 1rem;
+    justify-content: center;
+  }
+}
+
+select {
+  outline: 0;
+  border-width: 0 0 1px;
+  background: transparent;
+  border-color: #005aab;
+}
+/* .select { 
+      font-size:13px; 
+  }   */
+/* remove the original arrow */
+select.col-xl-12.select {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  -o-appearance: none;
+  /* no standardized syntax available, no ie-friendly solution available */
+}
+
+select + i.fa {
+  float: right;
+  margin-top: -30px;
+  margin-right: 5px;
+  /* this is so when you click on the chevron, your click actually goes on the dropdown menu */
+  pointer-events: none;
+  /* everything after this is just to cover up the original arrow */
+  /* (for browsers that don't support the syntax used above) */
+  padding-right: 5px;
+}
+.fontSM {
+  font-size: 59% !important;
+  font-weight: 400;
+}
+
+//modal
+
+.modal-content {
+  margin: none !important;
+  position: relative;
+  margin-top: 25%;
+}
+.modal-header {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  padding: 1rem 1rem;
+  border-bottom: transparent;
+  border-top-left-radius: 0.3rem;
+  border-top-right-radius: 0.3rem;
+}
+.badge {
+  border-radius: 50px !important;
+  margin: auto;
+}
+.badge-success {
+  background-color: #62bc00 !important;
+}
+.bd-t-blue {
+  background-color: #005aab;
+  border-radius: 0.3rem 0.3rem 0 0;
+  height: 7px;
+  position: absolute;
+  width: 100%;
+  z-index: 1;
+}
+
+::ng-deep .mat-form-field-infix {
+  border-top: 0px !important;
+  padding: 0.234rem !important;
+
+  @media (max-width: 1024px) {
+    padding: 0.31rem !important;
+  }
+
+  @media (max-width: 768px) {
+    padding: 0.36rem !important;
+  }
+}

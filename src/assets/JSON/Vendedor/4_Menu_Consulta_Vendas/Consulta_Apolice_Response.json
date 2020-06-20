@@ -1,0 +1,55 @@
+{
+    "data": {
+        "policies": [
+            {
+                "code": 130,
+                "order": 12345689791,
+                "consumerName": "João da Silva1",
+                "cpf": "12345678971",
+                "vendor": "Elvis Costello",
+                "state": "São Paulo",
+                "status": 1
+            },
+            {
+                "code": 131,
+                "order": 12345689792,
+                "consumerName": "João da Silva2",
+                "cpf": "12345678975",
+                "vendor": "Elvis Costello",
+                "state": "São Paulo",
+                "status": 1
+            },
+            {
+                "code": 132,
+                "order": 12345689793,
+                "consumerName": "João da Silva3",
+                "cpf": "12345678974",
+                "vendor": "Anderson Leonardo",
+                "state": "São Paulo",
+                "status": 1
+            },
+            {
+                "code": 133,
+                "order": 12345689794,
+                "consumerName": "João da Silva4",
+                "cpf": "12345678972",
+                "vendor": "Elvis Costello",
+                "state": "São Paulo",
+                "status": 1
+            },
+            {
+                "code": 134,
+                "order": 12345689795,
+                "consumerName": "João da Silva5",
+                "cpf": "12345678971",
+                "vendor": "Anderson Leonardo",
+                "state": "São Paulo",
+                "status": 1
+            }
+        ]
+    },
+    "message": "Ok",
+    "hasError": false,
+    "errorDataCollection": null,
+    "statusCode": 200
+}

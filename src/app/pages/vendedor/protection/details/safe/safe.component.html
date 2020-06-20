@@ -1,0 +1,164 @@
+<div class="card shadow-sm mb-3" *ngFor="let insurance of cart; let i = index">
+    <div *ngIf="loading.getLoadingSafe() == true && i == 0" style="height: 50px;"></div>
+    <ngx-loading [show]="loading.getLoadingSafe() && i == 0" [config]="{backdropBorderRadius: '10px',
+                        backdropBackgroundColour: 'rgba(0, 0, 0, 0)',
+                        animationType: ngxLoadingAnimationTypes.threeBounce,
+                        primaryColour: '#D3D3D3',
+                        secondaryColour: '#D3D3D3',
+                        tertiaryColour: '#D3D3D3'}" [template]="loadingTemplate">
+    </ngx-loading>
+    <div *ngIf="loading.getLoadingSafe() == false" class="panel-group">
+        <!--panel 1-->
+        <div class="panel-default" id="accordion">
+            <div class="panel-heading">
+                <h4 class="panel-title">
+                    <a class="collapsed pt-3 pb-2 pl-4" data-toggle="collapse" data-parent="#accordion"
+                        href="#collapseOne{{i}}" id="aCollapseOne{{i}}">
+                        <h5>{{'vend-protection-details-safe-title' | translate}} {{ insurance.name }}</h5>
+                    </a>
+                </h4>
+            </div>
+            <div id="collapseOne{{i}}" class="panel-collapse collapse ">
+                <div class="panel-body card-body">
+                    <div class="row">
+                        <div class="col-6 col-sm-6 col-md-1 col-lg-1 col-xl-1">
+                            <img class="img-fluid rounded-circle" [src]="insurance?.image" width="80" height="auto" />
+                        </div>
+
+                        <div class="col-6 col-sm-6 col-md-2 col-lg-2 col-xl-2">
+                            <h5>{{'vend-protection-details-safe-seguro' | translate}}</h5>
+                            <small>{{insurance.name}}</small>
+                        </div>
+
+                        <div class="col-8 col-sm-8 col-md-3 col-lg-3 col-xl-3">
+                            <h5>{{'vend-protection-details-safe-coberturas' | translate}}</h5>
+                            <small>{{insurance.description}}</small>
+                        </div>
+
+                        <div class="col-4 col-sm-4 col-md-2 col-lg-2 col-xl-2">
+                            <h5>{{'vend-protection-details-safe-categoria' | translate}}</h5>
+                            <small>{{insurance.context}}</small>
+                        </div>
+
+                        <div class="col-6 col-sm-6 col-md-2 col-lg-2 col-xl-2">
+                            <h5>{{'vend-protection-details-safe-valorseguro' | translate}}</h5>
+                            <small
+                                *ngIf="getInsurancePlanPriceAmount(i) && insurance.planPriceSelected && insurance.planPriceSelected.name != 'Assinatura'">R$
+                                {{format(getInsurancePlanPriceAmount(i))}}</small>
+                            <small
+                                *ngIf="getInsurancePlanPriceAmount(i) && insurance.planPriceSelected && insurance.planPriceSelected.name == 'Assinatura'">R$
+                                {{format(getInsurancePlanPriceAmount(i))}}
+                                {{'vend-protection-details-product-mensais' | translate}}</small>
+                            <!-- <a *ngIf="!getInsurancePlanPriceAmount(i)" (click)="addInsurancePlan(i)" matStepperPrevious><small>+ Adicionar plano</small></a> -->
+                            <button mat-button matStepperPrevious (click)="addInsurancePlan(i)" class="btn btn-primary"
+                                *ngIf="!getInsurancePlanPriceAmount(i)"><small>+ Adicionar plano</small></button>
+                        </div>
+
+                        <div class="col-6 col-sm-6 col-md-2 col-lg-2 col-xl-2">
+                            <button class="btn border border-warning rounded-button" type="submit" data-toggle="modal"
+                                (click)="selectInsuranceToRemove(i)" data-target='#modaldeletaprodSafe'>
+                                <i class="fas fa-times-circle fa-lg bg-icon-red "></i>
+                                {{'vend-protection-details-safe-remover' | translate}}
+                            </button>
+                        </div>
+
+                        <div class="col-12 paddingAuto"></div>
+
+                        <div class="col-6 col-sm-6 col-md-1 col-lg-1 col-xl-1">
+                            <img class="img-fluid rounded-circle" [src]="insurance.productSelected?.image" width="80"
+                                height="auto" />
+                        </div>
+
+                        <div class="col-6 col-sm-6 col-md-2 col-lg-2 col-xl-2">
+                            <h5>{{insurance.productSelected?.category}}</h5>
+                            <small>{{insurance.productSelected?.name}}</small>
+                        </div>
+
+                        <!-- Não possui no JSON de produto -->
+                        <div class="col-6 col-sm-6 col-md-3 col-lg-3 col-xl-3">
+                            <h5>{{'vend-protection-details-safe-fabricante' | translate}}</h5>
+                            <small>Samsung</small>
+                        </div>
+
+                        <!-- Não possui no JSON de produto -->
+                        <div class="col-6 col-sm-6 col-md-2 col-lg-2 col-xl-2">
+                            <h5>{{'vend-protection-details-safe-modelo' | translate}}</h5>
+                            <small>SM-A505GT/1DL</small>
+                        </div>
+
+                        <div class="col-6 col-sm-2 col-md-2 col-lg-2 col-xl-2">
+                            <h5>{{'vend-protection-details-safe-produto' | translate}}</h5>
+                            <small
+                                class="col-12 custom-control custom-radio label-new text-white borderRadius3 badge text-white"
+                                id="status-{{insurance.productSelected?.status}}">
+                                {{insurance.productSelected?.status}}
+                            </small>
+                        </div>
+
+                        <!-- (click)="removeProduct(insurance)" -->
+                        <div class="col-6 col-sm-6 col-md-2 col-lg-2 col-xl-2">
+&nbsp;
+                        </div>
+                    </div>
+                    <div class="clearflix"></div>
+
+                    <!--Inicio do cadastro nota fiscal-->
+                    <form class="mt-5" *ngIf="safeForm[i]" [formGroup]="safeForm[i]">
+                        <!-- <form class="mt-5"> -->
+                        <div class="row">
+                            <div class="col-md-4 col-lg-3 col-xl-3" *ngFor="let field of fields">
+                                <label [for]="field.name">
+                                    <small>{{ field.label }}</small>
+                                </label>
+                                <input id="{{field.name + i}}" class="col-xl-12" [name]="field.name" [type]="field.type"
+                                    [mask]="field.mask" [maxlength]="field.maxLength" [formControlName]="field.name" (keyup)="updateProperties(i)" />
+                            </div>
+                            <div class="col-md-4 col-lg-5 col-xl-5">
+                                <div class="custom-control custom-checkbox user-grid-chkbox mt-4">
+                                    <label class="text-relative">
+                                        <input class="custom-control-input ng-untouched ng-pristine ng-valid mt-2"
+                                            type="checkbox" id="checkReplicate{{i}}" (click)="checkReplicate(i)" />
+                                        <span class="custom-control-label p-cursor mt-2 font-sm">
+                                            {{'vend-protection-details-safe-replicardados' | translate}}
+                                        </span>
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!--Modal descartar-->
+
+<div class="modal fade" id="modaldeletaprodSafe" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+    aria-hidden="true">
+
+    <div class="modal-dialog" role="document">
+        <div class="bd-t-red"></div>
+        <div class="modal-content bordertopModal">
+
+            <div class="modal-header modalFormat">
+                <img class="m-auto d-block" src="assets/img/deseja-descartar.png" />
+            </div>
+            <div class="modal-body">
+                <h1 class="text-center">{{'vend-protection-details-safe-deletar' | translate}}</h1>
+            </div>
+
+            <div class="row btn-center">
+                <a href="#" class="col-4 badge btn-br50 text-center p-3 border border-primary" data-dismiss="modal"
+                    aria-label="Fechar">
+                    {{'vend-protection-details-safe-modalnao' | translate}}
+                </a>
+
+                <a href="#" class="col-4 badge badge-danger btn-br50 text-center p-3 " data-dismiss="modal"
+                    aria-label="Fechar" (click)="removeSelected()">
+                    {{'vend-protection-details-safe-modalsim' | translate}}
+                </a>
+            </div>
+
+        </div>
+    </div>
+</div>

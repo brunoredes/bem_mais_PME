@@ -1,0 +1,31 @@
+{
+  "data": [
+    {
+      "id": "100",
+      "order": "1",
+      "title": "INSTITUCIONAL ZURICH",
+      "description": "lorem ipsum",
+      "picture": "assets/img/institucional.png",
+      "url": "http://www.zurich.com.br"
+    },
+    {
+      "id": "101",
+      "order": "1",
+      "title": "PRODUTOS E SERVIÇOS",
+      "description": "lorem ipsum",
+      "picture": "assets/img/produtos.png",
+      "url": "http://www.zurich.com.br"
+    }
+  ],
+  "message": "OK",
+  "hasError": false,
+  "errorDataCollection": [
+    {
+      "code": "string",
+      "message": "string",
+      "url": "string",
+      "detail": "string"
+    }
+  ],
+  "statusCode": 200
+}

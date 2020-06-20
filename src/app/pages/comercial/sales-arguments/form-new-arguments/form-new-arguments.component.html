@@ -1,0 +1,47 @@
+<div class="mb-12 col-md-12">
+    <form [formGroup]="newArgumentForm" (ngSubmit)="submit()">
+        <div class="row mt-4">
+            <div class="col-md-6 pl-0 pr-0">
+                <div class="col-md-12">
+                    <label class="mb-0">{{'ComercialSalesArgumentsTitleArg' | translate}}</label>
+                </div>
+                <mat-form-field class="col-xl-12">
+                    <input matInput id="title" name="title" formControlName="title">
+                </mat-form-field>
+            </div>
+            <div class="col-md-6 pl-0 pr-0">
+                <div class="col-md-12">
+                    <label class="mb-0">{{'ComercialSalesArgumentsInsur' | translate}}</label>
+                </div>
+                <mat-form-field class="col-xl-12 select">
+                    <mat-label></mat-label>
+                    <mat-select name="insurance" id="insurance" formControlName="insurance">
+                        <mat-option *ngFor="let i of insuranceList" value="{{ i.id }}">
+                            {{ i.name }}
+                        </mat-option>
+                    </mat-select>
+                </mat-form-field>
+            </div>
+        </div>
+        <div class="row">
+            <div class="mb-12 col-md-12 pl-0 pr-0">
+                <div class="col-md-12 mb-3">
+                    <label class="mb-0">{{'ComercialSalesArgumentsCreateArgDesc' | translate}}</label>
+                </div>                
+                <div class="col-md-12 mb-4">
+                    <textarea id="description" name="description" formControlName="description"></textarea>
+                </div>
+            </div>
+        </div>
+        <div id="footer" class="footer-goals-btns pl-0 pr-0">
+            <button type="reset" class="btn btnDash" (click)="goBack()">
+                {{ onlyView ? "Voltar" : ['ComercialSalesArgumentsCreateArgCancel' | translate] }}
+            </button>
+            <button type="submit" class="btn btnDash active" *ngIf="!onlyView" [disabled]="newArgumentForm.invalid">
+                {{'ComercialSalesArgumentsCreateArgAdd' | translate}}
+            </button>
+        </div>
+    </form>
+
+</div>
+

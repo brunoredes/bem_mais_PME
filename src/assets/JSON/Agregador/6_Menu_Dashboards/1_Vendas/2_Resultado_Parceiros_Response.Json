@@ -1,0 +1,23 @@
+{
+    "data": {
+        "xAxys": [1,2,3,4,5,6,7,8,9,10,11,12,13,14,15],
+        "series": [
+            {
+                "data": [10, 20, 30, 30, 40,14,17,34,68,25,35,17,39,27,40],
+                "label": "Parceiro 1"
+            },
+            {
+                "data": [0, 2, 35, 97, 23,4,17,76,9,1,0,23,12,11,1],
+                "label": "Parceiro 2"
+            },
+            {
+                "data": [3, 1, 65,23, 22,8,7,32,87,2,1,56,32,22,44],
+                "label": "Parceiro 3"
+            }
+        ]
+    },
+    "message": "Ok",
+    "hasError": false,
+    "errorDataCollection": null,
+    "statusCode": 200
+}

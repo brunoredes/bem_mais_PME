@@ -1,0 +1,180 @@
+<section>
+   <bem-mais-title></bem-mais-title>
+    <!-- Filtro -->
+    <form class="row" [formGroup]="formFilter" (ngSubmit)="findPartners()">
+        <div class="col-md-12 text-right pl-0">
+            <ul class="pl-0">
+                <li class="filter-button">
+                    <a id="filter-interested"><small>{{'dash-cancel-filtrar' | translate}} &nbsp;</small><i
+                            class="fa fa-sliders" aria-hidden="true"></i></a>
+                </li>
+                <div class="container mt-0">
+                    <div class="filter-div filter-interested mt-0 shadow-sm">
+
+                        <div class="row">
+                            <div class="col-md-12 pr-0 pl-0">
+                                <div class="col-xl-12">
+                                    <label for="code"><h5>{{'ComercialInterestedPartnersRazSoc' | translate}}</h5></label>
+                                </div>
+                                <mat-form-field class="col-xl-12">
+                                    <input matInput id="corporateName" name="corporateName"
+                                        formControlName="corporateName">
+                                </mat-form-field>
+                            </div>
+                        </div>
+
+                        <div class="row mb-2">
+                            <div class="col-md-12">
+                                <div class="row pr-0 pl-0">
+                                    <div class="col-xl-12">
+                                        <label><h5>{{'dash-cancel-data' | translate}}</h5></label>
+                                    </div>
+                                </div>
+                                <div class="row mt-3">
+                                    <div class="col-md-6 pr-0 pl-0">
+                                        <mat-form-field class="col-xl-12">
+                                            <input formControlName="registrationStartDate" matInput
+                                                [matDatepicker]="pickerSalesDe"
+                                                placeholder="{{'place-de' | translate}}">
+                                            <mat-datepicker-toggle matSuffix [for]="pickerSalesDe">
+                                            </mat-datepicker-toggle>
+                                            <mat-datepicker #pickerSalesDe></mat-datepicker>
+                                        </mat-form-field>
+                                    </div>
+                                    <div class="col-md-6 pr-0 pl-0">
+                                        <mat-form-field class="col-xl-12 datePickerAte">
+                                            <input formControlName="registrationEndDate" matInput
+                                                [matDatepicker]="pickerSalesAte"
+                                                placeholder="{{'place-ate' | translate}}">
+                                            <mat-datepicker-toggle matSuffix [for]="pickerSalesAte">
+                                            </mat-datepicker-toggle>
+                                            <mat-datepicker #pickerSalesAte></mat-datepicker>
+                                        </mat-form-field>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="row">
+                            <div class="col-md-12 pr-0 pl-0">
+                                <div class="col-xl-12">
+                                    <label for="cpfCnpj"><h5>{{'ComercialInterestedPartnersCpfCnpj' | translate}}</h5></label>
+                                </div>
+                                <mat-form-field class="col-xl-12">
+                                    <input matInput formControlName="cnpj" id="cpfCnpj" [textMask]="{mask: cpfCnpjM}">
+                                </mat-form-field>
+                            </div>
+                        </div>
+
+                        <div class="row">
+                            <div class="col-md-4 pr-0 pl-0">
+                                <div class="col-xl-12">
+                                    <label for="state"><h5>{{'ComercialInterestedPartnersUf' | translate}}</h5></label>
+                                </div>
+                                <mat-form-field class="col-xl-12">
+                                    <mat-select name="state" id="state" formControlName="state"
+                                        (selectionChange)="change()">
+                                        <mat-option></mat-option>
+                                        <mat-option *ngFor="let estado of estados" value="{{estado.sigla}}">
+                                            {{estado.sigla}}
+                                        </mat-option>
+                                    </mat-select>
+                                </mat-form-field>
+                            </div>
+                            <div class="col-md-8 pr-0 pl-0">
+                                <div class="col-xl-12">
+                                    <label for="city"><h5>{{'edituser-cidade' | translate}}</h5></label>
+                                </div>
+                                <mat-form-field class="col-xl-12">
+                                    <mat-select name="city" id="city" formControlName="city">
+                                        <mat-option></mat-option>
+                                        <mat-option *ngFor="let cidade of cidades" value="{{cidade}}">
+                                            {{ cidade.substr(8) }}
+                                        </mat-option>
+                                    </mat-select>
+                                </mat-form-field>
+                            </div>
+                        </div>
+
+                        <div class="row">
+                            <div class="col-md-12 pr-0 pl-0">
+                                <div class="col-xl-12">
+                                    <label for="cpfCnpj"><h5>{{'ComercialInterestedPartnersCatSeguro' | translate}}</h5></label>
+                                </div>
+                                <mat-form-field class="col-xl-12">
+                                    <mat-select name="category" id="category" formControlName="category">
+                                        <mat-option value="1">Categoria 1</mat-option>
+                                        <mat-option value="2">Categoria 2</mat-option>
+                                        <mat-option value="3">Categoria 3</mat-option>
+                                        <mat-option value="4">Categoria 4</mat-option>
+                                    </mat-select>
+                                </mat-form-field>
+                            </div>
+                        </div>
+                        <div class="d-flex justify-content-between">
+
+                            <a class="text-decoration-underline mt-3"
+                                routerLink="/private/comercial/filter">{{'ComercialInterestedPartnersFiltroAv' | translate}}<i
+                                    class="fas fa-chevron-right"></i></a>
+
+                            <button class="btn btn-primary rounded-pill">
+                                {{'dash-cancel-filtrar' | translate}}
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </ul>
+        </div>
+    </form>
+    <!-- Fim filtro -->
+</section>
+
+
+<!-- *ngIf="this.loading.getLoadingMenuComponents() == false" -->
+<section>
+    <mat-tab-group (selectedIndexChange)="changeTabStatus($event)">
+        <mat-tab label="{{'ComercialInterestedPartnersInteressados' | translate}}">
+            <app-table [dataSource]="dataSource" [displayedColumns]="displayedColumnsApproved"
+                [columnsTitle]="columnsTitleApproved" (recordDelete)="setRecordDelete($event)"
+                (viewElement)="view($event)" (approveElement)="approve($event)" (disapproveElement)="disapprove($event)"
+                (documentElement)="document($event)">
+
+            </app-table>
+        </mat-tab>
+        <mat-tab label="{{'ComercialInterestedPartnersNaoAceitos' | translate}}">
+            <app-table [dataSource]="dataSource" [displayedColumns]="displayedColumnsDisapproved"
+                [columnsTitle]="columnsTitleDisapproved" (recordDelete)="setRecordDelete($event)"
+                (viewElement)="view($event)" (documentElement)="document($event)">
+            </app-table>
+        </mat-tab>
+    </mat-tab-group>
+</section>
+
+<!--Modal remover um parceiro-->
+<div class="modal fade" id="deleteModal" tabindex="-1" role="dialog" aria-labelledby="deleteModal" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="bd-t-red"></div>
+        <div class="modal-content bordertopModal">
+
+            <div class="modal-header modalFormat">
+                <img class="m-auto d-block" src="assets/img/deseja-descartar.png" />
+            </div>
+            <div class="modal-body">
+                <h1 class="text-center">
+                    {{'AggregatorListRemoveModal' | translate}}
+                </h1>
+            </div>
+            <div class="row btn-center">
+                <a href="#" class="col-4 badge btn-br50 text-center p-3 border border-primary" data-dismiss="modal"
+                    aria-label="Fechar">
+                    {{'ComercialSalesArgumentsModalRemovDecNo' | translate}}
+                </a>
+                <a href="#" (click)="deleteRecord()" class="col-4 badge badge-danger btn-br50 text-center p-3 "
+                    data-dismiss="modal" aria-label="Fechar">
+                    {{'ComercialSalesArgumentsModalRemovDecYes' | translate}}
+                </a>
+            </div>
+        </div>
+    </div>
+</div>
+<!--final remover-->

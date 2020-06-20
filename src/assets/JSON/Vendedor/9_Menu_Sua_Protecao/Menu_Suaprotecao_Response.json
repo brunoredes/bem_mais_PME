@@ -1,0 +1,82 @@
+{
+    "data": {
+        "insurances":[
+            {
+                "id": 1,
+                "name": "Roubo e Furto",
+                "description": "Proteja contra Roubo e Furto Qualificado e garanta a reposição por um bem igual ou similar",
+                "image": "assets/img/insurances/roubo_furto.jpg",
+                "information": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.",
+                "context": "Varejo",
+                "contextId": 1
+            },
+            {
+                "id": 2,
+                "name": "Roubo Furto e Danos",
+                "description": "Proteja contra Roubo e Furto Qualificado e garanta a reposição por um bem igual ou similar",
+                "image": "assets/img/insurances/roubo_furto_danos.jpg",
+                "information": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.",
+                "context": "Varejo",
+                "contextId": 1
+            },
+            {
+                "id": 3,
+                "name": "Previdencia",
+                "description": "Proteja contra Roubo e Furto Qualificado e garanta a reposição por um bem igual ou similar",
+                "image": "assets/img/insurances/previdencia.jpg",
+                "information": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.",
+                "context": "Varejo",
+                "contextId": 1
+            },
+            {
+                "id": 4,
+                "name": "Seguro Auto",
+                "description": "Proteja contra Roubo e Furto Qualificado e garanta a reposição por um bem igual ou similar",
+                "image": "assets/img/insurances/automovel.jpg",
+                "information": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.",
+                "context": "Auto",
+                "contextId": 2
+            },
+            {
+                "id": 5,
+                "name": "Viagem",
+                "description": "Proteja contra Roubo e Furto Qualificado e garanta a reposição por um bem igual ou similar",
+                "image": "assets/img/insurances/viagem.jpg",
+                "information": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.",
+                "context": "Viagem",
+                "contextId": 3
+            },
+            {
+                "id": 6,
+                "name": "Seguro Pet",
+                "description": "Proteja contra Roubo e Furto Qualificado e garanta a reposição por um bem igual ou similar",
+                "image": "assets/img/insurances/pet.jpg",
+                "information": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.",
+                "context": "Pet",
+                "contextId": 4
+            },
+            {
+                "id": 7,
+                "name": "Prestamista",
+                "description": "Proteja contra Roubo e Furto Qualificado e garanta a reposição por um bem igual ou similar",
+                "image": "assets/img/insurances/prestamista.jpg",
+                "information": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.",
+                "context": "Prestamista",
+                "contextId": 5
+            },
+            {
+                "id": 8,
+                "name": "Garantia Estendida",
+                "description": "Proteja contra Roubo e Furto Qualificado e garanta a reposição por um bem igual ou similar",
+                "image": "assets/img/insurances/garantia_estendida.jpg",
+                "information": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.",
+                "context": "Garantia Estendida",
+                "contextId": 6
+            }
+        ]
+    },
+    "message": "Ok",
+    "hasError": false,
+    "errorDataCollection": null,
+    "statusCode": 200
+}

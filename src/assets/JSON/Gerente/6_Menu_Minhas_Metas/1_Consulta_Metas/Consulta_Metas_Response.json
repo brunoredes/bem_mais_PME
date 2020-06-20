@@ -1,0 +1,88 @@
+{
+    "data": {
+        "goals": [
+            {
+                "id": 123,
+                "code": 123,
+                "profile": "Revendas",
+                "title": "Lorem ipsum dolor",
+                "description": "Atingir 50 mil em vendas",
+                "startDate": "10/11/2019",
+                "endDate": "12/12/2019",
+                "insurance": "Seguro Ultra",
+                "type": "Vendedor",
+                "statusPercent": 50,
+                "value": "R$ 356,00"
+            },
+            {
+                "id": 124,
+                "code": 123,
+                "profile": "Revendas",
+                "title": "Lorem ipsum dolor",
+                "description": "Atingir 15 mil em vendas",
+                "startDate": "10/11/2019",
+                "endDate": "12/12/2019",
+                "insurance": "Perda Total",
+                "type": "Pessoal",
+                "statusPercent": 50,
+                "value": "R$ 356,00"
+            },
+            {
+                "id": 125,
+                "code": 123,
+                "profile": "Revendas",
+                "title": "Lorem ipsum dolor",
+                "description": "Atingir 50 mil em vendas",
+                "startDate": "10/11/2019",
+                "endDate": "12/12/2019",
+                "insurance": "Seguro Ultra",
+                "type": "Vendedor",
+                "statusPercent": 50,
+                "value": "R$ 356,00"
+            },
+            {
+                "id": 126,
+                "code": 123,
+                "profile": "Revendas",
+                "title": "Lorem ipsum dolor",
+                "description": "Atingir 15 mil em vendas",
+                "startDate": "10/11/2019",
+                "endDate": "12/12/2019",
+                "insurance": "Perda Total",
+                "type": "Pessoal",
+                "statusPercent": 50,
+                "value": "R$ 356,00"
+            },
+            {
+                "id": 127,
+                "code": 123,
+                "profile": "Revendas",
+                "title": "Lorem ipsum dolor",
+                "description": "Atingir 50 mil em vendas",
+                "startDate": "10/11/2019",
+                "endDate": "12/12/2019",
+                "insurance": "Seguro Ultra",
+                "type": "Vendedor",
+                "statusPercent": 50,
+                "value": "R$ 356,00"
+            },
+            {
+                "id": 128,
+                "code": 123,
+                "profile": "Revendas",
+                "title": "Lorem ipsum dolor",
+                "description": "Atingir 15 mil em vendas",
+                "startDate": "10/11/2019",
+                "endDate": "12/12/2019",
+                "insurance": "Perda Total",
+                "type": "Pessoal",
+                "statusPercent": 50,
+                "value": "R$ 356,00"
+            }
+        ]
+    },
+    "message": "Ok",
+    "hasError": false,
+    "errorDataCollection": null,
+    "statusCode": 200
+}

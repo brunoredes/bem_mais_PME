@@ -1,0 +1,264 @@
+/*Estilos da Proteção - Seleção de Produto */
+.filter-button{
+    padding: 5px 20px;
+      display: inline-block;
+      text-decoration: none;
+    border-radius: 50px;
+      border: 1px solid #787878;
+    color: #707070;
+
+
+  }
+  .border-box{
+      padding:15px;
+  }
+  .border-insurance{
+    padding-top:15px;
+    padding-bottom:15px;
+    text-align: center;
+    border-radius: 20px!important;
+    background: #FFF;
+    height:350px;
+    position: relative;
+    z-index: 9999999;
+  }
+  .fit-img{
+      height: 50%;
+      width: 50%;
+      object-fit: contain
+  }
+  input.searchbar {
+    outline: 0;
+    border-width: 0 0 1px;
+    background: transparent;
+    border-color: #787878;
+    text-align: center;
+    border-radius: 0px;
+  }
+  input.searchbar:focus {
+    background: transparent;
+    border-color: #707070;
+    text-align: center;
+    border-radius: 0px;
+  }
+  input.searchbar[type="text"] {
+    text-align: center;
+    border-radius: 0px;
+  }
+  ::-webkit-input.searchbar-placeholder {
+   text-align: center;
+   border-radius: 0px;
+  }
+  ::-moz-placeholder {
+    text-align: center;
+    border-radius: 0px;
+  }
+  :-ms-input.searchbar-placeholder {
+    text-align: center;
+    border-radius: 0px;
+  }
+  ::placeholder {
+    text-align: center;
+    border-radius: 0px;
+  }
+  input {
+    outline: 0;
+    border-width: 0 0 1px;
+    background: transparent;
+    border-color: #707070;
+    border-radius: 0px;
+  }
+  input:focus {
+    background: transparent;
+    border-color: #707070;
+    border-radius: 0px;
+  }
+  input[type="text"] {
+    border-radius: 0px;
+  }
+  ::-webkit-input-placeholder {
+   border-radius: 0px;
+  }
+  ::-moz-placeholder {
+    border-radius: 0px;
+  }
+  :-ms-input-placeholder {
+    border-radius: 0px;
+  }
+  ::placeholder {
+    border-radius: 0px;
+  }
+  .search {
+      position: relative;
+      color: #005AAB;
+      font-size: 16px;
+    }
+    .padding-heart{
+      text-align:right;
+      padding:0px;
+    }
+
+    .has-search .form-control {
+      padding-left: 2.375rem;
+  }
+
+  .has-search .form-control-feedback {
+      position: absolute;
+      z-index: 2;
+      display: block;
+      width: 2.375rem;
+      height: 2.375rem;
+      line-height: 2.375rem;
+      text-align: center;
+      pointer-events: none;
+      color: #005AAB;
+  }
+  .bgtransparent{
+    background-color: rgba(255, 255, 255, 0.8);
+  }
+  .whitebg{
+    background-color:#FFF;
+  }
+  .nostyle{
+    text-decoration: none;
+    color: #005AAB;
+  }
+  .bordertopModal{
+    border-top-color: #005AAB!important;
+    border-top: 10px solid;
+  }
+  input.cep {
+    outline: 0;
+    font-size: 17px;
+    border-width: 0 0 1px;
+    background: transparent;
+    border-color: #707070
+  }
+  input.cep:focus {
+    font-size: 17px;
+    background: transparent;
+    border-color: #707070
+  }
+  select{
+    outline: 0;
+    border-width: 0 0 1px;
+    background: transparent;
+    border-color: #707070
+  }
+  .select {
+      font-size:13px;
+  }
+  .modalFormat{
+      border: none;
+      text-align: left!important;
+      display: inline-block;
+  }
+  .mbtn {
+    border-radius: 5rem;
+  }
+  .mclose{
+    color:red;opacity:1;
+  }
+  .msuccess{
+    background: #62BC00;
+    border: 1px solid #62BC00;
+  }
+  textarea {
+    resize: none;
+  }
+  select{
+    outline: 0;
+    border-width: 0 0 1px;
+    background: transparent;
+    border-color: #005AAB
+  }
+  .select {
+      font-size:13px;
+  }
+  /* remove the original arrow */
+select.col-xl-12.select {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  -o-appearance: none;
+  /* no standardized syntax available, no ie-friendly solution available */
+}
+
+select + i.fa {
+  float: right;
+  margin-top: -30px;
+  margin-right: 5px;
+  /* this is so when you click on the chevron, your click actually goes on the dropdown menu */
+  pointer-events: none;
+  /* everything after this is just to cover up the original arrow */
+  /* (for browsers that don't support the syntax used above) */
+ padding-right: 5px;
+}
+
+
+//modal
+
+.modal-header {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  padding: 0!important;
+  border-bottom: 0!important ;
+
+}
+
+.bd-t-red{
+  background-color: #FF3636;
+  border-radius: 0.3rem 0.3rem 0 0;
+  height: 7px;
+  position: absolute;
+  width: 100%;
+  z-index: 1;
+}
+
+.btn-br50{border-radius: 50px !important;}
+.btn-center{margin: 2px;display: flex;justify-content: space-around;}
+
+.modal-content {
+
+  margin: none!important;
+  position: relative;
+  margin-top: 25%;
+}
+.modal-header {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  padding: 1rem 1rem;
+  border-bottom: transparent;
+  border-top-left-radius: 0.3rem;
+  border-top-right-radius: 0.3rem;
+}
+.badge {border-radius: 50px!important;margin: auto;}
+.badge-success{background-color: #62BC00!important;}
+.m-120{margin-top: -120px; position: relative;z-index: 2;}
+
+.bd-t-blue{background-color: #005AAB;border-radius: 0.3rem 0.3rem 0 0;height: 7px;position: absolute;width: 100%;z-index: 1;}
+.badge-primary{background-color:#62BC00!important;color: #fff;}
+.badge-secundary{background-color:#FF3636!important;color: #fff;}
+.badge {font-weight: 100;}
+
+.color-grey{color: #787878;}
+.color-grey-light{color: #949494;}
+
+.btn-redz {
+  background: transparent;
+  border: 1px solid #ff3636;
+  color: #ff3636 !important;
+  border-radius: 50px;
+  padding: 0.5em 2em;
+}
+.btn-redz:hover {
+  background: transparent;
+  border: 1px solid #ff3636;
+  color: #ff3636;
+  border-radius: 50px;
+}
+
+img {
+  width: 5rem;
+}

@@ -1,0 +1,88 @@
+{
+    "data": {
+        "managers": [
+            {
+                "id": 1,
+                "code": 123,
+                "profile": "Gerente",
+                "name": "André Luiz",
+                "storeState": "São Paulo",
+                "status": 1,
+                "statusDescription": "Ativo",
+                "email": "gerente@zurich.com.br",
+                "image": "https://www.zurich.com.br",
+                "cellPhone": "11 9123456789",
+                "age": "28"
+            },
+            {
+                "id": 2,
+                "code": 123,
+                "profile": "Gerente",
+                "name": "Guilherme Santos",
+                "storeState": "Rio de Janeiro",
+                "status": 1,
+                "statusDescription": "Ativo",
+                "email": "gerente@zurich.com.br",
+                "image": "https://www.zurich.com.br",
+                "cellPhone": "11 9123456789",
+                "age": "28"
+            },
+            {
+                "id": 3,
+                "code": 123,
+                "profile": "Gerente",
+                "name": "André Luiz",
+                "storeState": "São Paulo",
+                "status": 1,
+                "statusDescription": "Ativo",
+                "email": "gerente@zurich.com.br",
+                "image": "https://www.zurich.com.br",
+                "cellPhone": "11 9123456789",
+                "age": "28"
+            },
+            {
+                "id": 4,
+                "code": 123,
+                "profile": "Gerente",
+                "name": "Guilherme Santos",
+                "storeState": "Rio de Janeiro",
+                "status": 1,
+                "statusDescription": "Ativo",
+                "email": "gerente@zurich.com.br",
+                "image": "https://www.zurich.com.br",
+                "cellPhone": "11 9123456789",
+                "age": "28"
+            },
+            {
+                "id": 5,
+                "code": 123,
+                "profile": "Gerente",
+                "name": "André Luiz",
+                "storeState": "São Paulo",
+                "status": 1,
+                "statusDescription": "Ativo",
+                "email": "gerente@zurich.com.br",
+                "image": "https://www.zurich.com.br",
+                "cellPhone": "11 9123456789",
+                "age": "28"
+            },
+            {
+                "id": 6,
+                "code": 123,
+                "profile": "Gerente",
+                "name": "Guilherme Santos",
+                "storeState": "Rio de Janeiro",
+                "status": 1,
+                "statusDescription": "Ativo",
+                "email": "gerente@zurich.com.br",
+                "image": "https://www.zurich.com.br",
+                "cellPhone": "11 9123456789",
+                "age": "28"
+            }
+        ]
+    },
+    "message": "Ok",
+    "hasError": false,
+    "errorDataCollection": null,
+    "statusCode": 200
+}

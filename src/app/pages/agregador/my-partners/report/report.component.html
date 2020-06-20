@@ -1,0 +1,66 @@
+<section class="pr-0 pb-0">
+  <div class="d-flex justify-content-between align-items-center page-info w-100 d-none d-md-block">
+    <h5>{{'AggregatorSalesReport' | translate}}</h5>
+  </div>
+</section>
+<section>
+  <div class="card mb-3 shadow-sm mt-3">
+    <div class="card-body">
+      <div class="col-12"><small>{{'AggregatorReportSales' | translate}} <span
+            class="rounded-title">{{partner}}</span></small></div>
+      <div class="chk-block-content widget-body p-2">
+        <div class="table-responsive table-wrapper-scroll-y my-custom-scrollbar">
+          <table mat-table [dataSource]="dataSource" matSort
+            class="table table-borderless table-bordered table-striped mb-0">
+
+            <ng-container matColumnDef="code">
+              <th mat-header-cell *matHeaderCellDef mat-sort-header> {{'AggregatorListId' | translate}} </th>
+              <td mat-cell *matCellDef="let row"> {{row.code}} </td>
+            </ng-container>
+
+            <ng-container matColumnDef="name">
+              <th mat-header-cell *matHeaderCellDef mat-sort-header> {{'AggregatorSalesDetailsClientName' | translate}}
+              </th>
+              <td mat-cell *matCellDef="let row"> {{row.name}}</td>
+            </ng-container>
+
+            <ng-container matColumnDef="document">
+              <th mat-header-cell *matHeaderCellDef mat-sort-header> {{'AggregatorListCpfCnpj' | translate}} </th>
+              <td mat-cell *matCellDef="let row"> {{row.document}} </td>
+            </ng-container>
+
+            <ng-container matColumnDef="saleDate">
+              <th mat-header-cell *matHeaderCellDef mat-sort-header> {{'AggregatorSalesReportDate' | translate}} </th>
+              <td mat-cell *matCellDef="let row"> {{row.saleDate}} </td>
+            </ng-container>
+
+            <ng-container matColumnDef="amount">
+              <th mat-header-cell *matHeaderCellDef mat-sort-header> {{'AggregatorSalesReportValue' | translate}} </th>
+              <td mat-cell *matCellDef="let row"> {{row.amount}} </td>
+            </ng-container>
+
+            <ng-container matColumnDef="view">
+              <th mat-header-cell *matHeaderCellDef width="25px"> &nbsp; </th>
+              <td mat-cell *matCellDef="let row">
+                <a [routerLink]="[row.id, 'detail']">
+                  <i class="far fa-eye"></i>
+                </a>
+              </td>
+            </ng-container>
+
+
+            <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+            <tr mat-row *matRowDef="let row; columns: displayedColumns;" [routerLink]="[row.id, 'detail']"
+              class="row-border"></tr>
+          </table>
+        </div>
+      </div>
+    </div>
+  </div>
+  <mat-paginator class="shadow-sm" style="border-radius: 20px;" [pageSizeOptions]="[5, 10, 25, 100]"></mat-paginator>
+</section>
+<div class="col-12 pt-2 row">
+  <div class="col-12 row mb-4">
+    <a routerLink="/private/agregador/my-partners/list" class="btn btn-redz">{{'AggregatorSalesGoBack' | translate}}</a>
+  </div>
+</div>

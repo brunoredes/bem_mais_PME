@@ -1,0 +1,9 @@
+{
+    "data": {
+        "message": "2ª via enviada por email com sucesso!"
+    },
+    "message": "Ok",
+    "hasError": false,
+    "errorDataCollection": null,
+    "statusCode": 200
+}

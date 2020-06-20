@@ -1,0 +1,128 @@
+<section class="pr-0 pb-0">
+
+    <div class="d-flex justify-content-between align-items-center page-info w-100 d-none d-md-block">
+        <h5>{{'AggregatorSalesDetails' | translate}}</h5>
+    </div>
+</section>
+<div class="row">
+    <div class="col-12">
+        <nav>
+            <section class="main-contents" id="main-contents">
+                <div class="row">
+                    <div class="col-xl-12">
+                        <div class="col-xl-6 row" style="float:right; text-align:right;">
+                            <div class="col-xl-4">&nbsp;</div>
+                            <div class="col-xl-4">
+                                <a data-toggle="modal" data-target="#modalEmail">
+                                    <small>{{'vend-consultavendas-details-viaemail' | translate}}</small>
+                                </a>
+                            </div>
+                            <div class="col-xl-4">
+                                <a (click)="print()">
+                                    <small>{{'vend-consultavendas-details-imprimir' | translate}}</small>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-xl-12">
+                        <div class="col-xl-12 container rounded border-box whitebg shadow-sm pr-0 pl-0 mt-3">
+                            <div class="col-xl-12 product-title pt-3" style="border-bottom: 1px solid #DEE4E8">
+                                <h5>{{'AggregatorSalesDetailsInsurData' | translate}}</h5>
+                            </div>
+                            <div class="col-xl-12 row pt-2">
+                                <div class="col-xl-6 row">
+                                    <div class="col-xl-2"><img src="{{insurance.image}}" alt="img"></div>
+                                    <div class="col-xl-10">{{insurance.description}}
+                                    </div>
+                                </div>
+                                <div class="col-xl-6">{{'AggregatorSalesDetailsInsurVal' | translate}} R$
+                                    {{insurance.value}},00</div>
+                            </div>
+                        </div>
+                        <div class="col-xl-12 container rounded border-box whitebg shadow-sm pr-0 pl-0 mt-3">
+                            <div class="col-xl-12 product-title pt-3" style="border-bottom: 1px solid #DEE4E8">
+                                <h5>{{'AggregatorSalesDetailsProdData' | translate}}</h5>
+                            </div>
+                            <div class="col-xl-12 row pt-2">
+                                <div class="col-xl-6 row">
+                                    <div class="col-xl-2"><img src="{{product.image}}" alt="img"></div>
+                                    <div class="col-xl-10">{{product.name}}</div>
+                                </div>
+                                <div class="col-xl-6">
+                                    R$ {{product.value}},00 {{'AggregatorSalesDetailsValProd' | translate}} 10x
+                                    {{'AggregatorSalesDetailsValCard' | translate}} (12%
+                                    {{'AggregatorSalesDetailsDisc' | translate}})</div>
+                            </div>
+                        </div>
+                        <div class="col-xl-12 container rounded border-box whitebg shadow-sm pr-0 pl-0 mt-3">
+                            <div class="col-xl-12 product-title pt-3" style="border-bottom: 1px solid #DEE4E8">
+                                <h5>{{'AggregatorSalesDetailsClientData' | translate}}</h5>
+                            </div>
+                            <div class="col-xl-12 row pt-2">
+                                <div class="col-xl-4">
+                                    {{'AggregatorSalesDetailsClientName' | translate}}
+                                    <small>{{consumer.name}}</small><br>
+                                    {{'AggregatorSalesDetailsBirthDate' | translate}}
+                                    <small>{{consumer.birthDate}}</small><br>
+                                    {{'AggregatorSalesDetailsCpf' | translate}}
+                                    <small>{{consumer.cpf}}</small><br>
+                                    {{'AggregatorSalesDetailsRg' | translate}} <small>{{consumer.rg}}</small>
+                                </div>
+                                <div class="col-xl-4">
+                                    {{'AggregatorSalesDetailsAddress' | translate}}
+                                    <small>{{consumer.address}}</small><br>
+                                    {{'AggregatorSalesDetailsCompl' | translate}}
+                                    <small>{{consumer.complement}}</small><br>
+                                    {{'AggregatorSalesDetailsZipCd' | translate}}
+                                    <small>{{consumer.postalCode}}</small><br>
+                                    {{'AggregatorSalesDetailsCity' | translate}}
+                                    <small>{{consumer.state}}</small><br>
+                                    {{'AggregatorSalesDetailsUf' | translate}}
+                                    <small>{{consumer.city}}</small>
+                                </div>
+                                <div class="col-xl-4">
+                                    {{'AggregatorSalesDetailsPhone' | translate}}
+                                    <small>{{consumer.phone}}</small><br>
+                                    {{'AggregatorSalesDetailsMobile' | translate}}
+                                    <small>{{consumer.cellPhone}}</small><br>
+                                    {{'AggregatorListEmail' | translate}}
+                                    <small>{{consumer.email}}</small>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+                <div class="modal fade" id="modalEmail" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+                    aria-hidden="true">
+
+                    <div class="modal-dialog" role="document">
+                        <div class="bd-t-blue"></div>
+                        <div class="modal-content bordertopModal">
+
+                            <div class="modal-header modalFormat">
+                                <img class="img-fluid col-12 m-120" src="assets/img/confirmacao-feedback.png" />
+                            </div>
+                            <div class="modal-body">
+                                <h1 class="text-center">{{'AggregatorPartnersSalesDetailsModal' | translate}}</h1>
+                            </div>
+
+
+                            <a id="btnsuccessfully" class="col-4 badge badge-success text-center p-3 "
+                                data-dismiss="modal"
+                                aria-label="Fechar">{{'AggregatorPartnersSalesDetailsOk' | translate}}</a>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </nav>
+    </div>
+
+</div>
+<div class="col-12 pt-2 row">
+    <div class="col-12 row mb-4">
+        <a routerLink="../../" class="btn btn-redz">{{'AggregatorSalesGoBack' | translate}}</a>
+    </div>
+</div>

@@ -1,0 +1,32 @@
+{
+    "data": {
+        "answers": [
+            {
+                "id": 2,
+                "userName": "Aline",
+                "profile": "Comercial",
+                "answerDate": "13/10/2019",
+                "category": "Sugestão",
+                "title": "Erro ao conectar",
+                "description": "Lorem ipsum is simply dummy text of de printing and typesetting industry,Lorem ipsum is simply dummy text of de printing and typesetting industry,Lorem ipsum is simply dummy text of de printing and typesetting industry",
+                "image": "http://www.zurich.com.br",
+                "picture": "./assets/img/user-12.jpg"
+            },
+            {
+                "id": 1,
+                "userName": "Roberto da Silva",
+                "profile": "Agregador",
+                "answerDate": "12/10/2019",
+                "category": "Sugestão",
+                "title": "Erro ao conectar",
+                "description": "Lorem ipsum is simply dummy text of de printing and typesetting industry,Lorem ipsum is simply dummy text of de printing and typesetting industry,Lorem ipsum is simply dummy text of de printing and typesetting industry",
+                "image": null,
+                "picture": "./assets/img/user-2.jpg"
+            }
+        ]
+    },
+    "message": "Ok",
+    "hasError": false,
+    "errorDataCollection": null,
+    "statusCode": 200
+}

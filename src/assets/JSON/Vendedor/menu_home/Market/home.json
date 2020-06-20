@@ -1,0 +1,29 @@
+{
+  "data": {
+    "banners": [
+      {
+        "title": "Voe coma ZURICH",
+        "description": "lorem ipsum voe com a zurich ",
+        "backgroundImage": "assets/voe.png",
+        "url": "http://www.zurich.com.br"
+      },
+      {
+        "title": "Dia das mês com a zurich",
+        "description": "lorem ipsum dia das maes",
+        "backgroundImage": "assets/mae.png",
+        "url": "http://www.zurich.com.br"
+      }
+    ]
+  },
+  "message": "OK",
+  "hasError": false,
+  "errorDataCollection": [
+    {
+      "code": "string",
+      "message": "string",
+      "url": "string",
+      "detail": "string"
+    }
+  ],
+  "statusCode": 200
+}

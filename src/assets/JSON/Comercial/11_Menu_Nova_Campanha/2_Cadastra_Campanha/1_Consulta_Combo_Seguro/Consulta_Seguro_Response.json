@@ -1,0 +1,32 @@
+{
+    "data": [
+        {
+            "id": 1,
+            "name": "Roubo e Furto"
+        },
+        {
+            "id": 2,
+            "name": "Roubo e Furto com Danos"
+        },
+        {
+            "id": 3,
+            "name": "Garantia Estendida"
+        },
+        {
+            "id": 4,
+            "name": "Seguro Viagem"
+        },
+        {
+            "id": 5,
+            "name": "Seguro Auto"
+        },
+        {
+            "id": 6,
+            "name": "Seguro Pet"
+        }
+    ],
+    "message": "Ok",
+    "hasError": false,
+    "errorDataCollection": null,
+    "statusCode": 200
+}

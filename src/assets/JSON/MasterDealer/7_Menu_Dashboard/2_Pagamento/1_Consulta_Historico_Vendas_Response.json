@@ -1,0 +1,41 @@
+{
+    "data": {
+        "xAxys": [1,2,3,4,5,6,7,8,9,10,11,12,13,14,15],
+        "series": [
+            {
+                "data": [65, 59, 80, 81, 56, 55, 40,65, 59, 80, 81, 56, 55, 40, 42],
+                "name": "Roubo e Furto"
+            },
+            {
+                "data": [65, 59, 80, 81, 56, 55, 40,65, 59, 80, 81, 56, 55, 40, 42],
+                "name": "Seguro Viagem"
+            },
+            {
+                "data": [65, 59, 80, 81, 56, 55, 40,65, 59, 80, 81, 56, 55, 40, 42],
+                "name": "Garantia Estendida"
+            }
+        ],
+        "financialSummary":[
+            {
+                "name": "Valor Total Seguro RF",
+                "amount": "8239.58"
+            },
+            {
+                "name": "Valor Total Seguro Viagem",
+                "amount": "5239.58"
+            },
+            {
+                "name": "Valor Total Garantia Estendida",
+                "amount": "2239.58"
+            },
+            {
+                "name": "Saldo Disponível",
+                "amount": "15718.74"
+            }
+        ]
+    },
+    "message": "Ok",
+    "hasError": false,
+    "errorDataCollection": null,
+    "statusCode": 200
+}

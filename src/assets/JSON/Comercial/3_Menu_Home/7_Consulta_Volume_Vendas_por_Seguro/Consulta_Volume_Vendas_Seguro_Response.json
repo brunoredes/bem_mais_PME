@@ -1,0 +1,52 @@
+{
+  "data": {
+    "sales": [
+      {
+        "insurance": "Seguro Roubo",
+        "amount": "72537",
+        "percent": 80
+      },
+      {
+        "insurance": "Seguro Auto",
+        "amount": "70197",
+        "percent": 70
+      },
+      {
+        "insurance": "Seguro Viagem",
+        "amount": "80197",
+        "percent": 95
+      },
+      {
+        "insurance": "Seguro Pet",
+        "amount": "20572",
+        "percent": 55
+      },
+      {
+        "insurance": "Garantia Extendida",
+        "amount": "10572",
+        "percent": 40
+      },
+      {
+        "insurance": "Seguro Roubo e Furto",
+        "amount": "12572",
+        "percent": 62
+      },
+      {
+        "insurance": "Prestamista",
+        "amount": "1572",
+        "percent": 20
+      }
+    ]
+  },
+  "message": "OK",
+  "hasError": false,
+  "errorDataCollection": [
+    {
+      "code": "string",
+      "message": "string",
+      "url": "string",
+      "detail": "string"
+    }
+  ],
+  "statusCode": 200
+}

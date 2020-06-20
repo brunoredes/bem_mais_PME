@@ -1,0 +1,74 @@
+<div class="mb-12 col-md-12">
+    <form [formGroup]="newGoalForm" (ngSubmit)="submit()">
+        <div class="row pt-3">
+            <div class="mb-1 col-md-4 pl-0 pr-0">
+                <div class="col-md-12">
+                    <label class="mb-0">{{'ComercialNewGoalsListProf' | translate}}</label>
+                </div>
+                <mat-form-field class="col-xl-12">
+                    <mat-select name="profile" id="profile" formControlName="profile">
+                        <mat-option></mat-option>
+                        <mat-option value="{{ p.id }}" *ngFor="let p of profileList">{{ p.name }}</mat-option>
+                    </mat-select>
+                </mat-form-field>
+            </div>
+            <div class="mb-1 col-md-4 pl-0 pr-0">
+                <div class="col-md-12">
+                    <label class="mb-0">{{'ComercialNewGoalsNewProd' | translate}}</label>
+                </div>
+                <mat-form-field class="col-xl-12">
+                    <mat-select name="product" id="product" formControlName="product">
+                        <mat-option></mat-option>
+                        <mat-option value="{{ p.id }}" *ngFor="let p of productList">{{ p.name }}</mat-option>
+                    </mat-select>
+                </mat-form-field>
+            </div>
+            <div class="mb-1 col-md-4 pl-0 pr-0">
+                <div class="col-md-12">
+                    <label class="mb-0">{{'ComercialNewGoalsNewVal' | translate}}</label>
+                </div>
+                <mat-form-field class="col-xl-12">
+                    <input matInput prefix="R$ " mask="separator" thousandSeparator="."id="valueGoal" name="valueGoal" formControlName="valueGoal">
+                </mat-form-field>
+            </div>
+        </div>
+        <div class="row">
+            <div class="mb-1 col-md-4 pl-0 pr-0">
+                <div class="col-md-12">
+                    <label class="mb-0">{{'ComercialNewGoalsNewCodeGoal' | translate}}</label>
+                </div>
+                <mat-form-field class="col-xl-12">
+                    <input matInput id="codeGoal" name="codeGoal" formControlName="code">
+                </mat-form-field>
+            </div>
+            <div class="mb-1 col-md-8 pl-0 pr-0">
+                <div class="col-md-12">
+                    <label class="mb-0">{{'ComercialNewGoalsListTit' | translate}}</label>
+                </div>
+                <mat-form-field class="col-xl-12">
+                    <input matInput id="title" name="title" formControlName="title">
+                </mat-form-field>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="mb-12 col-md-12 pl-0 pr-0">
+                <div class="col-md-12 mb-3">
+                    <label class="mb-0">{{'ComercialNewGoalsListDesc' | translate}}</label>
+                </div>     
+                <div class="col-md-12 mb-4">
+                    <textarea id="description" name="description" formControlName="description"></textarea>
+                </div>
+            </div>
+        </div>
+        <div id="footer" class="footer-goals-btns pl-0 pr-0">
+            <button type="reset" class="btn btnDash" (click)="goBack()">
+                {{ !onlyView ? "Voltar" : ['ComercialNewGoalsCanc' | translate] }}
+              </button>
+              <button type="submit" class="btn btnDash active" *ngIf="onlyView" [disabled]="newGoalForm.invalid">
+                {{'ComercialNewGoalsAdd' | translate}}
+              </button>
+        </div>
+    </form>
+
+</div>

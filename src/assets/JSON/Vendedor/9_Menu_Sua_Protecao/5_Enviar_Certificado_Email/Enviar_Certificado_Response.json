@@ -1,0 +1,9 @@
+{
+    "data": {
+        "message": "Certificado enviado por email com sucesso!"
+    },
+    "message": "Ok",
+    "hasError": false,
+    "errorDataCollection": null,
+    "statusCode": 200
+}

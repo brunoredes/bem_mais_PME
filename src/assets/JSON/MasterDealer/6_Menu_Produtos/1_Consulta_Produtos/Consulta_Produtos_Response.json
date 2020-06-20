@@ -1,0 +1,82 @@
+{
+    "data": {
+        "products": [
+            {
+                "id": 123,
+                "code": 123,
+                "image": "/assets/img/gallery3.jpg",
+                "name": "Smartphone Samsung Galaxy s9",
+                "brand": "Samsung",
+                "model": "S9",
+                "version": "1 ano",
+                "amount": "356",
+                "categoryId": 1,
+                "categoryDescription": "Telefone Celular"
+            },
+            {
+                "id": 123,
+                "code": 123,
+                "image": "/assets/img/gallery3.jpg",
+                "name": "Smartphone Samsung Galaxy s9",
+                "brand": "Samsung",
+                "model": "S9",
+                "version": "1 ano",
+                "amount": "356",
+                "categoryId": 1,
+                "categoryDescription": "Telefone Celular"
+            },
+            {
+                "id": 123,
+                "code": 123,
+                "image": "/assets/img/gallery3.jpg",
+                "name": "Smartphone Samsung Galaxy s9",
+                "brand": "Samsung",
+                "model": "S9",
+                "version": "1 ano",
+                "amount": "356",
+                "categoryId": 1,
+                "categoryDescription": "Telefone Celular"
+            },
+            {
+                "id": 123,
+                "code": 123,
+                "image": "/assets/img/gallery3.jpg",
+                "name": "Smartphone Samsung Galaxy s9",
+                "brand": "Samsung",
+                "model": "S9",
+                "version": "1 ano",
+                "amount": "356",
+                "categoryId": 1,
+                "categoryDescription": "Telefone Celular"
+            },
+            {
+                "id": 123,
+                "code": 123,
+                "image": "/assets/img/gallery3.jpg",
+                "name": "Smartphone Samsung Galaxy s9",
+                "brand": "Samsung",
+                "model": "S9",
+                "version": "1 ano",
+                "amount": "356",
+                "categoryId": 1,
+                "categoryDescription": "Telefone Celular"
+            },
+            {
+                "id": 123,
+                "code": 123,
+                "image": "/assets/img/gallery3.jpg",
+                "name": "Smartphone Samsung Galaxy s9",
+                "brand": "Samsung",
+                "model": "S9",
+                "version": "1 ano",
+                "amount": "356",
+                "categoryId": 1,
+                "categoryDescription": "Telefone Celular"
+            }
+        ]
+    },
+    "message": "Ok",
+    "hasError": false,
+    "errorDataCollection": null,
+    "statusCode": 200
+}

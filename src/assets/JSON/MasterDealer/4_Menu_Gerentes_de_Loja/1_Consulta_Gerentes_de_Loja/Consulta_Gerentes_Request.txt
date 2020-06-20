@@ -1,0 +1,5 @@
+
+var manager = new Manager();
+manager.dealerId = 1;
+
+this.http.post<any>(`${environment.apiUrl}/Managers`, manager);

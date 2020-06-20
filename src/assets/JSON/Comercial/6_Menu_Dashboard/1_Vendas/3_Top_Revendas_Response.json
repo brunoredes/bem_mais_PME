@@ -1,0 +1,45 @@
+{
+    "data": {
+        "resale": [
+            {
+                "reseller": "Revenda 1",
+                "percent": 80,
+                "insuranceSale": "40000",
+                "canceledSale": "10000",
+                "details": null
+            },
+            {
+                "reseller": "Revenda 2",
+                "percent": 80,
+                "insuranceSale": "40000",
+                "canceledSale": "10000",
+                "details": null
+            },
+            {
+                "reseller": "Revenda 3",
+                "percent": 60,
+                "insuranceSale": "25000",
+                "canceledSale": "15000",
+                "details": null
+            },
+            {
+                "reseller": "Revenda 4",
+                "percent": 45,
+                "insuranceSale": "15000",
+                "canceledSale": "90000",
+                "details": null
+            },
+            {
+                "reseller": "Revenda 5",
+                "percent": 45,
+                "insuranceSale": "15000",
+                "canceledSale": "9000",
+                "details": null
+            }
+        ]
+    },
+    "message": "Ok",
+    "hasError": false,
+    "errorDataCollection": null,
+    "statusCode": 200
+}

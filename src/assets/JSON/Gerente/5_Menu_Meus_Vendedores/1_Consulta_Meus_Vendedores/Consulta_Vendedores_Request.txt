@@ -1,0 +1,6 @@
+
+var vendors = new Vendors();
+vendors.dealerId = 1;
+vendors.storeId = 1;
+
+this.http.post<any>(`${environment.apiUrl}/Vendors`, vendors);

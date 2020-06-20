@@ -1,0 +1,38 @@
+{
+    "data": {
+        "extract": [
+            {
+                "id": 1,
+                "title": "Saldo Total",
+                "image": "/assets/img/saldo-total.svg",
+                "amount": "20.000",
+                "color": "blue"
+            },
+            {
+                "id": 2,
+                "title": "Contestação",
+                "image": "/assets/img/contestacao.svg",
+                "amount": "5.000",
+                "color": "red"
+            },
+            {
+                "id": 3,
+                "title": "Valor Liberado",
+                "image": "/assets/img/valor-liberado.svg",
+                "amount": "15.000",
+                "color": "green"
+            },
+            {
+                "id": 4,
+                "title": "Em Transação",
+                "image": "/assets/img/em-transacao.svg",
+                "amount": "1.000",
+                "color": "green"
+            }
+        ]
+    },
+    "message": "Ok",
+    "hasError": false,
+    "errorDataCollection": null,
+    "statusCode": 200
+}

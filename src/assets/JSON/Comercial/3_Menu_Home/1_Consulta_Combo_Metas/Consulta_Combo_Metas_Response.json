@@ -1,0 +1,26 @@
+{
+    "data": {
+        "goals": [
+            {
+                "id":1,
+                "name": "Meta 1"
+            },
+            {
+                "id":2,
+                "name": "Metas 2"
+            },
+            {
+                "id":3,
+                "name": "Meta 3"
+            },
+            {
+                "id":4,
+                "name": "Meta 4"
+            }
+        ]
+    },
+    "message": "Ok",
+    "hasError": false,
+    "errorDataCollection": null,
+    "statusCode": 200
+}

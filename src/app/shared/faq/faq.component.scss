@@ -1,0 +1,119 @@
+input.searchbar {
+    outline: 0;
+    border-width: 0 0 1px;
+    background: transparent;
+    border-color: #c5c5c5 !important;
+    text-align: center;
+    border-radius: 0px;
+  }
+  input.searchbar:focus {
+    background: transparent;
+    border-color: #707070;
+    text-align: center;  
+    border-radius: 0px;
+  }
+  input.searchbar[type="text"] {
+    text-align: center;  
+    border-radius: 0px;
+  }
+  ::-webkit-input.searchbar-placeholder {
+   text-align: center;  
+   border-radius: 0px;
+  }
+  ::-moz-placeholder {
+    text-align: center;  
+    border-radius: 0px;
+  }
+  :-ms-input.searchbar-placeholder {
+    text-align: center;  
+    border-radius: 0px;
+  }
+  ::placeholder {
+    text-align: center;  
+    border-radius: 0px;
+  }
+  input {
+    outline: 0;
+    border-width: 0 0 1px;
+    background: transparent;
+    border-color: #707070;
+    border-radius: 0px;
+  }
+  input:focus {
+    background: transparent;
+    border-color: #707070;
+    border-radius: 0px;
+  }
+  .iconLupa {
+    display: flex;
+    justify-content: right;
+    position: absolute;
+    right: 10px;
+    color: #005AAB;
+}
+  input[type="text"] {
+    border-radius: 0px;
+  }
+  ::-webkit-input-placeholder {
+   border-radius: 0px;
+  }
+  ::-moz-placeholder {
+    border-radius: 0px;
+  }
+  :-ms-input-placeholder {
+    border-radius: 0px;
+  }
+  ::placeholder {
+    border-radius: 0px;
+  }
+  .search {
+      position: relative;
+      color: #005AAB;
+      font-size: 16px;
+    }
+  .rounded{
+        border-radius: 0!important;
+    }
+    .faq-wrap .call-in-action {
+      padding-top: 1rem!important;
+  }
+
+  .faq-wrap .nav-pills .nav-link.active {
+    background-color: #F9F8F8;
+    color: #414658;
+    border-bottom-width: 0;
+    border-radius: 0px !important;
+    position: relative;
+    z-index: 999999999999;
+    top: 1px;
+}
+
+.faq-wrap .faq-list {
+  height: 120px;
+  min-width: 120px;
+  min-height: 50px;
+  position: relative;
+  color: #414658;
+  background-color: rgba(0, 0, 0, 0.04);
+  border: 1px solid #DEE4E8;
+  top: 1px;
+  border-bottom-width: 0;
+}
+  
+  .nav {
+    display: flex;
+    flex-wrap: wrap;
+    padding-left: 0;
+    /* margin-bottom: 0; */
+    list-style: none;
+    border-bottom: 1px solid #DEE4E8;
+    width: 100%;
+    margin: auto;
+    justify-content: center;
+}
+.font-title-faq{
+  font-size: 15.35px;
+}
+.font-x {
+  text-align: center;
+}

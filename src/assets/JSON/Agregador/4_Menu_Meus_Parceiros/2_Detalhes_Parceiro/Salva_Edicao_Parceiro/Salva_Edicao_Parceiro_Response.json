@@ -1,0 +1,11 @@
+{
+    "data": {
+        "updateStatus": 1,
+        "updateDescription": "Ok",
+        "message": ""
+    },
+    "message": "Ok",
+    "hasError": false,
+    "errorDataCollection": null,
+    "statusCode": 200
+}

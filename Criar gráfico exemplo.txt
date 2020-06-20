@@ -1,0 +1,231 @@
+####################### Gráfico Grande ###############################
+
+-------------- HTML ------------ 
+
+<!-- Gráfico grande - Início -->
+<app-chart-large [barLineChartData]="exemploData"
+                 [barLineChartLabels]="exemploLabels" [barLineChartOptions]="exemploOptions"
+                 [barLineChartType]="exemploType" [barLineChartColors]="exemploColor"
+                 [exportId]="exemploExportId" [iconExportId]="exemploExportIconId"
+                 [filterDataId]="exemploFilterDataId" (changeDate)="exemploChangeDate($event)"
+                 [chartTitle]="exemploTitle">
+</app-chart-large>  
+<!-- Gráfico grande - Fim -->
+
+-------------- Typescript ------------
+
+	// Gráfico Grande - Início
+	exemploData: any = [{
+		data: [1,2,3,4,5,6,7,8]
+	}]
+	exemploLabels: any = ['a','b','c','d','e','f','g','h']
+	exemploColor: any = []
+	exemploOptions: any = {
+		responsive: true,
+		aspectRatio: 3,
+	}
+	exemploType: any = 'bar'
+	exemploExportId = 'exemploExport'
+	exemploExportIconId = 'exemploIcon'
+	exemploFilterDataId = 'exemploFilterData'
+	exemploTitle = 'Exemplo T�tulo'
+	   
+	exemploChangeDate(rangeDate: any) {
+		console.log(rangeDate[0]);
+		console.log(rangeDate[1]);
+	}
+	// Gráfico Grande - Fim
+
+
+	
+
+
+####################### Gráfico Pequeno ###############################
+
+--------------- HTML -------------------
+
+<!-- Gráfico pequeno - Início -->
+<section>
+    <div class="row">
+        <div class="col-12 col-sm-12 col-md-6 col-lg-6 col-xl-6">
+            <app-chart-small [barLineChartData]="exemplo2Data" [barLineChartLabels]="exemplo2Labels"
+                             [barLineChartColors]="exemplo2Color" [barLineChartOptions]="exemplo2Options"
+                             [barLineChartType]="exemplo2Type"
+                             [exportId]="exemplo2ExportId" [iconExportId]="exemplo2ExportIconId"
+                             [filterDataId]="exemplo2FilterDataId" (changeDate)="exemplo2ChangeDate($event)"
+                             [chartTitle]="exemplo2Title">
+            </app-chart-small>
+        </div>
+        <div class="col-12 col-sm-12 col-md-6 col-lg-6 col-xl-6">
+            <app-chart-small [barLineChartData]="exemplo3Data" [barLineChartLabels]="exemplo3Labels"
+                             [barLineChartColors]="exemplo3Color" [barLineChartOptions]="exemplo3Options"
+                             [barLineChartType]="exemplo3Type"
+                             [exportId]="exemplo3ExportId" [iconExportId]="exemplo3ExportIconId"
+                             [filterDataId]="exemplo3FilterDataId" (changeDate)="exemplo3ChangeDate($event)"
+                             [chartTitle]="exemplo3Title">
+            </app-chart-small>
+        </div>
+    </div>
+</section>
+<!-- Gráfico pequeno - Fim -->
+
+--------------- Typescript -------------------
+
+	// Gráfico pequeno - Início
+	exemplo2Data: any = [{
+		data: [1,2,3,4,5,6,7,8]
+	}]
+	exemplo2Labels: any = ['a','b','c','d','e','f','g','h']
+	exemplo2Color: any = []
+	exemplo2Options: any = {
+		responsive: true,
+		aspectRatio: 0,
+	}
+	exemplo2Type: any = 'pie'
+	exemplo2ExportId = 'exemplo2Export'
+	exemplo2ExportIconId = 'exemplo2Icon'
+	exemplo2FilterDataId = 'exemplo2FilterData'
+	exemplo2Title = 'Exemplo Título 2'
+	  
+	exemplo2ChangeDate(rangeDate: any) {
+		console.log(rangeDate[0]);
+		console.log(rangeDate[1]);
+	}
+
+	//------------------------------------
+
+	exemplo3Data: any = [{
+		data: [1,2,3,4,5,6,7,8]
+	}]
+	exemplo3Labels: any = ['a','b','c','d','e','f','g','h']
+	exemplo3Color: any = []
+	exemplo3Options: any = {
+		responsive: true,
+		aspectRatio: 0,
+	}
+	exemplo3Type: any = 'bar'
+	exemplo3ExportId = 'exemplo3Export'
+	exemplo3ExportIconId = 'exemplo3Icon'
+	exemplo3FilterDataId = 'exemplo3FilterData'
+	exemplo3Title = 'Exemplo Título 3'
+		
+	exemplo3ChangeDate(rangeDate: any) {
+		console.log(rangeDate[0]);
+		console.log(rangeDate[1]);
+	}
+	// Gráfico pequeno - Fim
+
+
+
+
+
+####################### Gráfico Dual ###############################
+
+--------------- HTML -------------------
+
+<!-- Gráfico Dual - Início -->
+<app-dual-chart-large [chart1Data]="exemplo4Data" [chart1Type]="exemplo4Type"
+                 [chart1Labels]="exemplo4Labels" [chart1Options]="exemplo4Options"
+                 [chart1Title]="exemplo4Title"
+                 [chart2Data]="exemplo5Data" [chart2Type]="exemplo5Type"
+                 [chart2Labels]="exemplo5Labels" [chart2Options]="exemplo5Options"
+                 [chart2Title]="exemplo5Title"
+                 [exportId]="exemploExportId" [iconExportId]="exemploExportIconId"
+                 [filterDataId]="exemploFilterDataId" (changeDate)="exemploChangeDate($event)"
+                 [chartTitle]="exemploTitle">
+</app-dual-chart-large>  
+<!-- Gráfico Dual - Início -->
+
+--------------- Typescript -------------------
+
+	// Gráfico Dual - Início
+	exemplo4Data: any = [{
+		data: [1,2,3,4,5,6,7,8]
+	}]
+	exemplo4Labels: any = ['a','b','c','d','e','f','g','h']
+	exemplo4Color: any = []
+	exemplo4Options: any = {
+		responsive: true,
+		aspectRatio: 0,
+	}
+  exemplo4Type: any = 'bar'
+	exemplo4Title = 'Exemplo Título gráfico 4'
+  
+  exemplo5Data: any = [{
+		data: [1,2,3,4,5,6,7,8]
+	}]
+	exemplo5Labels: any = ['a','b','c','d','e','f','g','h']
+	exemplo5Color: any = []
+	exemplo5Options: any = {
+		responsive: true,
+		aspectRatio: 0,
+	}
+	exemplo5Type: any = 'line'
+	exemplo5Title = 'Exemplo Título gráfico 5'
+
+	exemploExportId = 'exemploExport'
+	exemploExportIconId = 'exemploIcon'
+	exemploFilterDataId = 'exemploFilterData'
+	exemploTitle = 'Exemplo Título card'
+	   
+	exemploChangeDate(rangeDate: any) {
+		console.log(rangeDate[0]);
+		console.log(rangeDate[1]);
+	}
+	// Gráfico Dual - Fim
+
+
+
+####################### Gráfico Info ###############################
+
+--------------- HTML -------------------
+
+<!-- Gráfico informações - Início -->
+<app-chart-info [chartInfoData]="exemplo6Data"
+                [chartInfoLabels]="exemplo6Labels" [chartInfoOptions]="exemplo6Options"
+                [chartInfoType]="exemplo6Type" [chartInfoColors]="exemplo6Colors"
+                [chartInformations]="exemplo6Informations"
+                [exportId]="exemplo6ExportId" [iconExportId]="exemplo6ExportIconId"
+                [filterDataId]="exemplo6FilterDataId" (changeDate)="exemplo6ChangeDate($event)"
+                [chartTitle]="exemplo6Title">
+</app-chart-info>  
+<!-- Gráfico informações - Fim -->
+
+--------------- Typescript -------------------
+
+	// Gráfico informações - Início
+	exemplo6Data: any = [{
+		data: [1,2,3,4,5,6,7,8]
+	}]
+	exemplo6Labels: any = ['a','b','c','d','e','f','g','h']
+	exemplo6Color: any = []
+	exemplo6Options: any = {
+		responsive: true,
+    aspectRatio: 0,
+    scales: {
+      yAxes: [{
+        ticks: {
+          beginAtZero: true
+        }
+      }],
+    }
+  }
+
+  exemplo6Informations = [
+    {'name':'Total Seguro RF:', 'value': 'R$ 8.239,58'},
+    {'name':'Total Seguro Viagem:', 'value': 'R$ 5.239,58'},
+    {'name':'Total Garantia Estendida:', 'value': 'R$ 2.239,58'},
+    {'name':'Saldo Disponível:', 'value': 'R$15.718,74'}
+  ]
+
+	exemplo6Type: any = 'bar'
+	exemplo6ExportId = 'exemploExport'
+	exemplo6ExportIconId = 'exemploIcon'
+	exemplo6FilterDataId = 'exemploFilterData'
+	exemplo6Title = 'Exemplo Título 6'
+	   
+	exemplo6ChangeDate(rangeDate: any) {
+		console.log(rangeDate[0]);
+		console.log(rangeDate[1]);
+	}
+	// Gráfico informações - Fim

@@ -1,0 +1,10 @@
+
+var campaign = new Campaign();
+campaign.code = null;
+campaign.profile = null;
+campaign.name = null;
+campaign.validityStartDate = null;
+campaign.validityEndDate = null;
+campaign.insurance = null;
+
+this.http.post<any>(`${environment.apiUrl}/Campaigns`, campaign);

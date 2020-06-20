@@ -1,0 +1,45 @@
+{
+    "data": [
+      {
+        "insurance": "Seguro Roubo",
+        "value": 33,
+        "percent": 33
+      },
+      {
+        "insurance": "Seguro Auto",
+        "value": 22,
+        "percent": 22
+      },
+      {
+        "insurance": "Seguro Pet",
+        "value": 15,
+        "percent": 15
+      },
+      {
+        "insurance": "Seguro Viagem",
+        "value": 10,
+        "percent": 10
+      },
+      {
+        "insurance": "Seguro Prestamista",
+        "value": 8,
+        "percent": 8
+      },
+      {
+        "insurance": "Seguro Garantia Estendida",
+        "value": 8,
+        "percent": 8
+      }
+    ],
+    "message": "OK",
+    "hasError": false,
+    "errorDataCollection": [
+      {
+        "code": "string",
+        "message": "string",
+        "url": "string",
+        "detail": "string"
+      }
+    ],
+    "statusCode": 200
+  }

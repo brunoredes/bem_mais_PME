@@ -1,0 +1,21 @@
+var user = new User();
+user.userId = "1";
+user.profileId = "1";
+user.storeId = "1";
+user.picture = "assets/user.png";
+user.name = "Tamu Junto";
+user.gender = "M";
+user.birthDate = "01-01-1980";
+user.cpf = "000000005000";
+user.rg = "0360001212";
+user.zipCode = "09563180";
+user.address = "R. joao da silva";
+user.complement = "AP 454";
+user.city = "são paulo";
+user.ufId = "1";
+user.phoneNumber = "11 911235563";
+user.email = "tamujunto@zurich.com.br";
+user.website = "www.zurich.com.br";
+
+this.http.post<any>(`${environment.apiUrl}/Users`, user);
+

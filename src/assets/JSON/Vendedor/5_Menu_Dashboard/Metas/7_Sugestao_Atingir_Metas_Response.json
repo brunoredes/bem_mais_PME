@@ -1,0 +1,17 @@
+{
+  "data": {
+    "amount": "516",
+    "days": 5
+  },
+  "message": "OK",
+  "hasError": false,
+  "errorDataCollection": [
+    {
+      "code": "string",
+      "message": "string",
+      "url": "string",
+      "detail": "string"
+    }
+  ],
+  "statusCode": 200
+}

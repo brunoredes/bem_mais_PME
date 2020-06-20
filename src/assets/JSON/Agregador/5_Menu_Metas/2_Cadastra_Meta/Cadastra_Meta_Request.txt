@@ -1,0 +1,11 @@
+
+var goal = new Goal();
+goal.profile = 1; (Revendas)
+goal.insurance = 5; (Perda Total)
+goal.amount = 50000;
+goal.code = 789;
+goal.title = "Teste";
+goal.description = "Atingir 50 mil em vendas";
+goal.type = 1; (1-Pessoal, 2-Parceiro)
+
+this.http.post<any>(`${environment.apiUrl}/Goals`, goal);

@@ -1,0 +1,7 @@
+var userId = 1;
+var subjectId = null;
+var startDate= null;
+var endDate = null;
+var status = null;
+
+this.http.post<any>(`${environment.apiUrl}/Feedbacks?userId=${userId}&subjectId=${subjectId}&startDate=${startDate}&endDate=${endDate}&status=${status}`);

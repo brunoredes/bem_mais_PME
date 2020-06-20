@@ -1,0 +1,5 @@
+
+var userId = 234;
+
+this.http.get<any>(`${environment.apiUrl}/Goals/Attainment?userId=${userId}`);
+

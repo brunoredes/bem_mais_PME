@@ -1,0 +1,7 @@
+var obj = new Object();
+obj.retailerId = 123; (Loja Samsung 123)
+obj.productId = 1234; (Samsung Galaxy A50)
+obj.statusProduct = 1; (Novo)
+obj.cep = 01234567;
+
+this.http.post<any>(`${environment.apiUrl}/Insurances/Retails`, obj);

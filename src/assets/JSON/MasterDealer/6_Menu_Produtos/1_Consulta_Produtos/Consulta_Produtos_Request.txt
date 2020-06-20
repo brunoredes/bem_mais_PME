@@ -1,0 +1,9 @@
+
+var product = new Products();
+product.dealerId = 1;
+product.model = null;
+product.brand = null;
+product.category = null;
+product.amount = null;
+
+this.http.post<any>(`${environment.apiUrl}/Products`, product);

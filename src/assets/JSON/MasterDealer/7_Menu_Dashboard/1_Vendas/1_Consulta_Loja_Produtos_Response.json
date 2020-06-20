@@ -1,0 +1,27 @@
+{
+  "data": [
+    {
+      "label": "RF Funcionários",
+      "data": [
+        35
+      ]
+    },
+    {
+      "label": "RFD Funcionários",
+      "data": [
+        15
+      ]
+    }
+  ],
+  "message": "OK",
+  "hasError": false,
+  "errorDataCollection": [
+    {
+      "code": "string",
+      "message": "string",
+      "url": "string",
+      "detail": "string"
+    }
+  ],
+  "statusCode": 200
+}

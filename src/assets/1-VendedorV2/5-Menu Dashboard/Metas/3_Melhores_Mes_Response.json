@@ -1,0 +1,28 @@
+{
+    "data": {
+        "vendors": [
+            {
+                "name": "Roberto Luiz",
+                "office": "Vendedor",
+                "salesAmount": 500,
+                "percent": 100
+            },
+            {
+                "name": "Maria Roberta",
+                "office": "Vendedora",
+                "salesAmount": 500,
+                "percent": 50
+            },
+            {
+                "name": "Elvis",
+                "office": "Vendedor",
+                "salesAmount": 500,
+                "percent": 20
+            }
+        ]
+    },
+    "message": "Ok",
+    "hasError": false,
+    "errorDataCollection": null,
+    "statusCode": 200
+}

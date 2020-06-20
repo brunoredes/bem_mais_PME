@@ -1,0 +1,78 @@
+{
+    "data": {
+        "form": [
+            {
+                "type": "select",
+                "name": "homeCountry",
+                "label": "País ou região de origem",
+                "required": true,
+                "maxLenght":null,
+                "mask": null,
+                "dependency": null,
+                "options":[
+                    {
+                        "id": 1,
+                        "value": "Estados Unidos"
+                    },
+                    {
+                        "id": 55,
+                        "value": "Brasil"
+                    }
+                ]
+            },
+            {
+                "type": "select",
+                "name": "destinationCountry",
+                "label": "País ou região de destino",
+                "required": true,
+                "maxLenght":null,
+                "mask": null,
+                "dependency": null,
+                "options":[
+                    {
+                        "id": 1,
+                        "value": "Estados Unidos"
+                    },
+                    {
+                        "id": 55,
+                        "value": "Brasil"
+                    }
+                ]
+            },
+            {
+                "type": "datePicker",
+                "name": "startDate",
+                "label": "Data início",
+                "required": true,
+                "maxLenght":null,
+                "mask": null,
+                "dependency": null,
+                "options":null
+            },
+            {
+                "type": "datePicker",
+                "name": "endDate",
+                "label": "Data fim",
+                "required": true,
+                "maxLenght":null,
+                "mask": null,
+                "dependency": null,
+                "options":null
+            },
+            {
+                "type": "text",
+                "name": "ages",
+                "label": "Quem vai? (idades - por exemlo: 31, 25)",
+                "required": true,
+                "maxLenght":null,
+                "mask": null,
+                "dependency": null,
+                "options":null
+            }
+        ]
+    },
+    "message": "Ok",
+    "hasError": false,
+    "errorDataCollection": null,
+    "statusCode": 200
+}

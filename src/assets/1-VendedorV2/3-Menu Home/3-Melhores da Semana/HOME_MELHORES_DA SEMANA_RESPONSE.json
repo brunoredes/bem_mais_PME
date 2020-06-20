@@ -1,0 +1,50 @@
+{
+  "data": {
+    "vendors": [
+      {
+        "id": "100",
+        "name": "Roberto Luiz",
+        "profile": "VENDEDOR",
+        "sales": "500",
+        "salesPercent": 100,
+        "goal": "3500",
+        "goalPercent": 72,
+        "position": "1",
+        "picture": "assets/user1.png"
+      },
+      {
+        "id": "101",
+        "name": "Maria Roberta",
+        "profile": "VENDEDOR",
+        "sales": "250",
+        "salesPercent": 50,
+        "goal": "3500",
+        "goalPercent": 30,
+        "position": "2",
+        "picture": "assets/user2.png"
+      },
+      {
+        "id": "102",
+        "name": "Elvis",
+        "profile": "VENDEDOR",
+        "sales": "250",
+        "salesPercent": 20,
+        "goal": "3500",
+        "goalPercent": 20,
+        "position": "3",
+        "picture": "assets/user3.png"
+      }
+    ]
+  },
+  "message": "OK",
+  "hasError": false,
+  "errorDataCollection": [
+    {
+      "code": "string",
+      "message": "string",
+      "url": "string",
+      "detail": "string"
+    }
+  ],
+  "statusCode": 200
+}

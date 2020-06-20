@@ -1,0 +1,6 @@
+
+var userId = 234;
+var categoryId = 2; (Seguro)
+
+this.http.get<any>(`${environment.apiUrl}/Sales?userId=${userId}&categoryId=${categoryId}`);
+

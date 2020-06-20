@@ -1,0 +1,3 @@
+var userId = 123;
+
+this.http.get<any>(`${environment.apiUrl}/Trainings?userId=${userId}`);

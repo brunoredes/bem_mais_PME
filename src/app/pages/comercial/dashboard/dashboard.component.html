@@ -1,0 +1,24 @@
+
+    <section class="pr-0 pb-0">
+        <div class="row  ml-0">
+            <div class="col-12 col-sm-12 col-md-5 col-lg-5 col-xl-7 mt-0 p-0">
+               <bem-mais-title></bem-mais-title>
+            </div>
+
+            <div class="col-12 col-sm-12 col-md-7 col-lg-7 col-xl-5 mt-2">
+                <div id="myDIV">
+                    <a id="btnDashVendas" routerLinkActive="active" routerLink="vendas" class="btnDash btn">{{'ComercialDashboardSales' | translate}}</a>
+                    <a id="btnDashCancelamento" routerLinkActive="active" routerLink="cancelamento" class="btnDash btn">{{'ComercialDashboardCancelled' | translate}}</a>
+                    <a id="btnDashSinistrados" routerLinkActive="active" routerLink="sinistrado"  class="btnDash btn">{{'ComercialDashboardAccident' | translate}}</a>
+                </div>
+            </div>
+        </div>
+        </section>
+
+
+<!--
+<app-sinistrados *ngIf="sinistrados"></app-sinistrados>
+<app-vendas-comercial *ngIf="vendas"></app-vendas-comercial>
+<app-cancelados *ngIf="cancelamento"></app-cancelados> -->
+
+<router-outlet></router-outlet>

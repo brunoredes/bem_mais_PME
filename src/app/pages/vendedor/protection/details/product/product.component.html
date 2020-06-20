@@ -1,0 +1,80 @@
+<div class="row">
+    <div class="col-12 col-sm-4 col-md-12 col-lg-4 col-xl-4 pb-3">
+        <div class="card shadow-sm">
+            <div class="p-3">
+                <div id="gallery">
+                    <div id="panel">
+                        <img class="img-fluid img-auto" id="largeImage" [src]="selectedProduct.image" width=250px
+                            height=auto />
+                    </div>
+                    <div id="thumbs">
+                        <img *ngFor="let image of selectedProduct.thumbs" [src]="image.thumbUrl"
+                            alt="1st image description" width=50px height=auto />
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="col-12 col-sm-4 col-md-12 col-lg-8 col-xl-8 pb-3">
+        <div class="card shadow-sm">
+            <div class="p-2 m-0  row">
+                <div class="col-12 col-sm-12 col-md-9 col-lg-8 col-xl-9 p-4">
+                    <h5>{{ selectedProduct.name }} - <span id="status-{{selectedProduct.status}}"
+                            class="badge text-white">{{ selectedProduct.status }} </span></h5>
+                    <div class="card-details-confs"><b>{{ selectedProduct.description }} </b></div>
+                </div>
+                <div class="col-12 col-sm-12 col-md-3 col-lg-3 col-xl-3 bemValue">
+                    <div class="card-details-confs"><b>{{'vend-protection-details-product-valorbem' | translate}}</b> </div>
+                    <h5 >{{format(selectedProduct.value)}}</h5>
+                </div>
+            </div>
+            <div class="p-4">
+                <div class="row">
+                    <div class="col-12 col-sm-12 col-md-6 col-lg-6 col-xl-6 border-right pl-4">
+                        <mat-radio-group id="insurancePlan" [value]="insurancePlanSelected">
+                            <mat-radio-button color="primary" (click)="updateInsurancePlan(item)"
+                                id="plan-{{item.planId}}" value="{{item.planId}}" *ngFor="let item of dataInsurance?.insurance.planPrice">
+                                <div *ngIf="item?.name !== 'Assinatura'; else assinature">
+                                    <span>{{dataInsurance?.insurance.name}} - {{item.timeCoverage}} {{'vend-protection-details-product-meses' | translate}}</span><br />
+                                    <small>{{'vend-protection-details-product-until' | translate}} {{item.installments}}x de {{format(item.installmentValue)}}</small>
+                                </div>
+                                <ng-template #assinature>
+                                    <span>{{dataInsurance?.insurance.name}} - {{item.name}} </span><br />
+                                    <small>{{format(item.amount)}} {{'vend-protection-details-product-mensais' | translate}}</small>
+                                </ng-template>
+                            </mat-radio-button>
+                        </mat-radio-group>
+                    </div>
+                    <div class="col-12 col-sm-12 col-md-6 col-lg-6 col-xl-6">
+                        <h5>{{'vend-protection-details-product-argumentos' | translate}}</h5>
+                        <div *ngFor="let item of dataInsurance?.arguments">
+                            <small>- {{item.description}}</small>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="pt-3 pb-3"></div>
+<div class="row">
+    <div class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12">
+        <div class="col-md-12">
+            <nav>
+                <div class="nav nav-tabs nav-fill project-tab" id="nav-tab" role="tablist">
+                    <a class="nav-item nav-link show" id="{{item.title}}-tab" data-toggle="tab"
+                        href="#nav-{{item.title}}" role="tab" attr.aria-controls="nav-{{item.title}}"
+                        *ngFor="let item of dataInsurance?.details"
+                        [ngClass]="{'active':item.title === selectedTab.title}"
+                        (click)="changeSelectedTab(item)">{{item.title}}</a>
+                </div>
+            </nav>
+
+            <div class="tab-content" id="nav-tabContent">
+                <div class="tab-pane fade active in show" id="nav-{{selectedTab?.title}}" role="tabpanel"
+                    attr.aria-labelledby="{{selectedTab?.title}}-tab">
+                    {{selectedTab?.description}}
+                </div>
+            </div>
+        </div>
+    </div>

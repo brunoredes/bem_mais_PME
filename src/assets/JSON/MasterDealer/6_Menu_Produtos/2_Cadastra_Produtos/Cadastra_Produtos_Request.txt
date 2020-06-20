@@ -1,0 +1,12 @@
+
+var product = new Products();
+product.code = "123";
+product.name = "Samsung Galaxy S10";
+product.brand = "Samsung";
+product.model = "S10";
+product.version = "1 ano";
+product.categoryId = 1;
+product.amount = "2500";
+product.dactoryWarranty = "1 ano";
+
+this.http.post<any>(`${environment.apiUrl}/roducts`, product);

@@ -1,0 +1,11 @@
+{
+    "data": {
+        "createStatus": 1,
+        "createDescription": "Ok",
+        "message": ""
+    },
+    "message": "Ok",
+    "hasError": false,
+    "errorDataCollection": null,
+    "statusCode": 200
+}

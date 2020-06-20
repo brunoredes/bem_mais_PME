@@ -1,0 +1,2 @@
+var policyId = 123;
+this.http.get<any>(`${environment.apiUrl}/Policies/${policyId}/Email`);

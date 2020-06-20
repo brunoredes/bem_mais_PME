@@ -1,0 +1,2 @@
+
+this.http.get<any>(`${environment.apiUrl}/Partners/Best`);

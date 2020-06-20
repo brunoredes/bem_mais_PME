@@ -1,0 +1,5 @@
+
+var store = new Store();
+store.dealerId = 1;
+
+this.http.post<any>(`${environment.apiUrl}/Stores`, store);

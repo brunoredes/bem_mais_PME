@@ -1,0 +1,165 @@
+<section>
+    <form class="row" [formGroup]="formFilter" (ngSubmit)="findGoals()">
+        <div class="col-md-12 text-right pl-0">
+            <ul class="pl-0">
+                <li class="filter-button">
+                    <a id="filter-dashGoals"><small>{{'dash-cancel-filtrar' | translate}} &nbsp;</small>
+                        <i class="fa fa-sliders" aria-hidden="true"></i></a>
+                </li>
+                <div class="container mt-0">
+                    <div class="filter-div filter-dashGoals mt-0 shadow-sm">
+                        <div class="row mb-2">
+                            <div class="col-md-12">
+                                <div class="row pr-0 pl-0">
+                                    <div class="col-xl-12">
+                                        <label>{{'dash-cancel-data' | translate}}</label>
+                                    </div>
+                                </div>
+                                <div class="row mt-3">
+                                    <div class="col-md-6 pr-0 pl-0">
+                                        <mat-form-field class="col-xl-12">
+                                            <input formControlName="startDate" matInput [matDatepicker]="pickerGoalsDe"
+                                                placeholder="{{'place-de' | translate}}">
+                                            <mat-datepicker-toggle matSuffix [for]="pickerGoalsDe">
+                                            </mat-datepicker-toggle>
+                                            <mat-datepicker #pickerGoalsDe></mat-datepicker>
+                                        </mat-form-field>
+                                    </div>
+                                    <div class="col-md-6 pr-0 pl-0">
+                                        <mat-form-field class="col-xl-12 datePickerAte">
+                                            <input formControlName="endDate" matInput [matDatepicker]="pickerGoalsAte"
+                                                placeholder="{{'place-ate' | translate}}">
+                                            <mat-datepicker-toggle matSuffix [for]="pickerGoalsAte">
+                                            </mat-datepicker-toggle>
+                                            <mat-datepicker #pickerGoalsAte></mat-datepicker>
+                                        </mat-form-field>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-12 pr-0 pl-0">
+                                <div class="col-xl-12">
+                                    <label for="status">{{'dash-cancel-statusvenda' | translate}}</label>
+                                </div>
+                                <mat-form-field class="col-xl-12">
+                                    <mat-select matSelect id="status" name="status" formControlName="status">
+                                        <mat-option value="1">Status 1</mat-option>
+                                        <mat-option value="2">Status 2</mat-option>
+                                        <mat-option value="3">Status 3</mat-option>
+                                    </mat-select>
+                                </mat-form-field>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-12 pr-0 pl-0">
+                                <div class="col-xl-12">
+                                    <label for="category">{{'ManagerFilterProductCat' | translate}}</label>
+                                </div>
+                                <mat-form-field class="col-xl-12">
+                                    <mat-select matSelect id="category" name="category" formControlName="category">
+                                        <mat-option value="1">Categoria 1</mat-option>
+                                        <mat-option value="2">Categoria 2</mat-option>
+                                        <mat-option value="3">Categoria 3</mat-option>
+                                    </mat-select>
+                                </mat-form-field>
+                            </div>
+                        </div>
+                        <div class="float-right">
+                            <button class="btn btn-primary rounded-pill">
+                                {{'dash-cancel-filtrar' | translate}}
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </ul>
+        </div>
+    </form>
+</section>
+
+<app-chart-large [barLineChartData]="GoalsSalespeopleData" [barLineChartLabels]="GoalsSalespeopleLabels"
+    [barLineChartOptions]="GoalsSalespeopleOptions" [barLineChartType]="GoalsSalespeopleType"
+    [barLineChartColors]="GoalsSalespeopleColor" [filterDataId]="GoalsSalespeopleFilterDataId"
+    (changeDate)="GoalsSalespeopleChangeDate($event)" [chartTitle]="GoalsSalespeopleTitle">
+</app-chart-large>
+
+<section>
+    <div class="row">
+        <div class="col-12 col-sm-12 col-md-6 col-lg-6 col-xl-6">
+            <app-chart-small [barLineChartData]="GoalsStoresData" [barLineChartLabels]="GoalsStoresLabels"
+                [barLineChartColors]="GoalsStoresColor" [barLineChartOptions]="GoalsStoresOptions"
+                [barLineChartType]="GoalsStoresType" [filterDataId]="GoalsStoresFilterDataId"
+                (changeDate)="GoalsStoresChangeDate($event)" [chartTitle]="GoalsStoresTitle">
+            </app-chart-small>
+        </div>
+        <div class="col-12 col-sm-12 col-md-6 col-lg-6 col-xl-6">
+            <app-chart-small [barLineChartData]="InsuranceGoalsData" [barLineChartLabels]="InsuranceGoalsLabels"
+                [barLineChartColors]="InsuranceGoalsColor" [barLineChartOptions]="InsuranceGoalsOptions"
+                [barLineChartType]="InsuranceGoalsType" [filterDataId]="InsuranceGoalsFilterDataId"
+                (changeDate)="InsuranceGoalsChangeDate($event)" [chartTitle]="InsuranceGoalsTitle">
+            </app-chart-small>
+        </div>
+    </div>
+</section>
+
+<section>
+    <div class="row">
+        <div class="col-12 col-sm-12 col-md-3 col-lg-3 col-xl-3">
+            <app-achievement-goals></app-achievement-goals>
+        </div>
+        <div class="col-12 col-sm-12 col-md-3 col-lg-3 col-xl-3">
+            <app-goals-beats></app-goals-beats>
+        </div>
+        <div class="col-12 col-sm-12 col-md-6 col-lg-6 col-xl-6">
+            <app-chart-small [barLineChartData]="GoalsProductsData" [barLineChartLabels]="GoalsProductsLabels"
+                [barLineChartColors]="GoalsProductsColor" [barLineChartOptions]="GoalsProductsOptions"
+                [barLineChartType]="GoalsProductsType" [filterDataId]="GoalsProductsFilterDataId"
+                (changeDate)="GoalsProductsChangeDate($event)" [chartTitle]="GoalsProductsTitle" style="width: 94%;">
+            </app-chart-small>
+        </div>
+    </div>
+</section>
+
+<section>
+    <div class="card mb-3 shadow-sm mr-3">
+        <div class="card-body">
+            <div class="row">
+                <div class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12">
+                    <h5>{{'ManagerCompSales' | translate}}</h5>
+                    <div class="project-status-wrap">
+                        <div class="chk-block-content widget-body mb-3">
+                            <div class="table-responsive project-status-table border-0">
+                                <table class="table  table-middle mb-0 table-borderless">
+                                    <thead>
+                                        <tr>
+                                            <th></th>
+                                            <th></th>
+                                            <th></th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr *ngFor="let i of comparativo">
+                                            <td>{{i.position}}º {{i.name}}</td>
+                                            <td style="width:53vw">
+                                                <div class=" m-0">
+                                                    <div class="progress-bar bg-success" role="progressbar"
+                                                        style="height: 10px;" aria-valuenow="25" aria-valuemin="0"
+                                                        aria-valuemax="100" id="position{{i.position}}">
+                                                    </div>
+                                                </div>
+                                            </td>
+                                            <td>
+                                                {{'vend-home-vendas' | translate}} {{format(i.salesAmount)}}
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

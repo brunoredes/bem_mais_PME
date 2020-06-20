@@ -1,0 +1,14 @@
+var policyForm = new policyForm();
+policyForm.order = "";
+policyForm.cpf = "";
+policyForm.consumerName = "";
+policyForm.startDate = null;
+policyForm.endDate = null;
+policyForm.imei = "";
+policyForm.serialNumber = "";
+policyForm.vendor = 0;
+policyForm.product = "";
+policyForm.status 0;
+
+this.http.post<any>(`${environment.apiUrl}/Policies`, policyForm);
+

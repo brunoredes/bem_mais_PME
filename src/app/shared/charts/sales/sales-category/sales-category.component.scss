@@ -1,0 +1,76 @@
+.filter-data-sales-cat {
+    margin: 0 0 0 -215px;
+    float: left;
+    background: white;
+    width: 22vw;
+    position: absolute;
+    // border-radius: 3px;
+    padding: 10px 10px 10px 0px;
+    right: 0;
+    display: none;
+    // z-index: 99999953;
+    border-radius: 10px;
+    top: 32px; 
+    margin-right: -11px;
+    text-align: left;
+}
+
+.filter-data-sales-cat:after {
+    bottom: 100%;
+    left: 89%;
+    border: solid transparent;
+    content: " ";
+    height: 0;
+    width: 0;
+    position: absolute;
+    pointer-events: none;
+    border-bottom-color: white;
+    border-width: 8px;
+    margin-left: -8px;
+}
+
+.mat-width {
+    width: 100%;
+}
+
+@media only screen and (max-width: 1024px){
+    .filter-data-sales-cat {
+        width: 27vw;
+        margin-right: -9px;
+    }
+}
+
+@media only screen and (max-width: 768px){
+    .filter-data-sales-cat {
+        width: 35vw;
+        margin-right: -8px;
+    }
+}
+
+@media only screen and (max-width: 425px) {
+    .mat-width {
+        width: 77%;
+    }
+
+    .filter-data-sales-cat {
+        width: 41vw;
+        margin-right: 4px;
+    }
+}
+
+@media only screen and (max-width: 375px){
+    .mat-width {
+        width: 74%;
+    }
+}
+
+@media only screen and (max-width: 320px){
+
+    .filter-data-sales-cat {
+        margin-right: -5px;
+    }
+
+    .mat-width {
+        width: 72%;
+    }
+}

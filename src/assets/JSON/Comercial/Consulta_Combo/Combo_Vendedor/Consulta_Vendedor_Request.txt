@@ -1,0 +1,3 @@
+var retailerId = 123; (Loja Samsung 123)
+
+this.http.get<any>(`${environment.apiUrl}/Vendors?retailerId=${retailerId}`);

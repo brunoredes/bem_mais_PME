@@ -1,0 +1,82 @@
+{
+    "data": {
+        "orders": [
+            {
+                "title": "Total de ordens realizadas",
+                "amount": 1624,
+                "options": {
+                    "style": "decimal",
+                    "locale": "pt-BR",
+                    "currency": "BRL"
+                }
+            },
+            {
+                "title": "Ordens Confirmadas",
+                "amount": 1460,
+                "options": {
+                    "style": "decimal",
+                    "locale": "pt-BR",
+                    "currency": "BRL"
+                }
+            },
+            {
+                "title": "Ordens Não Confirmadas",
+                "amount": 160,
+                "options": {
+                    "style": "decimal",
+                    "locale": "pt-BR",
+                    "currency": "BRL"
+                }
+            },
+            {
+                "title": "Ticket Médio",
+                "amount": 228,
+                "options": {
+                    "style": "decimal",
+                    "locale": "pt-BR",
+                    "currency": "BRL"
+                }
+            },
+            {
+                "title": "Total de seguros Vendidos",
+                "amount": 1922,
+                "options": {
+                    "style": "decimal",
+                    "locale": "pt-BR",
+                    "currency": "BRL"
+                }
+            },
+            {
+                "title": "Prêmio Vendido $",
+                "amount": 332924,
+                "options": {
+                    "style": "currency",
+                    "locale": "pt-BR",
+                    "currency": "BRL"
+                }
+            },
+            {
+                "title": "Prêmio Cancelado $",
+                "amount": 23600,
+                "options": {
+                    "style": "currency",
+                    "locale": "pt-BR",
+                    "currency": "BRL"
+                }
+            },
+            {
+                "title": "% Conversão",
+                "amount": 89.9,
+                "options": {
+                    "style": "percent",
+                    "locale": "pt-BR",
+                    "currency": "BRL"
+                }
+            }
+        ]
+    },
+    "message": "Ok",
+    "hasError": false,
+    "errorDataCollection": null,
+    "statusCode": 200
+}

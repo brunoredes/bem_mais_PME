@@ -1,0 +1,105 @@
+<!-- Filtro -->
+<section>
+    <form class="row" [formGroup]="formFilter" (ngSubmit)="loadCancellation()">
+        <div class="col-md-12 text-right pl-0">
+            <ul class="pl-0">
+                <li class="filter-button">
+                    <a id="filter-dashCancelamento"><small>{{'dash-cancel-filtrar' | translate}} &nbsp;</small><i
+                            class="fa fa-sliders" aria-hidden="true"></i></a>
+                </li>
+                <div class="container mt-0">
+                    <div class="filter-div filter-dashCancelamento mt-0 shadow-sm">
+
+                        <div class="row">
+                            <div class="col-md-12 pr-0 pl-0">
+                                <div class="col-xl-12">
+                                    <label for="parceiroUserId"><h5>{{'ComercialHomeRankParceiros' | translate}}</h5></label>
+                                </div>
+                                <mat-form-field class="col-xl-12">
+                                    <input matInput formControlName="partner" id="parceiroUserId"
+                                        name="parceiroUserId" />
+                                </mat-form-field>
+                            </div>
+                        </div>
+
+                        <div class="row">
+                            <div class="col-md-12 pr-0 pl-0">
+                                <div class="col-xl-12">
+                                    <label for="lojaUserId"><h5>{{'dash-cancel-loja' | translate}}</h5></label>
+                                </div>
+                                <mat-form-field class="col-xl-12">
+                                    <input matInput id="lojaUserId" name="lojaUserId" formControlName="store" />
+                                </mat-form-field>
+                            </div>
+                        </div>
+
+                        <div class="row">
+                            <div class="col-md-4 pr-0 pl-0">
+                                <div class="col-xl-12">
+                                    <label for="state"><h5>UF</h5></label>
+                                </div>
+                                <mat-form-field class="col-xl-12">
+                                    <mat-select id="state" formControlName="state" (selectionChange)="change()">
+                                        <mat-option></mat-option>
+                                        <mat-option value="{{ uf.sigla }}" *ngFor="let uf of uf">{{ uf.sigla }}
+                                        </mat-option>
+                                    </mat-select>
+                                </mat-form-field>
+                            </div>
+                            <div class="col-md-8 pr-0 pl-0">
+                                <div class="col-xl-12">
+                                    <label for="city"><h5>{{'edituser-cidade' | translate}}</h5></label>
+                                </div>
+                                <mat-form-field class="col-xl-12">
+                                    <mat-select id="city" formControlName="city">
+                                        <mat-option></mat-option>
+                                        <mat-option *ngFor="let cidade of city" value="{{cidade}}">
+                                            {{ cidade.substr(8) }}
+                                        </mat-option>
+                                    </mat-select>
+                                </mat-form-field>
+                            </div>
+                        </div>
+
+                        <div class="float-right">
+                            <button class="btn btn-primary rounded-pill">
+                                {{ "dash-cancel-filtrar" | translate }}
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </ul>
+        </div>
+    </form>
+</section>
+<!-- Fim filtro -->
+
+<app-chart-large [barLineChartData]="barLineChartData" [barLineChartLabels]="barLineChartLabels"
+    [barLineChartOptions]="barLineChartOptions" [exportId]="barLineChartExportId"
+    [iconExportId]="barLineChartExportIconId" [filterDataId]="barLineChartFilterDataId"
+    (changeDate)="barLineChartChangeDate($event)" [chartTitle]="barLineChartTitle">
+</app-chart-large>
+
+<section>
+    <div class="row">
+        <div class="col-12 col-sm-12 col-md-6 col-lg-6 col-xl-6">
+            <app-chart-small [barLineChartData]="pieCancelInsuranceChartData"
+                [barLineChartLabels]="pieCancelInsuranceChartLabels"
+                [barLineChartOptions]="pieCancelInsuranceChartOptions" [barLineChartType]="pieCancelInsuranceChartType"
+                [barLineChartColors]="pieCancelInsuranceChartColors" [exportId]="pieCancelInsuranceChartExportId"
+                [iconExportId]="pieCancelInsuranceChartExportIconId"
+                [filterDataId]="pieCancelInsuranceChartFilterDataId"
+                (changeDate)="pieCancelInsuranceChartChangeDate($event)" [chartTitle]="pieCancelInsuranceChartTitle">
+            </app-chart-small>
+        </div>
+        <div class="col-12 col-sm-12 col-md-6 col-lg-6 col-xl-6">
+            <app-chart-small [barLineChartData]="pieCancelCategoryChartData"
+                [barLineChartLabels]="pieCancelCategoryChartLabels"
+                [barLineChartOptions]="pieCancelCategoryChartOptions" [barLineChartType]="pieCancelCategoryChartType"
+                [barLineChartColors]="pieCancelCategoryChartColors" [exportId]="pieCancelCategoryChartExportId"
+                [iconExportId]="pieCancelCategoryChartExportIconId" [filterDataId]="pieCancelCategoryChartFilterDataId"
+                (changeDate)="pieCancelCategoryChartChangeDate($event)" [chartTitle]="pieCancelCategoryChartTitle">
+            </app-chart-small>
+        </div>
+    </div>
+</section>

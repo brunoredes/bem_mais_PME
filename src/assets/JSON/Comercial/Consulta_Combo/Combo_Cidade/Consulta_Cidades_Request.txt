@@ -1,0 +1,3 @@
+var stateId = 25; (São Paulo)
+
+this.http.get<any>(`${environment.apiUrl}/Locations/City?stateId=${stateId}`);

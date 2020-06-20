@@ -1,0 +1,100 @@
+{
+  "data": [
+    {
+      "id": 1,
+      "categoryId": 1,
+      "question": "Where can I see my policy?",
+      "answer": "Access Zurich Insurance portal to get information about your policy.",
+      "urlAttachment": "www://zurich.com.BemMais/attachments/faq1.pdf"
+    },
+    {
+      "id": 2,
+      "categoryId": 1,
+      "question": "question 2",
+      "answer": "answer 2",
+      "urlAttachment": "www://zurich.com.BemMais/attachments/faq2.pdf"
+    },
+    {
+      "id": 3,
+      "categoryId": 1,
+      "question": "question 3",
+      "answer": "answer 3",
+      "urlAttachment": "www://zurich.com.BemMais/attachments/faq3.pdf"
+    },
+    {
+      "id": 4,
+      "categoryId": 1,
+      "question": "question 4",
+      "answer": "answer 4",
+      "urlAttachment": "www://zurich.com.BemMais/attachments/faq4.pdf"
+    },
+    {
+      "id": 5,
+      "categoryId": 1,
+      "question": "question 5",
+      "answer": "answer 5",
+      "urlAttachment": "www://zurich.com.BemMais/attachments/faq5.pdf"
+    },
+    {
+      "id": 6,
+      "categoryId": 1,
+      "question": "question 6",
+      "answer": "answer 6",
+      "urlAttachment": "www://zurich.com.BemMais/attachments/faq6.pdf"
+    },
+    {
+      "id": 7,
+      "categoryId": 1,
+      "question": "question 7",
+      "answer": "answer 7",
+      "urlAttachment": "www://zurich.com.BemMais/attachments/faq7.pdf"
+    },
+    {
+      "id": 8,
+      "categoryId": 1,
+      "question": "question 8",
+      "answer": "answer 8",
+      "urlAttachment": "www://zurich.com.BemMais/attachments/faq8.pdf"
+    },
+    {
+      "id": 9,
+      "categoryId": 1,
+      "question": "question 9",
+      "answer": "answer 9",
+      "urlAttachment": "www://zurich.com.BemMais/attachments/faq9.pdf"
+    },
+    {
+      "id": 10,
+      "categoryId": 1,
+      "question": "question 10",
+      "answer": "answer 10",
+      "urlAttachment": "www://zurich.com.BemMais/attachments/faq10.pdf"
+    },
+    {
+      "id": 11,
+      "categoryId": 1,
+      "question": "question 11",
+      "answer": "answer 11",
+      "urlAttachment": "www://zurich.com.BemMais/attachments/faq11.pdf"
+    },
+    {
+      "id": 12,
+      "categoryId": 1,
+      "question": "question 12",
+      "answer": "answer 12",
+      "urlAttachment": "www://zurich.com.BemMais/attachments/faq12.pdf"
+    }
+  ],
+  "message": "OK",
+  "hasError": false,
+  "errorDataCollection": [
+    {
+      "code": "string",
+      "message": "string",
+      "url": "string",
+      "detail": "string"
+    }
+  ],
+  "statusCode": 200
+}
+

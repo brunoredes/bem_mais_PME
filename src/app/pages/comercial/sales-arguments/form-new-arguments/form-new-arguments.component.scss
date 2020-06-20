@@ -1,0 +1,171 @@
+label{font-size: 1vw!important;}
+
+select{
+    outline: 0;
+    border-width: 0 0 1px;
+    background: transparent;
+    
+  }
+  /* .select { 
+      font-size:13px; 
+  }   */
+  /* remove the original arrow */
+select.col-xl-12.select {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  -o-appearance: none;
+  /* no standardized syntax available, no ie-friendly solution available */
+}
+
+select + i.fa {
+  float: right;
+  margin-top: -30px;
+  margin-right: 5px;
+  /* this is so when you click on the chevron, your click actually goes on the dropdown menu */
+  pointer-events: none;
+  /* everything after this is just to cover up the original arrow */
+  /* (for browsers that don't support the syntax used above) */
+ padding-right: 5px;
+}
+
+.label-float {
+  position: relative;
+  padding-top: 30px;
+  margin-bottom: 10px;
+}
+
+.label-float input {
+  border: 0;
+  // border-bottom: 1px solid #d8d8d8;
+  outline: none;
+  font-size: 15px;
+  transition: all 0.3s ease-out;
+  -webkit-transition: all 0.3s ease-out;
+  -moz-transition: all 0.3s ease-out;
+  -webkit-appearance: none;
+  border-radius: 0;
+  width: 100%;
+  background: transparent;
+}
+
+// .label-float input:focus {
+  // border-bottom: 2px solid #005aab;
+// }
+
+.label-float input::placeholder {
+  color: transparent;
+}
+
+.label-float label {
+  pointer-events: none;
+  position: absolute;
+  top: 0;
+  left: 0;
+  margin-top: 13px;
+  transition: all 0.3s ease-out;
+  -webkit-transition: all 0.3s ease-out;
+  -moz-transition: all 0.3s ease-out;
+}
+
+.label-float input:required:invalid + label:before {
+  content: "*";
+}
+.label-float input:focus + label,
+.label-float input:not(:placeholder-shown) + label {
+  font-size: 13px;
+  margin-top: 0;
+  color: #005aab;
+}
+
+ /* MIXINS */
+ @mixin focusOutline {
+  outline: dotted 1px #ccc;
+  outline-offset: 0.45rem;
+}
+@mixin hideInput {
+  width: 0;
+  height: 0;
+  position: absolute;
+  left: -9999px;
+}
+@mixin breakpoint($point) {
+  @if $point == 1100 {
+    @media (max-width: 1100px) {
+      @content;
+    }
+  } @else if $point == 800 {
+    @media (max-width: 800px) {
+      @content;
+    }
+  }
+}
+
+
+@media only screen and(max-width:425px) {
+  .footer-goals-btns {
+    position: relative;
+    right: 0 !important;
+    top: 10px;
+    .btnDash {
+      padding: 7px 14px !important;;
+    }
+  }
+
+  @media only screen and(max-width:320px) {
+    .footer-goals-btns {
+      position: relative;
+      /* right: 0 !important; */
+      top: 10px;
+      /* clear: both; */
+      display: inline-grid;
+      width: 100%;
+      text-align: center;
+      .btnDash {
+        padding: 6px 10px !important;
+      }
+    }
+  }
+}
+
+.footer-goals-btns {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end !important;
+  align-content: flex-end !important;
+  .btnDash {
+    
+    align-self: flex-end;
+    border: solid;
+    border-width: thin;
+    outline: none;
+    padding: 10px 16px;
+    cursor: pointer;
+    border-radius: 50px;
+    width: 140px;
+    color: #FF3636;
+    border-color: #FF3636;
+  }
+  .active {
+    background-color: #62BC00;
+    color: white !important;
+    border-radius: 50px;
+    box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.075) !important;
+    border-color:  #62BC00;
+  }
+}
+
+textarea {
+  display: block;
+  max-width: 100%;
+  min-width: 100%;
+  padding: calc(.75em - 1px);
+  resize: none;
+  background-color: #fff;
+  border-radius: 4px;
+  color: inherit;
+  border: 1px solid #dbdbdb;
+}
+
+::ng-deep form .mat-form-field-infix {
+  border-top: 0px !important;
+}

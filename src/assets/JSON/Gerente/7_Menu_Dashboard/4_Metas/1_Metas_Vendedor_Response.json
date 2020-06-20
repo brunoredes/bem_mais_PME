@@ -1,0 +1,23 @@
+{
+  "data": {
+    "xAxys": [1],
+    "vendors": [
+        {
+            "data": [3000],
+            "label": "Meta"
+        },
+        {
+            "data": [1000],
+            "label": "Elvis"
+        },
+        {
+            "data": [2000],
+            "label": "Suzana"
+        }
+    ]
+  },
+  "message": "Ok",
+  "hasError": false,
+  "errorDataCollection": null,
+  "statusCode": 200
+}

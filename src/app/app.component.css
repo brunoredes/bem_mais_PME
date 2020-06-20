@@ -1,0 +1,34 @@
+.app {
+  overflow: auto !important;
+}
+/* .red-width {
+  width: 81.5%;
+  
+} */
+
+@keyframes coluna{
+  from {
+    width: 94%;
+  }
+  
+  to {
+   width: 81.5%;
+  }
+}
+
+@keyframes coluna2{
+  from {
+    width: 81.5%;
+  }
+  
+  to {
+   width: 94.5%;
+  }
+}
+
+
+.red {
+  /* background: red;
+  height: 100vh; */
+  margin: 0 1%;
+}

@@ -1,0 +1,22 @@
+<section class="pr-0 pb-0">
+    <div class="row">
+        <div class="col-12 col-sm-12 col-md-3 col-lg-5 col-xl-6">
+            <bem-mais-title></bem-mais-title>
+        </div>
+
+        <div class="col-12 col-sm-12 col-md-9 col-lg-7 col-xl-6 mt-2 mb-3">
+            <div id="myDIV" >
+                <a routerLink="sales" routerLinkActive="active"
+                    class=" btn btnDash">{{'AggregatorDashboardSales' | translate}}</a>
+                <a routerLink="cancel" routerLinkActive="active"
+                    class="btn btnDash">{{'TSdashAbaCancelamentos' | translate}}</a>
+                <a routerLink="commissions" routerLinkActive="active"
+                    class="btn btnDash">{{'AggregatorDashboardComis' | translate}}</a>
+                <a routerLink="goals" routerLinkActive="active" class="btn btnDash">{{'metasTitle' | translate}}</a>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+<router-outlet></router-outlet>

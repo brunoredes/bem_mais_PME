@@ -1,0 +1,22 @@
+{
+    "data": {
+        "categories":[
+            {
+                "id": 1,
+                "name": "Smartphone"
+            },
+            {
+                "id": 2,
+                "name": "Tablets"
+            },
+            {
+                "id": 3,
+                "name": "Smartwatchs"
+            }
+        ]
+    },
+    "message": "Ok",
+    "hasError": false,
+    "errorDataCollection": null,
+    "statusCode": 200
+}

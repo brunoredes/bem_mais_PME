@@ -1,0 +1,20 @@
+
+var manager = new Manager();
+manager.dealerId = 1;
+manager.name = "Roberto Luiz";
+manager.birthDate = "01/02/1990";
+manager.cpf = "12345678998";
+manager..rg = "123456789";
+manager.genre = "M";
+manager.email = "roberto.luiz@zurich.com.br";
+manager.phone = "11 12345678";
+manager.storeId = 1; (Fast São Paulo)
+manager.postalCode = "1234567";
+manager.address = "Av Jornalista Roberto Marinho";
+manager.addressNumber = "85";
+manager.neighborhood = "Brooklin";
+manager.city = "São Paulo";
+manager.state= "São Paulo";
+manager.complement = null;
+
+this.http.post<any>(`${environment.apiUrl}/Managers`, manager);

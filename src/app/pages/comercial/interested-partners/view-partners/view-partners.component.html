@@ -1,0 +1,213 @@
+<!--Register-->
+<div class="col-12 row">
+  <div>
+    <!-- *ngIf="this.loading.getLoadingMenuComponents() == false"> -->
+    <div class="position-relative col-12">
+      <div class="grid-b-space">
+        <h3>{{'ComercialInterestedPartnersTitle' | translate}}</h3>
+      </div>
+    </div>
+  </div>
+</div>
+<form [formGroup]="partnerForm">
+  <div class="col-12 row">
+    <div class="col-10 row">
+      <div class="col-6">
+        <div class="mb-3 label-float">
+          <label>{{'ComercialInterestedPartnersRazSoc' | translate}}</label>
+          <br />
+          <input formControlName="corporateName" type="text" />
+        </div>
+      </div>
+      <div class="col-6">
+        <div class="mb-3 label-float">
+          <label>{{'comercialInterestedPartnersViewCnpj' | translate}}</label>
+          <br />
+          <input type="text" />
+        </div>
+      </div>
+
+      <div class="col-12 row pr-0">
+        <div class="mb-3 col-12 pr-0">
+          <div class="label-float">
+            <label>{{'comercialInterestedPartnersViewFancName' | translate}}</label>
+            <br />
+            <input formControlName="corporateName" type="text" />
+          </div>
+        </div>
+      </div>
+      <div class="col-12 row pr-0">
+        <div class="mb-3 col-6">
+          <div class="label-float">
+            <label>{{'comercialInterestedPartnersViewCep'| translate}}</label>
+            <br />
+            <input formControlName="cep" type="text" />
+          </div>
+        </div>
+        <div class="mb-3 col-6 pr-0">
+          <div class="label-float">
+            <label>{{'comercialInterestedPartnersViewAddr' | translate}}</label>
+            <br />
+            <input formControlName="address" type="text" />
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="col-2">
+      <div class="dropzone-wrapperr container col-md-12">
+        <div class="dropzone-desc">
+          <p>{{'edituser-arraste' | translate}}</p>
+          <button type="submit" class="btn btn-darkk btn-lg btn-square ml-auto"><i
+              class="fas fa-camera-retro fa-1x"></i></button>
+        </div>
+        <input type="file" name="img_logo" class="dropzone" (change)="onPictureChange($event)" accept="image/*">
+      </div>
+    </div>
+
+  </div>
+  <div class="col-12 row">
+    <div class="mb-3 col-1">
+      <div class="label-float">
+        <label>{{'comercialInterestedPartnersViewNum' | translate}}</label>
+        <br />
+        <input formControlName="number" type="text" />
+      </div>
+    </div>
+    <div class="mb-3 col-2">
+      <div class="label-float">
+        <label>{{'comercialInterestedPartnersViewCompl' | translate}}</label>
+        <br />
+        <input formControlName="complement" type="text" />
+      </div>
+    </div>
+    <div class="mb-3 col-4">
+      <div class="label-float">
+        <label>{{'comercialInterestedPartnersViewNeigh' | translate}}</label>
+        <br />
+        <input formControlName="neighborhood" type="text" />
+      </div>
+    </div>
+    <div class="mb-3 col-4">
+      <div class="label-float">
+        <label>{{'ComercialInterestedPartnersCidade' | translate}}</label>
+        <br />
+        <input formControlName="city" type="text" />
+      </div>
+    </div>
+    <div class="mb-3 col-1">
+      <div class="label-float">
+        <label>{{'ComercialInterestedPartnersUf' | translate}}</label>
+        <br />
+        <input formControlName="state" type="text" />
+      </div>
+    </div>
+  </div>
+  <div class="col-12 row">
+    <div class="mb-3 col-4">
+      <div class="label-float">
+        <label>{{'comercialInterestedPartnersViewPhon' | translate}}</label>
+        <br />
+        <input formControlName="phone" type="text" />
+      </div>
+    </div>
+    <div class="mb-3 col-4">
+      <div class="label-float">
+        <label>{{'comercialInterestedPartnersViewEmail' | translate}}</label>
+        <br />
+        <input formControlName="email" type="text" />
+      </div>
+    </div>
+    <div class="mb-3 col-4">
+      <div class="label-float">
+        <label>{{'comercialInterestedPartnersViewSite' | translate}}</label>
+        <br />
+        <input formControlName="site" type="text" />
+      </div>
+    </div>
+  </div>
+  <div class="col-12 pt-3">
+    <h5>{{'comercialInterestedPartnersViewRegist' | translate}}</h5>
+  </div>
+  <div formGroupName="responsible">
+    <div class="col-12 p-0 m-0">
+      <div class="col-12 row">
+        <div class="mb-3 col-10">
+          <div class="label-float">
+            <label>{{'comercialInterestedPartnersViewFullN' | translate}}</label>
+            <br />
+            <input formControlName="name" type="text" />
+          </div>
+        </div>
+        <div class="mb-3 col-2 p-0">
+          <div class="col-md-12 col-sm-12 radioInput">
+            <div class="toggle" style="float:right;">
+              <input type="radio" name="gender" value="M" id="genderMale" checked />
+              <label for="genderMale">
+                <i class="fas fa-male mr-2"></i>
+                <small class="fontSM">{{'comercialInterestedPartnersViewMal'| translate}}</small>
+              </label>
+              <input type="radio" name="gender" value="F" id="genderFemale" />
+              <label for="genderFemale">
+                <i class="fas fa-female mr-2"></i>
+                <small class="fontSM">{{'comercialInterestedPartnersViewFem' | translate}}</small>
+              </label>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="col-12 row">
+      <div class="mb-3 col-4">
+        <div class="label-float">
+          <label>{{'comercialInterestedPartnersViewPhon' | translate}}</label>
+          <br />
+          <input formControlName="phone" type="text" />
+        </div>
+      </div>
+      <div class="mb-3 col-6">
+        <div class="label-float">
+          <label>{{'comercialInterestedPartnersViewEmail' | translate}}</label>
+          <br />
+          <input formControlName="email" type="text" />
+        </div>
+      </div>
+      <div class="mb-3 col-2 mt-4">
+        <a class="btn btn-bluez float-right">
+          <i class="fas fa-cloud-download-alt"></i>
+          &nbsp;{{'comercialInterestedPartnersViewDownl' | translate}}
+        </a>
+      </div>
+    </div>
+  </div>
+  <div class="col-12">
+    <div class="col-12 row mb-4">
+      <a routerLink="/private/comercial/interested-partnerns"
+        class="btn btn-redz">{{'comercialInterestedPartnersViewGoBac' | translate}}</a>
+      <button type="submit" class="btn btn-greenz btn-lg btn-square ml-auto" data-toggle="modal"
+        data-target="#modalEditUser">{{'comercialInterestedPartnersViewSaveCh' | translate}}</button>
+    </div>
+  </div>
+</form>
+
+<div class="modal fade" id="modalEditUser" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+  aria-hidden="true">
+
+  <div class="modal-dialog" role="document">
+    <div class="bd-t-blue"></div>
+    <div class="modal-content bordertopModal">
+
+      <div class="modal-header modalFormat">
+        <img class="img-fluid col-12 m-120" src="assets/img/confirmacao-feedback.png" />
+      </div>
+      <div class="modal-body">
+        <h1 class="text-center"><b>{{'comercialInterestedPartnersViewOkData' | translate}}</b></h1>
+      </div>
+
+
+      <a href="#" class="col-4 badge badge-success text-center p-3 " data-dismiss="modal"
+        aria-label="Fechar">{{'comercialInterestedPartnersViewOk' | translate}}</a>
+
+
+    </div>
+  </div>
+</div>

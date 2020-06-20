@@ -1,0 +1,40 @@
+{
+    "data": {
+        "sellingPoints": [
+            {
+                "id": 123,
+                "code": 123,
+                "title": "Lorem Ipsum is simply",
+                "insurance": "Roubo e Furto"
+            },
+            {
+                "id": 123,
+                "code": 123,
+                "title": "Lorem Ipsum is simply",
+                "insurance": "Roubo e Furto"
+            },
+            {
+                "id": 123,
+                "code": 123,
+                "title": "Lorem Ipsum is simply",
+                "insurance": "Roubo e Furto"
+            },
+            {
+                "id": 123,
+                "code": 123,
+                "title": "Lorem Ipsum is simply",
+                "insurance": "Roubo e Furto"
+            },
+            {
+                "id": 123,
+                "code": 123,
+                "title": "Lorem Ipsum is simply",
+                "insurance": "Roubo e Furto"
+            }
+        ]
+    },
+    "message": "Ok",
+    "hasError": false,
+    "errorDataCollection": null,
+    "statusCode": 200
+}

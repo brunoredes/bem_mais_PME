@@ -1,0 +1,26 @@
+{
+  "data": {
+    "user": {
+      "id": "108",
+      "name": "Andre Lóqui",
+      "profile": {
+        "id": 6,
+        "name": "Gerente"
+      },
+      "picture": "assets/user.png",
+      "retailer": null,
+      "dealerId": 1
+    }
+  },
+  "message": "OK",
+  "hasError": false,
+  "errorDataCollection": [
+    {
+      "code": "string",
+      "message": "string",
+      "url": "string",
+      "detail": "string"
+    }
+  ],
+  "statusCode": 200
+}

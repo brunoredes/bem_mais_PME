@@ -1,0 +1,40 @@
+#myDIV{float: right;}
+  
+  #myDIV>.btnDash {
+    border: none;
+    outline: none;
+    padding: 10px 16px;
+    cursor: pointer;
+    border-radius: 50px;
+    margin-right: 5px;
+    }
+    
+    /* Style the active class, and buttons on mouse-over */
+    #myDIV>.active, .btnDash:hover {
+    background-color: #666;
+    color: white!important;
+    border-radius: 50px;
+    margin-right: 5px;
+    box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.075) !important;
+    }
+    #myDIV>.btnDash a{font-size: 0.8em;}
+
+    
+@media screen and(max-width: 425px) and (min-width: 320px){
+
+
+  #myDIV{float: none;}
+
+#myDIV>.active.btnDash{
+  text-align: center;
+  display: block!important;
+  
+}
+
+#myDIV>.btnDash{
+  
+  display: block!important;
+  margin-left: 15px;
+}
+
+}

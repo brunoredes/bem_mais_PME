@@ -1,0 +1,11 @@
+{
+    "data": {
+        "disapproveStatus": 1,
+        "disapproveDescription": "Ok",
+        "message": ""
+    },
+    "message": "Ok",
+    "hasError": false,
+    "errorDataCollection": null,
+    "statusCode": 200
+}

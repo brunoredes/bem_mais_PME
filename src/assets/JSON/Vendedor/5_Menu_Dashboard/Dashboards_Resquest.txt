@@ -1,0 +1,10 @@
+var dash = new DashForm();
+dash.retailerId = 123; (Loja Samsung 123)
+dash.userId = 1; (Elvis)
+dash.startDate = null;
+dash.endDate = null;
+dash.status = null;
+dash.category = null;
+
+//Exemplo de Requisição -- Haverá uma requisição dessa para cada SubMenu/Gráfico
+this.http.post<any>(`${environment.apiUrl}/Dashboards/Sales/MyPerformance`, dash);

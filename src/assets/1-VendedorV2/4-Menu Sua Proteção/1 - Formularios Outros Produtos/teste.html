@@ -1,0 +1,11 @@
+<div *ngFor="let item of formList" class="col-12">
+
+    <input *ngIf="item.type == text" id="item.name" formControlName="item.name" class="form-control"
+        required="item.required" maxlength="item.maxLenght" ngx-mask="item.mask" />
+
+    <select *ngIf="item.type == select" id="item.name" formControlName="item.name" class="form-control">
+        <option value="-1" [selected]="true">Selecione</option>
+        <option *ngFor="let option of item.options" value="{{option.id}}">{{option.value}}</option>
+    </select>
+
+</div>

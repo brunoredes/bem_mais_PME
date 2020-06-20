@@ -1,0 +1,18 @@
+{
+    "data": {
+        "sales": [
+            {
+                "id":1,
+                "name": "Finalizadas"
+            },
+            {
+                "id":2,
+                "name": "Pendentes"
+            }
+        ]
+    },
+    "message": "Ok",
+    "hasError": false,
+    "errorDataCollection": null,
+    "statusCode": 200
+}

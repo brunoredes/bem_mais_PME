@@ -1,0 +1,6 @@
+var feedback = new Feedback();
+feedback.category = 1; (Sugestão de melhoria)
+feedback.title = "Ajuste na funcionalidade X";
+feedback.content = "Lorem Ipsum os simply dummy text of the printing";
+
+this.http.post<any>(`${environment.apiUrl}/Feedbacks`, feedback);

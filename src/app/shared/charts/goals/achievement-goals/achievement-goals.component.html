@@ -1,0 +1,28 @@
+<div class="card mb-4 shadow-sm">
+    <div class="card-body">
+        <div class="col-xl-12 row">
+            <h5>% {{'AggregatorDashGoalTargetAchiev' | translate}}</h5>
+        </div>
+        <div class="chk-block-content">
+            <div class="chartTitleHome">
+                {{ achievementGoals.percent }}%
+            </div>
+            <canvas id="achievementGoalsChart" height="250"></canvas>
+        </div>
+        <br>
+        <div class="row">
+            <!-- <small><strong>{{'AggregatorListStat' | translate}}: </strong>{{ format(achievementGoals.percent, status) }} da meta atingida</small><br> -->
+
+            <div class="col-12 col-sm-12 col-md-6 col-lg-6 col-xl-6">
+                <small><strong>{{'MasterDealerMetaEstipulada' | translate}}: </strong></small>
+                 <h5>R$ {{ format(achievementGoals.goal, decimal) }}</h5>
+            </div>
+            <div class="col-12 col-sm-12 col-md-6 col-lg-6 col-xl-6">
+                <small><strong>{{'MasterDealerTotalVendido' | translate}}: </strong></small>
+                <h5>R$ {{ format(achievementGoals.amount, decimal) }}</h5>
+            
+            </div>
+
+            </div>
+    </div>
+</div>

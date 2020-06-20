@@ -1,0 +1,88 @@
+{
+    "data": {
+        "vendors": [
+            {
+                "id": 123,
+                "code": 123,
+                "profile": "Vendedor",
+                "name": "André Luiz",
+                "storeState": "São Paulo",
+                "status": 1,
+                "statusDescription": "Ativo",
+                "email": "gerente@zurich.com.br",
+                "image": "https://www.zurich.com.br",
+                "cellPhone": "11 9123456789",
+                "age": "28"
+            },
+            {
+                "id": 124,
+                "code": 123,
+                "profile": "Vendedor",
+                "name": "Guilherme Santos",
+                "storeState": "Rio de Janeiro",
+                "status": 1,
+                "statusDescription": "Ativo",
+                "email": "gerente@zurich.com.br",
+                "image": "https://www.zurich.com.br",
+                "cellPhone": "11 9123456789",
+                "age": "28"
+            },
+            {
+                "id": 125,
+                "code": 123,
+                "profile": "Vendedor",
+                "name": "André Luiz",
+                "storeState": "São Paulo",
+                "status": 1,
+                "statusDescription": "Ativo",
+                "email": "gerente@zurich.com.br",
+                "image": "https://www.zurich.com.br",
+                "cellPhone": "11 9123456789",
+                "age": "28"
+            },
+            {
+                "id": 126,
+                "code": 123,
+                "profile": "Vendedor",
+                "name": "Guilherme Santos",
+                "storeState": "Rio de Janeiro",
+                "status": 1,
+                "statusDescription": "Ativo",
+                "email": "gerente@zurich.com.br",
+                "image": "https://www.zurich.com.br",
+                "cellPhone": "11 9123456789",
+                "age": "28"
+            },
+            {
+                "id": 127,
+                "code": 123,
+                "profile": "Vendedor",
+                "name": "André Luiz",
+                "storeState": "São Paulo",
+                "status": 1,
+                "statusDescription": "Ativo",
+                "email": "gerente@zurich.com.br",
+                "image": "https://www.zurich.com.br",
+                "cellPhone": "11 9123456789",
+                "age": "28"
+            },
+            {
+                "id": 128,
+                "code": 123,
+                "profile": "Vendedor",
+                "name": "Guilherme Santos",
+                "storeState": "Rio de Janeiro",
+                "status": 1,
+                "statusDescription": "Ativo",
+                "email": "gerente@zurich.com.br",
+                "image": "https://www.zurich.com.br",
+                "cellPhone": "11 9123456789",
+                "age": "28"
+            }
+        ]
+    },
+    "message": "Ok",
+    "hasError": false,
+    "errorDataCollection": null,
+    "statusCode": 200
+}

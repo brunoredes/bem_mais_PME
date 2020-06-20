@@ -1,0 +1,57 @@
+{
+  "data": {
+    "partners": [
+      {
+        "id": "100",
+        "partner": "Samsung",
+        "salesAmount": "10000",
+        "cancellations": 2000,
+        "position": "1",
+        "picture": "assets/partner2.png"
+      },
+      {
+        "id": "100",
+        "partner": "Samsung",
+        "salesAmount": "10000",
+        "cancellations": 2000,
+        "position": "2",
+        "picture": "assets/partner2.png"
+      },
+      {
+        "id": "100",
+        "partner": "Samsung",
+        "salesAmount": "10000",
+        "cancellations": 2000,
+        "position": "3",
+        "picture": "assets/partner2.png"
+      },
+      {
+        "id": "100",
+        "partner": "Samsung",
+        "salesAmount": "10000",
+        "cancellations": 2000,
+        "position": "4",
+        "picture": "assets/partner2.png"
+      },
+      {
+        "id": "100",
+        "partner": "Samsung",
+        "salesAmount": "10000",
+        "cancellations": 2000,
+        "position": "5",
+        "picture": "assets/partner2.png"
+      }
+    ]
+  },
+  "message": "OK",
+  "hasError": false,
+  "errorDataCollection": [
+    {
+      "code": "string",
+      "message": "string",
+      "url": "string",
+      "detail": "string"
+    }
+  ],
+  "statusCode": 200
+}

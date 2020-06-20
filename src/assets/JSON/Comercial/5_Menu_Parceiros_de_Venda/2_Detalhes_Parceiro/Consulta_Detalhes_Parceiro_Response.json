@@ -1,0 +1,33 @@
+{
+    "data": {
+        "partner": {
+            "id": 123,
+            "code": 123,
+            "corporateName": "Lorem Ipsum is simply",
+            "commercialName": "Lorem Ipsum is simply",
+            "image": "http://www.zurich.com",
+            "cnpj": "000000000000-0",
+            "cep": "01234-786",
+            "address": "Av Jornalista Roberto Marinho",
+            "number": "85",
+            "complement": "Tower Bridge",
+            "neighborhood": "Brooklin",
+            "city": "São Paulo",
+            "state": "SP",
+            "phone": "+55 (11) 912345678",
+            "email": "jose@gmail.com",
+            "site": "jose.com.br",
+            "level": 3,
+            "responsible": {
+                "name": "José da Silva",
+                "genre": "M",
+                "phone": "11 965432871",
+                "email": "jose@gmail.com"
+            }
+        }
+    },
+    "message": "Ok",
+    "hasError": false,
+    "errorDataCollection": null,
+    "statusCode": 200
+}

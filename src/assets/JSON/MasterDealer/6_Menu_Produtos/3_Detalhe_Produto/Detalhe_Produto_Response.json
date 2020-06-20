@@ -1,0 +1,16 @@
+{
+  "data": {
+    "code": "123",
+    "name": "Samsung Galaxy S10",
+    "brand": "Samsung",
+    "model": "S10",
+    "version": "1 ano",
+    "categoryId": 1,
+    "amount": "2500",
+    "dactoryWarranty": "1 ano"
+  },
+  "message": "Ok",
+  "hasError": false,
+  "errorDataCollection": null,
+  "statusCode": 200
+}

@@ -1,0 +1,42 @@
+{
+    "data": {
+        "insurances": [
+            {
+                "id": 1,
+                "name": "Roubo e Furto"
+            },
+            {
+                "id": 2,
+                "name": "Roubo Furto e Danos"
+            },
+            {
+                "id": 3,
+                "name": "Ultra Resistência"
+            },
+            {
+                "id": 4,
+                "name": "Seguro Auto"
+            },
+            {
+                "id": 5,
+                "name": "Viagem"
+            },
+            {
+                "id": 6,
+                "name": "Seguro Pet"
+            },
+            {
+                "id": 7,
+                "name": "Prestamista"
+            },
+            {
+                "id": 8,
+                "name": "Garantia Estendida"
+            }
+        ]
+    },
+    "message": "Ok",
+    "hasError": false,
+    "errorDataCollection": null,
+    "statusCode": 200
+}

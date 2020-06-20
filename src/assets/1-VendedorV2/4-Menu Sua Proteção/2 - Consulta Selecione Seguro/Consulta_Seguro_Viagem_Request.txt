@@ -1,0 +1,8 @@
+var travel = new Travel();
+travel.homeCountry = 55; (Brasil)
+travel.destinationCountry = 1; (Estados Unidos)
+travel.startDate = "02/02/2020";
+travel.endDate = "15/02/2020";
+travel.ages = "12,22,23,44";
+
+this.http.post<any>(`${environment.apiUrl}/Insurances/Tavels?retailerId=${retailerId}`, travel);

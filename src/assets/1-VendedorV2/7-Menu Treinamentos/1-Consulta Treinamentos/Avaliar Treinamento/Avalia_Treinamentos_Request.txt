@@ -1,0 +1,5 @@
+var training = new Training();
+training.ratingPercentage = 47;
+training.description = "Lorem ipsum dolor sit amet,Lorem ipsum dolor sit amet,Lorem ipsum dolor sit amet,Lorem ipsum dolor sit amet,";
+
+this.http.post<any>(`${environment.apiUrl}/Trainings`, training);

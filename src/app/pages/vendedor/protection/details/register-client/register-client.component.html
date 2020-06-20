@@ -1,0 +1,346 @@
+<div class="row ml-4">
+    <div class=" d-flex justify-content-between w-100 quebra">
+        <div class="radioInput row">
+            <div class="radio-button">
+                <input type="radio" name="typePerson" (change)="changeTypePerson()" checked value="Fisica" id="fisica" [(ngModel)]="typePerson"/>
+                <label for="fisica">{{'vend-protection-details-registerclient-pessoafisica' | translate}}</label>
+            </div>
+            <div class="radio-button">
+                <input type="radio" name="typePerson" (change)="changeTypePerson()" value="Juridica" id="juridica" [(ngModel)]="typePerson"/>
+                <label for="juridica">{{'vend-protection-details-registerclient-pessoajuridica' | translate}}</label>
+            </div>
+        </div>
+    </div>
+</div>
+
+<form [formGroup]="registerClientFormFisica" *ngIf="typePerson === 'Fisica'">
+    <div class="row ml-1">
+        <!-- <div class=" d-flex justify-content-between w-100 quebra">
+            <div class="radioInput row" >
+                <div class="radio-button">
+                    <input type="radio" name="typePerson" formControlName="typePerson" value="fisica" id="fisica" />
+                    <label for="fisica">{{'vend-protection-details-registerclient-pessoafisica' | translate}}</label>
+                </div>
+                <div class="radio-button">
+                    <input type="radio" name="typePerson" formControlName="typePerson" value="juridica" id="juridica" />
+                    <label for="juridica">{{'vend-protection-details-registerclient-pessoajuridica' | translate}}</label>
+                </div>
+            </div>
+        </div> -->
+        <div class="mb-3 col-md-6">
+            <div class="label-float">
+                <label id="nameLabel">{{'vend-protection-details-registerclient-nomecompleto' | translate}}</label>
+                <br>
+                <input type="text" (keyup)="clearValidate('name')" id="name" name="name"  formControlName="name" />
+                
+            </div>
+        </div>
+        <div class="mb-3 col-md-4">
+            <div class="label-float">
+                <label id="birthDateLabel">{{'vend-protection-details-registerclient-datanasc' | translate}}</label>
+                <br>
+                <input type="text" (keyup)="clearValidate('birthDate')" id="birthDate" name="birthDate" mask="00/00/0000"   formControlName="birthDate" />
+                
+            </div>
+        </div>
+        <div class="col-md-2 col-sm-12 radioInput my-2">
+            <div class="toggle" style="margin-bottom: 0px; padding-bottom: 0px;">
+                <input type="radio" name="gender" value="Male" formControlName="gender" id="genderMale" />
+                <label for="genderMale"><i class="fas fa-male mr-2"></i><small>{{'vend-protection-details-registerclient-masculino' | translate}}</small></label>
+                <input type="radio" name="gender" value="Female" formControlName="gender" id="genderFemale" />
+                <label for="genderFemale"><i class="fas fa-female mr-2"></i><small>{{'vend-protection-details-registerclient-feminino' | translate}}</small></label>
+            </div>
+        </div>
+        <div class="mb-3 col-md-4">
+            <div class="label-float ">
+                <label id="cpfLabel">{{'vend-protection-details-registerclient-cpfconsu' | translate}}</label>
+                <br>
+                <input type="text" (keyup)="clearValidate('cpf')" id="cpf" name="cpf"  formControlName="cpf" mask="000.000.000-00" />
+                
+            </div>
+        </div>
+        <div class="mb-3 col-md-4">
+            <div class="label-float">
+                <label id="rgLabel">{{'edituser-rg' | translate}}</label>
+                <br>
+                <input type="text" (keyup)="clearValidate('rg')" id="rg" name="rg"  formControlName="rg" mask="00.000.000-0" />
+                
+            </div>
+        </div>
+        <div class="mb-3 col-md-4">
+            <div class="label-float">
+                <label id="nationalityLabel">{{'vend-protection-details-registerclient-nacionalidade' | translate}}</label>
+                <br>
+                <input type="text" (keyup)="clearValidate('nationality')" id="nationality" name="nationality"  formControlName="nationality" />
+                
+            </div>
+        </div>
+        <div class="mb-3 col-md-2">
+            <div class="label-float">
+                <label id="postalCodeLabel">{{'vend-protection-details-registerclient-cep' | translate}}</label>
+                <br>
+                <span class="mr-3 fa fa-search form-control-feedback lupaClass"></span>
+                <input type="text" (keyup)="clearValidate('postalCode')" id="postalCode" name="postalCode"  formControlName="postalCode" mask="00000-000" />
+                
+            </div>
+        </div>
+        <div class="mb-3 col-md-6">
+            <div class="label-float ">
+                <label id="addressLabel">{{'vend-protection-details-registerclient-endereco' | translate}}</label>
+                <br>
+                <input type="text" (keyup)="clearValidate('address')" id="address" name="address"  formControlName="address" />
+                
+            </div>
+        </div>
+        <div class="mb-3 col-md-4">
+            <div class="label-float">
+                <label id="numberLabel">{{'vend-protection-details-registerclient-numero' | translate}}</label>
+                <br>
+                <input type="text" (keyup)="clearValidate('number')" id="number" name="number"  formControlName="number" />
+                
+            </div>
+        </div>
+        <div class="mb-3 col-md-3">
+            <div class="label-float">
+                
+                <label id="complementLabel">{{'vend-protection-details-registerclient-complemento' | translate}}</label>
+                <br>
+                <input type="text"  (keyup)="clearValidate('complement')" id="complement" name="complement" formControlName="complement" />
+                
+            </div>
+        </div>
+        <div class="mb-3 col-md-3">
+            <div class="label-float">
+               
+                <label id="discrictLabel">{{'vend-protection-details-registerclient-bairro' | translate}}</label>
+                <br>
+                <input type="text" (keyup)="clearValidate('discrict')" id="discrict" name="discrict"  formControlName="discrict" />
+                
+            </div>
+        </div>
+        <div class="mb-3 col-md-3">
+            <div class="label-float">
+
+                <label id="cityLabel">{{'vend-protection-details-registerclient-cidade' | translate}}</label>
+                <br>
+                <input type="text" (keyup)="clearValidate('city')" id="city" name="city"  formControlName="city" />
+                
+            </div>
+        </div>
+        <div class="mb-3 col-md-3">
+            <div class="label-float">
+
+                <label id="ufLabel">{{'vend-protection-details-registerclient-estado' | translate}}</label>
+                <br>
+                <input type="text" (keyup)="clearValidate('uf')" id="uf" name="uf"  formControlName="uf" />
+                
+            </div>
+        </div>
+        <div class="mb-3 col-md-3">
+            <div class="label-float">
+                <label id="emailLabel">E-mail</label>
+                <br>
+                <input type="text" (keyup)="clearValidate('email')" id="email" name="email"  formControlName="email" />
+                
+            </div>
+        </div>
+        <div class="mb-3 col-md-3">
+            <div class="label-float">
+
+                <label id="cellPhoneLabel">{{'vend-protection-details-registerclient-telefone' | translate}}</label>
+                <br>
+                <input type="text" (keyup)="clearValidate('cellPhone')" id="cellPhone" name="cellPhone"  formControlName="cellPhone" [mask]="maskPhone"
+                    (blur)="getMaskPhone('cellPhone')" (focus)="getMaskPhone('cellPhone', true)" />
+                
+            </div>
+        </div>
+        <div class="col-md-12 row">
+            <div class="col-sm-3 col-md-3">
+                <mat-checkbox class="mat-checkbox-label-font" color="primary" name="smsNews" formControlName="smsNews">{{'vend-protection-details-registerclient-recebersms' | translate}}</mat-checkbox>
+            </div>
+            <div class="col-sm-3 col-md-3">
+                <mat-checkbox class="mat-checkbox-label-font" color="primary" name="whatsNews" formControlName="whatsNews">{{'vend-protection-details-registerclient-receberwhats' | translate}}</mat-checkbox>
+            </div>
+            <div class="col-sm-3 col-md-3">
+                <mat-checkbox class="mat-checkbox-label-font" color="primary" name="emailNews" formControlName="emailNews">{{'vend-protection-details-registerclient-receberemail' | translate}}</mat-checkbox>
+            </div>
+
+            <div class="col-sm-3 col-md-3">                
+                <mat-checkbox class="mat-checkbox-label-font" color="primary"name="politicallyExposed" formControlName="politicallyExposed">{{'vend-protection-details-registerclient-naoreceber' | translate}}</mat-checkbox>
+            </div>
+        </div>
+    </div>
+</form>
+
+<form [formGroup]="registerClientFormJuridica" *ngIf="typePerson == 'Juridica'">
+    <div class="row ml-1">
+        <div class="mb-3 col-md-7">
+            <div class="label-float">
+                <label id="companyNameJuridicaLabel">{{'ComercialInterestedPartnersRazSoc' | translate}}</label>
+                <br>
+                <input type="text" (keyup)="clearValidate('companyNameJuridica')" id="companyNameJuridica" name="companyNameJuridica"  formControlName="companyNameJuridica" />
+                
+            </div>
+        </div>
+        <div class="mb-3 col-md-5">
+            <div class="label-float">
+
+                <label id="cnpjJuridicaLabel">{{'comercialInterestedPartnersViewCnpj' | translate}}</label>
+                <br>
+                <input type="text" (keyup)="clearValidate('cnpjJuridica')" id="cnpjJuridica" name="cnpjJuridica"  formControlName="cnpjJuridica"
+                mask="00.000.000/0000-00" (blur)="getMaskCpfCnpj('cnpjJuridica')" (focus)="getMaskCpfCnpj('cnpjJuridica', true)"/>
+               
+            </div>
+        </div>
+        <div class="mb-3 col-md-12">
+            <div class="label-float ">
+                <label id="fantasyNameJuridicaLabel">{{'comercialInterestedPartnersViewFancName' | translate}}</label>
+                <br>
+                <input type="text" (keyup)="clearValidate('fantasyNameJuridica')" id="fantasyNameJuridica" name="fantasyNameJuridica"  formControlName="fantasyNameJuridica"/>
+                
+            </div>
+        </div>
+        <div class="mb-3 col-md-4">
+            <div class="label-float">
+                <label id="zipCodeJuridicaLabel">{{'AggregatorSalesDetailsZipCd' | translate}}</label>
+                <br>
+                <input type="text" (keyup)="clearValidate('zipCodeJuridica')" id="zipCodeJuridica" name="zipCodeJuridica"  formControlName="zipCodeJuridica" mask="00000-000" />
+                
+            </div>
+        </div>
+        <div class="mb-3 col-md-8">
+            <div class="label-float">
+
+
+                <label id="addressJuridicalabel">{{'comercialInterestedPartnersViewAddr' | translate}}</label>
+                <br>
+                <input type="text" (keyup)="clearValidate('addressJuridica')" id="addressJuridica" name="addressJuridica"  formControlName="addressJuridica" />
+               
+            </div>
+        </div>
+        <div class="mb-3 col-md-1">
+            <div class="label-float ">
+                <label id="numberJuridicaLabel">{{'AggregatorNewPartnerFisPerAddrNumb' | translate}}</label>
+                <br>
+                <input type="text" (keyup)="clearValidate('numberJuridica')" id="numberJuridica" name="numberJuridica"  formControlName="numberJuridica" />
+                
+            </div>
+        </div>
+        <div class="mb-3 col-md-4">
+            <div class="label-float">
+
+                <label id="complementJuridicaLabel">{{'AggregatorSalesDetailsCompl' | translate}}</label>
+                <br>
+                <input type="text" (keyup)="clearValidate('complementJuridica')" id="complementJuridica" name="complementJuridica"  formControlName="complementJuridica"/>
+                
+            </div>
+        </div>
+        <div class="mb-3 col-md-3">
+            <div class="label-float">
+                <label id="discrictJuridicaLabel">{{'AggregatorNewPartnerFisPerNeigh' | translate}}</label>
+                <br>
+                <input type="text" (keyup)="clearValidate('discrictJuridica')" id="discrictJuridica" name="discrictJuridica"  formControlName="discrictJuridica" />
+                
+            </div>
+        </div>
+        <div class="mb-3 col-md-3">
+            <div class="label-float">
+                <label id="cityJuridicaLabel">{{'AggregatorSalesDetailsCity' | translate}}</label>
+                <br>
+                <input type="text"  (keyup)="clearValidate('cityJuridica')" id="cityJuridica" name="cityJuridica"  formControlName="cityJuridica" />
+                
+            </div>
+        </div>
+        <div class="mb-3 col-md-1">
+            <div class="label-float">
+                <label id="ufJuridicaLabel">{{'AggregatorSalesDetailsUf' | translate}}</label>
+                <br>
+                <input type="text" (keyup)="clearValidate('ufJuridica')" id="ufJuridica" name="ufJuridica"  formControlName="ufJuridica" />
+                
+            </div>
+        </div>
+        <div class="mb-3 col-md-4">
+            <div class="label-float">
+
+
+                <label id="cellPhoneJuridicaLabel">{{'AggregatorSalesDetailsPhone' | translate}}</label>
+                <br>
+                <input type="text" (keyup)="clearValidate('cellPhoneJuridica')" id="cellPhoneJuridica" name="cellPhoneJuridica"  formControlName="cellPhoneJuridica" [mask]="maskPhone"
+                (blur)="getMaskPhone('cellPhoneJuridica')" (focus)="getMaskPhone('cellPhoneJuridica', true)"/>
+                
+            </div>
+        </div>
+        <div class="mb-3 col-md-4">
+            <div class="label-float">
+
+                <label id="emailJuridicaLabel">{{'AggregatorListEmail' | translate}}</label>
+                <br>
+                <input type="text" (keyup)="clearValidate('emailJuridica')" id="emailJuridica" name="emailJuridica"  formControlName="emailJuridica" />
+                
+            </div>
+        </div>
+        <div class="mb-3 col-md-4">
+            <div class="label-float">
+
+                <label id="websiteJuridicaLabel">{{'comercialInterestedPartnersViewSite' | translate}}</label>
+                <br>
+                <input type="text" (keyup)="clearValidate('websiteJuridica')" id="websiteJuridica" name="websiteJuridica"  formControlName="websiteJuridica" />
+               
+            </div>
+        </div>
+        <div class="mb-3 col-md-12">
+            <div class="label-float">
+                <h4>{{'forms-cadresponsavel' | translate}}</h4>
+            </div>
+        </div>
+        <div class="mb-3 col-md-10">
+            <div class="label-float">
+                <label id="nameRespJuridicaLabel">{{'comercialInterestedPartnersViewFullN' | translate}}</label>
+                <br>
+                <input type="text" (keyup)="clearValidate('nameRespJuridica')" id="nameRespJuridica" name="nameRespJuridica"  formControlName="nameRespJuridica" />
+                
+            </div>
+        </div>
+        <div class="col-md-2 col-sm-12 radioInput p-0">
+            <div class="toggle" style="margin-bottom: 0px; padding-bottom: 0px;">
+                <input type="radio" name="genderRespJuridica" value="Male" formControlName="genderRespJuridica" id="genderMale" />
+                <label for="genderMale"><i class="fas fa-male mr-2"></i><small>{{'vend-protection-details-registerclient-masculino' | translate}}</small></label>
+                <input type="radio" name="genderRespJuridica" value="Female" formControlName="genderRespJuridica" id="genderFemale" />
+                <label for="genderFemale"><i class="fas fa-female mr-2"></i><small>{{'vend-protection-details-registerclient-feminino' | translate}}</small></label>
+            </div>
+        </div>
+        <div class="mb-3 col-md-4">
+            <div class="label-float">
+
+                <label id="cellPhoneRespJuridicaLabel">{{'comercialInterestedPartnersViewPhon' | translate}}</label>
+                <br>
+                <input type="text" (keyup)="clearValidate('cellPhoneRespJuridica')" id="cellPhoneRespJuridica" name="cellPhoneRespJuridica"  formControlName="cellPhoneRespJuridica" [mask]="maskPhoneResp"
+                (blur)="getMaskPhone('cellPhoneRespJuridica')" (focus)="getMaskPhone('cellPhoneRespJuridica', true)"/>
+                
+            </div>
+        </div>
+        <div class="mb-3 col-md-4">
+            <div class="label-float">
+                <label id="emailRespJuridicaLabel">{{'AggregatorListEmail' | translate}}</label>
+                <br>
+                <input type="text" (keyup)="clearValidate('emailRespJuridica')" id="emailRespJuridica" name="emailRespJuridica"  formControlName="emailRespJuridica" />
+                
+            </div>
+        </div>
+        <div class="col-md-12 row">
+            <div class="col-sm-3 col-md-3">
+                <mat-checkbox class="mat-checkbox-label-font" color="primary" name="smsNewsJuridica" formControlName="smsNewsJuridica">{{'vend-protection-details-registerclient-recebersms' | translate}}</mat-checkbox>
+            </div>
+            <div class="col-sm-3 col-md-3">
+                <mat-checkbox class="mat-checkbox-label-font" color="primary" name="whatsNewsJuridica" formControlName="whatsNewsJuridica">{{'vend-protection-details-registerclient-receberwhats' | translate}}</mat-checkbox>
+            </div>
+            <div class="col-sm-3 col-md-3">
+                <mat-checkbox class="mat-checkbox-label-font" color="primary" name="emailNewsJuridica" formControlName="emailNewsJuridica">{{'vend-protection-details-registerclient-receberemail' | translate}}</mat-checkbox>
+            </div>
+
+            <div class="col-sm-3 col-md-3">                
+                <mat-checkbox class="mat-checkbox-label-font" color="primary"name="politicallyExposedJuridica" formControlName="politicallyExposedJuridica">{{'vend-protection-details-registerclient-naoreceber' | translate}}</mat-checkbox>
+            </div>
+        </div>
+    </div>
+</form>

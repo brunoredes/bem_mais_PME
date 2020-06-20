@@ -1,0 +1,34 @@
+{
+  "data": {
+    "revendas": [
+      {
+        "id": 0,
+        "name": "Revenda 01",
+        "image": "assets/img/logo-revenda.png",
+        "description": "Lorem ipsum dolor sit amet speculum lomaris rigulat patronus."
+      },
+      {
+        "id": 0,
+        "name": "Revenda 02",
+        "image": "assets/img/logo-revenda.png",
+        "description": "Lorem ipsum dolor sit amet speculum lomaris rigulat patronus."
+      },
+      {
+        "id": 0,
+        "name": "Revenda 03",
+        "image": "assets/img/logo-revenda.png",
+        "description": "Lorem ipsum dolor sit amet speculum lomaris rigulat patronus."
+      },
+      {
+        "id": 0,
+        "name": "Revenda 04",
+        "image": "assets/img/logo-revenda.png",
+        "description": "Lorem ipsum dolor sit amet speculum lomaris rigulat patronus."
+      }
+    ]
+  },
+  "message": "Ok",
+  "hasError": false,
+  "errorDataCollection": null,
+  "statusCode": 200
+}

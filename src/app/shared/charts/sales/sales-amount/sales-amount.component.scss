@@ -1,0 +1,134 @@
+.chart-sales-amount {
+    margin: 0 0 0 -300px;
+    float: left;
+    background: white;
+    width: 22vw;
+    position: absolute;
+    // border-radius: 3px;
+    padding: 10px 5px 0px 5px;
+    left: 0;
+    display: none;
+    // z-index: 99999953;
+    border-radius: 10px;
+    top: 32px; 
+    left: 90px;
+    text-align: left;
+}
+
+.chart-sales-amount:after {
+    bottom: 100%;
+    left: 89%;
+    border: solid transparent;
+    content: " ";
+    height: 0;
+    width: 0;
+    position: absolute;
+    pointer-events: none;
+    border-bottom-color: white;
+    border-width: 8px;
+    margin-left: -8px;
+}
+
+@media(max-width: 1024px){
+
+
+    .chart-my-performance {
+        
+        width: 30vw;
+       
+    }
+
+    @media(max-width: 768px){
+
+        .chart-my-performance {
+            width: 40vw;
+        }
+
+    }
+
+    @media(max-width: 425px){
+
+        .chart-my-performance {
+            width: 72vw;
+        }
+
+        h3, .h3 {
+            font-size: 1.0rem;
+            font-weight: bold!important;
+        }
+    
+        .p-4{padding: 0 !important;}
+    
+       #formatSmall>small{display: block;line-height: 1;}
+    
+     .img-fluid {
+        max-width: 50%;
+        height: auto;
+    }
+    
+    
+    .scrollbar
+    {
+       
+       float: left;
+       max-height: 300px;
+       
+    }
+    
+    .card-body span {
+        font-size: 0.8em;
+        margin-top: -10px;
+        display: flex;
+    }
+    i, span {
+        display: inline-block;
+    }
+    
+    
+    .svg-sale{
+     max-width: 20%; 
+     height: auto;
+     position: absolute;
+     display: flex;
+     top: -79px;
+     right: 0;
+    
+    
+    }
+
+    }
+
+      @media(max-width: 375px){
+
+        .chart-my-performance {
+            width: 70vw;
+            position: relative;
+            left: 94px;
+        
+        }
+
+ 
+
+    }
+
+    @media(max-width: 320px){
+
+        .chart-my-performance{
+            width: 58vw;
+            position: relative;
+            left: 145px;
+        }
+
+        .svg-sale{
+            max-width: 20%; 
+            height: auto;
+            position: absolute;
+            display: flex;
+            top: -53px;
+           }
+  
+
+    }
+
+
+  }

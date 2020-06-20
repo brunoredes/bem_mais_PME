@@ -1,0 +1,137 @@
+.height{height:400px;}
+
+
+//scroll
+
+style-4::-webkit-scrollbar-track {
+  -webkit-box-shadow: inset 0 0 6px rgba(255, 255, 255, 0.3);
+  background-color: transparent;
+  border-radius: 10px;
+}
+
+#style-4::-webkit-scrollbar {
+  width: 8px;
+  background-color: transparent;
+  margin-right: 8px;
+}
+
+.btn-filter {
+  background-color: #666;
+  color: white !important;
+  border-radius: 50px;
+  box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.075) !important;
+  width: 100px;
+}
+
+#style-4::-webkit-scrollbar-thumb {
+  background-color: rgba(112, 112, 112, 0.8);
+  border: 1px solid transparent;
+  border-radius: 10px;
+}
+
+.scrollbar {
+  padding: 5px;
+  max-height: 20vw;
+  overflow-y: scroll;
+  -ms-overflow-style: -ms-autohiding-scrollbar;
+}
+
+.force-overflow {
+  min-height: 450px;
+}
+
+.scrollbar-content {
+  float: left;
+  max-height: 100vh;
+  overflow-y: scroll;
+}
+
+.force-overflow-content {
+  min-height: 100vh;
+}
+
+.chart__width {
+  //width: 200px;
+  //height: 200px;
+}
+
+.chartTitleHome {
+  position: absolute;
+  right: 10px;
+  text-align: center;
+  font-size: 0.8em;
+  display: grid;
+  top: 70px;
+  bottom: 0;
+}
+
+.chartTitleHome span:last-child {
+  position: absolute;
+  right: 0;
+  text-align: center;
+
+  display: grid;
+  top: 31px;
+  bottom: 0;
+}
+
+.card {
+  display: block!important;
+}
+
+@media(max-width:1440px){
+
+  .height{height:310px;}
+
+  @media(max-width:1366px){
+    .height{height:295px;}
+  }
+
+}
+
+@media (max-width: 1024px) {
+  .chartTitleHome {
+    position: absolute;
+    right: 10px;
+    text-align: center;
+    font-size: 0.8em;
+    display: grid;
+    top: 62px;
+    bottom: 0;
+  }
+
+  .height{
+    height: 270px;
+}
+
+  .chartTitleHome span:last-child {
+    position: absolute;
+    right: 0;
+    text-align: center;
+
+    display: grid;
+    top: 22px;
+    bottom: 0;
+  }
+}
+
+.fontValue{font-size: 1.8vw;}
+
+
+@media screen and(max-width:425px) and(min-width:320px) {
+
+  .fontValue{font-size: 4.8vw;}
+
+
+  .rounded-pill {
+    border-radius: 2rem !important;
+  }
+
+  .text-muted {
+    text-align: center;
+  }
+}
+
+.light-blue {
+  background: rgba(231, 241, 250, 0.3);
+}

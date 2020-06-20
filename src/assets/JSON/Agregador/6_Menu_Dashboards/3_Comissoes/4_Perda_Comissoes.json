@@ -1,0 +1,75 @@
+{
+    "data": [
+      {
+        "insurance": "Jan",
+        "value": 1.75,
+        "percent": 1.75
+      },
+      {
+        "insurance": "Fev",
+        "value": 2.00,
+        "percent": 2.00
+      },
+      {
+        "insurance": "Mar",
+        "value": 2.15,
+        "percent": 2.15
+      },
+      {
+        "insurance": "Abr",
+        "value": 3.20,
+        "percent": 3.20
+      },
+      {
+        "insurance": "Mai",
+        "value": 2.25,
+        "percent": 2.25
+      },
+      {
+        "insurance": "Jun",
+        "value": 0.15,
+        "percent": 0.15
+      },
+      {
+        "insurance": "Jul",
+        "value": 2.34,
+        "percent": 2.34
+      },
+      {
+        "insurance": "Ago",
+        "value": 3.42,
+        "percent": 3.42
+      },
+      {
+        "insurance": "Set",
+        "value": 2.56,
+        "percent": 2.56
+      },
+      {
+        "insurance": "Out",
+        "value": 3.94,
+        "percent": 3.94
+      },
+      {
+        "insurance": "Nov",
+        "value": 4.05,
+        "percent": 4.05
+      },
+      {
+        "insurance": "Dez",
+        "value": 5.00,
+        "percent": 5.00
+      }
+    ],
+    "message": "OK",
+    "hasError": false,
+    "errorDataCollection": [
+      {
+        "code": "string",
+        "message": "string",
+        "url": "string",
+        "detail": "string"
+      }
+    ],
+    "statusCode": 200
+  }

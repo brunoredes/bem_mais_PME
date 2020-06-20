@@ -1,0 +1,474 @@
+.d-grid {
+  display: grid;
+}
+.d-contents {
+  display: contents;
+}
+hr {
+  min-width: 85%;
+  margin-top: 0 !important;
+  margin-bottom: 0 !important;
+}
+#content-grid-feed {
+  background-color: #f0f0f0;
+  color: #626262;
+  position: absolute;
+  right: 0;
+  top: 0;
+  height: 116vh;
+  transition: transform 1s;
+}
+
+.font-sm {
+  font-size: 0.6rem !important;
+}
+
+.filter-feedback {
+  //   margin: 0 0 0 -1120px;
+  //   float: left;
+  background: white;
+  width: 28vw;
+  position: absolute;
+  border-radius: 3px;
+  padding: 20px;
+  //   left: 0;
+  display: none;
+  z-index: 99;
+  border-radius: 20px;
+  top: 35px;
+  //   left: 800px;
+  right: 13px;
+  text-align: left;
+}
+
+.filter-feedback:after {
+  bottom: 100%;
+  left: 89%;
+  border: solid transparent;
+  content: " ";
+  height: 0;
+  width: 0;
+  position: absolute;
+  pointer-events: none;
+  border-bottom-color: white;
+  border-width: 8px;
+  margin-left: -8px;
+}
+
+.filter-button {
+  padding: 0 10px;
+  display: inline-block;
+  border-radius: 50px;
+  color: #707070;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+.filter-button a {
+  display: flex;
+  justify-content: center;
+  line-height: 1.2;
+}
+
+.my-custom-scrollbar {
+  position: relative;
+  height: 101vh;
+  overflow: visible;
+  padding: 6px;
+}
+.table-wrapper-scroll-y {
+  display: block;
+  margin-left: -6px;
+}
+
+#style-4 .my-custom-scrollbar {
+  margin-right: 5px !important;
+}
+
+.border-list {
+  min-width: 205px;
+  height: 4px;
+  background: #a1a1a1;
+  border-radius: 50px;
+  display: table;
+  position: relative;
+  top: 19px;
+  margin: 0;
+}
+.border-line {
+  padding: 3px;
+  position: absolute;
+  top: 26px;
+}
+
+.img-border {
+  width: 90%;
+  border-radius: 95px;
+  max-width: 164px;
+  height: 164px;
+}
+.details-title {
+  letter-spacing: 2px;
+}
+
+.details-title img {
+  padding: 10px;
+  margin: 0 auto;
+}
+
+.rounded-button {
+  border-radius: 20px !important;
+  padding: 0.7rem 1rem !important;
+}
+
+.btn-gradient-blue-green {
+  color: #fff;
+  background: linear-gradient(90deg, rgba(14, 108, 213, 1) 0%, rgba(85, 176, 39, 1) 100%);
+  border: 1px solid rgba(14, 108, 213, 1);
+}
+
+input {
+  outline: 0;
+  border-width: 0 0 1px;
+  background: transparent;
+  border-color: #005aab;
+}
+input:focus {
+  background: transparent;
+  border-color: #005aab;
+}
+input[type="text"] {
+  font-size: 13px;
+}
+::-webkit-input-placeholder {
+  font-size: 13px;
+}
+::-moz-placeholder {
+  font-size: 13px;
+}
+:-ms-input-placeholder {
+  font-size: 13px;
+}
+::placeholder {
+  font-size: 13px;
+}
+select {
+  outline: 0;
+  border-width: 0 0 1px;
+  background: transparent;
+  border-color: #005aab;
+}
+.select {
+  font-size: 13px;
+}
+/* remove the original arrow */
+select.col-xl-12.select {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  -o-appearance: none;
+  /* no standardized syntax available, no ie-friendly solution available */
+}
+
+select + i.fa {
+  float: right;
+  margin-top: -30px;
+  margin-right: 5px;
+  /* this is so when you click on the chevron, your click actually goes on the dropdown menu */
+  pointer-events: none;
+  /* everything after this is just to cover up the original arrow */
+  /* (for browsers that don't support the syntax used above) */
+  padding-right: 5px;
+}
+.mbtn {
+  border-radius: 5rem;
+}
+.mclose {
+  color: red;
+  opacity: 1;
+}
+.msuccess {
+  background: #62bc00;
+  border: 1px solid #62bc00;
+  color: #fff !important;
+}
+.table-round-corner {
+  margin-top: 15px;
+  width: 100%;
+  text-align: center;
+  overflow: hidden;
+  border-collapse: separate;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  border-radius: 10px;
+}
+table th,
+table td {
+  border: none;
+}
+
+.thumb-wrap img {
+  border-radius: 100%;
+}
+
+.filter {
+  margin: 0 0 0 12px;
+  float: left;
+  background: white;
+  width: 26vw;
+  position: absolute;
+  border-radius: 3px;
+  padding: 20px;
+  left: 0;
+  display: none;
+  z-index: 99999953;
+  border-radius: 20px;
+  top: 70px;
+}
+
+.filter:after {
+  bottom: 100%;
+  left: 89%;
+  border: solid transparent;
+  content: " ";
+  height: 0;
+  width: 0;
+  position: absolute;
+  pointer-events: none;
+  border-bottom-color: white;
+  border-width: 8px;
+  margin-left: -8px;
+}
+//modal
+
+.modal-content {
+  margin: none !important;
+  position: relative;
+  margin-top: 25%;
+}
+.modal-header {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  padding: 1rem 1rem;
+  border-bottom: transparent;
+  border-top-left-radius: 0.3rem;
+  border-top-right-radius: 0.3rem;
+}
+.badge {
+  border-radius: 50px !important;
+  margin: auto;
+}
+.badge-success {
+  background-color: #62bc00 !important;
+}
+.m-120 {
+  margin-top: -120px;
+  position: relative;
+  z-index: 2;
+}
+
+.bd-t-blue {
+  background-color: #005aab;
+  border-radius: 0.3rem 0.3rem 0 0;
+  height: 7px;
+  position: absolute;
+  width: 100%;
+  z-index: 1;
+}
+.badge-primary {
+  background-color: #62bc00 !important;
+  color: #fff;
+}
+.badge-secundary {
+  background-color: #005aab !important;
+  color: #fff;
+}
+.badge-wait {
+  background-color: #ff3636 !important;
+  color: #fff;
+}
+.badge {
+  font-weight: 100;
+}
+
+.color-grey {
+  color: #787878;
+}
+.color-grey-light {
+  color: #949494;
+}
+#none {
+  display: none;
+}
+.iconClose {
+  display: none;
+}
+//
+.imagem__feedback {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 85%;
+  flex-direction: column;
+}
+@media (max-width: 768px) {
+  .filter-feedback {
+    margin: 0 0 0 90px;
+    width: 45vw;
+    position: absolute;
+    top: 35px;
+    left: -80px;
+  }
+
+  .filter-feedback:after {
+    margin-left: -290px;
+  }
+
+  #none {
+    display: block;
+  }
+
+  #content-grid-feed {
+    display: none;
+    right: 0;
+    position: fixed;
+    z-index: 11;
+  }
+  .isClosed {
+    transform: translateX(100%);
+  }
+
+  #menu-overlay {
+    background-color: rgba(26, 26, 26, 0.8);
+    width: 100%;
+    height: 100vh;
+    position: absolute;
+    z-index: 10;
+    right: 0;
+    top: 0;
+    clear: left;
+    display: none;
+  }
+
+  .iconFeed {
+    max-width: 2.8rem;
+    height: 2.8rem;
+    align-items: center;
+    display: flex;
+    justify-content: center;
+  }
+
+  .iconClose {
+    position: absolute;
+    top: 0;
+    right: 0;
+    z-index: 9999999999;
+    display: flex;
+    color: #ff3636;
+    padding: 10px;
+    display: none;
+    cursor: pointer;
+  }
+
+  #content-grid-feed {
+    overflow: hidden;
+  }
+
+  .my-custom-scrollbar {
+    overflow: auto;
+    overflow-x: hidden;
+  }
+
+  .filter-button {
+    padding: 15px;
+  }
+
+  .border-line {
+    display: none;
+  }
+  @media (max-width: 425px) {
+    .navbar-brand {
+      font-size: 1.2rem;
+      color: #414658;
+
+      .imagem__feedback {
+        width: 110%;
+      }
+    }
+
+    .filter-feedback {
+      margin: 0 0 0 90px;
+      width: 90vw;
+      position: absolute;
+      top: 35px;
+      left: -80px;
+    }
+
+    .filter-feedback:after {
+      margin-left: -300px;
+    }
+  }
+
+  @media (max-width: 375px) {
+    .navbar-brand {
+      font-size: 1.2rem;
+      color: #414658;
+    }
+
+    .filter-feedback:after {
+      margin-left: -280px;
+    }
+  }
+
+  @media (max-width: 320px) {
+    .navbar-brand {
+      font-size: 1.2rem;
+      color: #414658;
+    }
+
+    .iconFeed {
+      max-width: 3rem;
+      height: 2.2rem;
+    }
+
+    .filter-feedback {
+      margin: 0 0 0 90px;
+      width: 95vw;
+      position: absolute;
+      top: 35px;
+      left: -80px;
+    }
+
+    .filter-feedback:after {
+      margin-left: -250px;
+    }
+  }
+}
+button {
+  cursor: pointer;
+  margin-top: 10px;
+  padding: 10px 20px;
+  color: white;
+  font-size: 12px;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+
+
+.flex-row {
+  display: flex;
+  flex: 1 1 100%;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+.flex-col {
+  margin: 6px;
+  padding: 16px;
+  background-color: black;
+  display: flex;
+  justify-content: center;
+  flex: 1 1 0px;
+  flex-direction: column;
+  color: white;
+}

@@ -1,0 +1,120 @@
+<section>
+    <form class="row" [formGroup]="formFilter" (ngSubmit)="findSales()">
+        <div class="col-md-12 text-right pl-0" >
+            <ul class="pl-0">
+                <li class="filter-button">
+                    <a id="filter-dashSales"><small>{{'dash-cancel-filtrar' | translate}} &nbsp;</small><i class="fa fa-sliders"
+                            aria-hidden="true"></i></a>
+                </li>
+                <div class="container mt-0">
+                    <div class="filter-div filter-dashSales mt-0 shadow-sm">
+                        <div class="row mb-2">
+                            <div class="col-md-12">
+                                <div class="row pr-0 pl-0">
+                                    <div class="col-xl-12">
+                                        <label>{{'ComercialHomeNovosParcData' | translate}}</label>
+                                    </div>
+                                </div>
+                                <div class="row mt-3">
+                                    <div class="col-md-6 pr-0 pl-0">
+                                        <mat-form-field class="col-xl-12">
+                                            <input formControlName="startDate" matInput [matDatepicker]="pickerSalesDe"
+                                                placeholder="{{'place-de' | translate}}">
+                                            <mat-datepicker-toggle matSuffix [for]="pickerSalesDe"></mat-datepicker-toggle>
+                                            <mat-datepicker #pickerSalesDe></mat-datepicker>
+                                        </mat-form-field>
+                                    </div>
+                                    <div class="col-md-6 pr-0 pl-0">
+                                        <mat-form-field class="col-xl-12 datePickerAte">
+                                            <input formControlName="endDate" matInput [matDatepicker]="pickerSalesAte"
+                                                placeholder="{{'place-ate' | translate}}">
+                                            <mat-datepicker-toggle matSuffix [for]="pickerSalesAte"></mat-datepicker-toggle>
+                                            <mat-datepicker #pickerSalesAte></mat-datepicker>
+                                        </mat-form-field>
+                                    </div>
+                                </div>
+        
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-12 pr-0 pl-0">
+                                <div class="col-xl-12">
+                                <label for="partner">{{'ComercialHomeRankParceiros' | translate}}</label>
+                                </div>
+                                <mat-form-field class="col-xl-12">
+                                    <input matInput id="partner" name="partner"
+                                        formControlName="partner">
+                                </mat-form-field>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-12 pr-0 pl-0">
+                                <div class="col-xl-12">
+                                <label for="store">{{'dash-cancel-loja' | translate}}</label>
+                                </div>
+                                <mat-form-field class="col-xl-12">
+                                    <mat-select matSelect id="store" name="store" formControlName="store">
+                                        <mat-option value="1">Loja 1</mat-option>
+                                        <mat-option value="2">Loja 2</mat-option>
+                                        <mat-option value="3">Loja 3</mat-option>
+                                    </mat-select>
+                                </mat-form-field>
+                            </div>
+                        </div>
+                        <div class="float-right">
+                            <button class="btn btn-primary rounded-pill">
+                                {{ "dash-cancel-filtrar" | translate }}
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </ul>
+        </div>
+    </form>
+</section>
+
+<app-orders-dashboard [orderData]="salesOrders"></app-orders-dashboard>
+
+<section>
+    <div class="row">
+        <div class="col-12 col-sm-12 col-md-6 col-lg-6 col-xl-6">
+            <app-chart-small [barLineChartData]="PartnerResultsData" [barLineChartLabels]="PartnerResultsLabels"
+                [barLineChartOptions]="PartnerResultsOptions" [barLineChartType]="PartnerResultsType"
+                [barLineChartColors]="PartnerResultsColors" [exportId]="PartnerResultsExportId"
+                [iconExportId]="PartnerResultsExportIconId" [filterDataId]="PartnerResultsFilterDataId"
+                (changeDate)="PartnerResultsChangeDate($event)" [chartTitle]="PartnerResultsTitle">
+            </app-chart-small>
+        </div>
+        <div class="col-12 col-sm-12 col-md-6 col-lg-6 col-xl-6">
+            <app-chart-small [barLineChartData]="SalesVolumeData" [barLineChartLabels]="SalesVolumeLabels"
+                [barLineChartOptions]="SalesVolumeOptions" [barLineChartType]="SalesVolumeType"
+                [barLineChartColors]="SalesVolumeColors" [exportId]="SalesVolumeExportId"
+                [iconExportId]="SalesVolumeExportIconId" [filterDataId]="SalesVolumeFilterDataId"
+                (changeDate)="SalesVolumeChangeDate($event)" [chartTitle]="SalesVolumeTitle">
+            </app-chart-small>
+        </div>
+    </div>
+</section>
+
+<section>
+    <div class="row">
+        <div class="col-12 col-sm-12 col-md-6 col-lg-6 col-xl-6">
+            <app-chart-small [barLineChartData]="DistributionSecurityData"
+                [barLineChartLabels]="DistributionSecurityLabels" [barLineChartOptions]="DistributionSecurityOptions"
+                [barLineChartType]="DistributionSecurityType" [barLineChartColors]="DistributionSecurityColors"
+                [exportId]="DistributionSecurityExportId" [iconExportId]="DistributionSecurityExportIconId"
+                [filterDataId]="DistributionSecurityFilterDataId" (changeDate)="DistributionSecurityChangeDate($event)"
+                [chartTitle]="DistributionSecurityTitle">
+            </app-chart-small>
+        </div>
+        <div class="col-12 col-sm-12 col-md-6 col-lg-6 col-xl-6">
+            <app-chart-small [barLineChartData]="DistributionProductsData"
+                [barLineChartLabels]="DistributionProductsLabels" [barLineChartOptions]="DistributionProductsOptions"
+                [barLineChartType]="DistributionProductsType" [barLineChartColors]="DistributionProductsColors"
+                [exportId]="DistributionProductsExportId" [iconExportId]="DistributionProductsExportIconId"
+                [filterDataId]="DistributionProductsFilterDataId" (changeDate)="DistributionProductsChangeDate($event)"
+                [chartTitle]="DistributionProductsTitle">
+            </app-chart-small>
+        </div>
+    </div>
+</section>

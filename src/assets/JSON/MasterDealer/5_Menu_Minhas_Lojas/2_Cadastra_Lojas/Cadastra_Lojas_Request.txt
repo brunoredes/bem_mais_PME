@@ -1,0 +1,18 @@
+
+var store = new Store();
+store.companyName = "Loja teste 1";
+store.cnpj = "0000000000000";
+store.commercialname = "Loja do ZÉ";
+store.postalCode = "01234567";
+store.address = "Av Jornalista Roberto Marinho";
+store.addressNumber = "85";
+store.complement = "";
+store.neighborhood = "Brooklin";
+store.city = "São Paulo";
+store.state = "São Paulo";
+store.phone = "11 12345678";
+store.email = "loja1@zurich.com.br";
+store.site = "https://www.loja1.zurich.com.br";
+store.image = "https://www.loja1.zurich.com.br";
+
+this.http.post<any>(`${environment.apiUrl}/Stores`, store);

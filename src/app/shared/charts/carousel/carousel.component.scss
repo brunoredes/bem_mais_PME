@@ -1,0 +1,153 @@
+// slide
+
+.blog .carousel-indicators {
+	left: 0;
+	top: auto;
+  bottom: -40px;
+
+}
+
+/* The colour of the indicators */
+.blog .carousel-indicators li {
+  background: #a3a3a3;
+  border-radius: 50%;
+  width: 8px;
+  height: 8px;
+}
+
+.blog .carousel-indicators .active {
+  background: #707070;
+}
+
+.carousel {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  width: 100%;
+  display: flex;
+  position: absolute;
+  left: 0;
+  transition: all 1s ease;
+}
+
+.bd-placeholder-img img {
+  display: block;
+  width: 50%!important;
+}
+
+
+.chartTitleHome{
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 48%;
+  text-align: center;
+  font-size: 1.5em;
+  margin-right: 49px;
+}
+
+//css para chrome
+@media screen and (-webkit-min-device-pixel-ratio: 0) {
+
+  .chartTitleHome {
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 42%;
+    text-align: center;
+    font-size: 1.5em;
+    
+}
+
+
+}
+
+.chart__width{
+  width: 200px;
+  height: 200px;
+}
+
+.font-sm{font-size: .7rem!important;}
+
+.font-sm{
+	font-size: .8em!important;	
+}
+
+.fontGuide{font-size: 1vw;}
+
+.font-sm small{font-size: .8vw !important;}
+
+
+.widthCarousel{width: 15vw;}
+
+
+
+@media(max-width:1440px){
+
+  .widthCarousel{width: auto}
+
+  .chartTitleHome {
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 42%;
+    text-align: center;
+    font-size: 1.5em;
+    margin-right: 28px;
+}
+
+@media(max-width:1366px){
+
+  .chartTitleHome {
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 50%;
+    text-align: center;
+    font-size: 1.5em;
+    margin-right: 15px;
+}
+
+//css para chrome
+@media screen and (-webkit-min-device-pixel-ratio: 0) {
+
+  .chartTitleHome {
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 42%;
+    text-align: center;
+    font-size: 1.5em;
+    margin-right: 15px;
+}
+
+
+}
+
+
+}
+
+}
+
+@media only screen and (max-width: 1024px) {
+
+  @media only screen and (max-width: 768px) {
+
+      .chartTitleHome{
+        bottom: 42%; 
+        margin-right: 0;
+      }
+
+      @media only screen and (max-width: 425px) {
+          
+          @media only screen and (max-width: 375px){
+
+              
+
+              @media only screen and (max-width: 320px){        
+                  
+              }            
+          }                    
+      }
+  }
+}

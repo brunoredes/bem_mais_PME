@@ -1,0 +1,3 @@
+var applicationId = 1;
+
+this.http.get<any>(`${environment.apiUrl}/Faqs?applicationId=${applicationId}`);

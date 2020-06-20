@@ -1,0 +1,40 @@
+{
+  "data": [
+    {
+      "category": "CELULAR",
+      "value": 33,
+      "percent": 33
+    },
+    {
+      "category": "TABLETS",
+      "value": 22,
+      "percent": 22
+    },
+    {
+      "category": "NOTEBOOKS",
+      "value": 15,
+      "percent": 15
+    },
+    {
+      "category": "SMARTWATCH",
+      "value": 10,
+      "percent": 10
+    },
+    {
+      "category": "CAMERAS DIGITAIS",
+      "value": 20,
+      "percent": 20
+    }
+  ],
+  "message": "OK",
+  "hasError": false,
+  "errorDataCollection": [
+    {
+      "code": "string",
+      "message": "string",
+      "url": "string",
+      "detail": "string"
+    }
+  ],
+  "statusCode": 200
+}

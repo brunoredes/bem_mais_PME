@@ -1,0 +1,29 @@
+.metas strong{text-align: center!important;font-size: 150px !important;display: block;}
+
+@media(max-width:1440px){
+
+ .metas strong{text-align: center!important;font-size: 92px !important;display: block;}
+
+ @media(max-width: 1366px){
+
+    .metas strong {
+        text-align: center !important;
+        font-size: 95px !important;
+        display: block;
+    }
+
+    @media(max-width:1024px){
+
+        .metas strong {
+            text-align: center !important;
+            font-size: 75px !important;
+            display: block;
+        }
+
+
+    }
+
+  }
+
+
+}

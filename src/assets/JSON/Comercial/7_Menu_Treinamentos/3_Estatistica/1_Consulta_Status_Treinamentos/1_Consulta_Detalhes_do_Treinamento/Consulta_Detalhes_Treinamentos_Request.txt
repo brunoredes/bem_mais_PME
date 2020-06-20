@@ -1,0 +1,3 @@
+
+var idTraining = 1;
+this.http.get<any>(`${environment.apiUrl}/Trainings/{idTraining}/Details`);

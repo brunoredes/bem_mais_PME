@@ -1,0 +1,103 @@
+.chartTitleHome{
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 49%;
+    text-align: center;
+    font-size: 2.2em;
+
+  }
+
+  @media(max-width:1440px){
+
+    .chartTitleHome{
+
+        position: absolute;
+        left: 0;
+        right: 0;
+        bottom: 49%;
+        text-align: center;
+        font-size: 1.8em;
+
+    }
+
+    @media(max-width:1366px){
+
+
+        .chartTitleHome{
+
+            position: absolute;
+            left: 0;
+            right: 0;
+            bottom: 53%;
+            text-align: center;
+            font-size: 1.8em;
+    
+        }
+
+   
+
+    @media(max-width: 1024px){
+
+
+        .chartTitleHome{
+
+            position: absolute;
+            left: 0;
+            right: 0;
+            bottom: 54%;
+            text-align: center;
+            font-size: 1.5em;
+    
+    
+        }
+      
+        @media(max-width: 768px){
+
+
+            .chartTitleHome {
+                position: absolute;
+                left: 0;
+                right: 0;
+                bottom: 59%;
+                text-align: center;
+                font-size: 15px;
+            }
+
+            @media(max-width: 425px){
+
+                .chartTitleHome {
+                    position: absolute;
+                    left: 0;
+                    right: 0;
+                    bottom: 50%;
+                    text-align: center;
+                    font-size: 2.5rem;
+                }
+
+
+            }
+
+            @media(max-width: 320px){
+
+                .chartTitleHome {
+                    position: absolute;
+                    left: 0;
+                    right: 0;
+                    bottom: 54%;
+                    text-align: center;
+                    font-size: 1.5rem;
+                }
+
+
+            }
+
+        }
+
+
+    }
+
+
+}
+
+}

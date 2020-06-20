@@ -1,0 +1,457 @@
+.d-contents {
+  display: contents;
+}
+.listStyle {
+  list-style-type: none;
+}
+
+.mat-radio-button ~ .mat-radio-button {
+  margin-left: 16px;
+}
+
+.mat-radio {
+  position: absolute;
+  clear: both;
+  display: contents;
+}
+
+.mat-radio li {
+  padding: 10px;
+  border-bottom: 1px solid #d8d8d8;
+}
+.mat-radio li:nth-child(4) {
+  border-bottom: 0;
+}
+
+.rotetion-icon {
+  transform: rotate(180deg);
+}
+
+.justify-content-flex-end {
+  justify-content: flex-end;
+}
+
+.text-decoration-underline {
+  text-decoration: underline !important;
+}
+.justify {
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+}
+
+.exporat-filtro {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  margin-right: 30px;
+  top: 68px;
+}
+
+.chart__width.charDonut {
+  position: relative;
+}
+
+.chartTitle {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 40%;
+  text-align: center;
+  font-size: 2.8em;
+}
+
+//Star Rating
+
+.star-rating {
+  line-height: 32px;
+  font-size: 1em;
+  margin-right: 10px;
+}
+
+.star-rating .fa-star {
+  color: #ffd800;
+}
+.star-rating span {
+  margin-right: 6px;
+}
+
+//Vendedor treinamento
+.card-border {
+  border-radius: 20px;
+  background-color: rgba(98, 188, 0, 0.16);
+}
+
+.card-border-light-blue {
+  border-radius: 20px;
+  background-color: #e7f1fa;
+}
+
+.scrollbar {
+  max-height: 231px;
+  overflow-y: scroll;
+  overflow-x: hidden;
+  cursor: pointer;
+}
+
+.force-overflow {
+  min-height: 450px;
+}
+
+.scrollbar-content {
+  max-height: 100vh;
+  overflow-y: scroll;
+  overflow-x: hidden;
+}
+
+.force-overflow-content {
+  min-height: 100vh;
+}
+
+#style-4::-webkit-scrollbar-track {
+  -webkit-box-shadow: inset 0 0 6px rgba(255, 255, 255, 0.3);
+  background-color: transparent;
+  border-radius: 10px;
+}
+
+#style-4::-webkit-scrollbar {
+  width: 8px;
+  background-color: transparent;
+  margin-right: 8px;
+}
+
+#style-4::-webkit-scrollbar-thumb {
+  background-color: rgba(112, 112, 112, 0.8);
+  border: 1px solid transparent;
+  border-radius: 10px;
+}
+
+//filter
+
+.filter-estatistica {
+  margin: auto;
+  float: left;
+  background: white;
+  width: 25vw;
+  position: absolute;
+  border-radius: 3px;
+  padding: 20px;
+  right: 0;
+  display: none;
+  z-index: 99;
+  border-radius: 20px;
+  text-align: left;
+  margin-right: 33px;
+  top: 122px;
+}
+
+.filter-estatistica h5{font-weight: normal!important;}
+
+.filter-button {
+  padding: 5px 20px;
+  display: inline-block;
+  text-decoration: none;
+  border-radius: 50px;
+  border: 1px solid #787878;
+  color: #707070;
+  margin-top: -8px;
+}
+
+.filter-estatistica:after {
+  bottom: 100%;
+  left: 89%;
+  border: solid transparent;
+  content: " ";
+  height: 0;
+  width: 0;
+  position: absolute;
+  pointer-events: none;
+  border-bottom-color: white;
+  border-width: 8px;
+  margin-left: -8px;
+}
+
+.filter-Exportar {
+  margin: auto;
+  float: left;
+  background: white;
+  width: 25vw;
+  position: absolute;
+  border-radius: 3px;
+  padding: 20px;
+  right: 0;
+  display: none;
+  z-index: 99;
+  border-radius: 20px;
+  text-align: left;
+  margin-right: 154px;
+  top: 113px;
+}
+
+.filter-Exportar:after {
+  bottom: 100%;
+  left: 89%;
+  border: solid transparent;
+  content: " ";
+  height: 0;
+  width: 0;
+  position: absolute;
+  pointer-events: none;
+  border-bottom-color: white;
+  border-width: 8px;
+  margin-left: -8px;
+}
+
+.filter-Exportar-regiao {
+  margin: auto;
+  float: left;
+  background: white;
+  width: 25vw;
+  position: absolute;
+  border-radius: 3px;
+  padding: 20px;
+  right: 0;
+  display: none;
+  z-index: 99;
+  border-radius: 20px;
+  text-align: left;
+  margin-right: 140px;
+  top: calc(50% - -191px);
+}
+
+.filter-Exportar-regiao:after {
+  bottom: 100%;
+  left: 89%;
+  border: solid transparent;
+  content: " ";
+  height: 0;
+  width: 0;
+  position: absolute;
+  pointer-events: none;
+  border-bottom-color: white;
+  border-width: 8px;
+  margin-left: -8px;
+}
+
+.chart-training-region {
+  margin: auto;
+  float: left;
+  background: white;
+  width: 25vw;
+  position: absolute;
+  border-radius: 3px;
+  padding: 20px;
+  right: 0;
+  display: none;
+  z-index: 99;
+  border-radius: 20px;
+  text-align: left;
+  margin-right: 40px;
+  top: calc(50% - -191px);
+}
+
+.chart-training-region:after {
+  bottom: 100%;
+  left: 89%;
+  border: solid transparent;
+  content: " ";
+  height: 0;
+  width: 0;
+  position: absolute;
+  pointer-events: none;
+  border-bottom-color: white;
+  border-width: 8px;
+  margin-left: -8px;
+}
+
+button {
+  cursor: pointer;
+  margin-top: 10px;
+  padding: 10px 20px;
+  color: white;
+  font-size: 12px;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+
+.card-body span {
+  font-size: 1vw;
+}
+.font-sm span{font-size: 1vw!important;}
+
+@media(max-width:1440px){
+
+  .chartTitle {
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 38%;
+    text-align: center;
+    font-size: 2.2em;
+  }
+
+
+}
+
+@media (max-width: 1024px) {
+
+  .chartTitle {
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 35%;
+    text-align: center;
+    font-size: 2em;
+  }
+
+  
+  .filter-estatistica {
+    width: 31vw;
+  }
+
+  .filter-Exportar-regiao {
+    width: 31vw;
+    margin-right: 146px;
+  }
+
+  .filter-Exportar-regiao {
+    position: absolute;
+    top: calc(50% - -161px);
+    margin-right: 120px;
+    width: 27vw;
+  }
+
+  .chart-training-region {
+    width: 31vw;
+    padding: 15px;
+    margin-right: 24px;
+    top: calc(50% - -162px);
+  }
+
+  .exporat-filtro {
+    top: 55px;
+  }
+
+  @media (max-width: 768px) {
+
+
+    .chartTitle {
+      position: absolute;
+      left: 0;
+      right: 0;
+      bottom: 40%;
+    text-align: center;
+    font-size: 3em;
+    }
+
+    .filter-estatistica {
+      width: 40vw;
+      top: 106px;
+    }
+
+    .chart-training-region {
+      width: 38vw;
+      margin-right: 25px;
+      top: calc(50% - -700px);
+    }
+
+    .filter-Exportar-regiao {
+      width: 35vw;
+      position: absolute;
+      top: calc(50% - -700px);
+      margin-right: 99px;
+    }
+
+    .filter-Exportar {
+      width: 38vw;
+      margin-right: 140px;
+      top: 107px;
+    }
+
+    @media (max-width: 425px) {
+      .exporat-filtro {
+        position: relative;
+        right: 0;
+        left: calc(100% - 60px);
+        bottom: 0;
+        top: 5px;
+      }
+
+      .filter-estatistica {
+        width: 72vw;
+        margin-right: 32px;
+        top: 252px;
+      }
+
+      .filter-Exportar {
+        width: 65vw;
+        margin-right: 111px;
+        top: 241px;
+      }
+
+      .filter-Exportar:after {
+        margin-left: -38px;
+      }
+
+      .filter-Exportar-regiao {
+        width: 71vw;
+        position: absolute;
+        right: 0;
+        top: calc(59% - 0px);
+      }
+
+      @media(max-width: 375px){
+
+        .exporat-filtro {
+          position: relative;
+          right: 0;
+          left: calc(100% - 119px);
+          bottom: 0;
+          top: 5px;
+        }
+
+        .filter-Exportar {
+          width: 72vw;
+          margin-right: 67px;
+        }
+
+        .filter-Exportar:after {
+          margin-left: -88px;
+        }
+
+        .filter-estatistica {
+          width: 83vw;
+        }
+
+        @media (max-width: 320px) {
+
+          .filter-Exportar {
+            width: 81vw;
+            margin-right: 35px;
+          }
+  
+          .filter-Exportar:after {
+            margin-left: -137px;
+          }
+
+          .filter-estatistica {
+            width: 94vw;
+            margin-right: 6px;
+          }
+
+          .filter-estatistica:after {
+            margin-left: -39px;
+          }
+  
+          .exporat-filtro {
+            position: relative;
+            right: 0;
+            left: calc(100% - 175px);
+            bottom: 0;
+            top: 5px;
+          }
+      }
+    }
+  }
+}
+}

@@ -1,0 +1,29 @@
+{
+    "data": [
+        {
+            "id": 657,
+            "name": "Júlio Macedo",
+            "salesAmount": 7537.32,
+            "position": 1,
+            "percent": 80
+        },
+        {
+            "id": 234,
+            "name": "André Lóqui",
+            "salesAmount": 3456.88,
+            "position": 13,
+            "percent": 40
+        }
+    ],
+    "message": "OK",
+    "hasError": false,
+    "errorDataCollection": [
+        {
+            "code": "string",
+            "message": "string",
+            "url": "string",
+            "detail": "string"
+        }
+    ],
+    "statusCode": 200
+}

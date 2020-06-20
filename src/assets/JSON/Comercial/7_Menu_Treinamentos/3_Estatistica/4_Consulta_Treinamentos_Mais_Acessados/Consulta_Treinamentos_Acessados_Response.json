@@ -1,0 +1,30 @@
+{
+    "data": {
+        "trainings": [
+            {
+                "name": "Manual de Boas Práticas",
+                "percent": 100,
+                "image": "assets/img/book.svg"
+            },
+            {
+                "name": "Manual de Boas Práticas",
+                "percent": 50,
+                "image": "assets/img/book.svg"
+            },
+            {
+                "name": "Manual de Boas Práticas",
+                "percent": 20,
+                "image": "assets/img/book.svg"
+            },
+            {
+                "name": "Manual de Boas Práticas",
+                "percent": 10,
+                "image": "assets/img/book.svg"
+            }
+        ]
+    },
+    "message": "Ok",
+    "hasError": false,
+    "errorDataCollection": null,
+    "statusCode": 200
+}

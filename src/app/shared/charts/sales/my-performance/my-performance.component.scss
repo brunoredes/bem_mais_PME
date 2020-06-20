@@ -1,0 +1,257 @@
+.chart-my-performance {
+    margin: 0 0 0 -300px;
+    float: left;
+    background: white;
+    width: 22vw;
+    position: absolute;
+    // border-radius: 3px;
+    padding: 10px 5px 0px 5px;
+    left: 0;
+    display: none;
+    // z-index: 99999953;
+    border-radius: 10px;
+    top: 32px; 
+    left: 90px;
+    text-align: left;
+}
+
+.chart-my-performance:after {
+    bottom: 100%;
+    left: 89%;
+    border: solid transparent;
+    content: " ";
+    height: 0;
+    width: 0;
+    position: absolute;
+    pointer-events: none;
+    border-bottom-color: white;
+    border-width: 8px;
+    margin-left: -8px;
+}
+
+
+.filter-button{
+    padding: 5px 20px;
+    display: inline-block;
+    text-decoration: none;
+    border-radius: 50px;
+    border: 1px solid #787878;
+    color: #707070;
+  
+  
+  }
+  .border-box{
+      padding:15px; 
+      height: 250px; 
+      text-align: center;
+  }
+  .border-insurance{
+    padding-top:15px; 
+    padding-bottom:15px; 
+    text-align: center;
+    border-radius: 20px!important;
+    background: #FFF;
+    height:350px;
+    position: relative;
+    z-index: 1;
+  }
+  .fit-img{
+      height: 50%; 
+      width: 50%; 
+      object-fit: contain
+  }
+  .light-blue{background: rgba(231,241,250,0.3)}
+  .mb-3, .my-3 {margin-bottom: 0.5rem !important;}
+  
+  .navbar {
+      position: relative;
+      display: none!important; 
+      
+  }
+  
+  .bg-white {
+      background-color: #fff !important;
+      color: #414658 !important;
+      border-radius: 18px;
+  }
+  .bg-primary, .colored-pagination .pagination a {
+      background-color: #1862c6 !important;
+      border-radius: 20px;
+  }
+  
+  //cards
+  
+  .card-body p {font-size: 0.8em;}
+  .card-body span{font-size: 0.8em; margin-top: -10px;display: flex;}
+  .grid-b-space {margin-bottom: 1px!important;}
+  
+  
+  //scroll
+  
+  
+  .scrollbar
+  {
+     
+     float: left;
+     max-height: 185Px;
+     
+    
+  
+  }
+  
+  
+  .scrollbar-content
+  { 
+     float: left;
+     max-height: 100vh;
+     
+     padding: 10px;
+    
+  }
+  
+  .force-overflow-content{
+    
+    min-height: 100vh;
+  
+  }
+  
+  /*
+   *  STYLE 4
+   */
+  
+  #style-4::-webkit-scrollbar-track
+  {
+      -webkit-box-shadow: inset 0 0 6px rgba(255,255,255,0.3);
+      background-color: transparent;
+      border-radius: 10px;
+  }
+  
+  #style-4::-webkit-scrollbar
+  {
+      width: 8px;
+      background-color: transparent;
+      margin-right: 8px;
+  
+  }
+  
+  #style-4::-webkit-scrollbar-thumb
+  {
+      background-color: rgba(112,112,112,0.8);
+      border: 1px solid transparent;
+      border-radius: 10px;
+  }
+  
+   .svg-sale{
+   max-width: 80%; 
+   height: auto;
+  }
+  
+  @media(max-width: 1024px){
+
+
+    .chart-my-performance {
+        
+        width: 30vw;
+       
+    }
+
+    @media(max-width: 768px){
+
+        .chart-my-performance {
+            width: 40vw;
+        }
+
+    }
+
+    @media(max-width: 425px){
+
+        .chart-my-performance {
+            width: 72vw;
+        }
+
+        h3, .h3 {
+            font-size: 1.0rem;
+            font-weight: bold!important;
+        }
+    
+        .p-4{padding: 0 !important;}
+    
+       #formatSmall>small{display: block;line-height: 1;}
+    
+     .img-fluid {
+        max-width: 50%;
+        height: auto;
+    }
+    
+    
+    .scrollbar
+    {
+       
+       float: left;
+       max-height: 300px;
+       
+    }
+    
+    .card-body span {
+        font-size: 0.8em;
+        margin-top: -10px;
+        display: flex;
+    }
+    i, span {
+        display: inline-block;
+    }
+    
+    
+    .svg-sale{
+     max-width: 20%; 
+     height: auto;
+     position: absolute;
+     display: flex;
+     top: -79px;
+     right: 0;
+    
+    
+    }
+
+    }
+
+      @media(max-width: 375px){
+
+        .chart-my-performance {
+            width: 70vw;
+            position: relative;
+            left: 94px;
+        
+        }
+
+ 
+
+    }
+
+    @media(max-width: 320px){
+
+        .chart-my-performance{
+            width: 58vw;
+            position: relative;
+            left: 145px;
+        }
+
+        .svg-sale{
+            max-width: 20%; 
+            height: auto;
+            position: absolute;
+            display: flex;
+            top: -53px;
+           }
+  
+
+    }
+
+
+  }
+
+
+  
+
+  
+  

@@ -1,0 +1,142 @@
+<section class="mt-3">
+    <div class="row">
+        <div class="col-12 col-sm-12 col-md-3 col-lg-3 col-xl-3">
+            <app-achievement-goals></app-achievement-goals>
+        </div>
+        <div class="col-12 col-sm-12 col-md-3 col-lg-3 col-xl-3">
+            <app-goals-beats></app-goals-beats>
+        </div>
+        <div class="col-12 col-sm-12 col-md-6 col-lg-6 col-xl-6 pr-0">
+            <div class="card mb-3 shadow-sm mr-3">
+                <div class="card-body">
+                    <perfect-scrollbar class="height">	
+                    <h5>{{'Best Partners of the Month' | translate}}</h5>
+                    <div id="style-4">
+                        <div class="force-overflow">
+                            <div class="card col-md-auto mb-3 light-blue mb-1 p-3" *ngFor="let i of top">
+                                <div class="row">
+                                    <div class="col-4 col-sm-4 col-md-2 col-lg-2 m-auto">
+                                        <img src="./assets/img/logo-revenda.png" class="img-fluid rounded-circle"
+                                            alt="Responsive image">
+                                    </div>
+                                    <div class="col-md-3">
+                                        <span class="mt-3 d-flex justify-content-center">{{i.name}}</span>
+
+                                    </div>
+                                    <div class="col-md-5">
+                                        <p class="text-muted mb-1">
+                                            <small>Vendas: {{format(i.salesAmount)}}</small>
+                                        </p>
+                                        <div class="progress over-visible mb-4" style="height: 5px">
+                                            <div class="progress-bar customize-progress-bar" role="progressbar"
+                                                aria-valuenow="100" aria-valuemin="0" id="top{{i.id}}"
+                                                aria-valuemax="100">
+                                                <span>{{i.percent}}%</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-4 col-sm-4 col-md-2 col-lg-2 m-auto">
+                                        <img src="./assets/img/trophy-parceiro.svg"  style="width: 70%;" class="img-fluid "
+                                            alt="Responsive image">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    </perfect-scrollbar>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section>
+    <div class="row">
+        <div class="col-12 col-sm-12 col-md-6 col-lg-6 col-xl-6">
+            <app-chart-small [barLineChartData]="SalesGoalsData" [barLineChartLabels]="SalesGoalsLabels"
+                [barLineChartOptions]="SalesGoalsOptions" [barLineChartType]="SalesGoalsType"
+                [exportId]="SalesGoalsExportId" [iconExportId]="SalesGoalsExportIconId"
+                [filterDataId]="SalesGoalsFilterDataId" (changeDate)="SalesGoalsChangeDate($event)"
+                [chartTitle]="AggregatorDashSaleInsurGoal">
+            </app-chart-small>
+        </div>
+        <div class="col-12 col-sm-12 col-md-6 col-lg-6 col-xl-6">
+            <app-chart-small [barLineChartData]="ProductGoalsData" [barLineChartLabels]="ProductGoalsLabels"
+                [barLineChartOptions]="ProductGoalsOptions" [barLineChartType]="ProductGoalsType"
+                [exportId]="ProductGoalsExportId" [iconExportId]="ProductGoalsExportIconId"
+                [filterDataId]="ProductGoalsFilterDataId" (changeDate)="ProductGoalsChangeDate($event)"
+                [chartTitle]="AggregatorDashGoalSaleCatProduct">
+            </app-chart-small>
+        </div>
+    </div>
+</section>
+
+
+
+
+<section>
+    <div class="card mb-3 shadow-sm">
+        <div class="card-body">
+            <div class="row">
+                <div class="col-12">
+                    <h5>{{'AgregadorHomeCompareSalesTitle' | translate}}</h5>
+
+                    <div class="project-status-wrap">
+                        <div class="chk-block-content widget-body mb-3">
+                            <div class="table-responsive project-status-table border-0">
+                                <table class="table  table-middle mb-0 table-borderless">
+                                    <thead>
+                                        
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td>1° Júlio Macedo</td>
+                                            <td style="width:50vw">
+                                                <div class=" m-0">
+                                                    <div class="progress-bar bg-success" role="progressbar"
+                                                        style="width: 65%; height: 10px;" aria-valuenow="25"
+                                                        aria-valuemin="0" aria-valuemax="100">
+                                                    </div>
+                                                </div>
+                                            </td>
+                                            <td>
+                                                R$ 7.253,75
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>13° Você</td>
+                                            <td style="width:17vw">
+                                                <div class=" m-0">
+                                                    <div class="progress-bar bg-success" role="progressbar"
+                                                        style="width: 45%; height: 10px;" aria-valuenow="25"
+                                                        aria-valuemin="0" aria-valuemax="100">
+                                                    </div>
+                                                </div>
+                                            </td>
+                                            <td>
+                                                R$ 3.456,88
+                                            </td>
+                                        </tr>
+
+
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+
+
+                </div>
+                <div class="col-12 col-sm-12 col-md-6 col-lg-6 col-xl-6">
+                    <h5>{{'AggregatorDashSuggGoals' | translate}}</h5>
+                    <div class="d-flex col-md-auto p-2">
+                        <span class="mt-2 mr-2">
+                            {{'AggregatorHomeSell' | translate}} <b class="fontValue">{{format(amount)}}</b> {{'AggregatorHomeNext' | translate}}
+                            <b class="fontValue">{{days}}</b> {{'AggregatorHomeDays' | translate}}
+                        </span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

@@ -1,0 +1,25 @@
+{
+    "data": {
+        "vendors": [
+            {
+                "name": "Fast Shop",
+                "salesAmount": 500,
+                "percent": 100
+            },
+            {
+                "name": "Asus Store",
+                "salesAmount": 500,
+                "percent": 50
+            },
+            {
+                "name": "Zé Cel",
+                "salesAmount": 500,
+                "percent": 20
+            }
+        ]
+    },
+    "message": "Ok",
+    "hasError": false,
+    "errorDataCollection": null,
+    "statusCode": 200
+}

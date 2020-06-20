@@ -1,0 +1,3 @@
+var profileId = 4;
+
+this.http.get<any>(`${environment.apiUrl}/Homes/Links?profileId=${profileId}`);
